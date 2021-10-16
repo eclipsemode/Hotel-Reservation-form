@@ -1,0 +1,17 @@
+@mixin text-field {
+    border: 1px solid $Dark-shade-25;
+    border-radius: 4px;
+    line-height: 24px;
+    width: 320px;
+    height: 44px;
+    padding: 0 15px;
+    color: $Dark-shade-75;
+    &::placeholder {
+        color: $Dark-shade-25;
+    }
+    &:focus,
+    &:hover {
+        outline: none;
+        border: 1px solid $Dark-shade-50;
+    }
+}

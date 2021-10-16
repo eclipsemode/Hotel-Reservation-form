@@ -1,0 +1,28 @@
+/// FONTS AND STYLES
+html {
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    font-size: 14px;
+    line-height: 24px;
+    color: $Dark-shade-75;
+    margin-left: 10px;
+}
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    color: $Dark-shade-100;
+}
+h2 {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 23, 16px;
+    color: $Dark-shade-100;
+}
+h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 14.63px;
+    color: $Dark-shade-100;
+}

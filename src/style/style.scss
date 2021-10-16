@@ -1,6 +1,9 @@
 @import "~normalize.css";
+@import "./layout/mixins.scss";
+@import "./layout/variables.scss";
+@import "./layout/base.scss";
+@import "./layout/Montserrat.scss";
 
-body {
-    background: whitesmoke;
-    color: goldenrod;
+.text {
+    @include text-field;
 }

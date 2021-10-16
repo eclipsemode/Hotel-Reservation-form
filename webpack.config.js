@@ -30,8 +30,12 @@ module.exports = {
     new CopyWebpackPlugin({
         patterns: [
             {
-                from: path.resolve(__dirname, 'src/assets'),
+                from: path.resolve(__dirname, 'src/assets/favicon.ico'),
                 to: path.resolve(__dirname, 'dist')
+            },
+            {
+                from: path.resolve(__dirname, 'src/assets/images'),
+                to: path.resolve(__dirname, 'dist/images')
             },
         ]
     }),
@@ -56,6 +60,17 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type: 'asset/resource'
+            },
+            {
+                test: /\.(ttf|woff|woff2|eot)$/i,
+                type: 'asset/inline',
+                use: [{
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[ext]",
+                        outputPath: "fonts",
+                    }
+                }]
             }
         ],
     }
