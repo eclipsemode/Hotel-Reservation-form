@@ -428,6 +428,13 @@ h3 {
   font-weight: 600;
   font-style: normal;
 }
+.ui-kit__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .text {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -436,6 +443,10 @@ h3 {
   height: 44px;
   padding: 0 15px;
   color: rgba(31, 32, 65, 0.75);
+  background: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
 }
 .text::placeholder {
   color: rgba(31, 32, 65, 0.25);
@@ -443,4 +454,162 @@ h3 {
 .text:focus, .text:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.dropdown-type {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  line-height: 24px;
+  width: 320px;
+  height: 44px;
+  padding: 0 15px;
+  color: rgba(31, 32, 65, 0.75);
+  background: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  padding: 0 35px 0 15px;
+}
+.dropdown-type::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.dropdown-type:focus, .dropdown-type:hover {
+  outline: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.dropdown-type::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 13px;
+  border: solid rgba(31, 32, 65, 0.5);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  pointer-events: none;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+.dropdown-type:focus, .dropdown-type--active {
+  border-color: rgba(31, 32, 65, 0.75);
+}
+
+.dropdown-menu {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  width: 100%;
+  color: rgba(31, 32, 65, 0.75);
+  background: #fff;
+  box-sizing: border-box;
+  display: none;
+  overflow: hidden;
+}
+
+.dropdown-menu__list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.dropdown-menu__list_item {
+  padding: 0 15px;
+  line-height: 36px;
+  cursor: pointer;
+}
+.dropdown-menu__list_item:hover {
+  background: rgba(31, 32, 65, 0.05);
+}
+.dropdown-menu__list_item:not(:last-child) {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+}
+
+.hidden .dropdown-type {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.hidden .dropdown-type::after {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.hidden .dropdown-menu {
+  display: block;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  position: absolute;
+  top: 44px;
+  left: 0;
+}
+
+.dropdown.hidden {
+  position: relative;
+}
+
+.masked-text-field {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  line-height: 24px;
+  width: 320px;
+  height: 44px;
+  padding: 0 15px;
+  color: rgba(31, 32, 65, 0.75);
+  background: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  color: rgba(31, 32, 65, 0.25);
+  text-transform: uppercase;
+}
+.masked-text-field::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.masked-text-field:focus, .masked-text-field:hover {
+  outline: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.masked-text-field::-webkit-calendar-picker-indicator {
+  background: transparent;
+}
+
+.date-type {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  line-height: 24px;
+  width: 320px;
+  height: 44px;
+  padding: 0 15px;
+  color: rgba(31, 32, 65, 0.75);
+  background: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  color: rgba(31, 32, 65, 0.5);
+  text-transform: uppercase;
+  width: 150px;
+}
+.date-type::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.date-type:focus, .date-type:hover {
+  outline: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.date-type::-webkit-calendar-picker-indicator {
+  background: transparent;
+  width: 0;
+  height: 0;
+  border: solid rgba(31, 32, 65, 0.5);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.date-type:focus::-webkit-calendar-picker-indicator {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
 }

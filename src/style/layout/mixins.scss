@@ -6,6 +6,9 @@
     height: 44px;
     padding: 0 15px;
     color: $Dark-shade-75;
+    background: #fff;
+    box-sizing: border-box;
+    text-align: left;
     &::placeholder {
         color: $Dark-shade-25;
     }

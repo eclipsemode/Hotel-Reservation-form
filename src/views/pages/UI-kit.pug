@@ -1,0 +1,17 @@
+.ui-kit__container
+    h2 TEXT FIELD
+    input(type="text", name="text-field", placeholder="Email").text
+    h2 DROPDOWN
+    .dropdown
+        button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
+        .dropdown-menu
+            ul.dropdown-menu__list
+                li(data-value='first').dropdown-menu__list_item First
+                li(data-value='second').dropdown-menu__list_item Second
+                li(data-value='third').dropdown-menu__list_item Third
+                li(data-value='fourth').dropdown-menu__list_item Fourth
+                li(data-value='five').dropdown-menu__list_item Five
+    h2 MASKED TEXT FIELD
+    input(type="date", name="date-field").masked-text-field
+    h2 DATE DROPDOWN 
+    input(type="date", name="date-field__mini").date-type

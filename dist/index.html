@@ -1,14 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack project</title>
+    <title>Hotel Reservation Project</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="main.bundle.css" rel="stylesheet"></head>
   <body> 
     <h1>Hello World!</h1>
-    <input class="text" type="text" name="text-field" placeholder="Email">
+<div class="ui-kit__container">
+  <h2>TEXT FIELD</h2>
+  <input class="text" type="text" name="text-field" placeholder="Email">
+  <h2>DROPDOWN</h2>
+  <div class="dropdown">
+    <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
+    <div class="dropdown-menu">
+      <ul class="dropdown-menu__list">
+        <li class="dropdown-menu__list_item" data-value="first">First</li>
+        <li class="dropdown-menu__list_item" data-value="second">Second</li>
+        <li class="dropdown-menu__list_item" data-value="third">Third</li>
+        <li class="dropdown-menu__list_item" data-value="fourth">Fourth</li>
+        <li class="dropdown-menu__list_item" data-value="five">Five</li>
+      </ul>
+    </div>
+  </div>
+  <h2>MASKED TEXT FIELD</h2>
+  <input class="masked-text-field" type="date" name="date-field">
+  <h2>DATE DROPDOWN </h2>
+  <input class="date-type" type="date" name="date-field__mini">
+</div>
   <script defer src="main.bundle.js"></script></body>
 </html>

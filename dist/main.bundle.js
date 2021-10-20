@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/style.scss */ \"./style/style.scss\");\n\r\n\r\n\r\nlet first = 55;\r\n\r\nconsole.log(first);\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/style.scss */ \"./style/style.scss\");\n\r\n\r\n// CLICK ON BUTTON DROPDOWN. OPEN / CLOSE THE SELECT\r\ndocument.querySelector('.dropdown-type').addEventListener('click', () => {\r\n    document.querySelector('.dropdown').classList.toggle('hidden');\r\n    document.querySelector('.dropdown-type').classList.add('dropdown-type--active');\r\n});\r\n\r\n// ITEM SELECTION FROM LIST. MEMORISE SELECTED ITEM. CLOSE DROPDOWN\r\ndocument.querySelectorAll('.dropdown-menu__list_item').forEach(function (listItem) {\r\n    listItem.addEventListener('click', function () {\r\n        document.querySelector('.dropdown-type').innerText = this.innerText;\r\n        document.querySelector('.dropdown-type').focus();\r\n        document.querySelector('.dropdown').classList.remove('hidden');\r\n    })\r\n});\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 

@@ -3,7 +3,4 @@
 @import "./layout/variables.scss";
 @import "./layout/base.scss";
 @import "./layout/Montserrat.scss";
-
-.text {
-    @include text-field;
-}
+@import "./layout/UI-kit.scss";
