@@ -17,7 +17,8 @@ module.exports = {
     entry: './index.js',
     output: {
         filename: "[name].bundle.js",
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'assets/images/[name][ext][query]'
     },
     plugins: [new HtmlWebpackPlugin({
         inject: 'body',
@@ -30,20 +31,20 @@ module.exports = {
     new CopyWebpackPlugin({
         patterns: [
             {
-                from: path.resolve(__dirname, 'src/assets/favicon.ico'),
+                from: path.resolve(__dirname, 'src/style/assets/favicon.ico'),
                 to: path.resolve(__dirname, 'dist')
             },
-            {
-                from: path.resolve(__dirname, 'src/assets/images'),
-                to: path.resolve(__dirname, 'dist/images')
-            },
+            // {
+            //     from: path.resolve(__dirname, 'src/assets/images'),
+            //     to: path.resolve(__dirname, 'dist/images')
+            // },
         ]
     }),
     ],
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.s[ac]ss|css$/i,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
             {
@@ -59,7 +60,11 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
-                type: 'asset/resource'
+                type: 'asset/resource',
+                // generator: {
+                //     // filename: 'assets/img/[name].[ext]',
+                //     filename: 'assets/img/[hash][ext][query]',
+                // },
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/i,
@@ -68,7 +73,7 @@ module.exports = {
                     loader: "file-loader",
                     options: {
                         name: "[name].[ext]",
-                        outputPath: "fonts",
+                        outputPath: "assets/fonts",
                     }
                 }]
             }

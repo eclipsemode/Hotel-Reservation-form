@@ -17,18 +17,24 @@
     <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
     <div class="dropdown-menu">
       <ul class="dropdown-menu__list">
-        <li class="dropdown-menu__list_item" data-value="first">First</li>
-        <li class="dropdown-menu__list_item" data-value="second">Second</li>
-        <li class="dropdown-menu__list_item" data-value="third">Third</li>
-        <li class="dropdown-menu__list_item" data-value="fourth">Fourth</li>
-        <li class="dropdown-menu__list_item" data-value="five">Five</li>
+        <li class="dropdown-menu__list-item" data-value="first">First</li>
+        <li class="dropdown-menu__list-item" data-value="second">Second</li>
+        <li class="dropdown-menu__list-item" data-value="third">Third</li>
+        <li class="dropdown-menu__list-item" data-value="fourth">Fourth</li>
+        <li class="dropdown-menu__list-item" data-value="five">Five</li>
       </ul>
     </div>
   </div>
   <h2>MASKED TEXT FIELD</h2>
-  <input class="masked-text-field" type="date" name="date-field">
+  <input class="masked-text-field" type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off">
   <h2>DATE DROPDOWN </h2>
-  <input class="date-type" type="date" name="date-field__mini">
+  <input class="date-type" type="text" name="date-field__mini" id="el" placeholder="дд.мм.гггг" autocomplete="off">
+  <h2>FILTER DATE DROPDOWN </h2>
+  <form>
+    <input class="subscription-text-field" type="text" id="el" name="date">
+  </form>
+  <h2>SUBSCRIPTION TEXT FIELD </h2>
+  <button class="subscription-text-field" type="text">Email</button>
 </div>
   <script defer src="main.bundle.js"></script></body>
 </html>

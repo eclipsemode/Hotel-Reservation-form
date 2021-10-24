@@ -30,17 +30,20 @@
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.4.0",
     "file-loader": "^6.2.0",
+    "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.4.0",
     "mini-css-extract-plugin": "^2.4.2",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "sass": "^1.43.2",
     "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.1",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
+    "air-datepicker": "^3.0.1",
     "normalize.css": "^8.0.1"
   }
 }

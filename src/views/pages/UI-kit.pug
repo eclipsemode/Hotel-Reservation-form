@@ -6,12 +6,18 @@
         button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
         .dropdown-menu
             ul.dropdown-menu__list
-                li(data-value='first').dropdown-menu__list_item First
-                li(data-value='second').dropdown-menu__list_item Second
-                li(data-value='third').dropdown-menu__list_item Third
-                li(data-value='fourth').dropdown-menu__list_item Fourth
-                li(data-value='five').dropdown-menu__list_item Five
+                li(data-value='first').dropdown-menu__list-item First
+                li(data-value='second').dropdown-menu__list-item Second
+                li(data-value='third').dropdown-menu__list-item Third
+                li(data-value='fourth').dropdown-menu__list-item Fourth
+                li(data-value='five').dropdown-menu__list-item Five
     h2 MASKED TEXT FIELD
-    input(type="date", name="date-field").masked-text-field
+    input(type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off").masked-text-field
     h2 DATE DROPDOWN 
-    input(type="date", name="date-field__mini").date-type
+    input(type="text" name="date-field__mini" id="el" placeholder="дд.мм.гггг" autocomplete="off").date-type
+    h2 FILTER DATE DROPDOWN 
+    form
+        input(type="text" id="el" name="date").subscription-text-field
+    h2 SUBSCRIPTION TEXT FIELD 
+    button(type="text").subscription-text-field Email
+
