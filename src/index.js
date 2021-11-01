@@ -17,7 +17,30 @@ new AirDatepicker('#el', {
     buttons: ['clear', selectItem],
     multipleDatesSeparator: ' - ',
     classes: 'dp-style',
+    minDate: new Date(),
 })
+new AirDatepicker('#el2', {
+    buttons: ['clear', selectItem],
+    multipleDatesSeparator: ' - ',
+    classes: 'dp-style',
+    minDate: new Date(),
+})
+new AirDatepicker('#el3', {
+    buttons: ['clear', selectItem],
+    multipleDatesSeparator: ' - ',
+    classes: 'dp-style',
+    minDate: new Date(),
+})
+new AirDatepicker('#el-filter', {
+    buttons: ['clear', selectItem],
+    multipleDatesSeparator: ' - ',
+    classes: 'dp-style',
+    minDate: new Date(),
+    multipleDates: 2,
+    range: true,
+})
+
+
 
 // CLICK ON BUTTON DROPDOWN. OPEN / CLOSE THE SELECT
 document.querySelector('.dropdown-type').addEventListener('click', () => {

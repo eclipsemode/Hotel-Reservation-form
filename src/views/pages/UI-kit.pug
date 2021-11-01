@@ -13,11 +13,14 @@
                 li(data-value='five').dropdown-menu__list-item Five
     h2 MASKED TEXT FIELD
     input(type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off").masked-text-field
-    h2 DATE DROPDOWN 
-    input(type="text" name="date-field__mini" id="el" placeholder="дд.мм.гггг" autocomplete="off").date-type
+    h2 DATE DROPDOWN
+    .date-dropdown
+        input(type="text" name="date-field__1" id="el2" placeholder="дд.мм.гггг" autocomplete="off").date-type
+        input(type="text" name="date-field__2" id="el3" placeholder="дд.мм.гггг" autocomplete="off").date-type
     h2 FILTER DATE DROPDOWN 
     form
-        input(type="text" id="el" name="date").subscription-text-field
-    h2 SUBSCRIPTION TEXT FIELD 
-    button(type="text").subscription-text-field Email
+        input(type="text" id="el-filter" name="date" placeholder="дд.мм.гггг" autocomplete="off").filter-date-dropdown
+    h2 SUBSCRIPTION TEXT FIELD
+    form.subscription
+        input(type="email", name="text-field", placeholder="Email").subscription-text-field
 

@@ -28,6 +28,11 @@
         grid-row-gap: 9px;
     }
 }
+.air-datepicker-cell {
+    &:hover {
+        transform: translateY(-4px);
+    }
+}
 .air-datepicker-cell.-focus- {
     background: linear-gradient(#6fcf97 0%, #66d2ea 100%);
     border-radius: 50%;
@@ -42,6 +47,7 @@
     border-radius: 50%;
     height: 40px;
     width: 40px;
+    transform: translateY(-4px);
 }
 .air-datepicker-cell.-selected-.-focus- {
     background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
@@ -105,6 +111,10 @@
         display: none;
     }
 }
+.air-datepicker-cell.-in-range- {
+    background: linear-gradient(45deg, rgba(188, 156, 255, 25%), rgba(139, 164, 249, 25%));
+    overflow-x: black;
+}
 // .air-datepicker {
 //     left: 0;
 //     opacity: 1;
@@ -159,6 +169,7 @@
     box-sizing: border-box;
     display: none;
     overflow: hidden;
+    z-index: 100;
 }
 .dropdown-menu__list {
     list-style-type: none;
@@ -208,35 +219,59 @@
 }
 
 // ---- DATE DROPDOWN ----
-.date-type {
-    @include text-field;
-    color: $Dark-shade-50;
-    text-transform: uppercase;
-    width: 150px;
-    &::-webkit-calendar-picker-indicator {
-        background: transparent;
-        width: 0;
-        height: 0;
+.date-dropdown {
+    display: flex;
+    justify-content: space-between;
+    max-width: 320px;
+    width: 100%;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: calc(100% - 60%);
+        left: 128px;
         border: solid $Dark-shade-50;
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 3px;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
+        pointer-events: none;
+        z-index: 10;
         transition: all 0.3s ease;
-        cursor: pointer;
     }
-    &:focus {
-        &::-webkit-calendar-picker-indicator {
-            transform: rotate(-135deg);
-            -webkit-transform: rotate(-135deg);
-        }
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% - 60%);
+        right: 13px;
+        border: solid $Dark-shade-50;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        pointer-events: none;
+        z-index: 10;
+        transition: all 0.3s ease;
     }
+}
+.date-type {
+    @include text-field;
+    color: $Dark-shade-50;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+// ---- FILTER DATE DROPDOWN ----
+
+.filter-date-dropdown {
+    @include text-field;
+    text-transform: uppercase;
 }
 
 // ---- SUBSCRIPTION TEXT FIELD ----
-.subscription-text-field {
-    @include text-field;
+.subscription {
     position: relative;
     &::after {
         content: "";
@@ -248,5 +283,9 @@
         background-image: url(./assets/images/arrow_forward.svg);
         background-repeat: no-repeat;
         z-index: 100;
+        pointer-events: none;
+    }
+    &-text-field {
+        @include text-field;
     }
 }
