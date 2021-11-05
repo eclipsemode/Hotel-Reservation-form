@@ -18,7 +18,7 @@ module.exports = {
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'assets/images/[name][ext][query]'
+        // assetModuleFilename: 'assets/images/[name][ext][query]'
     },
     plugins: [new HtmlWebpackPlugin({
         inject: 'body',
@@ -61,22 +61,18 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type: 'asset/resource',
-                // generator: {
-                //     // filename: 'assets/img/[name].[ext]',
-                //     filename: 'assets/img/[hash][ext][query]',
-                // },
+                generator: {
+                    // filename: 'assets/img/[name].[ext]',
+                    filename: 'assets/img/[hash][ext][query]',
+                },
             },
             {
-                test: /\.(ttf|woff|woff2|eot)$/i,
-                type: 'asset/inline',
-                use: [{
-                    loader: "file-loader",
-                    options: {
-                        name: "[name].[ext]",
-                        outputPath: "assets/fonts",
-                    }
-                }]
-            }
-        ],
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/fonts/[hash][ext][query]'
+                },
+            },
+        ]
     }
 };

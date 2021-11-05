@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="main.bundle.css" rel="stylesheet"></head>
   <body> 
-    <h1>Hello World!</h1>
 <div class="ui-kit__container">
+  <h1 style="color: brown;">UI KIT</h1>
   <h2>TEXT FIELD</h2>
   <input class="text" type="text" name="text-field" placeholder="Email">
   <h2>DROPDOWN</h2>
@@ -32,7 +32,7 @@
     <input class="date-type" type="text" name="date-field__1" id="el2" placeholder="дд.мм.гггг" autocomplete="off">
     <input class="date-type" type="text" name="date-field__2" id="el3" placeholder="дд.мм.гггг" autocomplete="off">
   </div>
-  <h2>FILTER DATE DROPDOWN </h2>
+  <h2>FILTER DATE DROPDOWN</h2>
   <form>
     <input class="filter-date-dropdown" type="text" id="el-filter" name="date" placeholder="дд.мм.гггг" autocomplete="off">
   </form>
@@ -40,6 +40,163 @@
   <form class="subscription">
     <input class="subscription-text-field" type="email" name="text-field" placeholder="Email">
   </form>
+  <h2>DROPDOWN (WITH ITEM COUNTER)</h2>
+  <div class="counter">
+    <button class="counter__btn" type="submit" data-direction="minus">-</button>
+    <input class="counter__value" type="text" value="0">
+    <button class="counter__btn" type="submit" data-direction="plus">+</button>
+  </div>
+  <h2>CALENDAR</h2>
+  <div class="calendar">
+    <div class="calendar_month">
+      <div class="calendar_month__left"></div>
+      <div class="calendar_month__date"> 
+        <h2>МАЙ 2021</h2>
+      </div>
+      <div class="calendar_month__right"></div>
+    </div>
+    <div class="calendar_weekdays">
+      <div>Пн</div>
+      <div>Вт</div>
+      <div>Ср</div>
+      <div>Чт</div>
+      <div>Пт</div>
+      <div>Сб</div>
+      <div>Вс</div>
+    </div>
+    <div class="calendar_days"> 
+      <div class="calendar_days__prev-date"> 
+        <p>26</p>
+      </div>
+      <div class="calendar_days__prev-date"> 
+        <p>27</p>
+      </div>
+      <div class="calendar_days__prev-date"> 
+        <p>28</p>
+      </div>
+      <div class="calendar_days__prev-date"> 
+        <p>29</p>
+      </div>
+      <div class="calendar_days__prev-date"> 
+        <p>30</p>
+      </div>
+      <div> 
+        <p>1</p>
+      </div>
+      <div> 
+        <p>2</p>
+      </div>
+      <div> 
+        <p>3</p>
+      </div>
+      <div> 
+        <p>4</p>
+      </div>
+      <div> 
+        <p>5</p>
+      </div>
+      <div> 
+        <p>6</p>
+      </div>
+      <div> 
+        <p>7</p>
+      </div>
+      <div> 
+        <p>8</p>
+      </div>
+      <div> 
+        <p>9</p>
+      </div>
+      <div> 
+        <p>10</p>
+      </div>
+      <div> 
+        <p>11</p>
+      </div>
+      <div> 
+        <p>12</p>
+      </div>
+      <div> 
+        <p>13</p>
+      </div>
+      <div> 
+        <p>14</p>
+      </div>
+      <div> 
+        <p>15</p>
+      </div>
+      <div> 
+        <p>16</p>
+      </div>
+      <div> 
+        <p>17</p>
+      </div>
+      <div> 
+        <p>18</p>
+      </div>
+      <div> 
+        <p>19</p>
+      </div>
+      <div> 
+        <p>20</p>
+      </div>
+      <div> 
+        <p>21</p>
+      </div>
+      <div> 
+        <p>22</p>
+      </div>
+      <div> 
+        <p>23</p>
+      </div>
+      <div> 
+        <p>24</p>
+      </div>
+      <div> 
+        <p>25</p>
+      </div>
+      <div> 
+        <p>26</p>
+      </div>
+      <div> 
+        <p>27</p>
+      </div>
+      <div> 
+        <p>28</p>
+      </div>
+      <div class="calendar_days__today"> 
+        <p>29</p>
+      </div>
+      <div> 
+        <p>30</p>
+      </div>
+      <div> 
+        <p>31</p>
+      </div>
+      <div class="calendar_days__next-date"> 
+        <p>1</p>
+      </div>
+      <div class="calendar_days__next-date"> 
+        <p>2</p>
+      </div>
+      <div class="calendar_days__next-date"> 
+        <p>3</p>
+      </div>
+      <div class="calendar_days__next-date"> 
+        <p>4</p>
+      </div>
+      <div class="calendar_days__next-date"> 
+        <p>5</p>
+      </div>
+      <div class="calendar_days__next-date"> 
+        <p>6</p>
+      </div>
+    </div>
+    <div class="calendar_buttons"> 
+      <button class="calendar_buttons__clear" type="submit">Очистить</button>
+      <button class="calendar_buttons__submit" type="submit">Применить</button>
+    </div>
+  </div>
 </div>
   <script defer src="main.bundle.js"></script></body>
 </html>

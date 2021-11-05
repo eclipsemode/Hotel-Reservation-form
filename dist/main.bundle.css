@@ -1,7 +1,3 @@
-/*!*************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style/style.scss ***!
-  \*************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
 /*!********************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!../node_modules/air-datepicker/air-datepicker.css ***!
   \********************************************************************************************************************************************/
@@ -1092,9 +1088,9 @@ template {
   display: none;
 }
 
-/*!*****************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style/style.scss (1) ***!
-  \*****************************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style/style.scss ***!
+  \*************************************************************************************************************/
 html {
   font-family: "Montserrat", sans-serif;
 }
@@ -1129,6 +1125,48 @@ h3 {
   color: #1f2041;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/fonts/079ca05d3ded9bc107ab.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/fonts/4a799b111f608dbf4f89.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/fonts/1944c8d1a118759a4435.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/fonts/62a749ca2820713ebbf8.ttf) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/fonts/e2d60bc49517598c0ce8.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/fonts/3cd786652b8a2e9d41f2.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(assets/fonts/fa8441f345d83a0bc4ec.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
 .air-datepicker {
   font-family: "Montserrat", sans-serif;
   width: 320px;
@@ -1212,7 +1250,7 @@ h3 {
   left: 20px;
   height: 20px;
   width: 20px;
-  background-image: url(assets/images/arrow_forward.svg);
+  background-image: url(assets/img/eec7abcd8c598f229ba3.svg);
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
@@ -1225,7 +1263,7 @@ h3 {
   right: 20px;
   height: 20px;
   width: 20px;
-  background-image: url(assets/images/arrow_forward.svg);
+  background-image: url(assets/img/eec7abcd8c598f229ba3.svg);
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
@@ -1488,7 +1526,7 @@ h3 {
   right: 13px;
   width: 17px;
   height: 17px;
-  background-image: url(assets/images/arrow_forward.svg);
+  background-image: url(assets/img/eec7abcd8c598f229ba3.svg);
   background-repeat: no-repeat;
   z-index: 100;
   pointer-events: none;
@@ -1511,4 +1549,111 @@ h3 {
 .subscription-text-field:focus, .subscription-text-field:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.calendar {
+  width: 320px;
+  height: 369px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+}
+.calendar_month {
+  width: 100%;
+  font-size: 19px;
+  line-height: 23.16px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.calendar_month__left {
+  width: 24px;
+  height: 24px;
+  background-image: url(assets/img/eec7abcd8c598f229ba3.svg);
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+  margin-top: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.calendar_month__right {
+  width: 24px;
+  height: 24px;
+  background-image: url(assets/img/eec7abcd8c598f229ba3.svg);
+  background-repeat: no-repeat;
+  margin-top: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.calendar_weekdays {
+  font-size: 12px;
+  line-height: 14.63px;
+  color: #bc9cff;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+}
+.calendar_days {
+  font-size: 12px;
+  line-height: 14.63px;
+  color: rgba(31, 32, 65, 0.5);
+  font-weight: 400;
+  width: 92%;
+  height: 215px;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+.calendar_days__prev-date {
+  color: rgba(31, 32, 65, 0.25);
+}
+.calendar_days__next-date {
+  color: rgba(31, 32, 65, 0.25);
+}
+.calendar_days > div {
+  height: 40px;
+  display: inline-block;
+}
+.calendar_days > div > p {
+  cursor: pointer;
+}
+.calendar_days > div:not(.calendar_days__today):not(.calendar_days__prev-date):not(.calendar_days__next-date) > p:hover {
+  opacity: 0.5;
+}
+.calendar_days__today {
+  background: linear-gradient(#6fcf97 0%, #66d2ea 100%);
+  border-radius: 22px;
+  color: white;
+  font-weight: 700;
+}
+.calendar button {
+  border-style: none;
+  background: none;
+  color: #bc9cff;
+  font-size: 12px;
+  line-height: 14.63px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.calendar button:hover {
+  opacity: 0.5;
+}
+.calendar_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 30px;
 }

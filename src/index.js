@@ -3,42 +3,44 @@ import 'air-datepicker/air-datepicker.css';
 import "./style/style.scss";
 import ArrowSvg from './style/assets/images/arrow_forward.svg';
 
-// AIR DATEPICKER
-let selectItem = {
-    content: 'Применить',
-    className: 'custom-button-classname',
-    onClick: (dp) => {
-        let date = new onSelect();
-        dp.selectDate(date);
-        dp.setViewDate(date);
-    },
-}
-new AirDatepicker('#el', {
-    buttons: ['clear', selectItem],
-    multipleDatesSeparator: ' - ',
-    classes: 'dp-style',
-    minDate: new Date(),
-})
-new AirDatepicker('#el2', {
-    buttons: ['clear', selectItem],
-    multipleDatesSeparator: ' - ',
-    classes: 'dp-style',
-    minDate: new Date(),
-})
-new AirDatepicker('#el3', {
-    buttons: ['clear', selectItem],
-    multipleDatesSeparator: ' - ',
-    classes: 'dp-style',
-    minDate: new Date(),
-})
-new AirDatepicker('#el-filter', {
-    buttons: ['clear', selectItem],
-    multipleDatesSeparator: ' - ',
-    classes: 'dp-style',
-    minDate: new Date(),
-    multipleDates: 2,
-    range: true,
-})
+
+
+// // AIR DATEPICKER
+// let selectItem = {
+//     content: 'Применить',
+//     className: 'custom-button-classname',
+//     onClick: (dp) => {
+//         let date = new onSelect();
+//         dp.selectDate(date);
+//         dp.setViewDate(date);
+//     },
+// }
+// new AirDatepicker('#el', {
+//     buttons: ['clear', selectItem],
+//     multipleDatesSeparator: ' - ',
+//     classes: 'dp-style',
+//     minDate: new Date(),
+// })
+// new AirDatepicker('#el2', {
+//     buttons: ['clear', selectItem],
+//     multipleDatesSeparator: ' - ',
+//     classes: 'dp-style',
+//     minDate: new Date(),
+// })
+// new AirDatepicker('#el3', {
+//     buttons: ['clear', selectItem],
+//     multipleDatesSeparator: ' - ',
+//     classes: 'dp-style',
+//     minDate: new Date(),
+// })
+// new AirDatepicker('#el-filter', {
+//     buttons: ['clear', selectItem],
+//     multipleDatesSeparator: ' - ',
+//     classes: 'dp-style',
+//     minDate: new Date(),
+//     multipleDates: 2,
+//     range: true,
+// })
 
 
 
@@ -56,3 +58,26 @@ document.querySelectorAll('.dropdown-menu__list-item').forEach(function (listIte
         document.querySelector('.dropdown').classList.remove('hidden');
     })
 });
+
+// ITEM COUNTER
+const buttons = document.querySelectorAll(".counter__btn");
+buttons.forEach(btn => {
+    btn.addEventListener("click", function () {
+        const direction = this.dataset.direction;
+
+        const inp = this.parentElement.querySelector(".counter__value");
+
+        const currentValue = +inp.value;
+
+        let newValue;
+
+        if (direction === "plus") {
+            newValue = currentValue + 1;
+        } else {
+            newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
+        }
+
+        inp.value = newValue;
+    })
+})
+buttons();
