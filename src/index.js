@@ -42,21 +42,21 @@ import ArrowSvg from './style/assets/images/arrow_forward.svg';
 //     range: true,
 // })
 
-
-
-// CLICK ON BUTTON DROPDOWN. OPEN / CLOSE THE SELECT
-document.querySelector('.dropdown-type').addEventListener('click', () => {
-    document.querySelector('.dropdown').classList.toggle('hidden');
-    document.querySelector('.dropdown-type').classList.add('dropdown-type--active');
-});
-
-// ITEM SELECTION FROM LIST. MEMORISE SELECTED ITEM. CLOSE DROPDOWN
-document.querySelectorAll('.dropdown-menu__list-item').forEach(function (listItem) {
-    listItem.addEventListener('click', function () {
-        document.querySelector('.dropdown-type').innerText = this.innerText;
-        document.querySelector('.dropdown-type').focus();
-        document.querySelector('.dropdown').classList.remove('hidden');
-    })
+// CLICK ON BUTTON DROPDOWN. OPEN / CLOSE THE SELECT / ITEM SELECTION FROM LIST. MEMORISE SELECTED ITEM. CLOSE DROPDOWN
+document.addEventListener('click', (event) => {
+    if (event.target.closest('.dropdown-type')) {
+        document.querySelector('.dropdown').classList.toggle('active');
+    } else if (!event.target.closest('.dropdown')) {
+        document.querySelector('.dropdown').classList.remove('active');
+    } else if (event.target.closest('.dropdown-menu__list-item')) {
+        document.querySelectorAll('.dropdown-menu__list-item').forEach(function (listItem) {
+            listItem.addEventListener('click', function () {
+                document.querySelector('.dropdown-type').innerText = this.innerText;
+                document.querySelector('.dropdown-type').focus();
+                document.querySelector('.dropdown').classList.remove('active');
+            })
+        });
+    }
 });
 
 // ITEM COUNTER
@@ -80,4 +80,66 @@ buttons.forEach(btn => {
         inp.value = newValue;
     })
 })
-buttons();
+
+
+const date = new Date();
+
+date.setDate(1);
+
+const monthDays = document.querySelector('.calendar_days');
+
+const lastDay = new Date(date.getFullYear(),
+    date.getMonth() + 1, 0).getDate();
+
+const prevLastDay = new Date(date.getFullYear(),
+    date.getMonth(), 0).getDate();
+
+const firstDayIndex = date.getDate() - 1;
+
+const lastDayIndex = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1, 0).getDay();
+
+const nextDays = 7 - lastDayIndex;
+
+const months = [
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабрь"
+];
+
+document.querySelector('.calendar_month__date h2').innerHTML = months[date.getMonth()];
+
+document.querySelector('.calendar_month__date span').innerHTML = date.getFullYear();
+
+let days = "";
+
+for (let x = firstDayIndex; x > 0; x--) {
+    days += `<div class="calendar_days__prev-date "><p>${prevLastDay - x + 1}</p></div>`;
+}
+
+for (let i = 1; i <= lastDay; i++) {
+    if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
+        days += `<div class="calendar_days__today"><p>${i}</p></div>`;
+    } else {
+        days += `<div><p>${i}</p></div>`;
+    }
+}
+
+for (let j = 1; j <= nextDays; j++) {
+    days += `<div class="calendar_days__next-date"><p>${j}</p></div>`;
+    monthDays.innerHTML = days;
+}
+
+document.querySelector(".calendar_month__left").addEventListener('click', () => {
+
+})

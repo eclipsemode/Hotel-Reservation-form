@@ -25,8 +25,13 @@
             margin-left: 10px;
             cursor: pointer;
         }
-        // &__date {
-        // }
+        &__date {
+            display: flex;
+            justify-content: space-between;
+            width: 125px;
+            align-items: center;
+            color: $Dark-shade-100;
+        }
         &__right {
             width: 24px;
             height: 24px;
@@ -62,6 +67,7 @@
         grid-template-rows: repeat(5, 1fr);
         justify-content: space-between;
         align-items: center;
+
         &__prev-date {
             color: $Dark-shade-25;
         }

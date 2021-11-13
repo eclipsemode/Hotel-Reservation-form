@@ -1390,15 +1390,15 @@ h3 {
   border-bottom: 1px solid rgba(31, 32, 65, 0.25);
 }
 
-.hidden .dropdown-type {
+.active .dropdown-type {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.hidden .dropdown-type::after {
+.active .dropdown-type::after {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }
-.hidden .dropdown-menu {
+.active .dropdown-menu {
   display: block;
   border-top: 0;
   border-top-left-radius: 0;
@@ -1408,7 +1408,7 @@ h3 {
   left: 0;
 }
 
-.dropdown.hidden {
+.dropdown.active {
   position: relative;
 }
 
@@ -1579,6 +1579,13 @@ h3 {
   margin-top: 5px;
   margin-left: 10px;
   cursor: pointer;
+}
+.calendar_month__date {
+  display: flex;
+  justify-content: space-between;
+  width: 125px;
+  align-items: center;
+  color: #1f2041;
 }
 .calendar_month__right {
   width: 24px;

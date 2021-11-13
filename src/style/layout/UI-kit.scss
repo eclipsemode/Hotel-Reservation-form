@@ -187,7 +187,7 @@
         border-bottom: 1px solid $Dark-shade-25;
     }
 }
-.hidden {
+.active {
     .dropdown-type {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -207,7 +207,7 @@
         left: 0;
     }
 }
-.dropdown.hidden {
+.dropdown.active {
     position: relative;
 }
 
