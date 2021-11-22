@@ -60,6 +60,12 @@ document.querySelectorAll('.dropdown-guest__list-button').forEach(element => {
             document.querySelector('.dropdown-type').focus();
         } else if (event.target.closest('[name="clear"]')) {
             document.querySelector('.dropdown-type').textContent = dropText;
+            document.querySelector('[name="children"]').value = 0;
+            document.querySelector('[name="children"]').previousElementSibling.style = 'opacity: 0.5;';
+            document.querySelector('[name="adults"]').value = 0;
+            document.querySelector('[name="adults"]').previousElementSibling.style = 'opacity: 0.5;';
+            document.querySelector('[name="babies"]').value = 0;
+            document.querySelector('[name="babies"]').previousElementSibling.style = 'opacity: 0.5;';
         }
 
         if (document.querySelector('.dropdown-type').textContent == 0) {
