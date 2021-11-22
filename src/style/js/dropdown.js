@@ -10,6 +10,7 @@ document.addEventListener('click', (event) => {
         document.querySelector('[name="clear"]').style = 'opacity: 0; pointer-events: none;';
     } else {
         document.querySelector('[name="clear"]').style = 'opacity: 1; pointer-events: auto;';
+        document.querySelector('[name="clear"]').setAttribute('style', ':hover {opacity: 0.5;}')
     }
 });
 
