@@ -5,6 +5,12 @@ document.addEventListener('click', (event) => {
     } else if (!event.target.closest('.dropdown')) {
         document.querySelector('.dropdown').classList.remove('active');
     }
+
+    if (document.querySelector('[name="children"]').value == 0 && document.querySelector('[name="adults"]').value == 0 && document.querySelector('[name="babies"]').value == 0) {
+        document.querySelector('[name="clear"]').style = 'opacity: 0; pointer-events: none;';
+    } else {
+        document.querySelector('[name="clear"]').style = 'opacity: 1; pointer-events: auto;';
+    }
 });
 
 // ITEM COUNTER
@@ -80,5 +86,7 @@ document.querySelectorAll('.dropdown-guest__list-button').forEach(element => {
         } else if (document.querySelector('.dropdown-type').textContent > 4) {
             document.querySelector('.dropdown-type').textContent += ' Гостей';
         }
+
+
     })
 });
