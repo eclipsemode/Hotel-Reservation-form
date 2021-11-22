@@ -4,15 +4,13 @@
     input(type="text", name="text-field", placeholder="Email").text
 
     h2 DROPDOWN
-    .dropdown
-        button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
-        .dropdown-menu
-            ul.dropdown-menu__list
-                li(data-value='first').dropdown-menu__list-item First
-                li(data-value='second').dropdown-menu__list-item Second
-                li(data-value='third').dropdown-menu__list-item Third
-                li(data-value='fourth').dropdown-menu__list-item Fourth
-                li(data-value='five').dropdown-menu__list-item Five
+    //- .dropdown
+    //-     button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
+    //-     .dropdown-menu
+    //-         ul.dropdown-menu__list
+    //-             li(data-value='adults').dropdown-menu__list-item Взрослые
+    //-             li(data-value='children').dropdown-menu__list-item Дети
+    //-             li(data-value='babies').dropdown-menu__list-item Младенцы
                 
     h2 MASKED TEXT FIELD
     input(type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off").masked-text-field
@@ -27,10 +25,33 @@
     form.subscription
         input(type="email", name="text-field", placeholder="Email").subscription-text-field
     h2 DROPDOWN (WITH ITEM COUNTER)
-    .counter
-        button.counter__btn(type='submit' data-direction="minus") -
-        input.counter__value(type="text" value="0")
-        button.counter__btn(type='submit' data-direction="plus") +
+    .dropdown
+        button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
+        .dropdown-guest(hidden)
+            ul.dropdown-guest__list
+                li(data-value='adults').dropdown-guest__list-item Взрослые
+                    .counter
+                        button.counter__btn(type='submit' data-direction="minus") -
+                        input.counter__value(type="number" value="0" max="9" name='adults')
+                        button.counter__btn(type='submit' data-direction="plus") +
+                li(data-value='children').dropdown-guest__list-item Дети
+                    .counter
+                        button.counter__btn(type='submit' data-direction="minus") -
+                        input.counter__value(type="number" value="0" max="9" name='children')
+                        button.counter__btn(type='submit' data-direction="plus") +
+                li(data-value='babies').dropdown-guest__list-item Младенцы
+                    .counter
+                        button.counter__btn(type='submit' data-direction="minus") -
+                        input.counter__value(type="number" value="0" max="9" name='babies')
+                        button.counter__btn(type='submit' data-direction="plus") +
+                .dropdown-guest__list-button
+                    button(type="submit" name="clear").dropdown-guest__list-button-item Очистить
+                    button(type="submit" name="submit").dropdown-guest__list-button-item Применить
+
+    //- .counter
+    //-     button.counter__btn(type='submit' data-direction="minus") -
+    //-     input.counter__value(type="number" value="0" max="9")
+    //-     button.counter__btn(type='submit' data-direction="plus") +
     h2 CALENDAR
     .calendar
         .calendar_month
@@ -48,91 +69,8 @@
             div Сб
             div Вс
         .calendar_days 
-            //- .calendar_days__prev-date 
-            //-     p 26
-            //- .calendar_days__prev-date 
-            //-     p 27
-            //- .calendar_days__prev-date 
-            //-     p 28
-            //- .calendar_days__prev-date 
-            //-     p 29
-            //- .calendar_days__prev-date 
-            //-     p 30
-            //- div 
-            //-     p 1
-            //- div 
-            //-     p 2
-            //- div 
-            //-     p 3
-            //- div 
-            //-     p 4
-            //- div 
-            //-     p 5
-            //- div 
-            //-     p 6
-            //- div 
-            //-     p 7
-            //- div 
-            //-     p 8
-            //- div 
-            //-     p 9
-            //- div 
-            //-     p 10
-            //- div 
-            //-     p 11
-            //- div 
-            //-     p 12
-            //- div 
-            //-     p 13
-            //- div 
-            //-     p 14
-            //- div 
-            //-     p 15
-            //- div 
-            //-     p 16
-            //- div 
-            //-     p 17
-            //- div 
-            //-     p 18
-            //- div 
-            //-     p 19
-            //- div 
-            //-     p 20
-            //- div 
-            //-     p 21
-            //- div 
-            //-     p 22
-            //- div 
-            //-     p 23
-            //- div 
-            //-     p 24
-            //- div 
-            //-     p 25
-            //- div 
-            //-     p 26
-            //- div 
-            //-     p 27
-            //- div 
-            //-     p 28
-            //- div.calendar_days__today 
-            //-     p 29
-            //- div 
-            //-     p 30
-            //- div 
-            //-     p 31
-            //- .calendar_days__next-date 
-            //-     p 1
-            //- .calendar_days__next-date 
-            //-     p 2
-            //- .calendar_days__next-date 
-            //-     p 3
-            //- .calendar_days__next-date 
-            //-     p 4
-            //- .calendar_days__next-date 
-            //-     p 5
-            //- .calendar_days__next-date 
-            //-     p 6
         .calendar_buttons 
             button.calendar_buttons__clear(type='submit') Очистить
             button.calendar_buttons__submit(type='submit') Применить
         
+    h2(style='cursor: pointer;' class='test') TEST

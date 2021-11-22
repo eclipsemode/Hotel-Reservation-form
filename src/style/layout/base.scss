@@ -1,4 +1,9 @@
 /// FONTS AND STYLES
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 html {
     font-family: "Montserrat", sans-serif;
 }

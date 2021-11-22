@@ -13,18 +13,6 @@
   <h2>TEXT FIELD</h2>
   <input class="text" type="text" name="text-field" placeholder="Email">
   <h2>DROPDOWN</h2>
-  <div class="dropdown">
-    <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
-    <div class="dropdown-menu">
-      <ul class="dropdown-menu__list">
-        <li class="dropdown-menu__list-item" data-value="first">First</li>
-        <li class="dropdown-menu__list-item" data-value="second">Second</li>
-        <li class="dropdown-menu__list-item" data-value="third">Third</li>
-        <li class="dropdown-menu__list-item" data-value="fourth">Fourth</li>
-        <li class="dropdown-menu__list-item" data-value="five">Five</li>
-      </ul>
-    </div>
-  </div>
   <h2>MASKED TEXT FIELD</h2>
   <input class="masked-text-field" type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off">
   <h2>DATE DROPDOWN</h2>
@@ -41,10 +29,37 @@
     <input class="subscription-text-field" type="email" name="text-field" placeholder="Email">
   </form>
   <h2>DROPDOWN (WITH ITEM COUNTER)</h2>
-  <div class="counter">
-    <button class="counter__btn" type="submit" data-direction="minus">-</button>
-    <input class="counter__value" type="text" value="0">
-    <button class="counter__btn" type="submit" data-direction="plus">+</button>
+  <div class="dropdown">
+    <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
+    <div class="dropdown-guest" hidden>
+      <ul class="dropdown-guest__list">
+        <li class="dropdown-guest__list-item" data-value="adults">Взрослые
+          <div class="counter">
+            <button class="counter__btn" type="submit" data-direction="minus">-</button>
+            <input class="counter__value" type="number" value="0" max="9" name="adults">
+            <button class="counter__btn" type="submit" data-direction="plus">+</button>
+          </div>
+        </li>
+        <li class="dropdown-guest__list-item" data-value="children">Дети
+          <div class="counter">
+            <button class="counter__btn" type="submit" data-direction="minus">-</button>
+            <input class="counter__value" type="number" value="0" max="9" name="children">
+            <button class="counter__btn" type="submit" data-direction="plus">+</button>
+          </div>
+        </li>
+        <li class="dropdown-guest__list-item" data-value="babies">Младенцы
+          <div class="counter">
+            <button class="counter__btn" type="submit" data-direction="minus">-</button>
+            <input class="counter__value" type="number" value="0" max="9" name="babies">
+            <button class="counter__btn" type="submit" data-direction="plus">+</button>
+          </div>
+        </li>
+        <div class="dropdown-guest__list-button">
+          <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
+          <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+        </div>
+      </ul>
+    </div>
   </div>
   <h2>CALENDAR</h2>
   <div class="calendar">
@@ -70,6 +85,7 @@
       <button class="calendar_buttons__submit" type="submit">Применить</button>
     </div>
   </div>
+  <h2 class="test" style="cursor: pointer;">TEST</h2>
 </div>
   <script defer src="main.bundle.js"></script></body>
 </html>
