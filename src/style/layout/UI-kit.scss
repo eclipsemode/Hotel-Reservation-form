@@ -133,79 +133,15 @@
     position: relative;
 }
 
-// ---- DROPDOWN ----
-// .dropdown-type {
-//     @include text-field;
-//     display: block;
-//     cursor: pointer;
-//     position: relative;
-//     padding: 0 35px 0 15px;
-//     &::after {
-//         content: "";
-//         position: absolute;
-//         top: calc(100% - 60%);
-//         right: 13px;
-//         border: solid $Dark-shade-50;
-//         border-width: 0 3px 3px 0;
-//         display: inline-block;
-//         padding: 3px;
-//         transform: rotate(45deg);
-//         -webkit-transform: rotate(45deg);
-//         pointer-events: none;
-//         z-index: 10;
-//         transition: all 0.3s ease;
-//     }
-//     &:focus,
-//     &--active {
-//         border-color: $Dark-shade-75;
-//     }
-// }
-// .dropdown-menu {
-//     border: 1px solid $Dark-shade-50;
-//     border-radius: 4px;
-//     width: 100%;
-//     color: $Dark-shade-75;
-//     background: #fff;
-//     box-sizing: border-box;
-//     display: none;
-//     overflow: hidden;
-//     z-index: 100;
-// }
-// .dropdown-menu__list {
-//     list-style-type: none;
-//     padding-left: 0;
-//     margin: 0;
-// }
-// .dropdown-menu__list-item {
-//     padding: 0 15px;
-//     line-height: 36px;
-//     cursor: pointer;
-//     &:hover {
-//         background: $Dark-shade-5;
-//     }
-// }
-// .active {
-// .dropdown-type {
-//     border-bottom-left-radius: 0;
-//     border-bottom-right-radius: 0;
-//     &::after {
-//         border-color: $Dark-shade-75;
-//     }
-//     }
-//     .dropdown-menu {
-//         display: block;
-//         border-top: 0;
-//         border-top-left-radius: 0;
-//         border-top-right-radius: 0;
+// ---- DROPWDOWN ----
 
-//         position: absolute;
-//         top: 44px;
-//         left: 0;
-//     }
-// }
-// .dropdown.active {
-//     position: relative;
-// }
+.drop {
+    &-btn {
+        cursor: pointer;
+        @include text-field;
+        @include arrow-after;
+    }
+}
 
 // ---- DROPWDOWN-GUEST ----
 
@@ -237,21 +173,7 @@
     position: relative;
     padding: 0 35px 0 15px;
     color: $Dark-shade-75;
-    &::after {
-        content: "";
-        position: absolute;
-        top: calc(100% - 60%);
-        right: 13px;
-        border: solid $Dark-shade-50;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        pointer-events: none;
-        z-index: 10;
-        transition: all 0.3s ease;
-    }
+    @include arrow-after;
     &:focus,
     &--active {
         border-color: $Dark-shade-75;
@@ -316,49 +238,36 @@
     text-transform: uppercase;
 }
 
-// ---- DATE DROPDOWN ----
+// ---- DATE TYPE ----
+
 .date-dropdown {
     display: flex;
     justify-content: space-between;
-    max-width: 320px;
     width: 100%;
-    position: relative;
-    &::before {
-        content: "";
-        position: absolute;
-        top: calc(100% - 60%);
-        left: 128px;
-        border: solid $Dark-shade-50;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        pointer-events: none;
-        z-index: 10;
-        transition: all 0.3s ease;
+    max-width: 320px;
+    & button {
+        @include arrow-after;
+        @include text-field;
+        width: 150px;
+        padding: 0;
+        margin: 0;
+        &:focus {
+            border-color: $Dark-shade-50;
+        }
+        & .date-type {
+            @include text-field;
+            width: 100%;
+            height: 100%;
+            text-transform: uppercase;
+            border: transparent;
+            &:focus {
+                border: none;
+            }
+            &:hover {
+                border: none;
+            }
+        }
     }
-    &::after {
-        content: "";
-        position: absolute;
-        top: calc(100% - 60%);
-        right: 13px;
-        border: solid $Dark-shade-50;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 3px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        pointer-events: none;
-        z-index: 10;
-        transition: all 0.3s ease;
-    }
-}
-.date-type {
-    @include text-field;
-    color: $Dark-shade-50;
-    text-transform: uppercase;
-    width: 150px;
 }
 
 // ---- FILTER DATE DROPDOWN ----
@@ -546,9 +455,16 @@
     width: 20px;
     color: $Dark-shade-100;
     background: none;
+    font-weight: 700;
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
     }
+}
+
+// ---- CHECKBOX ----
+
+.checkbox {
+    @include checkbox;
 }

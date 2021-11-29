@@ -13,12 +13,19 @@
   <h2>TEXT FIELD</h2>
   <input class="text" type="text" name="text-field" placeholder="Email">
   <h2>DROPDOWN</h2>
+  <div class="drop">
+    <button class="drop-btn" type="submit">Сколько гостей</button>
+  </div>
   <h2>MASKED TEXT FIELD</h2>
   <input class="masked-text-field" type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off">
   <h2>DATE DROPDOWN</h2>
   <div class="date-dropdown">
-    <input class="date-type" type="text" name="date-field__1" id="el2" placeholder="дд.мм.гггг" autocomplete="off">
-    <input class="date-type" type="text" name="date-field__2" id="el3" placeholder="дд.мм.гггг" autocomplete="off">
+    <button class="date" type="submit"> 
+      <input class="date-type" type="text" name="date-field__1" id="el2" placeholder="дд.мм.гггг" autocomplete="off">
+    </button>
+    <button class="date" type="submit">
+      <input class="date-type" type="text" name="date-field__2" id="el3" placeholder="дд.мм.гггг" autocomplete="off">
+    </button>
   </div>
   <h2>FILTER DATE DROPDOWN</h2>
   <form>
@@ -85,7 +92,27 @@
       <button class="calendar_buttons__submit" type="submit">Применить</button>
     </div>
   </div>
-  <h2 class="test" style="cursor: pointer;">TEST</h2>
+  <h2>CHECKBOX</h2>
+  <form class="checkbox">
+    <label class="checkbox__label">
+      <input class="checkbox__label-input" type="checkbox" checked>Завтрак
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__label-input" type="checkbox">Письменный стол
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__label-input" type="checkbox">Стул для кормления
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__label-input" type="checkbox">Кроватка
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__label-input" type="checkbox">Телевизор
+    </label>
+    <label class="checkbox__label">
+      <input class="checkbox__label-input" type="checkbox">Шампунь                                                
+    </label>
+  </form>
 </div>
   <script defer src="main.bundle.js"></script></body>
 </html>

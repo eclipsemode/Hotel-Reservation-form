@@ -4,20 +4,16 @@
     input(type="text", name="text-field", placeholder="Email").text
 
     h2 DROPDOWN
-    //- .dropdown
-    //-     button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
-    //-     .dropdown-menu
-    //-         ul.dropdown-menu__list
-    //-             li(data-value='adults').dropdown-menu__list-item Взрослые
-    //-             li(data-value='children').dropdown-menu__list-item Дети
-    //-             li(data-value='babies').dropdown-menu__list-item Младенцы
-                
+    .drop
+        button(type="submit").drop-btn Сколько гостей
     h2 MASKED TEXT FIELD
     input(type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off").masked-text-field
     h2 DATE DROPDOWN
     .date-dropdown
-        input(type="text" name="date-field__1" id="el2" placeholder="дд.мм.гггг" autocomplete="off").date-type
-        input(type="text" name="date-field__2" id="el3" placeholder="дд.мм.гггг" autocomplete="off").date-type
+        button(type='submit').date 
+            input(type="text" name="date-field__1" id="el2" placeholder="дд.мм.гггг" autocomplete="off").date-type 
+        button(type='submit').date
+            input(type="text" name="date-field__2" id="el3" placeholder="дд.мм.гггг" autocomplete="off").date-type
     h2 FILTER DATE DROPDOWN
     form
         input(type="text" id="el-filter" name="date" placeholder="дд.мм.гггг" autocomplete="off").filter-date-dropdown
@@ -72,5 +68,23 @@
         .calendar_buttons 
             button.calendar_buttons__clear(type='submit') Очистить
             button.calendar_buttons__submit(type='submit') Применить
-        
-    h2(style='cursor: pointer;' class='test') TEST
+    h2 CHECKBOX
+    form.checkbox
+        label.checkbox__label
+            input(type='checkbox' checked).checkbox__label-input
+            | Завтрак
+        label.checkbox__label
+            input(type='checkbox').checkbox__label-input
+            | Письменный стол
+        label.checkbox__label
+            input(type='checkbox').checkbox__label-input
+            | Стул для кормления
+        label.checkbox__label
+            input(type='checkbox').checkbox__label-input
+            | Кроватка
+        label.checkbox__label
+            input(type='checkbox').checkbox__label-input
+            | Телевизор
+        label.checkbox__label
+            input(type='checkbox').checkbox__label-input
+            | Шампунь                                                

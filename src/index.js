@@ -1,9 +1,15 @@
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
 import "./style/style.scss";
+
 import ArrowSvg from './style/assets/images/arrow_forward.svg';
+import checkSvg from './style/assets/images/check.svg';
+import locationSvg from './style/assets/images/location.svg';
+import comfortSvg from './style/assets/images/comfort.svg';
+
 import calendar from './style/js/calendar';
 import dropdown from './style/js/dropdown';
+import arrowAfter from './style/js/arrow-after';
 // import { render } from 'pug';
 
 

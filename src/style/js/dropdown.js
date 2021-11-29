@@ -4,6 +4,8 @@ document.addEventListener('click', (event) => {
         document.querySelector('.dropdown').classList.toggle('active');
     } else if (!event.target.closest('.dropdown')) {
         document.querySelector('.dropdown').classList.remove('active');
+    } else if (document.querySelector('.dropdown').classList.contains('active')) {
+        document.querySelector('.dropdown-type').focus();
     }
 
     if (document.querySelector('[name="children"]').value == 0 && document.querySelector('[name="adults"]').value == 0 && document.querySelector('[name="babies"]').value == 0) {
@@ -17,22 +19,19 @@ document.addEventListener('click', (event) => {
 // ITEM COUNTER
 
 const buttons = document.querySelectorAll(".counter__btn");
-const sumArr = [+document.querySelector('[name="adults"]').value, +document.querySelector('[name="children"]').value, +document.querySelector('[name="babies"]').value];;
+const sumArr = [+document.querySelector('[name="adults"]').value, +document.querySelector('[name="children"]').value, +document.querySelector('[name="babies"]').value];
 
 buttons.forEach(btn => {
     btn.addEventListener("click", function (event) {
         if (event.target.closest('.dropdown')) {
             document.querySelector('.dropdown-type').focus();
         }
-        const direction = this.dataset.direction;
 
         const inp = this.parentElement.querySelector(".counter__value");
-
         const currentValue = +inp.value;
-
         let newValue;
 
-        if (direction === "plus") {
+        if (this.dataset.direction === "plus") {
             newValue = currentValue + 1;
         } else {
             newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
@@ -80,14 +79,12 @@ document.querySelectorAll('.dropdown-guest__list-button').forEach(element => {
 
         if (document.querySelector('.dropdown-type').textContent == 0) {
             document.querySelector('.dropdown-type').textContent = dropText;
-        } else if (document.querySelector('.dropdown-type').textContent == 1) {
+        } else if (document.querySelector('.dropdown-type').textContent.slice(-1) == 1) {
             document.querySelector('.dropdown-type').textContent += ' Гость';
-        } else if (document.querySelector('.dropdown-type').textContent > 1 && document.querySelector('.dropdown-type').textContent < 5) {
+        } else if (document.querySelector('.dropdown-type').textContent.slice(-1) > 1 && document.querySelector('.dropdown-type').textContent.slice(-1) < 5) {
             document.querySelector('.dropdown-type').textContent += ' Гостя';
-        } else if (document.querySelector('.dropdown-type').textContent > 4) {
+        } else if (document.querySelector('.dropdown-type').textContent !== dropText) {
             document.querySelector('.dropdown-type').textContent += ' Гостей';
         }
-
-
     })
 });
