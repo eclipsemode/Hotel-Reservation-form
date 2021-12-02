@@ -463,8 +463,24 @@
     }
 }
 
-// ---- CHECKBOX ----
+// ---- CHECKBOX BUTTONS ----
 
 .checkbox {
     @include checkbox;
+}
+
+// ---- BENEFITS ----
+
+.benefits-comfort {
+    @include benefits(url(./assets/images/comfort.svg));
+}
+
+.benefits-location {
+    @include benefits(url(./assets/images/location.svg));
+}
+
+// ---- RADIO BUTTONS ----
+
+.radio {
+    @include radio;
 }

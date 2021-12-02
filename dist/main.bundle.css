@@ -1723,3 +1723,118 @@ h3 {
   background-position: center;
   border-color: #bc9cff;
 }
+
+.benefits-comfort {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  padding-bottom: 17px;
+  padding-top: 23px;
+  max-width: 280px;
+  width: 100%;
+}
+.benefits-comfort__svg {
+  background: url(assets/img/bff4d8d74f2fa6026d27.svg);
+  width: 48px;
+  height: 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+.benefits-comfort__text {
+  display: flex;
+  flex-direction: column;
+}
+.benefits-comfort__text-name {
+  margin: 0;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.benefits-comfort__text-description {
+  margin: 0;
+  font-weight: 400;
+  text-transform: unset;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.benefits-location {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  padding-bottom: 17px;
+  padding-top: 23px;
+  max-width: 280px;
+  width: 100%;
+}
+.benefits-location__svg {
+  background: url(assets/img/ba4bbd6a0da5a6dedd41.svg);
+  width: 48px;
+  height: 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+.benefits-location__text {
+  display: flex;
+  flex-direction: column;
+}
+.benefits-location__text-name {
+  margin: 0;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.benefits-location__text-description {
+  margin: 0;
+  font-weight: 400;
+  text-transform: unset;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.radio-container {
+  color: rgba(31, 32, 65, 0.5);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.radio-container__label {
+  display: inline-flex;
+  align-items: center;
+}
+.radio-container__label:not(:first-of-type) {
+  margin-left: 20px;
+}
+.radio-container__label_input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  margin-right: 9.74px;
+  cursor: pointer;
+  position: relative;
+}
+.radio-container__label_input:checked::before {
+  content: "";
+  top: calc(50% - 6px);
+  left: calc(50% - 6px);
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
+  border-color: #bc9cff;
+}
+.radio .--checked {
+  color: rgba(31, 32, 65, 0.75);
+}

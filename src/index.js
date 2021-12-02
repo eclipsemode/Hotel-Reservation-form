@@ -10,6 +10,8 @@ import comfortSvg from './style/assets/images/comfort.svg';
 import calendar from './style/js/calendar';
 import dropdown from './style/js/dropdown';
 import arrowAfter from './style/js/arrow-after';
+import input from './style/js/input';
+
 // import { render } from 'pug';
 
 
