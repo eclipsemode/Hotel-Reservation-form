@@ -1240,11 +1240,7 @@ h3 {
   z-index: 10;
 }
 .drop-btn:focus::after {
-  transform: rotate(225deg);
   border-color: rgba(31, 32, 65, 0.75);
-}
-.drop-btn:active::after {
-  transform: rotate(225deg);
 }
 
 .dropdown.active .dropdown-type {
@@ -1307,11 +1303,7 @@ h3 {
   z-index: 10;
 }
 .dropdown-type:focus::after {
-  transform: rotate(225deg);
   border-color: rgba(31, 32, 65, 0.75);
-}
-.dropdown-type:active::after {
-  transform: rotate(225deg);
 }
 .dropdown-type:focus, .dropdown-type--active {
   border-color: rgba(31, 32, 65, 0.75);
@@ -1437,7 +1429,7 @@ h3 {
   overflow: visible;
 }
 .date-form__inp:focus::-webkit-calendar-picker-indicator {
-  transform: rotate(225deg);
+  border-color: rgba(31, 32, 65, 0.75);
 }
 
 .filter-date-dropdown {

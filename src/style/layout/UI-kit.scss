@@ -264,7 +264,8 @@
             overflow: visible;
         }
         &:focus::-webkit-calendar-picker-indicator {
-            transform: rotate(225deg);
+            // transform: rotate(225deg);
+            border-color: $Dark-shade-75;
         }
     }
 }

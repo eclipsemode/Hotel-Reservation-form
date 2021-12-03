@@ -38,15 +38,15 @@
     }
     &:focus {
         &::after {
-            transform: rotate(225deg);
+            // transform: rotate(225deg);
             border-color: $Dark-shade-75;
         }
     }
-    &:active {
-        &::after {
-            transform: rotate(225deg);
-        }
-    }
+    // &:active {
+    //     &::after {
+    //         transform: rotate(225deg);
+    //     }
+    // }
 }
 
 // ---- CHECKBOX ----
