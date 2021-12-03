@@ -1197,7 +1197,8 @@ h3 {
 .text::placeholder {
   color: rgba(31, 32, 65, 0.25);
 }
-.text:focus, .text:hover {
+.text:focus,
+.text :active, .text:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
@@ -1220,7 +1221,8 @@ h3 {
 .drop-btn::placeholder {
   color: rgba(31, 32, 65, 0.25);
 }
-.drop-btn:focus, .drop-btn:hover {
+.drop-btn:focus,
+.drop-btn :active, .drop-btn:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
@@ -1286,7 +1288,8 @@ h3 {
 .dropdown-type::placeholder {
   color: rgba(31, 32, 65, 0.25);
 }
-.dropdown-type:focus, .dropdown-type:hover {
+.dropdown-type:focus,
+.dropdown-type :active, .dropdown-type:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
@@ -1383,93 +1386,58 @@ h3 {
 .masked-text-field::placeholder {
   color: rgba(31, 32, 65, 0.25);
 }
-.masked-text-field:focus, .masked-text-field:hover {
+.masked-text-field:focus,
+.masked-text-field :active, .masked-text-field:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
-.date-dropdown {
+.date-form {
   display: flex;
   justify-content: space-between;
   width: 100%;
   max-width: 320px;
 }
-.date-dropdown button {
-  position: relative;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  line-height: 24px;
-  width: 320px;
-  height: 44px;
-  padding: 0 15px;
-  color: rgba(31, 32, 65, 0.75);
-  background: #fff;
-  box-sizing: border-box;
-  text-align: left;
-  z-index: 10;
-  width: 150px;
-  padding: 0;
-  margin: 0;
-}
-.date-dropdown button::after {
-  content: "";
-  position: absolute;
-  top: 40%;
-  right: 13px;
-  border: solid rgba(31, 32, 65, 0.5);
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  pointer-events: none;
-  z-index: 10;
-}
-.date-dropdown button:focus::after {
-  transform: rotate(225deg);
-  border-color: rgba(31, 32, 65, 0.75);
-}
-.date-dropdown button:active::after {
-  transform: rotate(225deg);
-}
-.date-dropdown button::placeholder {
-  color: rgba(31, 32, 65, 0.25);
-}
-.date-dropdown button:focus, .date-dropdown button:hover {
-  outline: none;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
-.date-dropdown button:focus {
-  border-color: rgba(31, 32, 65, 0.5);
-}
-.date-dropdown button .date-type {
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  line-height: 24px;
-  width: 320px;
-  height: 44px;
-  padding: 0 15px;
-  color: rgba(31, 32, 65, 0.75);
-  background: #fff;
-  box-sizing: border-box;
-  text-align: left;
-  z-index: 10;
-  width: 100%;
+.date-form__inp {
+  max-width: 150px;
+  max-height: 44px;
   height: 100%;
   text-transform: uppercase;
-  border: transparent;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  line-height: 24px;
+  width: 320px;
+  height: 44px;
+  padding: 0 15px;
+  color: rgba(31, 32, 65, 0.75);
+  background: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  z-index: 10;
 }
-.date-dropdown button .date-type::placeholder {
+.date-form__inp::placeholder {
   color: rgba(31, 32, 65, 0.25);
 }
-.date-dropdown button .date-type:focus, .date-dropdown button .date-type:hover {
+.date-form__inp:focus,
+.date-form__inp :active, .date-form__inp:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
-.date-dropdown button .date-type:focus {
-  border: none;
+.date-form__inp::-webkit-calendar-picker-indicator {
+  background: none;
+  border: solid rgba(31, 32, 65, 0.5);
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  transform: rotate(45deg);
+  height: 0px;
+  width: 0px;
+  pointer-events: none;
 }
-.date-dropdown button .date-type:hover {
-  border: none;
+.date-form__inp::-webkit-datetime-edit {
+  overflow: visible;
+}
+.date-form__inp:focus::-webkit-calendar-picker-indicator {
+  transform: rotate(225deg);
 }
 
 .filter-date-dropdown {
@@ -1489,7 +1457,8 @@ h3 {
 .filter-date-dropdown::placeholder {
   color: rgba(31, 32, 65, 0.25);
 }
-.filter-date-dropdown:focus, .filter-date-dropdown:hover {
+.filter-date-dropdown:focus,
+.filter-date-dropdown :active, .filter-date-dropdown:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
@@ -1525,7 +1494,8 @@ h3 {
 .subscription-text-field::placeholder {
   color: rgba(31, 32, 65, 0.25);
 }
-.subscription-text-field:focus, .subscription-text-field:hover {
+.subscription-text-field:focus,
+.subscription-text-field :active, .subscription-text-field:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }

@@ -238,34 +238,33 @@
     text-transform: uppercase;
 }
 
-// ---- DATE TYPE ----
-
-.date-dropdown {
+// ---- DATE DROPDOWN ----
+.date-form {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 320px;
-    & button {
-        @include arrow-after;
+    &__inp {
+        max-width: 150px;
+        max-height: 44px;
+        height: 100%;
+        text-transform: uppercase;
         @include text-field;
-        width: 150px;
-        padding: 0;
-        margin: 0;
-        &:focus {
-            border-color: $Dark-shade-50;
+        &::-webkit-calendar-picker-indicator {
+            background: none;
+            border: solid $Dark-shade-50;
+            border-width: 0 3px 3px 0;
+            padding: 3px;
+            transform: rotate(45deg);
+            height: 0px;
+            width: 0px;
+            pointer-events: none;
         }
-        & .date-type {
-            @include text-field;
-            width: 100%;
-            height: 100%;
-            text-transform: uppercase;
-            border: transparent;
-            &:focus {
-                border: none;
-            }
-            &:hover {
-                border: none;
-            }
+        &::-webkit-datetime-edit {
+            overflow: visible;
+        }
+        &:focus::-webkit-calendar-picker-indicator {
+            transform: rotate(225deg);
         }
     }
 }

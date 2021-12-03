@@ -9,11 +9,9 @@
     h2 MASKED TEXT FIELD
     input(type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off").masked-text-field
     h2 DATE DROPDOWN
-    .date-dropdown
-        button(type='submit').date 
-            input(type="text" name="date-field__1" id="el2" placeholder="дд.мм.гггг" autocomplete="off").date-type 
-        button(type='submit').date
-            input(type="text" name="date-field__2" id="el3" placeholder="дд.мм.гггг" autocomplete="off").date-type
+    form.date-form
+        input(type="date" max="1979-12-31").date-form__inp
+        input(type="date" max="1979-12-31").date-form__inp
     h2 FILTER DATE DROPDOWN
     form
         input(type="text" id="el-filter" name="date" placeholder="дд.мм.гггг" autocomplete="off").filter-date-dropdown

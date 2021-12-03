@@ -19,14 +19,10 @@
   <h2>MASKED TEXT FIELD</h2>
   <input class="masked-text-field" type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off">
   <h2>DATE DROPDOWN</h2>
-  <div class="date-dropdown">
-    <button class="date" type="submit"> 
-      <input class="date-type" type="text" name="date-field__1" id="el2" placeholder="дд.мм.гггг" autocomplete="off">
-    </button>
-    <button class="date" type="submit">
-      <input class="date-type" type="text" name="date-field__2" id="el3" placeholder="дд.мм.гггг" autocomplete="off">
-    </button>
-  </div>
+  <form class="date-form">
+    <input class="date-form__inp" type="date" max="1979-12-31">
+    <input class="date-form__inp" type="date" max="1979-12-31">
+  </form>
   <h2>FILTER DATE DROPDOWN</h2>
   <form>
     <input class="filter-date-dropdown" type="text" id="el-filter" name="date" placeholder="дд.мм.гггг" autocomplete="off">
