@@ -23,9 +23,6 @@ const sumArr = [+document.querySelector('[name="adults"]').value, +document.quer
 
 buttons.forEach(btn => {
     btn.addEventListener("click", function (event) {
-        // if (event.target.closest('.dropdown')) {
-        //     document.querySelector('.dropdown-type').focus();
-        // }
 
         const inp = this.parentElement.querySelector(".counter__value");
         const currentValue = +inp.value;
@@ -86,13 +83,5 @@ document.querySelectorAll('.dropdown-guest__list-button').forEach(element => {
         } else if (document.querySelector('.dropdown-type').textContent !== dropText) {
             document.querySelector('.dropdown-type').textContent += ' гостей';
         }
-
-        // else if (document.querySelector('.dropdown-type').textContent.slice(-1) == 1) {
-        //     document.querySelector('.dropdown-type').textContent += ' гость';
-        // } else if (document.querySelector('.dropdown-type').textContent.slice(-1) > 1 && document.querySelector('.dropdown-type').textContent.slice(-1) < 5) {
-        //     document.querySelector('.dropdown-type').textContent += ' гостя';
-        // } else if (document.querySelector('.dropdown-type').textContent !== dropText) {
-        //     document.querySelector('.dropdown-type').textContent += ' гостей';
-        // }
     })
 });
