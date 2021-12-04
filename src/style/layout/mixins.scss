@@ -1,3 +1,5 @@
+// ---- MAIN DESIGN TEXT FIELD ----
+
 @mixin text-field {
     border: 1px solid $Dark-shade-25;
     border-radius: 4px;
@@ -20,6 +22,8 @@
         border: 1px solid $Dark-shade-50;
     }
 }
+
+// ---- ARROW INDICATOR ----
 
 @mixin arrow-after {
     position: relative;

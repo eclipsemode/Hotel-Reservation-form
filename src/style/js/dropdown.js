@@ -79,12 +79,20 @@ document.querySelectorAll('.dropdown-guest__list-button').forEach(element => {
 
         if (document.querySelector('.dropdown-type').textContent == 0) {
             document.querySelector('.dropdown-type').textContent = dropText;
-        } else if (document.querySelector('.dropdown-type').textContent.slice(-1) == 1) {
+        } else if (document.querySelector('.dropdown-type').textContent != 11 && document.querySelector('.dropdown-type').textContent.slice(-1) == 1) {
             document.querySelector('.dropdown-type').textContent += ' гость';
-        } else if (document.querySelector('.dropdown-type').textContent.slice(-1) > 1 && document.querySelector('.dropdown-type').textContent.slice(-1) < 5) {
+        } else if (document.querySelector('.dropdown-type').textContent > 1 && document.querySelector('.dropdown-type').textContent < 5 || document.querySelector('.dropdown-type').textContent > 20 && document.querySelector('.dropdown-type').textContent.slice(-1) < 5) {
             document.querySelector('.dropdown-type').textContent += ' гостя';
         } else if (document.querySelector('.dropdown-type').textContent !== dropText) {
             document.querySelector('.dropdown-type').textContent += ' гостей';
         }
+
+        // else if (document.querySelector('.dropdown-type').textContent.slice(-1) == 1) {
+        //     document.querySelector('.dropdown-type').textContent += ' гость';
+        // } else if (document.querySelector('.dropdown-type').textContent.slice(-1) > 1 && document.querySelector('.dropdown-type').textContent.slice(-1) < 5) {
+        //     document.querySelector('.dropdown-type').textContent += ' гостя';
+        // } else if (document.querySelector('.dropdown-type').textContent !== dropText) {
+        //     document.querySelector('.dropdown-type').textContent += ' гостей';
+        // }
     })
 });
