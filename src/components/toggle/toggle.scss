@@ -1,0 +1,46 @@
+.container {
+    max-width: 260px;
+    width: 100%;
+}
+
+.toggle {
+    position: relative;
+    &__inp {
+        appearance: none;
+    }
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 20px;
+        cursor: pointer;
+        border: 1px solid $Dark-shade-25;
+        background-color: #fff;
+        transition: 0.4s;
+        border-radius: 10px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(12px - 50%);
+            left: 3px;
+            width: 12px;
+            height: 12px;
+            background: $Dark-shade-25;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+    }
+    &__text {
+        margin-left: 50px;
+    }
+    &__inp:checked + &__slider {
+        border-color: $Purple;
+        transition: 0.4s;
+        &::before {
+            left: 23px;
+            background: $Purple-gradient;
+            transition: 0.4s;
+        }
+    }
+}
