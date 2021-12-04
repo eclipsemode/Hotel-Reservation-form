@@ -1,0 +1,33 @@
+.expandable-checkbox-container {
+    max-width: 266px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include arrow-after;
+    &::after {
+        cursor: pointer;
+        pointer-events: all;
+        transform: rotate(225deg);
+    }
+    &__title {
+        cursor: pointer;
+    }
+    &--disabled {
+        max-width: 266px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        @include arrow-after;
+        &::after {
+            top: calc(100% - 70%);
+            cursor: pointer;
+            pointer-events: all;
+        }
+    }
+}
+.expandable-checkbox {
+    @include checkbox;
+    &--disabled {
+        display: none;
+    }
+}

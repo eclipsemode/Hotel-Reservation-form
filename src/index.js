@@ -1,5 +1,5 @@
-import AirDatepicker from 'air-datepicker';
-import 'air-datepicker/air-datepicker.css';
+// import AirDatepicker from 'air-datepicker';
+// import 'air-datepicker/air-datepicker.css';
 import "./style/style.scss";
 
 import ArrowSvg from './style/assets/images/arrow_forward.svg';
@@ -7,11 +7,11 @@ import checkSvg from './style/assets/images/check.svg';
 import locationSvg from './style/assets/images/location.svg';
 import comfortSvg from './style/assets/images/comfort.svg';
 
-import calendar from './style/js/calendar';
-import dropdown from './style/js/dropdown';
-import arrowAfter from './style/js/arrow-after';
-import input from './style/js/input';
-
+import calendar from './js/calendar';
+import dropdown from './js/dropdown';
+import arrowAfter from './js/arrow-after';
+import radioButtons from './components/radio-buttons/radio-buttons';
+import expandableCheckbox from './components/expandable-checkbox-list/expandable-checkbox-list';
 
 // import { render } from 'pug';
 

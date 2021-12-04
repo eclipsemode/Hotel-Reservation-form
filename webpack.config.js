@@ -22,7 +22,7 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin({
         inject: 'body',
-        template: "./views/index.pug"
+        template: "./index.pug",
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({

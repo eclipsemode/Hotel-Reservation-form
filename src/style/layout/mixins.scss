@@ -42,15 +42,9 @@
     }
     &:focus {
         &::after {
-            // transform: rotate(225deg);
             border-color: $Dark-shade-75;
         }
     }
-    // &:active {
-    //     &::after {
-    //         transform: rotate(225deg);
-    //     }
-    // }
 }
 
 // ---- CHECKBOX ----
@@ -145,7 +139,7 @@
             &:not(:first-of-type) {
                 margin-left: 20px;
             }
-            &_input {
+            &-input {
                 appearance: none;
                 -webkit-appearance: none;
                 width: 20px;
@@ -169,7 +163,7 @@
             }
         }
     }
-    .--checked {
+    .radio-container__label--checked {
         color: $Dark-shade-75;
     }
 }

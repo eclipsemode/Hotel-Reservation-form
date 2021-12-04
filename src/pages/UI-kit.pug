@@ -61,43 +61,9 @@
         .calendar_buttons 
             button.calendar_buttons__clear(type='submit') Очистить
             button.calendar_buttons__submit(type='submit') Применить
-    h2 CHECKBOX BUTTONS
-    form.checkbox
-        label.checkbox__label
-            input(type='checkbox' checked).checkbox__label-input
-            | Завтрак
-        label.checkbox__label
-            input(type='checkbox').checkbox__label-input
-            | Письменный стол
-        label.checkbox__label
-            input(type='checkbox').checkbox__label-input
-            | Стул для кормления
-        label.checkbox__label
-            input(type='checkbox').checkbox__label-input
-            | Кроватка
-        label.checkbox__label
-            input(type='checkbox').checkbox__label-input
-            | Телевизор
-        label.checkbox__label
-            input(type='checkbox').checkbox__label-input
-            | Шампунь 
+    h2 EXPANDABLE CHECKBOX LIST
+    include ../components/expandable-checkbox-list/expandable-checkbox-list.pug
     h2 BENEFITS
-    .benefits-comfort 
-        .benefits-comfort__svg 
-        .benefits-comfort__text
-            h3.benefits-comfort__text-name Комфорт
-            p.benefits-comfort__text-description Шумопоглощающие стены
-    .benefits-location
-        .benefits-location__svg 
-        .benefits-location__text
-            h3.benefits-location__text-name Удобство
-            p.benefits-location__text-description Окно в каждой из спален
+    include ../components/benefits/benefits.pug
     h2 RADIO BUTTONS 
-    form.radio
-        .radio-container
-            label.radio-container__label
-                input(type="radio" name='sex' value="male").radio-container__label_input
-                | Мужчина
-            label.radio-container__label
-                input(type="radio" name='sex' value="female").radio-container__label_input
-                | Женщина
+    include ../components/radio-buttons/radio-buttons.pug
