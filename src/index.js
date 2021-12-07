@@ -2,7 +2,6 @@
 // import 'air-datepicker/air-datepicker.css';
 
 import "./style/style.scss";
-import images from './js/images';
 import components from './js/components';
 
 

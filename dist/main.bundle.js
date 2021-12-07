@@ -56,7 +56,7 @@ eval("const checkbox = document.querySelector('.expandable-checkbox-container');
   \***********************************************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack:///./components/like-button/like-button.js?");
+eval("const likeBtn = document.querySelector('.like-btn');\r\n\r\nlikeBtn.addEventListener('click', event => {\r\n    let value = +likeBtn.innerText;\r\n    likeBtn.classList.toggle('like-btn--active');\r\n})\n\n//# sourceURL=webpack:///./components/like-button/like-button.js?");
 
 /***/ }),
 
@@ -77,7 +77,7 @@ eval("const labelMale = document.querySelector('[value=\"male\"]').parentElement
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/style.scss */ \"./style/style.scss\");\n/* harmony import */ var _js_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/images */ \"./js/images.js\");\n/* harmony import */ var _js_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/components */ \"./js/components.js\");\n// import AirDatepicker from 'air-datepicker';\r\n// import 'air-datepicker/air-datepicker.css';\r\n\r\n\r\n\r\n\r\n\r\n\r\n// import { render } from 'pug';\r\n\r\n\r\n\r\n// // AIR DATEPICKER\r\n// let selectItem = {\r\n//     content: 'Применить',\r\n//     className: 'custom-button-classname',\r\n//     onClick: (dp) => {\r\n//         let date = new onSelect();\r\n//         dp.selectDate(date);\r\n//         dp.setViewDate(date);\r\n//     },\r\n// }\r\n\r\n\r\n// new AirDatepicker('#el', {\r\n//     buttons: ['clear', selectItem],\r\n//     multipleDatesSeparator: ' - ',\r\n//     classes: 'dp-style',\r\n//     minDate: new Date(),\r\n// })\r\n// new AirDatepicker('#el2', {\r\n//     buttons: ['clear', selectItem],\r\n//     multipleDatesSeparator: ' - ',\r\n//     classes: 'dp-style',\r\n//     minDate: new Date(),\r\n// })\r\n// new AirDatepicker('#el3', {\r\n//     buttons: ['clear', selectItem],\r\n//     multipleDatesSeparator: ' - ',\r\n//     classes: 'dp-style',\r\n//     minDate: new Date(),\r\n// })\r\n// new AirDatepicker('#el-filter', {\r\n//     buttons: ['clear', selectItem],\r\n//     multipleDatesSeparator: ' - ',\r\n//     classes: 'dp-style',\r\n//     minDate: new Date(),\r\n//     multipleDates: 2,\r\n//     range: true,\r\n// })\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/style.scss */ \"./style/style.scss\");\n/* harmony import */ var _js_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/components */ \"./js/components.js\");\n// import AirDatepicker from 'air-datepicker';\r\n// import 'air-datepicker/air-datepicker.css';\r\n\r\n\r\n\r\n\r\n\r\n// import { render } from 'pug';\r\n\r\n\r\n\r\n// // AIR DATEPICKER\r\n// let selectItem = {\r\n//     content: 'Применить',\r\n//     className: 'custom-button-classname',\r\n//     onClick: (dp) => {\r\n//         let date = new onSelect();\r\n//         dp.selectDate(date);\r\n//         dp.setViewDate(date);\r\n//     },\r\n// }\r\n\r\n\r\n// new AirDatepicker('#el', {\r\n//     buttons: ['clear', selectItem],\r\n//     multipleDatesSeparator: ' - ',\r\n//     classes: 'dp-style',\r\n//     minDate: new Date(),\r\n// })\r\n// new AirDatepicker('#el2', {\r\n//     buttons: ['clear', selectItem],\r\n//     multipleDatesSeparator: ' - ',\r\n//     classes: 'dp-style',\r\n//     minDate: new Date(),\r\n// })\r\n// new AirDatepicker('#el3', {\r\n//     buttons: ['clear', selectItem],\r\n//     multipleDatesSeparator: ' - ',\r\n//     classes: 'dp-style',\r\n//     minDate: new Date(),\r\n// })\r\n// new AirDatepicker('#el-filter', {\r\n//     buttons: ['clear', selectItem],\r\n//     multipleDatesSeparator: ' - ',\r\n//     classes: 'dp-style',\r\n//     minDate: new Date(),\r\n//     multipleDates: 2,\r\n//     range: true,\r\n// })\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -89,61 +89,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_calendar_calendar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/calendar/calendar */ \"./components/calendar/calendar.js\");\n/* harmony import */ var _components_calendar_calendar__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_calendar_calendar__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/dropdown/dropdown */ \"./components/dropdown/dropdown.js\");\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_radio_buttons_radio_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/radio-buttons/radio-buttons */ \"./components/radio-buttons/radio-buttons.js\");\n/* harmony import */ var _components_radio_buttons_radio_buttons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_radio_buttons_radio_buttons__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _components_expandable_checkbox_list_expandable_checkbox_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/expandable-checkbox-list/expandable-checkbox-list */ \"./components/expandable-checkbox-list/expandable-checkbox-list.js\");\n/* harmony import */ var _components_expandable_checkbox_list_expandable_checkbox_list__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_expandable_checkbox_list_expandable_checkbox_list__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _components_like_button_like_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/like-button/like-button */ \"./components/like-button/like-button.js\");\n/* harmony import */ var _components_like_button_like_button__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_like_button_like_button__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./js/components.js?");
-
-/***/ }),
-
-/***/ "./js/images.js":
-/*!**********************!*\
-  !*** ./js/images.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_assets_images_arrow_forward_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style/assets/images/arrow_forward.svg */ \"./style/assets/images/arrow_forward.svg\");\n/* harmony import */ var _style_assets_images_check_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../style/assets/images/check.svg */ \"./style/assets/images/check.svg\");\n/* harmony import */ var _style_assets_images_location_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../style/assets/images/location.svg */ \"./style/assets/images/location.svg\");\n/* harmony import */ var _style_assets_images_comfort_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../style/assets/images/comfort.svg */ \"./style/assets/images/comfort.svg\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./js/images.js?");
-
-/***/ }),
-
-/***/ "./style/assets/images/arrow_forward.svg":
-/*!***********************************************!*\
-  !*** ./style/assets/images/arrow_forward.svg ***!
-  \***********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"assets/img/eec7abcd8c598f229ba3.svg\";\n\n//# sourceURL=webpack:///./style/assets/images/arrow_forward.svg?");
-
-/***/ }),
-
-/***/ "./style/assets/images/check.svg":
-/*!***************************************!*\
-  !*** ./style/assets/images/check.svg ***!
-  \***************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"assets/img/2eee425e85c74b305c32.svg\";\n\n//# sourceURL=webpack:///./style/assets/images/check.svg?");
-
-/***/ }),
-
-/***/ "./style/assets/images/comfort.svg":
-/*!*****************************************!*\
-  !*** ./style/assets/images/comfort.svg ***!
-  \*****************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"assets/img/bff4d8d74f2fa6026d27.svg\";\n\n//# sourceURL=webpack:///./style/assets/images/comfort.svg?");
-
-/***/ }),
-
-/***/ "./style/assets/images/location.svg":
-/*!******************************************!*\
-  !*** ./style/assets/images/location.svg ***!
-  \******************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"assets/img/ba4bbd6a0da5a6dedd41.svg\";\n\n//# sourceURL=webpack:///./style/assets/images/location.svg?");
 
 /***/ })
 
@@ -198,18 +143,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/ba4bbd6a0da5a6dedd41
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -224,26 +157,6 @@ eval("module.exports = __webpack_require__.p + \"assets/img/ba4bbd6a0da5a6dedd41
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
