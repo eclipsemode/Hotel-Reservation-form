@@ -394,6 +394,11 @@ h3 {
   color: #1f2041;
 }
 
+.container {
+  max-width: 260px;
+  width: 100%;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url(assets/fonts/079ca05d3ded9bc107ab.ttf) format("truetype");
@@ -1125,11 +1130,6 @@ h3 {
 }
 .expandable-checkbox--disabled {
   display: none;
-}
-
-.container {
-  max-width: 260px;
-  width: 100%;
 }
 
 .toggle {
