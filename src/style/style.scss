@@ -4,11 +4,4 @@
 @import "./layout/base.scss";
 @import "./layout/Montserrat.scss";
 @import "./layout/UI-kit.scss";
-
-// ---- COMPONENTS SCSS ----
-
-@import "../components/radio-buttons/radio-buttons.scss";
-@import "../components/benefits/benefits.scss";
-@import "../components/expandable-checkbox-list/expandable-checkbox-list.scss";
-@import "../components/toggle/toggle.scss";
-@import "../components/like-button/like-button.scss";
+@import "./layout/components.scss";

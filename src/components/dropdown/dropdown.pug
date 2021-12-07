@@ -1,0 +1,22 @@
+.dropdown
+    button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
+    .dropdown-guest(hidden)
+        ul.dropdown-guest__list
+            li(data-value='adults').dropdown-guest__list-item Взрослые
+                .counter
+                    button.counter__btn(type='submit' data-direction="minus") -
+                    input.counter__value(type="number" value="0" max="9" name='adults')
+                    button.counter__btn(type='submit' data-direction="plus") +
+            li(data-value='children').dropdown-guest__list-item Дети
+                .counter
+                    button.counter__btn(type='submit' data-direction="minus") -
+                    input.counter__value(type="number" value="0" max="9" name='children')
+                    button.counter__btn(type='submit' data-direction="plus") +
+            li(data-value='babies').dropdown-guest__list-item Младенцы
+                .counter
+                    button.counter__btn(type='submit' data-direction="minus") -
+                    input.counter__value(type="number" value="0" max="9" name='babies')
+                    button.counter__btn(type='submit' data-direction="plus") +
+            .dropdown-guest__list-button
+                button(type="submit" name="clear").dropdown-guest__list-button-item Очистить
+                button(type="submit" name="submit").dropdown-guest__list-button-item Применить

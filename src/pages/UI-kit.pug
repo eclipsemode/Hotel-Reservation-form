@@ -1,11 +1,7 @@
 .ui-kit__container
     h1(style="color: brown;") UI KIT
     h2 TEXT FIELD
-    input(type="text", name="text-field", placeholder="Email").text
-
-    h2 DROPDOWN
-    .drop
-        button(type="submit").drop-btn Сколько гостей
+    include ../components/text-field/text-field.pug
     h2 MASKED TEXT FIELD
     input(type="text" name="date" id="el" placeholder="дд.мм.гггг" autocomplete="off").masked-text-field
     h2 DATE DROPDOWN
@@ -19,28 +15,7 @@
     form.subscription
         input(type="email", name="text-field", placeholder="Email").subscription-text-field
     h2 DROPDOWN (WITH ITEM COUNTER)
-    .dropdown
-        button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
-        .dropdown-guest(hidden)
-            ul.dropdown-guest__list
-                li(data-value='adults').dropdown-guest__list-item Взрослые
-                    .counter
-                        button.counter__btn(type='submit' data-direction="minus") -
-                        input.counter__value(type="number" value="0" max="9" name='adults')
-                        button.counter__btn(type='submit' data-direction="plus") +
-                li(data-value='children').dropdown-guest__list-item Дети
-                    .counter
-                        button.counter__btn(type='submit' data-direction="minus") -
-                        input.counter__value(type="number" value="0" max="9" name='children')
-                        button.counter__btn(type='submit' data-direction="plus") +
-                li(data-value='babies').dropdown-guest__list-item Младенцы
-                    .counter
-                        button.counter__btn(type='submit' data-direction="minus") -
-                        input.counter__value(type="number" value="0" max="9" name='babies')
-                        button.counter__btn(type='submit' data-direction="plus") +
-                .dropdown-guest__list-button
-                    button(type="submit" name="clear").dropdown-guest__list-button-item Очистить
-                    button(type="submit" name="submit").dropdown-guest__list-button-item Применить
+    include ../components/dropdown/dropdown.pug
     h2 CALENDAR
     .calendar
         .calendar_month
