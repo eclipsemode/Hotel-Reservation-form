@@ -1,0 +1,18 @@
+.subscription {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% - 66%);
+        right: 13px;
+        width: 17px;
+        height: 17px;
+        background-image: url(./assets/images/arrow_forward.svg);
+        background-repeat: no-repeat;
+        z-index: 100;
+        pointer-events: none;
+    }
+    &-text-field {
+        @include text-field;
+    }
+}

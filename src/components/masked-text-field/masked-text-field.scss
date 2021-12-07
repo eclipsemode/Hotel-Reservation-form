@@ -1,0 +1,5 @@
+.masked-text-field {
+    @include text-field;
+    color: $Dark-shade-75;
+    text-transform: uppercase;
+}

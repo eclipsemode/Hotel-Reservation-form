@@ -1,0 +1,30 @@
+.date-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 320px;
+    &__inp {
+        max-width: 150px;
+        max-height: 44px;
+        height: 100%;
+        text-transform: uppercase;
+        @include text-field;
+        &::-webkit-calendar-picker-indicator {
+            background: none;
+            border: solid $Dark-shade-50;
+            border-width: 0 3px 3px 0;
+            padding: 3px;
+            transform: rotate(45deg);
+            height: 0px;
+            width: 0px;
+            pointer-events: none;
+        }
+        &::-webkit-datetime-edit {
+            overflow: visible;
+        }
+        &:focus::-webkit-calendar-picker-indicator {
+            // transform: rotate(225deg);
+            border-color: $Dark-shade-75;
+        }
+    }
+}
