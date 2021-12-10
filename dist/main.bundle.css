@@ -354,6 +354,7 @@ template {
 /*!*************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style/style.scss ***!
   \*************************************************************************************************************/
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -1197,4 +1198,50 @@ h3 {
 .subscription-text-field :active, .subscription-text-field:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+.rate__label {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  position: relative;
+}
+.rate__label::before {
+  content: "☆";
+  color: #bc9cff;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rate__label::after {
+  content: "★";
+  color: #bc9cff;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.rate__label:hover::after {
+  opacity: 1;
+}
+.rate__inp {
+  display: none;
+}
+.rate__label:hover::after, .rate__label:hover ~ .rate__label::after, .rate__inp:checked ~ .rate__label::after {
+  opacity: 1;
 }
