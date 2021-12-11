@@ -1023,7 +1023,8 @@ h3 {
   box-sizing: border-box;
   text-align: left;
   z-index: 10;
-  text-transform: uppercase;
+  position: relative;
+  max-width: 266px;
 }
 .filter-date-dropdown::placeholder {
   color: rgba(31, 32, 65, 0.25);
@@ -1032,6 +1033,22 @@ h3 {
 .filter-date-dropdown :active, .filter-date-dropdown:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.filter-date-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 13px;
+  border: solid rgba(31, 32, 65, 0.5);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  pointer-events: none;
+  z-index: 10;
+}
+.filter-date-dropdown:focus::after {
+  border-color: rgba(31, 32, 65, 0.75);
 }
 
 .calendar {
@@ -1178,7 +1195,7 @@ h3 {
   z-index: 100;
   pointer-events: none;
 }
-.subscription-text-field {
+.subscription__email {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   line-height: 24px;
@@ -1190,12 +1207,13 @@ h3 {
   box-sizing: border-box;
   text-align: left;
   z-index: 10;
+  max-width: 266px;
 }
-.subscription-text-field::placeholder {
+.subscription__email::placeholder {
   color: rgba(31, 32, 65, 0.25);
 }
-.subscription-text-field:focus,
-.subscription-text-field :active, .subscription-text-field:hover {
+.subscription__email:focus,
+.subscription__email :active, .subscription__email:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
@@ -1218,7 +1236,7 @@ h3 {
   content: "☆";
   color: #bc9cff;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 27px;
   font-weight: 400;
   position: absolute;
   top: 0;
@@ -1228,7 +1246,7 @@ h3 {
   content: "★";
   color: #bc9cff;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 27px;
   font-weight: 400;
   position: absolute;
   top: 0;

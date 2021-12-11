@@ -1,4 +1,5 @@
 .filter-date-dropdown {
     @include text-field;
-    text-transform: uppercase;
+    @include arrow-after;
+    max-width: 266px;
 }
