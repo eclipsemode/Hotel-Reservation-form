@@ -1,45 +1,76 @@
-const pagList = document.querySelector('.pagination__list');
-const pagListItem = document.querySelectorAll('.pagination__item');
-const pagItemActive = document.querySelector('.pagination__item--active');
-const pagPrev = document.querySelector('.pagination__prev');
-const pagNext = document.querySelector('.pagination__next');
-const pagDots = document.querySelectorAll('.pagination__dots');
+// const ulTag = document.querySelector(".pagination__list");
+// let totalPages = 20;
+// function element(totalPages, page) {
+//     let liTag = '';
+//     let activeLi;
+//     let beforePages = page - 1;
+//     let afterPages = page + 1;
 
-function pagFunc(totalPages, page) {
-    pagListItem.forEach((item) => {
-        item.addEventListener('click', event => {
-            if (event.target == pagNext || event.target == pagItemActive.nextElementSibling) {
-                if (pagItemActive.textContent < totalPages - 2) {
-                    pagItemActive.textContent++;
-                    pagItemActive.previousElementSibling.textContent++;
-                    pagItemActive.nextElementSibling.textContent++;
-                    if (pagItemActive.textContent == totalPages - 2) {
-                        pagNext.previousElementSibling.textContent = totalPages;
-                    }
-                }
-            } else if (event.target == pagPrev || event.target == pagItemActive.previousElementSibling) {
-                if (pagItemActive.textContent > 3) {
-                    pagItemActive.textContent--;
-                    pagItemActive.previousElementSibling.textContent--;
-                    pagItemActive.nextElementSibling.textContent--;
-                    if (pagItemActive.textContent == 3) {
-                        pagPrev.nextElementSibling.textContent = 1;
-                    }
-                }
-                // else if (pagItemActive.textContent == 3) {
-                //     pagPrev.nextElementSibling.nextElementSibling.classList.add('pagination__item--active');
-                //     pagPrev.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove('pagination__item--active');
-                // }
-            }
+//     document.addEventListener('click', () => {
+//         if (page > 1) {
+//             liTag += `<li class="pagination__item pagination__prev"></li>`;
+//             element(totalPages, page - 1);
+//         }
 
-            if (pagItemActive.textContent > 3) {
-                pagPrev.nextElementSibling.textContent = '...';
-            }
-            if (pagItemActive.textContent < totalPages - 2) {
-                pagNext.previousElementSibling.textContent = '...';
-            }
-        })
-    })
-}
+//         if (page > 2) {
+//             liTag += `<li class="pagination__item">1</li>`;
+//             element(totalPages, 1);
+//             if (page > 3) {
+//                 liTag += `<li class="pagination__item">...</li>`;
+//             }
+//         }
 
-pagFunc(20, 5)
+//     })
+
+
+//     if (page > 1) {
+//         liTag += `<li class="pagination__item pagination__prev"></li>`;
+//         document.getElementsByClassName('pagination__prev')[0].addEventListener('click', () => {
+//             element(totalPages, page - 1);
+//         })
+//     }
+
+//     if (page > 2) {
+//         liTag += `<li class="pagination__item">1</li>`;
+//         document.getElementsByClassName('pagination__item')[0].addEventListener('click', () => {
+//             element(totalPages, 1);
+//         })
+//         if (page > 3) {
+//             liTag += `<li class="pagination__item">...</li>`;
+//         }
+//     }
+
+//     for (let pageLenght = beforePages; pageLenght <= afterPages; pageLenght++) {
+//         if (pageLenght > totalPages) {
+//             continue;
+//         }
+
+//         if (pageLenght == 0) {
+//             pageLenght = pageLenght + 1;
+//         }
+
+//         if (page == pageLenght) {
+//             activeLi = "pagination__item--active";
+//         } else {
+//             activeLi = "";
+//         }
+
+//         liTag += `<li class="pagination__item ${activeLi}">${pageLenght}</li>`;
+//         document.getElementsByClassName('pagination__item')[0].addEventListener('click', () => {
+//             element(totalPages, pageLenght);
+//         })
+//     }
+
+//     if (page < totalPages - 1) {
+//         if (page < totalPages - 2) {
+//             liTag += `<li class="pagination__item">...</li>`;
+//         }
+//         liTag += `<li class="pagination__item" >${totalPages}</li>`;
+//     }
+
+//     if (page < totalPages) {
+//         liTag += `<li class="pagination__item pagination__next" ></li>`
+//     }
+//     ulTag.innerHTML = liTag;
+// }
+// element(totalPages, 5);

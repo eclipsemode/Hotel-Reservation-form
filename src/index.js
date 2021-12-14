@@ -3,7 +3,7 @@
 
 import "./style/style.scss";
 import components from './js/components';
-
+import $ from 'jquery';
 
 // import { render } from 'pug';
 
