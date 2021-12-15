@@ -1276,7 +1276,7 @@ h3 {
   line-height: 14.63px;
   height: 40px;
   width: 40px;
-  font-weight: 700;
+  font-weight: 400;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1326,6 +1326,7 @@ h3 {
 .pagination__next--disabled {
   display: none;
 }
+
 .range {
   max-width: 266px;
   width: 100%;

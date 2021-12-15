@@ -11,7 +11,7 @@
         line-height: 14.63px;
         height: 40px;
         width: 40px;
-        font-weight: 700;
+        font-weight: 400;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -60,7 +60,5 @@
         &--disabled {
             display: none;
         }
-    }
-    &__dots {
     }
 }

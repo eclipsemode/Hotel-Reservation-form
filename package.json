@@ -26,6 +26,10 @@
   },
   "homepage": "https://github.com/eclipsemode/Hotel-Reservation-form#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.4.0",
@@ -45,6 +49,9 @@
   },
   "dependencies": {
     "air-datepicker": "^3.0.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "paginationjs": "^2.1.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
