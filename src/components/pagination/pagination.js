@@ -1,11 +1,11 @@
 const ulTag = document.querySelector(".pagination__list");
 
-let totalPages = 20;
-function element(totalPages, page) {
+function pagination(totalPages, page) {
     let liTag = '';
     let activeLi;
     let beforePages = page - 1;
     let afterPages = page + 1;
+
     if (page > 1) {
         liTag += `<li class="pagination__item pagination__prev"></li>`;
     }
@@ -16,8 +16,6 @@ function element(totalPages, page) {
             liTag += `<li class="pagination__item pagination__dots">...</li>`;
         }
     }
-
-
 
     for (let pageLenght = beforePages; pageLenght <= afterPages; pageLenght++) {
         if (pageLenght > totalPages) {
@@ -46,65 +44,55 @@ function element(totalPages, page) {
 
     if (page < totalPages) {
         liTag += `<li class="pagination__item pagination__next"></li>`;
-
     }
-
 
     ulTag.innerHTML = liTag;
 
 
+    let activePage = document.getElementsByClassName('pagination__item--active')[0];
+    let previousPage = activePage.previousElementSibling;
+    let nextPage = activePage.nextElementSibling;
+    let previousPageButton = document.querySelector('.pagination__prev');
+    let nextPageButton = document.querySelector('.pagination__next');
+
     if (page < totalPages) {
-        document.querySelector('.pagination__next').addEventListener('click', () => {
-            element(totalPages, page + 1);
-        });
+        nextPageButton.addEventListener('click', () => pagination(totalPages, page + 1));
     }
+
     if (page > 1) {
-        document.querySelector('.pagination__prev').addEventListener('click', () => {
-            element(totalPages, page - 1);
-        });
+        previousPageButton.addEventListener('click', () => pagination(totalPages, page - 1));
     }
+
     if (page > 2) {
-        document.querySelector('.pagination__prev').nextElementSibling.addEventListener('click', () => {
-            element(totalPages, 1)
-        });
+        previousPageButton.nextElementSibling.addEventListener('click', () => pagination(totalPages, 1));
     }
+
     if (page < totalPages - 1) {
-        document.querySelector('.pagination__next').previousElementSibling.addEventListener('click', () => {
-            element(totalPages, totalPages)
-        });
+        nextPageButton.previousElementSibling.addEventListener('click', () => pagination(totalPages, totalPages));
     }
+
     if (page > 1 && page < totalPages + 1) {
-        document.getElementsByClassName('pagination__item--active')[0].previousElementSibling.addEventListener('click', () => {
-            element(totalPages, page - 1);
-        });
+        previousPage.addEventListener('click', () => pagination(totalPages, page - 1));
         if (page < totalPages) {
-            document.getElementsByClassName('pagination__item--active')[0].nextElementSibling.addEventListener('click', () => {
-                element(totalPages, page + 1);
-            })
+            nextPage.addEventListener('click', () => pagination(totalPages, page + 1))
         }
     } else if (page == 1) {
-        document.querySelector('.pagination__next').previousElementSibling.previousElementSibling.previousElementSibling.addEventListener('click', () => {
-            element(totalPages, page + 1);
-        })
+        nextPageButton.previousElementSibling.previousElementSibling.previousElementSibling.addEventListener('click', () => pagination(totalPages, page + 1))
     }
 
     if (page == 1) {
-        document.getElementsByClassName('pagination__item--active')[0].nextElementSibling.insertAdjacentHTML(
+        nextPage.insertAdjacentHTML(
             `afterend`,
             `<li class="pagination__item pagination__number">${page + 2}</li>`
         );
-        document.getElementsByClassName('pagination__item--active')[0].nextElementSibling.nextElementSibling.addEventListener('click', () => {
-            element(totalPages, page + 2);
-        })
+        nextPage.nextElementSibling.addEventListener('click', () => pagination(totalPages, page + 2))
     } else if (page == totalPages) {
-        document.getElementsByClassName('pagination__item--active')[0].previousElementSibling.insertAdjacentHTML(
+        previousPage.insertAdjacentHTML(
             `beforebegin`,
             `<li class="pagination__item pagination__number">${page - 2}</li>`
         );
-        document.getElementsByClassName('pagination__item--active')[0].previousElementSibling.previousElementSibling.addEventListener('click', () => {
-            element(totalPages, page - 2);
-        })
+        previousPage.previousElementSibling.addEventListener('click', () => pagination(totalPages, page - 2))
     }
 }
 
-element(totalPages, 1);
+pagination(20, 1);
