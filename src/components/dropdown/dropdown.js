@@ -4,6 +4,7 @@ const babiesSelector = document.querySelector('[name="babies"]');
 const childrenSelector = document.querySelector('[name="children"]');
 const adultsSelector = document.querySelector('[name="adults"]');
 const clearButton = document.querySelector('[name="clear"]');
+let gusetNumber;
 
 // CLICK ON BUTTON DROPDOWN. OPEN /  CLOSE DROPDOWN
 document.addEventListener('click', (event) => {
@@ -25,11 +26,6 @@ document.addEventListener('click', (event) => {
 
 // ITEM COUNTER
 const buttons = document.querySelectorAll(".counter__btn");
-const sumArr = [+adultsSelector.value, +childrenSelector.value, +babiesSelector.value];
-
-// document.getElementsByClassName('counter__value').forEach(element => {
-//     console.log('dsds')
-// })
 
 buttons.forEach(btn => {
     btn.addEventListener("click", function (event) {
@@ -39,11 +35,30 @@ buttons.forEach(btn => {
 
         if (this.dataset.direction === "plus") {
             newValue = currentValue + 1;
+            if (currentValue == 9) {
+                currentValue.preventDefault()
+            }
         } else {
             newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
         }
 
         inp.value = newValue;
+
+        dropdownButton.textContent = +childrenSelector.value + +adultsSelector.value + +babiesSelector.value;
+
+        // Guest declination
+        if (dropdownButton.textContent.slice(-1) == 0) {
+            dropdownButton.textContent += ' гостей';
+        } else if (dropdownButton.textContent.slice(-1) == 1 && dropdownButton.textContent != 11) {
+            dropdownButton.textContent += ' гость';
+        } else if (dropdownButton.textContent > 4 && dropdownButton.textContent < 20) {
+            dropdownButton.textContent += ' гостей';
+        } else if (dropdownButton.textContent > 24 && dropdownButton.textContent.slice(-1) > 4 || dropdownButton.textContent.slice(-1) < 0) {
+            dropdownButton.textContent += ' гостей';
+        } 
+        else if (dropdownButton.textContent.slice(-1) > 1 && dropdownButton.textContent.slice(-1) < 5) {
+            dropdownButton.textContent += ' гостя';
+        }
 
         if (inp.value > 0) {
             inp.previousElementSibling.style = 'opacity: 1;';
@@ -58,8 +73,6 @@ buttons.forEach(btn => {
             inp.nextElementSibling.style = 'opacity: 1;';
         }
     });
-
-
 });
 
 // DROPDOWN BUTTONS CLEAR AND SUBMIT
@@ -67,8 +80,6 @@ document.querySelectorAll('.dropdown-guest__list-button').forEach(element => {
     let dropText = dropdownButton.textContent;
     element.addEventListener('click', (event) => {
         if (event.target.closest('[name="submit"]')) {
-            let countGuest = +childrenSelector.value + +adultsSelector.value + +babiesSelector.value;
-            dropdownButton.textContent = countGuest;
             dropdown.classList.remove('active');
             dropdownButton.focus();
         } else if (event.target.closest('[name="clear"]')) {
@@ -82,17 +93,6 @@ document.querySelectorAll('.dropdown-guest__list-button').forEach(element => {
             babiesSelector.value = 0;
             babiesSelector.previousElementSibling.style = 'opacity: 0.5;';
             babiesSelector.nextElementSibling.style = 'opacity: 1';
-        }
-
-        // Guest declination
-        if (dropdownButton.textContent == 0) {
-            dropdownButton.textContent = dropText;
-        } else if (dropdownButton.textContent != 11 && dropdownButton.textContent.slice(-1) == 1) {
-            dropdownButton.textContent += ' гость';
-        } else if (dropdownButton.textContent > 1 && dropdownButton.textContent < 5 || dropdownButton.textContent > 20 && dropdownButton.textContent.slice(-1) < 5) {
-            dropdownButton.textContent += ' гостя';
-        } else if (dropdownButton.textContent !== dropText) {
-            dropdownButton.textContent += ' гостей';
         }
     })
 });
