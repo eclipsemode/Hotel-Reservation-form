@@ -1388,3 +1388,108 @@ h3 {
   line-height: 14.63px;
   margin-bottom: 20px;
 }
+.button__submit {
+  background: none;
+  border: none;
+  border-radius: 22px;
+  outline: none;
+}
+.button__submit--small {
+  cursor: pointer;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  text-transform: uppercase;
+  color: #FFF;
+  width: 99px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}
+.button__submit--small:hover {
+  opacity: 0.5;
+}
+.button__submit--small:active {
+  transform: translate(0.5px, 0.5px);
+}
+.button__submit--transparent {
+  cursor: pointer;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  text-transform: uppercase;
+  color: #BC9CFF;
+  width: 99px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+}
+.button__submit--transparent span {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: calc(50% - 29px);
+  z-index: 2;
+  color: #BC9CFF;
+}
+.button__submit--transparent::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 95px;
+  height: 40px;
+  background: #FFF;
+  border-radius: 22px;
+}
+.button__submit--transparent:hover {
+  opacity: 0.5;
+}
+.button__submit--transparent:active {
+  transform: translate(0.5px, 0.5px);
+}
+.button__submit--no-border {
+  text-transform: uppercase;
+  color: #BC9CFF;
+  width: 99px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+}
+.button__submit--no-border span {
+  cursor: pointer;
+}
+.button__submit--no-border span:hover {
+  color: rgba(31, 32, 65, 0.5);
+}
+.button__submit--no-border span:active {
+  opacity: 0.5;
+}
+.button__submit--big {
+  cursor: pointer;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  text-transform: uppercase;
+  color: #FFF;
+  width: 320px;
+  height: 44px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+}
+.button__submit--big::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  background: url(assets/img/ff6f3c54b1e488b74939.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.button__submit--big:hover {
+  opacity: 0.5;
+}
+.button__submit--big:active {
+  transform: translate(0.5px, 0.5px);
+}

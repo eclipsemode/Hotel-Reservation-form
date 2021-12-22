@@ -4,7 +4,6 @@ const babiesSelector = document.querySelector('[name="babies"]');
 const childrenSelector = document.querySelector('[name="children"]');
 const adultsSelector = document.querySelector('[name="adults"]');
 const clearButton = document.querySelector('[name="clear"]');
-let gusetNumber;
 
 // CLICK ON BUTTON DROPDOWN. OPEN /  CLOSE DROPDOWN
 document.addEventListener('click', (event) => {
@@ -60,6 +59,7 @@ buttons.forEach(btn => {
             dropdownButton.textContent += ' гостя';
         }
 
+        // Color of active or nonactive button in item counter
         if (inp.value > 0) {
             inp.previousElementSibling.style = 'opacity: 1;';
         } else {
