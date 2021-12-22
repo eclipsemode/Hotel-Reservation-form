@@ -1,0 +1,31 @@
+.rich-checkbox-container {
+    max-width: 266px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.rich-checkbox {
+    @include checkbox;
+    &__label {
+        color: $Dark-shade-75;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        &:not(:last-of-type) {
+            margin-bottom: 43px;
+        }
+    }
+    &__text {
+        position: relative;
+    }
+    &__additional {
+        position: absolute;
+        left: 0;
+        top: 22px;
+        color: $Dark-shade-50;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        width: 236px;
+    }
+}
