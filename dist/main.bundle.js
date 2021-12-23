@@ -154,7 +154,7 @@ eval("var checkbox = document.querySelector('.expandable-checkbox-container');\n
   \***********************************************/
 /***/ (() => {
 
-eval("var likeBtn = document.querySelector('.like-btn');\nlikeBtn.addEventListener('click', function (event) {\n  var value = +likeBtn.innerText;\n  likeBtn.classList.toggle('like-btn--active');\n});\n\n//# sourceURL=webpack:///./components/like-button/like-button.js?");
+eval("var likeBtn = document.querySelectorAll('.like-btn');\nlikeBtn.forEach(function (element) {\n  element.addEventListener('click', function (event) {\n    element.classList.toggle('like-btn--active');\n  });\n});\n\n//# sourceURL=webpack:///./components/like-button/like-button.js?");
 
 /***/ }),
 

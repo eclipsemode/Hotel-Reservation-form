@@ -1,0 +1,40 @@
+.comment {
+    width: 711px;
+    display: flex;
+    flex-direction: column;
+    &__user {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        .user__image {
+            width: 48px;
+            height: 48px;
+            justify-content: center;
+        }
+        .user__name {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: $Dark-shade-75;
+            display: block;
+            margin-left: 14.31px;
+        }
+        .user__date {
+            font-weight: 400;
+            display: block;
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__text {
+        margin-top: 0;
+        margin-left: 14.31px;
+    }
+    &__like {
+        display: flex;
+        justify-content: center;
+        width: 110px;
+    }
+}

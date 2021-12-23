@@ -1586,3 +1586,44 @@ h3 {
   max-width: 271px;
   max-height: 48px;
 }
+
+.comment {
+  width: 711px;
+  display: flex;
+  flex-direction: column;
+}
+.comment__user {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.comment__user .user__image {
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+}
+.comment__user .user__name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  display: block;
+  margin-left: 14.31px;
+}
+.comment__user .user__date {
+  font-weight: 400;
+  display: block;
+}
+.comment__info {
+  display: flex;
+  align-items: flex-start;
+}
+.comment__text {
+  margin-top: 0;
+  margin-left: 14.31px;
+}
+.comment__like {
+  display: flex;
+  justify-content: center;
+  width: 110px;
+}
