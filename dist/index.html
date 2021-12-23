@@ -60,6 +60,39 @@
     </ul>
   </div>
 </div>
+  <h2>DROPDOWN (ROOM)</h2>
+<div class="dropdown-room">
+  <button class="dropdown-type" type="submit" name="dropdown-field-room">Удобства номера</button>
+  <div class="dropdown-guest" hidden>
+    <ul class="dropdown-guest__list">
+      <li class="dropdown-guest__list-item" data-value="adults">Спальни
+        <div class="counter">
+          <button class="counter__btn" type="submit" data-direction="minus">-</button>
+          <input class="counter__value" type="number" value="0" max="9" name="bedrooms">
+          <button class="counter__btn" type="submit" data-direction="plus">+</button>
+        </div>
+      </li>
+      <li class="dropdown-guest__list-item" data-value="children">Кровати
+        <div class="counter">
+          <button class="counter__btn" type="submit" data-direction="minus">-</button>
+          <input class="counter__value" type="number" value="0" max="9" name="beds">
+          <button class="counter__btn" type="submit" data-direction="plus">+</button>
+        </div>
+      </li>
+      <li class="dropdown-guest__list-item" data-value="babies">Ванные комнаты
+        <div class="counter">
+          <button class="counter__btn" type="submit" data-direction="minus">-</button>
+          <input class="counter__value" type="number" value="0" max="9" name="bathrooms">
+          <button class="counter__btn" type="submit" data-direction="plus">+</button>
+        </div>
+      </li>
+      <div class="dropdown-guest__list-button">
+        <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
+        <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+      </div>
+    </ul>
+  </div>
+</div>
   <h2>CALENDAR</h2>
 <div class="calendar">
   <div class="calendar_month">

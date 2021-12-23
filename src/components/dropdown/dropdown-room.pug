@@ -1,0 +1,22 @@
+.dropdown-room
+    button(type="submit" name="dropdown-field-room").dropdown-type Удобства номера
+    .dropdown-guest(hidden)
+        ul.dropdown-guest__list
+            li(data-value='adults').dropdown-guest__list-item Спальни
+                .counter
+                    button.counter__btn(type='submit' data-direction="minus") -
+                    input.counter__value(type="number" value="0" max="9" name='bedrooms')
+                    button.counter__btn(type='submit' data-direction="plus") +
+            li(data-value='children').dropdown-guest__list-item Кровати
+                .counter
+                    button.counter__btn(type='submit' data-direction="minus") -
+                    input.counter__value(type="number" value="0" max="9" name='beds')
+                    button.counter__btn(type='submit' data-direction="plus") +
+            li(data-value='babies').dropdown-guest__list-item Ванные комнаты
+                .counter
+                    button.counter__btn(type='submit' data-direction="minus") -
+                    input.counter__value(type="number" value="0" max="9" name='bathrooms')
+                    button.counter__btn(type='submit' data-direction="plus") +
+            .dropdown-guest__list-button
+                button(type="submit" name="clear").dropdown-guest__list-button-item Очистить
+                button(type="submit" name="submit").dropdown-guest__list-button-item Применить

@@ -1,16 +1,25 @@
 const dropdown = document.querySelector('.dropdown');
+const dropdownRoom = document.querySelector('.dropdown-room');
 const dropdownButton = document.querySelector('.dropdown-type');
 const babiesSelector = document.querySelector('[name="babies"]');
 const childrenSelector = document.querySelector('[name="children"]');
 const adultsSelector = document.querySelector('[name="adults"]');
+const bedroomsSelector = document.querySelector('[name="bedrooms"]');
+const bedsSelector = document.querySelector('[name="beds"]');
+const bathroomsSelector = document.querySelector('[name="bathrooms"]');
 const clearButton = document.querySelector('[name="clear"]');
 
 // CLICK ON BUTTON DROPDOWN. OPEN /  CLOSE DROPDOWN
 document.addEventListener('click', (event) => {
     if (event.target.closest('.dropdown-type')) {
-        dropdown.classList.toggle('active');
-    } else if (!event.target.closest('.dropdown')) {
-        dropdown.classList.remove('active');
+        event.target.parentElement.classList.toggle('active');
+    } else if (!event.target.closest('.dropdown') && !event.target.closest('.dropdown-room')) {
+        if (dropdown.classList.contains('active')) {
+            dropdown.classList.remove('active');
+        } else if (dropdownRoom.classList.contains('active')) {
+            dropdownRoom.classList.remove('active');
+        }
+        
     } else if (dropdown.classList.contains('active')) {
         dropdownButton.focus();
     }
@@ -25,12 +34,14 @@ document.addEventListener('click', (event) => {
 
 // ITEM COUNTER
 const buttons = document.querySelectorAll(".counter__btn");
+const counterValue = document.querySelectorAll(".counter__value");
 
 buttons.forEach(btn => {
     btn.addEventListener("click", function (event) {
         const inp = this.parentElement.querySelector(".counter__value");
         const currentValue = +inp.value;
         let newValue;
+        let textButton = event.target.parentElement.parentElement.parentElement.parentElement.previousElementSibling;
 
         if (this.dataset.direction === "plus") {
             newValue = currentValue + 1;
@@ -42,8 +53,38 @@ buttons.forEach(btn => {
         }
 
         inp.value = newValue;
+        textButton.value = newValue;
 
-        dropdownButton.textContent = +childrenSelector.value + +adultsSelector.value + +babiesSelector.value;
+
+
+        // Room declination
+        let bedroomsDeclination;
+        let bedsDeclination;
+        let bathroomsDeclination;
+        if (document.querySelector('[name="bedrooms"]').value == 1) {
+            bedroomsDeclination = 'спальня';
+        } else if (document.querySelector('[name="bedrooms"]').value > 1 && document.querySelector('[name="bedrooms"]').value < 5) { 
+            bedroomsDeclination = 'спальни';
+        } else {
+            bedroomsDeclination = 'спален';
+        }
+        if (document.querySelector('[name="beds"]').value == 1) {
+            bedsDeclination = 'кровать';
+        } else if (document.querySelector('[name="beds"]').value > 1 && document.querySelector('[name="beds"]').value < 5) {
+            bedsDeclination = 'кровати';
+        } else {
+            bedsDeclination = 'кроватей';
+        }
+
+        // Value of dropdown element
+        if (event.target.closest('.dropdown')) {
+            textButton.textContent = +childrenSelector.value + +adultsSelector.value + +babiesSelector.value;
+        } 
+        if (event.target.closest('.dropdown-room')) {
+            textButton.textContent = document.querySelector('[name="bedrooms"]').value + ' ' + bedroomsDeclination + ', ' + document.querySelector('[name="beds"]').value + ' ' + bedsDeclination + '...';
+        }
+
+
 
         // Guest declination
         if (dropdownButton.textContent.slice(-1) == 0) {
@@ -77,22 +118,26 @@ buttons.forEach(btn => {
 
 // DROPDOWN BUTTONS CLEAR AND SUBMIT
 document.querySelectorAll('.dropdown-guest__list-button').forEach(element => {
-    let dropText = dropdownButton.textContent;
     element.addEventListener('click', (event) => {
         if (event.target.closest('[name="submit"]')) {
-            dropdown.classList.remove('active');
-            dropdownButton.focus();
+            event.target.parentElement.parentElement.parentElement.parentElement.classList.remove('active');
+            event.target.parentElement.parentElement.parentElement.previousElementSibling.focus();
         } else if (event.target.closest('[name="clear"]')) {
-            dropdownButton.textContent = dropText;
-            childrenSelector.value = 0;
-            childrenSelector.previousElementSibling.style = 'opacity: 0.5;';
-            childrenSelector.nextElementSibling.style = 'opacity: 1;';
-            adultsSelector.value = 0;
-            adultsSelector.previousElementSibling.style = 'opacity: 0.5;';
-            adultsSelector.nextElementSibling.style = 'opacity: 1;';
-            babiesSelector.value = 0;
-            babiesSelector.previousElementSibling.style = 'opacity: 0.5;';
-            babiesSelector.nextElementSibling.style = 'opacity: 1';
+            if (event.target.parentElement.parentElement.parentElement.parentElement.classList.contains('dropdown')) {
+                element.parentElement.parentElement.previousElementSibling.textContent = 'Сколько гостей';
+                dropdown.querySelectorAll('.counter__value').forEach(element => {
+                    element.value = 0;
+                    element.previousElementSibling.style = 'opacity: 0.5;';
+                    element.nextElementSibling.style = 'opacity: 1;';
+                })
+            } else if (event.target.parentElement.parentElement.parentElement.parentElement.classList.contains('dropdown-room')) {
+                element.parentElement.parentElement.previousElementSibling.textContent = 'Удобства номера';
+                dropdownRoom.querySelectorAll('.counter__value').forEach(element => {
+                    element.value = 0;
+                    element.previousElementSibling.style = 'opacity: 0.5;';
+                    element.nextElementSibling.style = 'opacity: 1;';
+                })
+            }
         }
     })
 });
