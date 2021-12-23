@@ -1264,6 +1264,13 @@ h3 {
   opacity: 1;
 }
 
+.pagination__text {
+  margin: 10px 6px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  line-height: 24px;
+}
 .pagination__list {
   display: flex;
   padding-left: 0;

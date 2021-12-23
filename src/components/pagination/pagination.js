@@ -95,4 +95,4 @@ function pagination(totalPages, page) {
     }
 }
 
-pagination(20, 1);
+pagination(15, 1);
