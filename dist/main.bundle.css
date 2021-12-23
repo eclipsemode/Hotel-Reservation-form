@@ -1544,6 +1544,9 @@ h3 {
 .rich-checkbox__label:not(:last-of-type) {
   margin-bottom: 43px;
 }
+.rich-checkbox__label:last-of-type {
+  margin-bottom: 30px;
+}
 .rich-checkbox__text {
   position: relative;
 }
@@ -1556,4 +1559,30 @@ h3 {
   font-weight: 400;
   line-height: 14px;
   width: 236px;
+}
+
+.bullet-list {
+  display: flex;
+  flex-direction: column;
+}
+.bullet-list__item {
+  display: flex;
+  align-items: center;
+}
+.bullet-list__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(31, 32, 65, 0.25);
+  align-self: flex-start;
+  margin-top: 6px;
+}
+.bullet-list__text {
+  margin-left: 10.43px;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 271px;
+  max-height: 48px;
 }
