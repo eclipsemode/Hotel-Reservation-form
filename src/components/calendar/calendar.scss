@@ -1,132 +1,157 @@
-.calendar {
+.air-datepicker {
+    border: 1px solid $Dark-shade-25;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-height: 369px;
     width: 320px;
-    height: 369px;
-    background-color: #fff;
-    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px;
-    &_month {
-        width: 100%;
+    --adp-padding: 12px;
+    --adp-background-color-hover: none;
+    --adp-day-cell-height: 40px;
+    --adp-border-color-inner: none;
+    --adp-background-color-in-range-focused: none;
+    --adp-background-color-selected-other-month-focused: linear-gradient(rgb(188, 156, 255) 0%, #8ba4f9 100%);
+    font-family: "Montserrat", sans-serif;
+}
+
+.air-datepicker-nav {
+    &--title {
+        color: $Dark-shade-100;
         font-size: 19px;
-        line-height: 23.16px;
         font-weight: 700;
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        &__left {
-            width: 24px;
-            height: 24px;
-            background-image: url(./assets/images/arrow_forward.svg);
-            background-repeat: no-repeat;
-            transform: rotateY(180deg);
-            margin-top: 5px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        &__date {
-            display: flex;
-            justify-content: center;
-            width: 125px;
-            align-items: center;
+        & i {
             color: $Dark-shade-100;
-            & > h2 {
-                margin-right: 2px;
-            }
-            & > span {
-                margin-left: 2px;
-            }
-        }
-        &__right {
-            width: 24px;
-            height: 24px;
-            background-image: url(./assets/images/arrow_forward.svg);
-            background-repeat: no-repeat;
-            margin-top: 5px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-    }
-    &_weekdays {
-        font-size: 12px;
-        line-height: 14.63px;
-        color: $Purple;
-        font-weight: 700;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 40px;
-    }
-    &_days {
-        font-size: 12px;
-        line-height: 14.63px;
-        color: $Dark-shade-50;
-        font-weight: 400;
-        width: 92%;
-        height: 215px;
-        margin: 0 auto;
-        text-align: center;
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        justify-content: space-between;
-        align-items: center;
-
-        &__prev-date {
-            color: $Dark-shade-25;
-        }
-        &__next-date {
-            color: $Dark-shade-25;
-        }
-
-        & > div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            cursor: pointer;
-        }
-        & > div:not(.calendar_days__today):not(.calendar_days__prev-date):not(.calendar_days__next-date) > p {
-            &:hover {
-                opacity: 0.5;
-            }
-        }
-        &__today {
-            background: linear-gradient(#6fcf97 0%, #66d2ea 100%);
-            border-radius: 50%;
-            color: rgba(255, 255, 255, 1);
-            font-weight: 700;
-        }
-        .selected--day {
-            background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
-            border-radius: 50%;
-            color: rgba(255, 255, 255, 1);
-            font-weight: 700;
-        }
-    }
-    & button {
-        border-style: none;
-        background: none;
-        color: $Purple;
-        font-size: 12px;
-        line-height: 14.63px;
-        font-weight: 700;
-        cursor: pointer;
-        &:hover {
-            opacity: 0.5;
-        }
-    }
-    &_buttons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 92%;
-        margin: 0 auto;
-        margin-top: 30px;
-        & button {
-            text-transform: uppercase;
         }
     }
 }
+
+.air-datepicker-body--day-name {
+    text-transform: capitalize;
+    color: $Purple;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.air-datepicker-nav {
+    &--action {
+        background: url(../style/assets/images/arrow_forward.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        &:first-of-type {
+            transform: rotate(180deg);
+        }
+        &:hover {
+            background: url(../style/assets/images/arrow_forward.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        & svg path {
+            display: none;
+        }
+}
+}
+
+
+// Cells
+.air-datepicker--content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.-day- {
+    width: 40px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 12px;
+    color: $Dark-shade-50;
+}
+.-day-.-current- {
+    color: white;
+    background: $Secondary-gradient;
+    border-radius: 50%;
+}
+.-day-.-current-.-focus- {
+    color: white;
+}
+.-day-.-selected- {
+    color: white;
+    background: $Primary-gradient;
+    border-radius: 50%;
+}
+.-day-.-selected-.-focus- {
+    background: $Primary-gradient;
+    border-radius: 50%;
+}
+.-day-.-selected-.-range-from- {
+    border-radius: 50%;
+}
+.-day-.-range-from- {
+    border: none;
+    border-radius: 50%;
+    background: $Primary-gradient;
+    color: white;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: $Primary-gradient--opacity;
+        z-index: -1;
+    }
+}
+.-day-.-range-to- {
+    border: none;
+    border-radius: 50%;
+    background: $Primary-gradient;
+    color: white;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: $Primary-gradient--opacity;
+        z-index: -1;
+    }
+}
+.-day-.-in-range- {
+    background: $Primary-gradient--opacity;
+}
+.-day-.-focus-.-in-range- {
+    background: $Primary-gradient--opacity;
+}
+.-day-.-other-month-.-focus-.-in-range- {
+    background: red;
+}
+.-disabled- {
+color: $Dark-shade-50;
+}
+.-other-month- {
+    color: $Dark-shade-25;
+}
+.-focus- {
+    color: $Dark-shade-25;
+}
+.-day-.-other-month-.-selected-.-range-from- {
+    background: $Primary-gradient;
+}
+.-day-.-other-month-.-selected-.-range-to- {
+    background: $Primary-gradient;
+}
+.-in-range-.air-datepicker-cell.-day-.-other-month-, .-in-range-.air-datepicker-cell.-year-.-other-decade- {
+    background: $Primary-gradient--opacity;
+    color: $Dark-shade-25;
+}
+
+
+.air-datepicker-buttons {
+    grid-gap: 80px;
+}
+.air-datepicker-button {
+    color: $Purple;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
