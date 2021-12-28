@@ -3,11 +3,21 @@
     justify-content: space-between;
     width: 100%;
     max-width: 320px;
+    &__container {
+        @include arrow-after;
+    }
+    &__container--focus {
+        @include arrow-after;
+        &::after {
+            border-color: $Dark-shade-75;
+        }
+    }
     &__inp {
         max-width: 150px;
         max-height: 44px;
         height: 100%;
         text-transform: uppercase;
+        caret-color: transparent;
         @include text-field;
         &::-webkit-calendar-picker-indicator {
             background: none;
@@ -25,6 +35,9 @@
         &:focus::-webkit-calendar-picker-indicator {
             // transform: rotate(225deg);
             border-color: $Dark-shade-75;
+        }
+        &::placeholder {
+            color: $Dark-shade-75;
         }
     }
 }

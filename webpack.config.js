@@ -1,8 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
@@ -20,9 +21,15 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         // assetModuleFilename: 'assets/images/[name][ext][query]'
     },
-    plugins: [new HtmlWebpackPlugin({
+    plugins: [
+    new HtmlWebpackPlugin({
         inject: 'body',
         template: "./index.pug",
+    }),
+    new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({

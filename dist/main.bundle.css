@@ -142,7 +142,7 @@
 .air-datepicker-body--day-names {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: var(--adp-day-cell-width) [7];
+  -ms-grid-columns: var(--adp-day-cell-width);
   grid-template-columns: repeat(7, var(--adp-day-cell-width));
   margin: 8px 0 3px;
 }
@@ -168,19 +168,19 @@
 }
 
 .air-datepicker-body--cells.-days- {
-  -ms-grid-columns: var(--adp-day-cell-width) [7];
+  -ms-grid-columns: var(--adp-day-cell-width);
   grid-template-columns: repeat(7, var(--adp-day-cell-width));
   grid-auto-rows: var(--adp-day-cell-height);
 }
 
 .air-datepicker-body--cells.-months- {
-  -ms-grid-columns: 1fr [3];
+  -ms-grid-columns: 1fr;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: var(--adp-month-cell-height);
 }
 
 .air-datepicker-body--cells.-years- {
-  -ms-grid-columns: 1fr [4];
+  -ms-grid-columns: 1fr;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: var(--adp-year-cell-height);
 }
@@ -583,7 +583,7 @@
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -ms-grid-rows: max-content [4];
+  -ms-grid-rows: max-content;
   grid-template-rows: repeat(4, max-content);
   grid-template-areas: var(--adp-grid-areas);
   font-family: var(--adp-font-family), sans-serif;
@@ -1706,11 +1706,53 @@ h3 {
   width: 100%;
   max-width: 320px;
 }
+.date-form__container {
+  position: relative;
+}
+.date-form__container::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 13px;
+  border: solid rgba(31, 32, 65, 0.5);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  pointer-events: none;
+  z-index: 10;
+}
+.date-form__container:focus::after {
+  border-color: rgba(31, 32, 65, 0.75);
+}
+.date-form__container--focus {
+  position: relative;
+}
+.date-form__container--focus::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 13px;
+  border: solid rgba(31, 32, 65, 0.5);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  pointer-events: none;
+  z-index: 10;
+}
+.date-form__container--focus:focus::after {
+  border-color: rgba(31, 32, 65, 0.75);
+}
+.date-form__container--focus::after {
+  border-color: rgba(31, 32, 65, 0.75);
+}
 .date-form__inp {
   max-width: 150px;
   max-height: 44px;
   height: 100%;
   text-transform: uppercase;
+  caret-color: transparent;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   line-height: 24px;
@@ -1746,6 +1788,9 @@ h3 {
 }
 .date-form__inp:focus::-webkit-calendar-picker-indicator {
   border-color: rgba(31, 32, 65, 0.75);
+}
+.date-form__inp::placeholder {
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .filter-date-dropdown {
@@ -1799,6 +1844,8 @@ h3 {
   --adp-border-color-inner: none;
   --adp-background-color-in-range-focused: none;
   --adp-background-color-selected-other-month-focused: linear-gradient(rgb(188, 156, 255) 0%, #8ba4f9 100%);
+  --adp-cell-background-color-selected: linear-gradient(rgb(188, 156, 255) 0%, #8ba4f9 100%);
+  --adp-pointer-size: none;
   font-family: "Montserrat", sans-serif;
 }
 

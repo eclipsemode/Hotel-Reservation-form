@@ -1,3 +1,5 @@
 form.date-form
-    input(type="date" max="1979-12-31").date-form__inp
-    input(type="date" max="1979-12-31").date-form__inp
+    .date-form__container
+        input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--start.datepicker
+    .date-form__container
+        input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--end.datepicker

@@ -16,8 +16,12 @@
 <input class="masked-text-field" type="text" name="date" placeholder="дд.мм.гггг" autocomplete="off">
   <h2>DATE DROPDOWN</h2>
 <form class="date-form">
-  <input class="date-form__inp" type="date" max="1979-12-31">
-  <input class="date-form__inp" type="date" max="1979-12-31">
+  <div class="date-form__container">
+    <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
+  </div>
+  <div class="date-form__container">
+    <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
+  </div>
 </form>
   <h2>FILTER DATE DROPDOWN</h2>
 <form>
@@ -94,7 +98,6 @@
   </div>
 </div>
   <h2>CALENDAR</h2>
-<div id="el"></div>
   <h2>EXPANDABLE CHECKBOX LIST</h2>
 <div class="expandable-checkbox-container">
   <h3 class="expandable-checkbox-container__title">expandable checkbox list</h3>

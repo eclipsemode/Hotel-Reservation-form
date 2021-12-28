@@ -5,14 +5,12 @@ import 'air-datepicker/air-datepicker.css';
 let selectItem = {
     content: 'Применить',
     className: 'custom-button-classname',
-    onClick: (dp) => {
-        let date = new onSelect();
-        dp.selectDate(date);
-        dp.setViewDate(date);
-    },
+    onClick: (dp) =>{
+        dp.hide()
+    }
 }
 
-new AirDatepicker('#el', {
+const dp = new AirDatepicker('.datepicker', {
     buttons: ['clear', selectItem],
     multipleDatesSeparator: ' - ',
     minDate: new Date(),
@@ -21,4 +19,14 @@ new AirDatepicker('#el', {
     navTitles: {
         days: 'MMMM <i>yyyy</i>',
     },
+    onSelect: function (fd, d, picker) {    
+        document.querySelector('.date-form__inp--start').value = fd.formattedDate[0];
+        document.querySelector('.date-form__inp--end').value = fd.formattedDate[1]; 
+        document.querySelectorAll(".date-form__inp").forEach(element => {
+            if (element.value == 'undefined') {
+                element.value = '';
+            }
+        })
+    },
 })
+
