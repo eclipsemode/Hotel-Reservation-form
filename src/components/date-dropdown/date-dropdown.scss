@@ -3,6 +3,10 @@
     justify-content: space-between;
     width: 100%;
     max-width: 320px;
+    & h3 {
+        position: absolute;
+        bottom: 43px;
+    }
     &__container {
         @include arrow-after;
     }

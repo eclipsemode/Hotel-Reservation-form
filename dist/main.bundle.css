@@ -1130,11 +1130,9 @@ h3 {
   text-transform: uppercase;
   line-height: 14.63px;
   color: #1f2041;
-}
-
-.container {
-  max-width: 260px;
-  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
 }
 
 @font-face {
@@ -1705,6 +1703,10 @@ h3 {
   justify-content: space-between;
   width: 100%;
   max-width: 320px;
+}
+.date-form h3 {
+  position: absolute;
+  bottom: 43px;
 }
 .date-form__container {
   position: relative;
