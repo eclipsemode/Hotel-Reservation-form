@@ -1573,7 +1573,7 @@ h3 {
   overflow: hidden;
   z-index: 100;
   position: absolute;
-  top: 44px;
+  top: 69px;
   left: 0;
   width: 100%;
   background: #fff;
@@ -2010,7 +2010,7 @@ h3 {
 .subscription::after {
   content: "";
   position: absolute;
-  top: 34%;
+  top: calc(50% + 5px);
   right: 13px;
   width: 17px;
   height: 17px;
@@ -2529,7 +2529,7 @@ h3 {
   overflow: hidden;
   z-index: 100;
   position: absolute;
-  top: 44px;
+  top: 69px;
   left: 0;
   width: 100%;
   background: #fff;
