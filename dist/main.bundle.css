@@ -1399,13 +1399,14 @@ h3 {
 
 .toggle {
   position: relative;
+  display: block;
 }
 .toggle__inp {
   appearance: none;
 }
 .toggle__slider {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   width: 40px;
   height: 20px;
@@ -1569,6 +1570,9 @@ h3 {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
+.dropdown-type::-webkit-calendar-picker-indicator {
+  display: none;
+}
 .dropdown-type::after {
   content: "";
   position: absolute;
@@ -1693,6 +1697,9 @@ h3 {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
+.text::-webkit-calendar-picker-indicator {
+  display: none;
+}
 
 .masked-text-field {
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -1716,6 +1723,9 @@ h3 {
 .masked-text-field :active, .masked-text-field:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.masked-text-field::-webkit-calendar-picker-indicator {
+  display: none;
 }
 
 .date-form {
@@ -1796,6 +1806,9 @@ h3 {
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
 .date-form__inp::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.date-form__inp::-webkit-calendar-picker-indicator {
   background: none;
   border: solid rgba(31, 32, 65, 0.5);
   border-width: 0 3px 3px 0;
@@ -1837,6 +1850,9 @@ h3 {
 .filter-date-dropdown :active, .filter-date-dropdown:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.filter-date-dropdown::-webkit-calendar-picker-indicator {
+  display: none;
 }
 .filter-date-dropdown::after {
   content: "";
@@ -2060,6 +2076,9 @@ h3 {
 .subscription__email :active, .subscription__email:hover {
   outline: none;
   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.subscription__email::-webkit-calendar-picker-indicator {
+  display: none;
 }
 
 .rate {
@@ -2479,7 +2498,7 @@ h3 {
   width: 110px;
 }
 
-.room-search {
+.card {
   position: relative;
   width: min-content;
   background: white;
@@ -2487,23 +2506,45 @@ h3 {
   border-radius: 4px;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
 }
-.room-search__content {
+.card__content {
   margin: 40px 30px;
 }
-.room-search__title {
+.card__title {
   font-size: 24px;
   width: 100%;
   line-height: 29.26px;
 }
-.room-search .date-form {
+.card .date-form {
   margin-top: 41.44px;
 }
-.room-search .dropdown {
+.card .dropdown {
   margin-top: 20.56px;
 }
-.room-search .dropdown-guest {
+.card .dropdown-guest {
   top: 69px;
 }
-.room-search .button__submit.button__submit--big {
+.card .button__submit.button__submit--big {
   margin-top: 31px;
+}
+
+.card__content .text:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.card__content .radio {
+  margin-top: 10px;
+}
+.card__content h3 {
+  margin-top: 20px;
+}
+.card__content .toggle {
+  margin-top: 10px;
+}
+.card__content .button__submit.button__submit--big {
+  margin-top: 20px;
+}
+.card__login {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

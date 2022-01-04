@@ -1,11 +1,12 @@
 .toggle {
     position: relative;
+    display: block;
     &__inp {
         appearance: none;
     }
     &__slider {
         position: absolute;
-        top: 0;
+        top: 2px;
         left: 0;
         width: 40px;
         height: 20px;

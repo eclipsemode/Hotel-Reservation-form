@@ -33,7 +33,6 @@ const dp = new AirDatepicker('.datepicker', {
 const dpNoRange = new AirDatepicker('.datepicker-no-range', {
     buttons: ['clear', selectItem],
     multipleDatesSeparator: ' - ',
-    minDate: new Date(),
     navTitles: {
         days: 'MMMM <i>yyyy</i>',
     },

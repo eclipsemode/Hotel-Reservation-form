@@ -9,9 +9,9 @@
   <link href="main.bundle.css" rel="stylesheet"></head>
   <body> 
 <h2>ROOM SERACH </h2>
-<div class="room-search">
-  <div class="room-search__content">
-    <div class="room-search__title"> 
+<div class="card">
+  <div class="card__content">
+    <div class="card__title"> 
       <h2>Найдём номера под ваши пожелания</h2>
     </div>
     <form class="date-form">
@@ -58,6 +58,39 @@
       </div>
     </div>
     <button class="button__submit button__submit--big" type="submit">подобрать номер</button>
+  </div>
+</div>
+<h2>REGISTRATION </h2>
+<div class="card">
+  <div class="card__content">
+    <div class="card__title"> 
+      <h2>Найдём номера под ваши пожелания</h2>
+    </div>
+    <input class="text" type="text" name="text-field" placeholder="Имя">
+    <input class="text" type="text" name="text-field" placeholder="Фамилия">
+    <form class="radio">
+      <div class="radio-container">
+        <label class="radio-container__label">
+          <input class="radio-container__label-input" type="radio" name="sex" value="male">Мужчина
+        </label>
+        <label class="radio-container__label">
+          <input class="radio-container__label-input" type="radio" name="sex" value="female">Женщина
+        </label>
+      </div>
+    </form>
+    <h3>дата рождения</h3>
+    <input class="masked-text-field datepicker-no-range" type="text" name="date" placeholder="дд.мм.гггг" autocomplete="off" max="1979-12-31">
+    <h3>данные для входа в сервис</h3>
+    <input class="text" type="text" name="text-field" placeholder="Email">
+    <input class="text" type="text" name="text-field" placeholder="Пароль">
+    <label class="toggle">
+      <input class="toggle__inp" type="checkbox"><span class="toggle__slider"></span><span class="toggle__text">Получать спецпредложения</span>
+    </label>
+    <button class="button__submit button__submit--big" type="submit">Перейти к оплате</button>
+    <div class="card__login">
+      <div class="card__login-info">Уже есть аккаунт на Toxin</div>
+      <button class="button__submit button__submit--transparent" type="submit"> <span>click me</span></button>
+    </div>
   </div>
 </div>
   <script defer src="main.bundle.js"></script></body>
