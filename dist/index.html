@@ -8,245 +8,57 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="main.bundle.css" rel="stylesheet"></head>
   <body> 
-<div class="ui-kit__container">
-  <h1 style="color: #bc9cff;">UI KIT</h1>
-  <h2>TEXT FIELD</h2>
-<div class="container">
-  <h3>Text Field</h3>
-  <input class="text" type="text" name="text-field" placeholder="Email">
-</div>
-  <h2>MASKED TEXT FIELD</h2>
-<div class="container"> 
-  <h3>masked text field</h3>
-  <input class="masked-text-field" type="text" name="date" placeholder="дд.мм.гггг" autocomplete="off">
-</div>
-  <h2>DATE DROPDOWN</h2>
-<form class="date-form">
-  <div class="date-form__container">
-    <h3>fffff</h3>
-    <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
-  </div>
-  <div class="date-form__container">
-    <h3>ffffssf</h3>
-    <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
-  </div>
-</form>
-  <h2>FILTER DATE DROPDOWN</h2>
-<form>
-  <h3>filter date dropdown</h3>
-  <button class="filter-date-dropdown" type="button" autocomplete="off">19 авг - 23 авг</button>
-</form>
-  <h2>SUBSCRIPTION TEXT FIELD</h2>
-<form class="subscription">
-  <h3>subscription text field</h3>
-  <input class="subscription__email" type="email" name="text-field" placeholder="Email">
-</form>
-  <h2>DROPDOWN (WITH ITEM COUNTER)</h2>
-<div class="dropdown">
-  <h3>dropdown</h3>
-  <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
-  <div class="dropdown-guest" hidden>
-    <ul class="dropdown-guest__list">
-      <li class="dropdown-guest__list-item" data-value="adults">Взрослые
-        <div class="counter">
-          <button class="counter__btn" type="submit" data-direction="minus">-</button>
-          <input class="counter__value" type="number" value="0" max="9" name="adults">
-          <button class="counter__btn" type="submit" data-direction="plus">+</button>
-        </div>
-      </li>
-      <li class="dropdown-guest__list-item" data-value="children">Дети
-        <div class="counter">
-          <button class="counter__btn" type="submit" data-direction="minus">-</button>
-          <input class="counter__value" type="number" value="0" max="9" name="children">
-          <button class="counter__btn" type="submit" data-direction="plus">+</button>
-        </div>
-      </li>
-      <li class="dropdown-guest__list-item" data-value="babies">Младенцы
-        <div class="counter">
-          <button class="counter__btn" type="submit" data-direction="minus">-</button>
-          <input class="counter__value" type="number" value="0" max="9" name="babies">
-          <button class="counter__btn" type="submit" data-direction="plus">+</button>
-        </div>
-      </li>
-      <div class="dropdown-guest__list-button">
-        <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
-        <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
-      </div>
-    </ul>
-  </div>
-</div>
-  <h2>DROPDOWN (ROOM)</h2>
-<div class="dropdown-room">
-  <h3>dropdown</h3>
-  <button class="dropdown-type" type="submit" name="dropdown-field-room">Удобства номера</button>
-  <div class="dropdown-guest" hidden>
-    <ul class="dropdown-guest__list">
-      <li class="dropdown-guest__list-item" data-value="adults">Спальни
-        <div class="counter">
-          <button class="counter__btn" type="submit" data-direction="minus">-</button>
-          <input class="counter__value" type="number" value="0" max="9" name="bedrooms">
-          <button class="counter__btn" type="submit" data-direction="plus">+</button>
-        </div>
-      </li>
-      <li class="dropdown-guest__list-item" data-value="children">Кровати
-        <div class="counter">
-          <button class="counter__btn" type="submit" data-direction="minus">-</button>
-          <input class="counter__value" type="number" value="0" max="9" name="beds">
-          <button class="counter__btn" type="submit" data-direction="plus">+</button>
-        </div>
-      </li>
-      <li class="dropdown-guest__list-item" data-value="babies">Ванные комнаты
-        <div class="counter">
-          <button class="counter__btn" type="submit" data-direction="minus">-</button>
-          <input class="counter__value" type="number" value="0" max="9" name="bathrooms">
-          <button class="counter__btn" type="submit" data-direction="plus">+</button>
-        </div>
-      </li>
-      <div class="dropdown-guest__list-button">
-        <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
-        <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
-      </div>
-    </ul>
-  </div>
-</div>
-  <h2>CALENDAR</h2>
-<div class="datepicker-no-range"></div>
-  <h2>EXPANDABLE CHECKBOX LIST</h2>
-<div class="expandable-checkbox-container">
-  <h3 class="expandable-checkbox-container__title">expandable checkbox list</h3>
-</div>
-<form class="expandable-checkbox">
-  <label class="expandable-checkbox__label">
-    <input class="expandable-checkbox__label-input" type="checkbox" checked>Завтрак
-  </label>
-  <label class="expandable-checkbox__label">
-    <input class="expandable-checkbox__label-input" type="checkbox">Письменный стол
-  </label>
-  <label class="expandable-checkbox__label">
-    <input class="expandable-checkbox__label-input" type="checkbox">Стул для кормления
-  </label>
-  <label class="expandable-checkbox__label">
-    <input class="expandable-checkbox__label-input" type="checkbox">Кроватка
-  </label>
-  <label class="expandable-checkbox__label">
-    <input class="expandable-checkbox__label-input" type="checkbox">Телевизор
-  </label>
-  <label class="expandable-checkbox__label">
-    <input class="expandable-checkbox__label-input" type="checkbox">Шампунь 
-  </label>
-</form>
-  <h2>BENEFITS</h2>
-<div class="benefits-comfort"> 
-  <div class="benefits-comfort__svg"> </div>
-  <div class="benefits-comfort__text">
-    <h3 class="benefits-comfort__text-name">Комфорт</h3>
-    <p class="benefits-comfort__text-description">Шумопоглощающие стены</p>
-  </div>
-</div>
-<div class="benefits-location">
-  <div class="benefits-location__svg"> </div>
-  <div class="benefits-location__text">
-    <h3 class="benefits-location__text-name">Удобство</h3>
-    <p class="benefits-location__text-description">Окно в каждой из спален</p>
-  </div>
-</div>
-  <h2>RADIO BUTTONS </h2>
-<form class="radio">
-  <h3>radio buttons</h3>
-  <div class="radio-container">
-    <label class="radio-container__label">
-      <input class="radio-container__label-input" type="radio" name="sex" value="male">Мужчина
-    </label>
-    <label class="radio-container__label">
-      <input class="radio-container__label-input" type="radio" name="sex" value="female">Женщина
-    </label>
-  </div>
-</form>
-  <h2>TOGGLE </h2>
-<div class="container"> 
-  <h3>toggle button</h3>
-  <label class="toggle">
-    <input class="toggle__inp" type="checkbox"><span class="toggle__slider"></span><span class="toggle__text">Получать спецпредложения</span>
-  </label>
-</div>
-  <h2>LIKE BUTTON </h2>
-<div class="like-btn">
-  <div class="like-btn__content"></div>
-</div>
-  <h2>RATE BUTTON </h2>
-<div class="rate">
-  <input class="rate__inp" type="radio" name="star" id="star1">
-  <label class="rate__label" for="star1"></label>
-  <input class="rate__inp" type="radio" name="star" id="star2">
-  <label class="rate__label" for="star2"></label>
-  <input class="rate__inp" type="radio" name="star" id="star3">
-  <label class="rate__label" for="star3"></label>
-  <input class="rate__inp" type="radio" name="star" id="star4">
-  <label class="rate__label" for="star4"></label>
-  <input class="rate__inp" type="radio" name="star" id="star5">
-  <label class="rate__label" for="star5"></label>
-</div>
-  <h2>PAGINATION </h2>
-<div class="pagination">
-  <h3>pagination</h3>
-  <ul class="pagination__list"></ul>
-  <p class="pagination__text">1 – 12 из 100+ вариантов аренды</p>
-</div>
-  <h2>RANGE SLIDER </h2>
-<div class="range">
-  <div class="range__value"><span class="range__value-first">0</span><span>&dash;</span><span class="range__value-second">100  </span></div>
-  <form class="range__form">
-    <div class="range__track">
-      <div class="track-line"></div>
+<h2>ROOM SERACH </h2>
+<div class="room-search">
+  <div class="room-search__content">
+    <div class="room-search__title"> 
+      <h2>Найдём номера под ваши пожелания</h2>
     </div>
-    <input class="range__slider range__slider-first" type="range" min="0" max="10000" value="3000">
-    <input class="range__slider range__slider-second" type="range" min="0" max="10000" value="7000">
-  </form>
-</div>
-  <h2>BUTTONS </h2>
-<div class="button"></div>
-<button class="button__submit button__submit--small" type="submit">click me</button><br>
-<button class="button__submit button__submit--transparent" type="submit"> <span>click me</span></button><br>
-<button class="button__submit button__submit--no-border" type="submit"> <span>click me</span></button><br>
-<button class="button__submit button__submit--big" type="submit">Перейти к оплате</button>
-  <h2>RICH CHECKBOX BUTTONS</h2>
-<div class="rich-checkbox-container">
-  <h3 class="rich-checkbox-container__title">rich checkbox buttons</h3>
-</div>
-<form class="rich-checkbox">
-  <label class="rich-checkbox__label">
-    <input class="rich-checkbox__label-input" type="checkbox" checked>
-    <div class="rich-checkbox__text">Широкий коридор<span class="rich-checkbox__additional">Ширина коридоров в номере не менее 91 см.</span></div>
-  </label>
-  <label class="rich-checkbox__label">
-    <input class="rich-checkbox__label-input" type="checkbox">
-    <div class="rich-checkbox__text">Помощник для инвалидов<span class="rich-checkbox__additional">На 1 этаже вас встретит специалист и проводит до номера.</span></div>
-  </label>
-</form>
-  <h2>BULLET LIST </h2>
-<div class="bullet-list">
-  <div class="bullet-list__item">
-    <div class="bullet-list__dot"> </div><span class="bullet-list__text">Нельзя с питомцами</span>
-  </div>
-  <div class="bullet-list__item">
-    <div class="bullet-list__dot"> </div><span class="bullet-list__text">Без вечеринок и мероприятий</span>
-  </div>
-  <div class="bullet-list__item">
-    <div class="bullet-list__dot"> </div><span class="bullet-list__text">Время прибытия — после 13:00, а выезд до 12:00</span>
-  </div>
-</div>
-  <h2>COMMENT </h2>
-<div class="comment"> 
-  <div class="comment__user user"><img class="user__image" src="../../../src/style/assets/images/user.png" alt="murad-sarafanov"><span class="user__name">Мурад Сарафанов<span class="user__date">5 дней назад</span></span></div>
-  <div class="comment__info">
-    <div class="comment__like">
-<div class="like-btn">
-  <div class="like-btn__content"></div>
-</div>
+    <form class="date-form">
+      <div class="date-form__container">
+        <h3>прибытие</h3>
+        <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
+      </div>
+      <div class="date-form__container">
+        <h3>выезд</h3>
+        <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
+      </div>
+    </form>
+    <div class="dropdown">
+      <h3>dropdown</h3>
+      <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
+      <div class="dropdown-guest" hidden>
+        <ul class="dropdown-guest__list">
+          <li class="dropdown-guest__list-item" data-value="adults">Взрослые
+            <div class="counter">
+              <button class="counter__btn" type="submit" data-direction="minus">-</button>
+              <input class="counter__value" type="number" value="0" max="9" name="adults">
+              <button class="counter__btn" type="submit" data-direction="plus">+</button>
+            </div>
+          </li>
+          <li class="dropdown-guest__list-item" data-value="children">Дети
+            <div class="counter">
+              <button class="counter__btn" type="submit" data-direction="minus">-</button>
+              <input class="counter__value" type="number" value="0" max="9" name="children">
+              <button class="counter__btn" type="submit" data-direction="plus">+</button>
+            </div>
+          </li>
+          <li class="dropdown-guest__list-item" data-value="babies">Младенцы
+            <div class="counter">
+              <button class="counter__btn" type="submit" data-direction="minus">-</button>
+              <input class="counter__value" type="number" value="0" max="9" name="babies">
+              <button class="counter__btn" type="submit" data-direction="plus">+</button>
+            </div>
+          </li>
+          <div class="dropdown-guest__list-button">
+            <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
+            <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+          </div>
+        </ul>
+      </div>
     </div>
-    <p class="comment__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+    <button class="button__submit button__submit--big" type="submit">подобрать номер</button>
   </div>
-</div>
 </div>
   <script defer src="main.bundle.js"></script></body>
 </html>

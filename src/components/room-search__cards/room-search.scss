@@ -1,0 +1,29 @@
+.room-search {
+    position: relative;
+    width: min-content;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .2);;
+    &__content {
+        margin: 40px 30px;
+    }
+    &__title {
+        font-size: 24px;
+        width: 100%;
+        line-height: 29.26px;
+    }
+    & .date-form {
+        margin-top: 41.44px;
+    }
+
+    & .dropdown {
+        margin-top: 20.56px;
+        &-guest {
+                top: 69px;
+            }
+    }
+    & .button__submit.button__submit--big {
+        margin-top: 31px;
+    }
+}

@@ -1,3 +1,4 @@
+// Dropdown
 .dropdown.active {
     .dropdown-type {
         border-bottom-left-radius: 0;
@@ -17,8 +18,32 @@
 
 .dropdown {
     position: relative;
+    width: 320px;
 }
 
+// Dropdown Room
+.dropdown-room.active {
+    .dropdown-type {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-color: $Dark-shade-75;
+        &::after {
+            border-color: $Dark-shade-75;
+        }
+        &:active {
+            border-color: $Dark-shade-75;
+        }
+    }
+    .dropdown-guest {
+        display: block;
+    }
+}
+
+.dropdown-room{
+    position: relative;
+}
+
+// Main
 .dropdown-type {
     @include text-field;
     display: block;
@@ -37,7 +62,7 @@
     overflow: hidden;
     z-index: 100;
     position: absolute;
-    top: 69px;
+    top: 74px;
     left: 0;
     width: 100%;
     background: #fff;
