@@ -7,60 +7,60 @@
     <title>Hotel Reservation Project</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="main.bundle.css" rel="stylesheet"></head>
-  <body> 
-<h2>ROOM SERACH </h2>
-<div class="card">
-  <div class="card__content">
-    <div class="card__title"> 
-      <h2>Найдём номера под ваши пожелания</h2>
+  <body>
+    <h2>ROOM SERACH </h2>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__title"> 
+          <h2>Найдём номера под ваши пожелания</h2>
+        </div>
+            <form class="date-form">
+              <div class="date-form__container">
+                <h3>прибытие</h3>
+                <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
+              </div>
+              <div class="date-form__container">
+                <h3>выезд</h3>
+                <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
+              </div>
+            </form>
+            <div class="dropdown">
+              <h3>гости</h3>
+              <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
+              <div class="dropdown-guest" hidden>
+                <ul class="dropdown-guest__list">
+                  <li class="dropdown-guest__list-item" data-value="adults">Взрослые
+                    <div class="counter">
+                      <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                      <input class="counter__value" type="number" value="0" max="9" name="adults">
+                      <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                    </div>
+                  </li>
+                  <li class="dropdown-guest__list-item" data-value="children">Дети
+                    <div class="counter">
+                      <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                      <input class="counter__value" type="number" value="0" max="9" name="children">
+                      <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                    </div>
+                  </li>
+                  <li class="dropdown-guest__list-item" data-value="babies">Младенцы
+                    <div class="counter">
+                      <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                      <input class="counter__value" type="number" value="0" max="9" name="babies">
+                      <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                    </div>
+                  </li>
+                  <div class="dropdown-guest__list-button">
+                    <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
+                    <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+                  </div>
+                </ul>
+              </div>
+            </div>
+        <button class="button__submit button__submit--big" type="submit">подобрать номер</button>
+      </div>
     </div>
-    <form class="date-form">
-      <div class="date-form__container">
-        <h3>прибытие</h3>
-        <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
-      </div>
-      <div class="date-form__container">
-        <h3>выезд</h3>
-        <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
-      </div>
-    </form>
-    <div class="dropdown">
-      <h3>dropdown</h3>
-      <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
-      <div class="dropdown-guest" hidden>
-        <ul class="dropdown-guest__list">
-          <li class="dropdown-guest__list-item" data-value="adults">Взрослые
-            <div class="counter">
-              <button class="counter__btn" type="submit" data-direction="minus">-</button>
-              <input class="counter__value" type="number" value="0" max="9" name="adults">
-              <button class="counter__btn" type="submit" data-direction="plus">+</button>
-            </div>
-          </li>
-          <li class="dropdown-guest__list-item" data-value="children">Дети
-            <div class="counter">
-              <button class="counter__btn" type="submit" data-direction="minus">-</button>
-              <input class="counter__value" type="number" value="0" max="9" name="children">
-              <button class="counter__btn" type="submit" data-direction="plus">+</button>
-            </div>
-          </li>
-          <li class="dropdown-guest__list-item" data-value="babies">Младенцы
-            <div class="counter">
-              <button class="counter__btn" type="submit" data-direction="minus">-</button>
-              <input class="counter__value" type="number" value="0" max="9" name="babies">
-              <button class="counter__btn" type="submit" data-direction="plus">+</button>
-            </div>
-          </li>
-          <div class="dropdown-guest__list-button">
-            <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
-            <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
-          </div>
-        </ul>
-      </div>
-    </div>
-    <button class="button__submit button__submit--big" type="submit">подобрать номер</button>
-  </div>
-</div>
-<h2>REGISTRATION </h2>
+    <h2>REGISTRATION </h2>
 <div class="card">
   <div class="card__content">
     <div class="card__title"> 
@@ -93,7 +93,7 @@
     </div>
   </div>
 </div>
-<h2>LOGIN </h2>
+    <h2>LOGIN </h2>
 <div class="card">
   <div class="card__content">
     <div class="card__title"> 
@@ -108,5 +108,67 @@
     </div>
   </div>
 </div>
+    <h2>ORDER </h2>
+    <div class="card">
+      <div class="card__content">
+        <div class="card__title">
+          <h2 class="card__num">№888<span class="card__app">люкс</span></h2><span class="card__value">9 999₽ <span class="card__value--normal">в сутки</span></span>
+        </div>
+            <form class="date-form card__date">
+              <div class="date-form__container">
+                <h3>прибытие</h3>
+                <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
+              </div>
+              <div class="date-form__container">
+                <h3>выезд</h3>
+                <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
+              </div>
+            </form>
+            <div class="dropdown card__dropdown">
+              <h3>гости</h3>
+              <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
+              <div class="dropdown-guest" hidden>
+                <ul class="dropdown-guest__list">
+                  <li class="dropdown-guest__list-item" data-value="adults">Взрослые
+                    <div class="counter">
+                      <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                      <input class="counter__value" type="number" value="0" max="9" name="adults">
+                      <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                    </div>
+                  </li>
+                  <li class="dropdown-guest__list-item" data-value="children">Дети
+                    <div class="counter">
+                      <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                      <input class="counter__value" type="number" value="0" max="9" name="children">
+                      <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                    </div>
+                  </li>
+                  <li class="dropdown-guest__list-item" data-value="babies">Младенцы
+                    <div class="counter">
+                      <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                      <input class="counter__value" type="number" value="0" max="9" name="babies">
+                      <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                    </div>
+                  </li>
+                  <div class="dropdown-guest__list-button">
+                    <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
+                    <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+                  </div>
+                </ul>
+              </div>
+            </div>
+        <div class="card__additional"><span class="card__additional-info">9 990₽ х 4 суток</span><span class="card__additional-value">39 960₽</span></div>
+        <div class="card__additional"><span class="card__additional-info">Сбор за услуги: скидка 2 179₽<img class="card__additional-img" src="../src/style/assets/images/info.png" alt="info" width="20px" height="20px" title="some info"></span><span class="card__additional-value">0₽</span></div>
+        <div class="card__additional"><span class="card__additional-info">Сбор за дополнительные услуги<img class="card__additional-img" src="../src/style/assets/images/info.png" alt="info" width="20px" height="20px" title="some info"></span><span class="card__additional-value">300₽</span></div>
+        <div class="card__price"> 
+          <h2>Итого</h2>
+          <div class="card__price-line"></div>
+          <h2 class="card__price-sum">38 081₽</h2>
+        </div>
+            <div class="button card__btn">
+              <button class="button__submit button__submit--big" type="submit">забронировать</button>
+            </div>
+      </div>
+    </div>
   <script defer src="main.bundle.js"></script></body>
 </html>

@@ -1,7 +1,8 @@
-form.date-form
-    .date-form__container
-        h3 dropdown
-        input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--start.datepicker
-    .date-form__container
-        h3 dropdown
-        input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--end.datepicker
+mixin dateDouble(start= 'dropdown', end= 'dropdown')
+    form.date-form(class=attributes.class)
+        .date-form__container
+            h3= start
+            input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--start.datepicker
+        .date-form__container
+            h3= end
+            input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--end.datepicker

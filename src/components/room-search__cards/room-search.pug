@@ -1,35 +1,13 @@
+include ../date-dropdown/date-dropdown.pug
+include ../dropdown/dropdown.pug
+
 .card
     .card__content
         .card__title 
             h2 Найдём номера под ваши пожелания
-        form.date-form
-            .date-form__container
-                h3 прибытие
-                input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--start.datepicker
-            .date-form__container
-                h3 выезд
-                input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--end.datepicker
-        .dropdown
-            h3 dropdown
-            button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
-            .dropdown-guest(hidden)
-                ul.dropdown-guest__list
-                    li(data-value='adults').dropdown-guest__list-item Взрослые
-                        .counter
-                            button.counter__btn(type='submit' data-direction="minus") -
-                            input.counter__value(type="number" value="0" max="9" name='adults')
-                            button.counter__btn(type='submit' data-direction="plus") +
-                    li(data-value='children').dropdown-guest__list-item Дети
-                        .counter
-                            button.counter__btn(type='submit' data-direction="minus") -
-                            input.counter__value(type="number" value="0" max="9" name='children')
-                            button.counter__btn(type='submit' data-direction="plus") +
-                    li(data-value='babies').dropdown-guest__list-item Младенцы
-                        .counter
-                            button.counter__btn(type='submit' data-direction="minus") -
-                            input.counter__value(type="number" value="0" max="9" name='babies')
-                            button.counter__btn(type='submit' data-direction="plus") +
-                    .dropdown-guest__list-button
-                        button(type="submit" name="clear").dropdown-guest__list-button-item Очистить
-                        button(type="submit" name="submit").dropdown-guest__list-button-item Применить
+
+        +dateDouble('прибытие', 'выезд')
+
+        +dropdown('гости')
+        
         button(type='submit').button__submit.button__submit--big подобрать номер

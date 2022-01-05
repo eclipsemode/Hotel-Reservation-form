@@ -22,6 +22,7 @@ const dp = new AirDatepicker('.datepicker', {
     onSelect: function (fd, d, picker) {    
         document.querySelector('.date-form__inp--start').value = fd.formattedDate[0];
         document.querySelector('.date-form__inp--end').value = fd.formattedDate[1]; 
+        
         document.querySelectorAll(".date-form__inp").forEach(element => {
             if (element.value == 'undefined') {
                 element.value = '';

@@ -1,10 +1,17 @@
-.button
-button(type='submit').button__submit.button__submit--small click me
-br
-button(type='submit').button__submit.button__submit--transparent 
-    span click me
-br
-button(type='submit').button__submit.button__submit--no-border 
-    span click me
-br
-button(type='submit').button__submit.button__submit--big Перейти к оплате
+mixin buttonSmall(text='click me')
+    .button(class=attributes.class)
+        button(type='submit').button__submit.button__submit--small= text
+
+mixin buttonTransparent(text='click me')
+    .button(class=attributes.class)
+        button(type='submit').button__submit.button__submit--transparent 
+            span= text
+
+mixin buttonNoBorder(text='click me')
+    .button(class=attributes.class)
+        button(type='submit').button__submit.button__submit--no-border 
+            span= text
+
+mixin buttonBig(text='click me')
+    .button(class=attributes.class)
+        button(type='submit').button__submit.button__submit--big= text

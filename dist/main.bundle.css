@@ -1123,6 +1123,7 @@ h2 {
   font-weight: 700;
   line-height: 23, 16px;
   color: #1f2041;
+  margin: 0;
 }
 
 h3 {
@@ -2548,4 +2549,60 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.card__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__value {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.card__value--normal {
+  font-weight: 400;
+}
+.card__app {
+  margin-top: 5px;
+  margin-left: 8px;
+  line-height: 14.63px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bc9cff;
+}
+.card__price {
+  display: flex;
+  margin-top: 30px;
+}
+.card__price-line {
+  width: 100%;
+  height: 19px;
+  border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
+}
+.card__price-sum {
+  white-space: nowrap;
+}
+.card__additional {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  line-height: 24px;
+}
+.card__additional-info {
+  display: flex;
+  align-items: center;
+}
+.card__additional-img {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.card__dropdown {
+  margin-bottom: 20px;
 }
