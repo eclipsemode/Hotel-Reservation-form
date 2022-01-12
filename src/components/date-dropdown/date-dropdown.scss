@@ -1,3 +1,6 @@
+@import '../../style/layout/mixins/arrow-after.scss';
+@import '../../style/layout/mixins/text-field.scss';
+
 .date-form {
     display: flex;
     justify-content: space-between;
@@ -37,7 +40,6 @@
             overflow: visible;
         }
         &:focus::-webkit-calendar-picker-indicator {
-            // transform: rotate(225deg);
             border-color: $Dark-shade-75;
         }
         &::placeholder {

@@ -1,0 +1,28 @@
+// ---- MAIN DESIGN TEXT FIELD ----
+@mixin text-field {
+    border: 1px solid $Dark-shade-25;
+    border-radius: 4px;
+    line-height: 24px;
+    width: 320px;
+    height: 44px;
+    padding: 0 15px;
+    color: $Dark-shade-75;
+    background: #fff;
+    box-sizing: border-box;
+    text-align: left;
+    z-index: 10;
+    font-family: inherit;
+    font-size: inherit;
+    &::placeholder {
+        color: $Dark-shade-25;
+    }
+    &:focus,
+    :active,
+    &:hover {
+        outline: none;
+        border: 1px solid $Dark-shade-50;
+    }
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+}

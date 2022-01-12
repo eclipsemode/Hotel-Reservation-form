@@ -1,7 +1,9 @@
+@import '../../style/layout/mixins/benefits.scss';
+
 .benefits-comfort {
-    @include benefits(url(./assets/images/comfort.svg));
+    @include benefits(url(../assets/images/comfort.svg));
 }
 
 .benefits-location {
-    @include benefits(url(./assets/images/location.svg));
+    @include benefits(url(../assets/images/location.svg));
 }

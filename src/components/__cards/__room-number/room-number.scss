@@ -1,0 +1,35 @@
+.room-number {
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__num--prev {
+        margin-bottom: 15px;
+        margin-right: 3px;
+        font-weight: 700;
+        line-height: 29.26px;
+        color: $Dark-shade-100;
+    }
+    &__app {
+        margin-top: 5px;
+        margin-left: 8px;
+        line-height: 14.63px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $Purple;
+    }
+    &__value {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        color: $Dark-shade-50;
+        white-space: nowrap;
+        margin-bottom: 20px;
+        align-self: flex-end;
+        &--normal {
+            font-weight: 400;
+        }
+    }
+}

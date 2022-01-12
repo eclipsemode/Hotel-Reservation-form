@@ -1,4 +1,6 @@
-// Dropdown
+@import '../../style/layout/mixins/arrow-after.scss';
+@import '../../style/layout/mixins/text-field.scss';
+
 .dropdown.active {
     .dropdown-type {
         border-bottom-left-radius: 0;
@@ -21,7 +23,6 @@
     width: 320px;
 }
 
-// Dropdown Room
 .dropdown-room.active {
     .dropdown-type {
         border-bottom-left-radius: 0;
@@ -52,6 +53,8 @@
     padding: 0 35px 0 15px;
     color: $Dark-shade-75;
     @include arrow-after;
+    font-family: inherit;
+    font-size: inherit;
     &:focus,
     &--active {
         border-color: $Dark-shade-75;
@@ -62,7 +65,7 @@
     overflow: hidden;
     z-index: 100;
     position: absolute;
-    top: 74px;
+    top: 44px;
     left: 0;
     width: 100%;
     background: #fff;
@@ -102,6 +105,7 @@
                 color: $Purple;
                 font-weight: 700;
                 font-size: 12px;
+                font-family: inherit;
                 &:hover {
                     opacity: 0.5;
                 }
@@ -135,6 +139,8 @@
     color: $Dark-shade-100;
     background: none;
     font-weight: 700;
+    font-family: inherit;
+    font-size: inherit;
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
         -webkit-appearance: none;

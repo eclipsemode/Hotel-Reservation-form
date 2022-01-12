@@ -1,0 +1,16 @@
+include ../../text-field/text-field
+include ../../buttons/button-big
+include ../../buttons/button-transparent
+
+.card
+    .card__content
+        h2.card__title Войти
+        
+        +textInput('Email')(class='card__input')
+        +textInput('Пароль')(class='card__input')
+
+        +buttonBig('войти')(class='card__btn')
+
+        .card__login
+            .card__login-info Нет аккаунта на Toxin?
+            +buttonTransparent('создать')

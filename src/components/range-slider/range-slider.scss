@@ -36,7 +36,6 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        // margin: auto;
         background-color: transparent;
         pointer-events: none;
         &::-webkit-slider-runnable-track {
@@ -64,14 +63,5 @@
         font-size: 12px;
         line-height: 14.63px;
         margin-bottom: 20px;
-    }
-    &__value-first {
-    }
-    &__value-second {
-    }
-
-    &__slider-first {
-    }
-    &__slider-second {
     }
 }

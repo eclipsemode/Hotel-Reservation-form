@@ -1,0 +1,12 @@
+include ../__room-number/room-number.pug
+include ../../rate-button/rate-button.pug
+
+.room-details
+    .room-details__image
+        img(src=require('./assets/images/room888.jpg') alt="alt")
+    
+    +roomNumber('№840', '9 990₽')(class='room-details__number')
+
+    .room-details__line 
+
+    +rate

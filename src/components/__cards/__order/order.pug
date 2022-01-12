@@ -1,0 +1,35 @@
+include ../../date-dropdown/date-dropdown.pug
+include ../../dropdown/dropdown.pug
+include ../../buttons/button-big.pug
+include ../__room-number/room-number.pug
+
+.card
+    .card__content
+
+        +roomNumber(class='card__title')
+
+        +dateDouble('прибытие', 'выезд')(class='card__date-range')
+
+        h3.card__suptitle гости
+        +dropdown('гости')(class='card__dropdown')
+
+        .card__additional
+            span.card__additional-info 9 990₽ х 4 суток
+            span.card__additional-value 39 960₽
+        
+        .card__additional
+            span.card__additional-info Сбор за услуги: скидка 2 179₽
+                img.card__additional-img(src=require("./assets/images/info.png"), alt="info" width="20px" height='20px' title='some info')
+            span.card__additional-value 0₽
+
+        .card__additional
+            span.card__additional-info Сбор за дополнительные услуги
+                img.card__additional-img(src=require("./assets/images/info.png") alt="info" width="20px" height='20px' title='some info')
+            span.card__additional-value 300₽
+
+        .card__price 
+            h2.card__price-sum Итого
+            .card__price-line
+            h2.card__price-sum 38 081₽
+
+        +buttonBig('забронировать')(class='card__btn')

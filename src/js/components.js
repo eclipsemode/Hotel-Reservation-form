@@ -6,5 +6,4 @@ import likeButton from '../components/like-button/like-button';
 import pagination from '../components/pagination/pagination';
 import rangeSlider from '../components/range-slider/range-slider';
 import dateDropdown from '../components/date-dropdown/date-dropdown';
-import orderCard from '../components/order/order';
 

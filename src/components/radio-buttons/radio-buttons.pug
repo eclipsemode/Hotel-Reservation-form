@@ -1,9 +1,9 @@
-form.radio
-    h3 radio buttons
-    .radio-container
-        label.radio-container__label
-            input(type="radio" name='sex' value="male").radio-container__label-input
-            | Мужчина
-        label.radio-container__label
-            input(type="radio" name='sex' value="female").radio-container__label-input
-            | Женщина
+mixin radio(first='Мужчина', last='Женщина')
+    form.radio(class=attributes.class)
+        .radio-container
+            label.radio-container__label
+                input(type="radio" name='sex' value="male").radio-container__label-input
+                =first
+            label.radio-container__label
+                input(type="radio" name='sex' value="female").radio-container__label-input
+                =last

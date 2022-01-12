@@ -19,7 +19,6 @@ module.exports = {
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, 'dist'),
-        // assetModuleFilename: 'assets/images/[name][ext][query]'
     },
     plugins: [
     new HtmlWebpackPlugin({
@@ -38,13 +37,9 @@ module.exports = {
     new CopyWebpackPlugin({
         patterns: [
             {
-                from: path.resolve(__dirname, 'src/style/assets/favicon.ico'),
+                from: path.resolve(__dirname, 'src/assets/favicon.ico'),
                 to: path.resolve(__dirname, 'dist')
             },
-            // {
-            //     from: path.resolve(__dirname, 'src/assets/images'),
-            //     to: path.resolve(__dirname, 'dist/images')
-            // },
         ]
     }),
     ],
@@ -76,8 +71,7 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type: 'asset/resource',
                 generator: {
-                    // filename: 'assets/img/[name].[ext]',
-                    filename: 'assets/img/[hash][ext][query]',
+                    filename: 'assets/images/[hash][ext][query]',
                 },
             },
             {

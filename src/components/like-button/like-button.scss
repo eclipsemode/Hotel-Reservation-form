@@ -3,7 +3,7 @@
         color: $Purple;
     }
     &:hover &__content::before {
-        background: url(./assets/images/like-active.svg);
+        background: url(../assets/images/like-active.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 11px;
@@ -24,7 +24,7 @@
             content: "";
             width: 20px;
             height: 20px;
-            background: url(./assets/images/like-notactive.svg);
+            background: url(../assets/images/like-notactive.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 11px;
@@ -54,7 +54,7 @@
     .like-btn__content {
         border-color: $Purple;
         &::before {
-            background: url(./assets/images/like-active.svg);
+            background: url(../assets/images/like-active.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 11px;

@@ -1,0 +1,15 @@
+include ../../date-dropdown/date-dropdown.pug
+include ../../dropdown/dropdown.pug
+include ../../buttons/button-big.pug
+
+.card
+    .card__content
+        h2.card__title Найдём номера под ваши пожелания
+
+        +dateDouble('прибытие', 'выезд')(class='card__date-range')
+
+        h3.card__suptitle гости
+        +dropdown('гости')(class='card__dropdown')
+        
+        +buttonBig('подобрать номер')(class='card__btn')
+

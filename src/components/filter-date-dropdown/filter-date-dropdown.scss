@@ -1,3 +1,6 @@
+@import '../../style/layout/mixins/text-field.scss';
+@import '../../style/layout/mixins/arrow-after.scss';
+
 .filter-date-dropdown {
     @include text-field;
     @include arrow-after;

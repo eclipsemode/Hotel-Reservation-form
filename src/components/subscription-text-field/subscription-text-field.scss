@@ -1,3 +1,5 @@
+@import '../../style/layout/mixins/text-field.scss';
+
 .subscription {
     position: relative;
     &::after {
@@ -7,7 +9,7 @@
         right: 13px;
         width: 17px;
         height: 17px;
-        background-image: url(./assets/images/arrow_forward.svg);
+        background-image: url(../assets/images/arrow_forward.svg);
         background-repeat: no-repeat;
         z-index: 100;
         pointer-events: none;

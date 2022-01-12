@@ -1,7 +1,24 @@
-@import "~normalize.css";
-@import "./layout/mixins.scss";
-@import "./layout/variables.scss";
-@import "./layout/base.scss";
-@import "./layout/fonts.scss";
-@import "../pages/UI-kit/UI-kit.scss";
-@import "./layout/components.scss";
+// @import "~normalize.css";
+@import './layout/variables.scss';
+@import './layout/fonts.scss';
+
+// ui kit
+@import './../pages/UI-kit/__cards/cards.scss';
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+html {
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    font-size: 14px;
+    line-height: 24px;
+    color: $Dark-shade-75;
+    margin-left: 10px;
+    height: 4000px;
+    min-width: 320px;
+}

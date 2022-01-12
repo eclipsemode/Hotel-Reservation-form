@@ -11,21 +11,19 @@
     <h2>ROOM SERACH </h2>
     <div class="card">
       <div class="card__content">
-        <div class="card__title"> 
-          <h2>Найдём номера под ваши пожелания</h2>
-        </div>
-            <form class="date-form">
+        <h2 class="card__title">Найдём номера под ваши пожелания</h2>
+            <form class="date-form card__date-range">
               <div class="date-form__container">
-                <h3>прибытие</h3>
+                <h3 class="card__suptitle">прибытие</h3>
                 <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
               </div>
               <div class="date-form__container">
-                <h3>выезд</h3>
+                <h3 class="card__suptitle">выезд</h3>
                 <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
               </div>
             </form>
-            <div class="dropdown">
-              <h3>гости</h3>
+        <h3 class="card__suptitle">гости</h3>
+            <div class="dropdown card__dropdown">
               <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
               <div class="dropdown-guest" hidden>
                 <ul class="dropdown-guest__list">
@@ -57,75 +55,99 @@
                 </ul>
               </div>
             </div>
-        <button class="button__submit button__submit--big" type="submit">подобрать номер</button>
+            <div class="button card__btn">
+              <button class="button__submit button__submit--big" type="submit">подобрать номер</button>
+            </div>
       </div>
     </div>
     <h2>REGISTRATION </h2>
-<div class="card">
-  <div class="card__content">
-    <div class="card__title"> 
-      <h2>Найдём номера под ваши пожелания</h2>
-    </div>
-    <input class="text" type="text" name="text-field" placeholder="Имя">
-    <input class="text" type="text" name="text-field" placeholder="Фамилия">
-    <form class="radio">
-      <div class="radio-container">
-        <label class="radio-container__label">
-          <input class="radio-container__label-input" type="radio" name="sex" value="male">Мужчина
-        </label>
-        <label class="radio-container__label">
-          <input class="radio-container__label-input" type="radio" name="sex" value="female">Женщина
-        </label>
+    <div class="card">
+      <div class="card__content">
+        <h2 class="card__title">Регистрация аккаунта</h2>
+            <div class="text-input card__input">
+              <input class="text-input__input" type="text" name="text-field" placeholder="Имя">
+            </div>
+            <div class="text-input card__input">
+              <input class="text-input__input" type="text" name="text-field" placeholder="Фамилия">
+            </div>
+            <form class="radio card__radio">
+              <div class="radio-container">
+                <label class="radio-container__label">
+                  <input class="radio-container__label-input" type="radio" name="sex" value="male">Мужчина
+                </label>
+                <label class="radio-container__label">
+                  <input class="radio-container__label-input" type="radio" name="sex" value="female">Женщина
+                </label>
+              </div>
+            </form>
+        <h3 class="card__suptitle">дата рождения</h3>
+            <div class="masked-text-field card__input">
+              <input class="masked-text-field__input datepicker-no-range" type="text" name="date" placeholder="дд.мм.гггг" autocomplete="off" max="1979-12-31">
+            </div>
+        <h3 class="card__suptitle">данные для входа в сервис</h3>
+            <div class="text-input card__input">
+              <input class="text-input__input" type="text" name="text-field" placeholder="Email">
+            </div>
+            <div class="text-input card__input">
+              <input class="text-input__input" type="text" name="text-field" placeholder="Пароль">
+            </div>
+            <div class="toggle card__toggle">
+              <label class="toggle__label">
+                <input class="toggle__inp" type="checkbox"><span class="toggle__slider"></span><span class="toggle__text">Получать спецпредложения</span>
+              </label>
+            </div>
+            <div class="button card__btn">
+              <button class="button__submit button__submit--big" type="submit">перейти к оплате</button>
+            </div>
+        <div class="card__login">
+          <div class="card__login-info">Уже есть аккаунт на Toxin</div>
+              <div class="button">
+                <button class="button__submit button__submit--transparent" type="submit"> <span>войти</span></button>
+              </div>
+        </div>
       </div>
-    </form>
-    <h3>дата рождения</h3>
-    <input class="masked-text-field datepicker-no-range" type="text" name="date" placeholder="дд.мм.гггг" autocomplete="off" max="1979-12-31">
-    <h3>данные для входа в сервис</h3>
-    <input class="text" type="text" name="text-field" placeholder="Email">
-    <input class="text" type="text" name="text-field" placeholder="Пароль">
-    <label class="toggle">
-      <input class="toggle__inp" type="checkbox"><span class="toggle__slider"></span><span class="toggle__text">Получать спецпредложения</span>
-    </label>
-    <button class="button__submit button__submit--big" type="submit">Перейти к оплате</button>
-    <div class="card__login">
-      <div class="card__login-info">Уже есть аккаунт на Toxin</div>
-      <button class="button__submit button__submit--transparent" type="submit"> <span>войти</span></button>
     </div>
-  </div>
-</div>
     <h2>LOGIN </h2>
-<div class="card">
-  <div class="card__content">
-    <div class="card__title"> 
-      <h2>Войти</h2>
+    <div class="card">
+      <div class="card__content">
+        <h2 class="card__title">Войти</h2>
+            <div class="text-input card__input">
+              <input class="text-input__input" type="text" name="text-field" placeholder="Email">
+            </div>
+            <div class="text-input card__input">
+              <input class="text-input__input" type="text" name="text-field" placeholder="Пароль">
+            </div>
+            <div class="button card__btn">
+              <button class="button__submit button__submit--big" type="submit">войти</button>
+            </div>
+        <div class="card__login">
+          <div class="card__login-info">Нет аккаунта на Toxin?</div>
+              <div class="button">
+                <button class="button__submit button__submit--transparent" type="submit"> <span>создать</span></button>
+              </div>
+        </div>
+      </div>
     </div>
-    <input class="text" type="text" name="text-field" placeholder="Email">
-    <input class="text" type="text" name="text-field" placeholder="Пароль">
-    <button class="button__submit button__submit--big" type="submit">войти</button>
-    <div class="card__login">
-      <div class="card__login-info">Нет аккаунта на Toxin?</div>
-      <button class="button__submit button__submit--transparent" type="submit"> <span>создать</span></button>
-    </div>
-  </div>
-</div>
     <h2>ORDER </h2>
     <div class="card">
       <div class="card__content">
-        <div class="card__title">
-          <h2 class="card__num">№888<span class="card__app">люкс</span></h2><span class="card__value">9 999₽ <span class="card__value--normal">в сутки</span></span>
-        </div>
-            <form class="date-form card__date">
+            <div class="room-number__title"><span class="room-number__num--prev">
+                 №</span>
+              <h2 class="card__title room-number__num">888<span class="room-number__app">люкс</span></h2><span class="room-number__value">9 999₽<span class="room-number__value--normal">
+                   в сутки</span></span>
+            </div>
+            <form class="date-form card__date-range">
               <div class="date-form__container">
-                <h3>прибытие</h3>
+                <h3 class="card__suptitle">прибытие</h3>
                 <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
               </div>
               <div class="date-form__container">
-                <h3>выезд</h3>
+                <h3 class="card__suptitle">выезд</h3>
                 <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг">
               </div>
             </form>
+        <h3 class="card__suptitle">гости</h3>
             <div class="dropdown card__dropdown">
-              <h3>гости</h3>
               <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button>
               <div class="dropdown-guest" hidden>
                 <ul class="dropdown-guest__list">
@@ -158,10 +180,10 @@
               </div>
             </div>
         <div class="card__additional"><span class="card__additional-info">9 990₽ х 4 суток</span><span class="card__additional-value">39 960₽</span></div>
-        <div class="card__additional"><span class="card__additional-info">Сбор за услуги: скидка 2 179₽<img class="card__additional-img" src="../src/style/assets/images/info.png" alt="info" width="20px" height="20px" title="some info"></span><span class="card__additional-value">0₽</span></div>
-        <div class="card__additional"><span class="card__additional-info">Сбор за дополнительные услуги<img class="card__additional-img" src="../src/style/assets/images/info.png" alt="info" width="20px" height="20px" title="some info"></span><span class="card__additional-value">300₽</span></div>
+        <div class="card__additional"><span class="card__additional-info">Сбор за услуги: скидка 2 179₽<img class="card__additional-img" src="assets/images/dd035506d31da8be779c.png" alt="info" width="20px" height="20px" title="some info"></span><span class="card__additional-value">0₽</span></div>
+        <div class="card__additional"><span class="card__additional-info">Сбор за дополнительные услуги<img class="card__additional-img" src="assets/images/dd035506d31da8be779c.png" alt="info" width="20px" height="20px" title="some info"></span><span class="card__additional-value">300₽</span></div>
         <div class="card__price"> 
-          <h2>Итого</h2>
+          <h2 class="card__price-sum">Итого</h2>
           <div class="card__price-line"></div>
           <h2 class="card__price-sum">38 081₽</h2>
         </div>
@@ -169,6 +191,28 @@
               <button class="button__submit button__submit--big" type="submit">забронировать</button>
             </div>
       </div>
+    </div>
+    <h2>ROOM DETAILS </h2>
+    <div class="room-details">
+      <div class="room-details__image"><img src="assets/images/1dd42730662cb25da09d.jpg" alt="alt"></div>
+          <div class="room-number__title"><span class="room-number__num--prev">
+               №</span>
+            <h2 class="room-details__number room-number__num">№840<span class="room-number__app">люкс</span></h2><span class="room-number__value">9 990₽<span class="room-number__value--normal">
+                 в сутки</span></span>
+          </div>
+      <div class="room-details__line"> </div>
+          <div class="rate">
+            <input class="rate__inp" type="radio" name="star" id="star1">
+            <label class="rate__label" for="star1"></label>
+            <input class="rate__inp" type="radio" name="star" id="star2">
+            <label class="rate__label" for="star2"></label>
+            <input class="rate__inp" type="radio" name="star" id="star3">
+            <label class="rate__label" for="star3"></label>
+            <input class="rate__inp" type="radio" name="star" id="star4">
+            <label class="rate__label" for="star4"></label>
+            <input class="rate__inp" type="radio" name="star" id="star5">
+            <label class="rate__label" for="star5"></label>
+          </div>
     </div>
   <script defer src="main.bundle.js"></script></body>
 </html>
