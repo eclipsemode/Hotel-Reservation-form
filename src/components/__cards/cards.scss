@@ -10,8 +10,34 @@
     }
     &__content {
         margin: 40px 30px;
+        display: flex;
+        flex-direction: column;
         & .text:not(:last-of-type) {
             margin-bottom: 10px;
+        }
+    }
+    &__slider ~ &__content {
+        margin:0 20px 20px 20px;
+    }
+    &__line {
+        width: 100%;
+        height: 1px;
+        background: rgba(31, 32, 65, 0.1);
+        margin-top: 12px;
+    }
+    &__rate {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__text {
+        color: $Dark-shade-50;
+        font-family: inherit;
+        font-weight: 700;
+        &--normal {
+            font-weight: 400;
+            text-transform: capitalize;
         }
     }
     &__input:not(:last-of-type) {

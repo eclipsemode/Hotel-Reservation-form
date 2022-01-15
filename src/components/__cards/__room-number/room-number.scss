@@ -1,15 +1,22 @@
 .room-number {
     &__title {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         justify-content: space-between;
     }
-    &__num--prev {
-        margin-bottom: 15px;
-        margin-right: 3px;
+    &__num {
+        position: relative;
+        color: $Dark-shade-100;
         font-weight: 700;
         line-height: 29.26px;
-        color: $Dark-shade-100;
+        margin-bottom: 0;
+        &::before {
+            content: '№';
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 29.26px;
+            color: $Dark-shade-100;
+        }
     }
     &__app {
         margin-top: 5px;
@@ -26,8 +33,6 @@
         line-height: 18px;
         color: $Dark-shade-50;
         white-space: nowrap;
-        margin-bottom: 20px;
-        align-self: flex-end;
         &--normal {
             font-weight: 400;
         }

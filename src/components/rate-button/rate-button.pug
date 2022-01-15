@@ -1,5 +1,5 @@
 mixin rate
-    .rate
+    .rate(class=attributes.class)
         input(type="radio" name="star" id="star1").rate__inp
         label.rate__label(for='star1')
         input(type="radio" name="star" id="star2").rate__inp
@@ -8,5 +8,5 @@ mixin rate
         label.rate__label(for='star3')
         input(type="radio" name="star" id="star4").rate__inp
         label.rate__label(for='star4')
-        input(type="radio" name="star" id="star5").rate__inp
+        input(type="radio" name="star" id="star5" checked).rate__inp
         label.rate__label(for='star5')

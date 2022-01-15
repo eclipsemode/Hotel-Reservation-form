@@ -1,12 +1,18 @@
 include ../__room-number/room-number.pug
 include ../../rate-button/rate-button.pug
+include ../__slider/slider.pug
 
-.room-details
-    .room-details__image
-        img(src=require('./assets/images/room888.jpg') alt="alt")
+
+.card
+    +slider(class='card__slider')
     
-    +roomNumber('№840', '9 990₽')(class='room-details__number')
+    .card__content
+        +roomNumber('840', '9 990₽')
 
-    .room-details__line 
+        .card__line
 
-    +rate
+        .card__rate
+            +rate
+            p.card__text 145
+                | 
+                span.card__text--normal отзывов
