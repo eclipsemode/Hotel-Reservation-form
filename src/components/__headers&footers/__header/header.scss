@@ -1,0 +1,155 @@
+@import '../../buttons/buttons.scss';
+@import '/style/layout/mixins/arrow-after.scss';
+@import '/assets/fonts/material-icons/material-icons.scss';
+
+.header {
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    box-shadow: rgba($color: #000000, $alpha: 0.5);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 13px 140px;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: 108px;
+        cursor: pointer;
+        &-svg {
+            width: 100%;
+            height: 40px;
+            background: url(../assets/images/logo.svg);
+            background-repeat: no-repeat;
+        }
+        &-text {
+            width: 100%;
+            height: 14px;
+            background: url(../assets/images/TOXIN.png);
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        color: $Dark-shade-50;
+        text-decoration: none;
+        position: relative;
+
+        &:hover {
+            color: $Dark-shade-75;
+        }
+        
+        &:not(:first-of-type) {
+            margin-left: 20px;
+        }
+        &--active {
+            color: $Dark-shade-75;
+            font-weight: 700;
+        }
+        &--drop {
+                position: relative;
+                margin-right: 15px;
+                padding-bottom: 2px;
+                &-icon {
+                    position: absolute;
+                }
+                &:hover {
+                    & .header__link-menu {
+                        display: block;
+                        color: $Dark-shade-50;
+                    }
+                }
+        }
+
+        &-menu {
+            position: absolute;
+            top: 5px;
+            left: 0;
+            padding-left: 0;
+            width: fit-content;
+            background-color: white;
+            border: 1px solid $Dark-shade-5;
+            border-radius: 2px;
+            display: none;
+            z-index: 2;
+        }
+        &-item {
+            list-style: none;
+            white-space: nowrap;
+            margin: 5px 10px;
+            &:hover {
+                color: $Dark-shade-75;
+            }
+        }
+    }
+
+    &__authorization {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+    &__registration {
+        margin-left: 20px;
+    }
+    &__name {
+        color: $Dark-shade-50;
+        border-left: 1px solid $Dark-shade-10;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        &__container {
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 912px) {
+    .header {
+        &__content {
+            padding-left: 20px;
+        }
+        &__link {
+            white-space: nowrap;
+            font-size: 12px;
+        }
+        &__authorization {
+            // transform: scale(75%);
+            margin-left: 20px;
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    .header {
+        &__logo-text {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        &__logo-svg {
+            display: none;
+        }
+        &__container {
+            justify-content: flex-start;
+        }
+    }
+}

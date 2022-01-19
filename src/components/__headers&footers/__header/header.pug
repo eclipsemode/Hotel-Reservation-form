@@ -1,0 +1,32 @@
+include ../../buttons/button-small.pug
+include ../../buttons/button-transparent.pug
+
+.header 
+    .header__container 
+        .header__logo 
+            .header__logo-svg 
+            .header__logo-text 
+        .header__content
+            .header__menu 
+                a(href="#").header__link.header__link--active О нас
+                a(href="#").header__link.header__link--drop Услуги
+                    span.material-icons.header__link--drop-icon expand_more
+                    ul.header__link-menu
+                        li.header__link-item Услуга один
+                        li.header__link-item Услуга два
+                        li.header__link-item Услуга три
+                a(href="#").header__link Вакансии
+                a(href="#").header__link Новости
+                a(href="#").header__link.header__link--drop Соглашения
+                    span.material-icons.md-color50.header__link--drop-icon expand_more
+                    ul.header__link-menu
+                        li.header__link-item Соглашение один
+                        li.header__link-item Соглашение два
+                        li.header__link-item Соглашение три
+
+            .header__authorization 
+                +buttonTransparent('войти')(class='header__login')
+                +buttonSmall('зарегистрироваться')(class='header__registration')
+
+            //- .header__authorization
+            //-     p.header__name Юлий Цезарь

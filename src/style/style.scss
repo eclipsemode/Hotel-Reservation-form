@@ -4,6 +4,7 @@
 
 // ui kit
 @import './../pages/UI-kit/__cards/cards.scss';
+@import '../pages/UI-kit/__headers&footers/headers&footers.scss';
 
 
 *,
@@ -15,10 +16,10 @@ html {
     font-family: "Montserrat", sans-serif;
 }
 body {
+    background: #F4F4F6;
     font-size: 14px;
     line-height: 24px;
     color: $Dark-shade-75;
-    margin-left: 10px;
-    height: 4000px;
-    min-width: 320px;
+    margin: 0;
+    min-width: 700px;
 }
