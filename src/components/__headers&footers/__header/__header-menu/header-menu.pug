@@ -1,0 +1,27 @@
+mixin header-menu(about='О нас', service='Услуги', vacancies='Вакансии', news='Новости', agreements='Соглашения')
+
+    .header__menu 
+        a(href="#").header__link.header__link--active= about
+        a(href="#").header__link.header__link--drop= service
+            span.material-icons.header__link--drop-icon expand_more
+            ul.header__link-menu
+                li.header__link-item Услуга один
+                li.header__link-item Услуга два
+                li.header__link-item Услуга три
+        a(href="#").header__link= vacancies
+        a(href="#").header__link= news
+        a(href="#").header__link.header__link--drop= agreements
+            span.material-icons.md-color50.header__link--drop-icon expand_more
+            ul.header__link-menu
+                li.header__link-item Соглашение один
+                li.header__link-item Соглашение два
+                li.header__link-item Соглашение три
+
+    .material-icons.header__burger.burger menu
+    .burger__menu
+        a.burger__link= about
+        a.burger__link= service
+        a.burger__link= vacancies
+        a.burger__link= news
+        a.burger__link= agreements
+

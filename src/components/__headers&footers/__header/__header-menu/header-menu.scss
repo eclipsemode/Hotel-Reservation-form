@@ -1,0 +1,80 @@
+.header {
+    &__link {
+        color: $Dark-shade-50;
+        text-decoration: none;
+        position: relative;
+
+        &:hover {
+            color: $Dark-shade-75;
+        }
+        
+        &:not(:first-of-type) {
+            margin-left: 20px;
+        }
+        &--active {
+            color: $Dark-shade-75;
+            font-weight: 700;
+        }
+        &--drop {
+                position: relative;
+                margin-right: 15px;
+                padding-bottom: 2px;
+                &-icon {
+                    position: absolute;
+                }
+                &:hover {
+                    & .header__link-menu {
+                        display: block;
+                        color: $Dark-shade-50;
+                    }
+                }
+        }
+
+        &-menu {
+            position: absolute;
+            top: 5px;
+            left: 0;
+            padding-left: 0;
+            width: fit-content;
+            background-color: white;
+            border: 1px solid $Dark-shade-5;
+            border-radius: 2px;
+            display: none;
+            z-index: 3;
+        }
+        &-item {
+            list-style: none;
+            white-space: nowrap;
+            margin: 5px 10px;
+            &:hover {
+                color: $Dark-shade-75;
+            }
+        }
+    }
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+    &__menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        row-gap: 0.5em;
+        background: $Dark-shade-50;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        &--active {
+            display: flex;
+        }
+    }
+}
