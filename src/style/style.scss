@@ -4,7 +4,8 @@
 
 // ui kit
 @import './../pages/UI-kit/__cards/cards.scss';
-@import '../pages/UI-kit/__headers&footers/headers&footers.scss';
+@import '/components/__headers&footers/__header/header.scss';
+@import '../components/__headers&footers/__footer/footer.scss';
 
 
 *,
@@ -12,14 +13,23 @@
 *::before {
     box-sizing: border-box;
 }
-html {
-    font-family: "Montserrat", sans-serif;
-}
+html,
 body {
+    font-family: "Montserrat", sans-serif;
     background: #F4F4F6;
     font-size: 14px;
     line-height: 24px;
     color: $Dark-shade-75;
     margin: 0;
+    padding: 0;
     min-width: 350px;
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    flex: 1 1 auto;
 }

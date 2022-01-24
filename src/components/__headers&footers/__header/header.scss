@@ -85,11 +85,22 @@
         &__menu {
             display: none;
         }
-        &__authorization {
+        &__login {
+            display: none;
+        }
+        &__registration {
             display: none;
         }
         &__container {
             flex-direction: row;
+        }
+        &__acc--mobile {
+            display: inline-block;
+        }
+        &__content {
+            display: flex;
+            flex-direction: row-reverse;
+            column-gap: 1em;
         }
     }
     .burger {
