@@ -1,9 +1,15 @@
 @import '../../style/layout/mixins/benefits.scss';
 
-.benefits-comfort {
-    @include benefits(url(../assets/images/comfort.svg));
-}
+.benefits {
+    display: flex;
+    column-gap: 1em;
+    border-bottom: 1px solid $Dark-shade-10;
+    max-width: 280px;
 
-.benefits-location {
-    @include benefits(url(../assets/images/location.svg));
+    &__text-name {
+        margin-bottom: 0;
+    }
+    &__text-description {
+        margin-top: 0;
+    }
 }

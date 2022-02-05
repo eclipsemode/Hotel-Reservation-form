@@ -6,9 +6,6 @@ function dropdown() {
         const babiesSelector = document.querySelector('[name="babies"]');
         const childrenSelector = document.querySelector('[name="children"]');
         const adultsSelector = document.querySelector('[name="adults"]');
-        // const bedroomsSelector = document.querySelector('[name="bedrooms"]');
-        // const bedsSelector = document.querySelector('[name="beds"]');
-        // const bathroomsSelector = document.querySelector('[name="bathrooms"]');
         const clearButton = document.querySelector('[name="clear"]');
         
         // CLICK ON BUTTON DROPDOWN. OPEN /  CLOSE DROPDOWN
@@ -56,7 +53,7 @@ function dropdown() {
                         if (this.dataset.direction === "plus") {
                             newValue = currentValue + 1;
                             if (currentValue == 9) {
-                                currentValue.preventDefault()
+                                currentValue.preventDefault();
                             }
                         } else {
                             newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
@@ -145,7 +142,7 @@ function dropdown() {
                             event.target.parentElement.parentElement.parentElement.previousElementSibling.focus();
                         } else if (event.target.closest('[name="clear"]')) {
                             if (event.target.parentElement.parentElement.parentElement.parentElement.classList.contains('dropdown')) {
-                                element.parentElement.parentElement.previousElementSibling.textContent = 'Сколько гостей';
+                                dropdownButton.textContent = 'Сколько гостей';
                                 dropdown.querySelectorAll('.counter__value').forEach(element => {
                                     element.value = 0;
                                     element.previousElementSibling.style = 'opacity: 0.5;';

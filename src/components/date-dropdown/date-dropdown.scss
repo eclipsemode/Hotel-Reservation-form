@@ -11,13 +11,20 @@
         bottom: 43px;
     }
     &__container {
-        @include arrow-after;
+        position: relative;
     }
     &__container--focus {
-        @include arrow-after;
         &::after {
             border-color: $Dark-shade-75;
         }
+        .date-form__icon {
+            color: $Dark-shade-75;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 0.4em;
+        right: 0.3em;
     }
     &__inp {
         max-width: 150px;
@@ -26,16 +33,16 @@
         text-transform: uppercase;
         caret-color: transparent;
         @include text-field;
-        &::-webkit-calendar-picker-indicator {
-            background: none;
-            border: solid $Dark-shade-50;
-            border-width: 0 3px 3px 0;
-            padding: 3px;
-            transform: rotate(45deg);
-            height: 0px;
-            width: 0px;
-            pointer-events: none;
-        }
+        // &::-webkit-calendar-picker-indicator {
+        //     background: none;
+        //     border: solid $Dark-shade-50;
+        //     border-width: 0 3px 3px 0;
+        //     padding: 3px;
+        //     transform: rotate(45deg);
+        //     height: 0px;
+        //     width: 0px;
+        //     pointer-events: none;
+        // }
         &::-webkit-datetime-edit {
             overflow: visible;
         }

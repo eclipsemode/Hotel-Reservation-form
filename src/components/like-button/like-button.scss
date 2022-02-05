@@ -1,4 +1,5 @@
 .like-btn {
+    width: fit-content;
     &:hover &__content::after {
         color: $Purple;
     }

@@ -1,6 +1,7 @@
 mixin dropdown
     .dropdown(class=attributes.class)
         button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
+        i.material-icons.material-icons--color50.material-icons--bold.dropdown__icon expand_more
         .dropdown-guest(hidden)
             ul.dropdown-guest__list
                 li(data-value='adults').dropdown-guest__list-item Взрослые
@@ -21,3 +22,4 @@ mixin dropdown
                 .dropdown-guest__list-button
                     button(type="submit" name="clear").dropdown-guest__list-button-item Очистить
                     button(type="submit" name="submit").dropdown-guest__list-button-item Применить
+                    

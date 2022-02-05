@@ -20,7 +20,7 @@
 
 .dropdown {
     position: relative;
-    width: 320px;
+    max-width: 320px;
 }
 
 .dropdown-room.active {
@@ -42,6 +42,7 @@
 
 .dropdown-room{
     position: relative;
+    max-width: 320px;
 }
 
 // Main
@@ -52,13 +53,21 @@
     position: relative;
     padding: 0 35px 0 15px;
     color: $Dark-shade-75;
-    @include arrow-after;
     font-family: inherit;
     font-size: inherit;
     &:focus,
     &--active {
-        border-color: $Dark-shade-75;
+        & ~ .dropdown__icon {
+            color: $Dark-shade-75;
+        }
     }
+}
+.dropdown__icon {
+    position: absolute;
+    top: 0.4em;
+    right: 0.3em;
+    z-index: 10;
+    pointer-events: none;
 }
 
 .dropdown-guest {

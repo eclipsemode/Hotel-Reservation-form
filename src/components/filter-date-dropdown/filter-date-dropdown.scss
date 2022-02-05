@@ -1,8 +1,21 @@
 @import '../../style/layout/mixins/text-field.scss';
 @import '../../style/layout/mixins/arrow-after.scss';
 
-.filter-date-dropdown {
-    @include text-field;
-    @include arrow-after;
-    max-width: 266px;
+
+
+.filter-date {
+    position: relative;
+    width: fit-content;
+    &__dropdown {
+        @include text-field;
+        max-width: 266px;
+        &:focus ~ .filter-date__icon {
+            color: $Dark-shade-75;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 0.4em;
+        right: 0.3em;
+    }
 }

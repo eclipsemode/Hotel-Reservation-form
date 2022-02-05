@@ -1,10 +1,11 @@
-.range
-    .range__value
-        span.range__value-first 0
-        span &dash;
-        span.range__value-second 100  
-    form.range__form
-        .range__track
-            .track-line
-        input.range__slider.range__slider-first(type="range" min='0' max='10000' value='3000')
-        input.range__slider.range__slider-second(type="range"  min='0' max='10000' value='7000')
+mixin range
+    .range
+        .range__value
+            span.range__value-first 0
+            span &dash;
+            span.range__value-second 100  
+        form.range__form
+            .range__track
+                .track-line
+            input.range__slider.range__slider-first(type="range" min='0' max='10000' value='3000')
+            input.range__slider.range__slider-second(type="range"  min='0' max='10000' value='7000')

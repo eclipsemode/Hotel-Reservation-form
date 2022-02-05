@@ -3,6 +3,8 @@ mixin dateDouble(start= 'dropdown', end= 'dropdown')
         .date-form__container
             h3.card__suptitle= start
             input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--start.datepicker
+            i.material-icons.material-icons--color50.material-icons--bold.date-form__icon expand_more
         .date-form__container
             h3.card__suptitle= end
             input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--end.datepicker
+            i.material-icons.material-icons--color50.material-icons--bold.date-form__icon expand_more

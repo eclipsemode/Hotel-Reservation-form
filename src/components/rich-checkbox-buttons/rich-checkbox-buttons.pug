@@ -1,11 +1,12 @@
-.rich-checkbox-container
-    h3.rich-checkbox-container__title rich checkbox buttons
-form.rich-checkbox
-    label.rich-checkbox__label
-        input(type='checkbox' checked).rich-checkbox__label-input
-        .rich-checkbox__text Широкий коридор
-            span.rich-checkbox__additional Ширина коридоров в номере не менее 91 см.
-    label.rich-checkbox__label
-        input(type='checkbox').rich-checkbox__label-input
-        .rich-checkbox__text Помощник для инвалидов
-            span.rich-checkbox__additional На 1 этаже вас встретит специалист и проводит до номера.
+mixin rich-checkbox
+    .rich-checkbox-container
+        h3.rich-checkbox-container__title rich checkbox buttons
+    form.rich-checkbox
+        label.rich-checkbox__label
+            input(type='checkbox' checked).rich-checkbox__label-input
+            .rich-checkbox__text Широкий коридор
+                span.rich-checkbox__additional Ширина коридоров в номере не менее 91 см.
+        label.rich-checkbox__label
+            input(type='checkbox').rich-checkbox__label-input
+            .rich-checkbox__text Помощник для инвалидов
+                span.rich-checkbox__additional На 1 этаже вас встретит специалист и проводит до номера.

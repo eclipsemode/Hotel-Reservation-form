@@ -1,10 +1,11 @@
-.benefits-comfort 
-    .benefits-comfort__svg 
-    .benefits-comfort__text
-        h3.benefits-comfort__text-name Комфорт
-        p.benefits-comfort__text-description Шумопоглощающие стены
-.benefits-location
-    .benefits-location__svg 
-    .benefits-location__text
-        h3.benefits-location__text-name Удобство
-        p.benefits-location__text-description Окно в каждой из спален
+mixin benefits
+    .benefits
+        img(src=require('./assets/images/comfort.svg'), alt="alt").benefits__svg
+        .benefits-comfort__text
+            h3.benefits__text-name Комфорт
+            p.benefits__text-description Шумопоглощающие стены
+    .benefits
+        img(src=require('./assets/images/location.svg'), alt="alt").benefits__svg 
+        .benefits-location__text
+            h3.benefits__text-name Удобство
+            p.benefits__text-description Окно в каждой из спален
