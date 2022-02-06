@@ -107,6 +107,9 @@
     }
     .footer__nav {
         display: none;
+        &:last-of-type {
+            display: none;
+        }
     }
     .footer__line {
         display: none;
