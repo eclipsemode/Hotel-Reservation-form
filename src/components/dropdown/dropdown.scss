@@ -78,6 +78,7 @@
     left: 0;
     width: 100%;
     background: #fff;
+    border-radius: 0 0 4px 4px;
     box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
     &__list {
         margin: 0;
@@ -86,7 +87,7 @@
         list-style: none;
         border: 1px solid $Dark-shade-50;
         border-top: none;
-        border-radius: 0 0 4px 4px;
+        border-radius: inherit;
         &-item {
             height: 37px;
             font-weight: 700;

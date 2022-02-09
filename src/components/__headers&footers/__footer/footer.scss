@@ -22,16 +22,25 @@
         list-style: none;
         padding-left: 0;
         white-space: nowrap;
-        font-size: 14px;
-        color: $Dark-shade-100;
-        font-weight: 700;
-        margin: 0;
     }
+
     &__item {
-        margin-top: 20px;
+        margin-top: 1em;
         font-weight: 400;
         color: $Dark-shade-50;
         cursor: pointer;
+        font-size: 14px;
+
+        &--title {
+            font-weight: 700;
+            color: $Dark-shade-100;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            color: $Dark-shade-25;
+        }
     }
 
     &__text {
