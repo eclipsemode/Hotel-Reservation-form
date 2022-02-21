@@ -24,8 +24,14 @@ module.exports = {
     },
     plugins: [
     new HtmlWebpackPlugin({
+        filename: "index.html",
         inject: "body",
         template: "./index.pug",
+    }),
+    new HtmlWebpackPlugin({
+        filename: "search.html",
+        inject: "body",
+        template: "./search.pug",
     }),
     new webpack.ProvidePlugin({
         $: "jquery",

@@ -58,7 +58,6 @@
         display: flex;
         justify-content: space-between;
         margin: 26px 0;
-        padding: 0 10%;
     }
     &__copyright {
         color: $Dark-shade-75;
@@ -67,6 +66,7 @@
     &__social {
         display: flex;
         column-gap: 20px;
+        justify-content: flex-end;
     }
     &__social-network {
         cursor: pointer;

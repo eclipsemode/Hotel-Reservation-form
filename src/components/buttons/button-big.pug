@@ -1,4 +1,5 @@
-mixin buttonBig(text='click me')
+mixin buttonBig(text='click me', href='./search.html')
     .button(class=attributes.class)
-        button(type='submit').button__submit.button__submit--big= text
-        i.material-icons.material-icons--color-white.button__icon arrow_forward
+        a(href=href).button__link
+            button(type='submit').button__submit.button__submit--big= text
+            i.material-icons.material-icons--color-white.button__icon arrow_forward

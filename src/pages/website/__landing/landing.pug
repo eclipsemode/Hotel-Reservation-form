@@ -5,5 +5,5 @@ include ..\..\..\components\__cards\__room-search\room-search.pug
         img(src=require('/assets/images/image 3.png'), alt="alt").landing__image
         img(src=require('/assets/images/image 2.png'), alt="alt").landing__image
         img(src=require('/assets/images/image.png'), alt="alt").landing__image
-    +card-search(class='landing__room-search')
+    +card-search('Найдём номера под ваши пожелания', './search.html')(class='landing__room-search')
     p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения

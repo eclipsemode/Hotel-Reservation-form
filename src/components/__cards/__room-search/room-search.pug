@@ -2,7 +2,7 @@ include ../../date-dropdown/date-dropdown.pug
 include ../../dropdown/dropdown.pug
 include ../../buttons/button-big.pug
 
-mixin card-search(title='Найдём номера под ваши пожелания')
+mixin card-search(title='Найдём номера под ваши пожелания', href='./search.html')
     .card(class=attributes.class)
         .card__content
             h2.card__title= title
@@ -12,5 +12,5 @@ mixin card-search(title='Найдём номера под ваши пожела�
             h3.card__suptitle гости
             +dropdown('гости')(class='card__dropdown')
             
-            +buttonBig('подобрать номер')(class='card__btn')
+            +buttonBig('подобрать номер', href)(class='card__btn')
 
