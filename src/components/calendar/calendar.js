@@ -29,8 +29,30 @@ const dp = new AirDatepicker(".datepicker", {
                 element.value = "";
             }
         });
+        localStorage.setItem("date_1", fd.date[0]);
+        localStorage.setItem("date_2", fd.date[1]);
     },
 });
+
+
+const dpOne = new AirDatepicker(".datepicker-one", {
+    multipleDates: 2,
+    selectedDates: [localStorage.getItem("date_1"), localStorage.getItem("date_2")],
+    buttons: ["clear", selectItem],
+    multipleDatesSeparator: " - ",
+    minDate: new Date(),
+    range: true,
+    navTitles: {
+        days: "MMMM <i>yyyy</i>",
+    },
+    dateFormat: "d MMM",
+    onSelect: function (fd) {
+        localStorage.setItem("date_1", fd.date[0]);
+        localStorage.setItem("date_2", fd.date[1]);
+    }
+    
+});
+
 
 const dpNoRange = new AirDatepicker(".datepicker-no-range", {
     buttons: ["clear", selectItem],
@@ -39,4 +61,3 @@ const dpNoRange = new AirDatepicker(".datepicker-no-range", {
         days: "MMMM <i>yyyy</i>",
     },
 });
-
