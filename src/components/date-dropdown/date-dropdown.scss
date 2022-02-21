@@ -33,16 +33,6 @@
         text-transform: uppercase;
         caret-color: transparent;
         @include text-field;
-        // &::-webkit-calendar-picker-indicator {
-        //     background: none;
-        //     border: solid $Dark-shade-50;
-        //     border-width: 0 3px 3px 0;
-        //     padding: 3px;
-        //     transform: rotate(45deg);
-        //     height: 0px;
-        //     width: 0px;
-        //     pointer-events: none;
-        // }
         &::-webkit-datetime-edit {
             overflow: visible;
         }

@@ -2,9 +2,8 @@
     position: relative;
     width: min-content;
     background: white;
-    border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .2);
+    filter: drop-shadow(0 10px 20px rgba(31,32,65, 5%));
     &__date-range {
         margin-top: 41.44px;
     }

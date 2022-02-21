@@ -3,3 +3,9 @@
 @import '../../buttons/buttons.scss';
 @import '../../calendar/calendar.scss';
 @import '../cards.scss';
+
+.card {
+    &__dropdown {
+        width: 100%;
+    }
+}

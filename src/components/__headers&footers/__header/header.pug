@@ -5,17 +5,18 @@ include ./__authorization--false/authorization--false.pug
 include ./__header-menu/header-menu.pug
 
 .header 
-    .header__container 
-        .header__logo 
-            .header__logo-svg 
-            .header__logo-text 
-        .header__content
+    .inner-container    
+        .header__container 
+            .header__logo 
+                .header__logo-svg 
+                .header__logo-text 
+            .header__content
 
-            +header-menu('О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения')
+                +header-menu('О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения')
 
-            - var authorised = false
+                - var authorised = false
 
-            if (authorised === true) 
-                +auto--true
-            else
-                +auto--false
+                if (authorised === true) 
+                    +auto--true
+                else
+                    +auto--false

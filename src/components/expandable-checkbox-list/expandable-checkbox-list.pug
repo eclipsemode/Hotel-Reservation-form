@@ -1,6 +1,7 @@
 mixin expandable(title='Expandable checkbox list')
-    .expandable-checkbox-container
+    .expandable-checkbox-container(class=attributes.class)
         h3.expandable-checkbox-container__title= title
+        i.material-icons.material-icons--color50.material-icons--bold.expandable-checkbox-container__icon expand_more
     form.expandable-checkbox
         label.expandable-checkbox__label
             input(type='checkbox' checked).expandable-checkbox__label-input

@@ -1,7 +1,7 @@
 mixin header-menu(about='О нас', service='Услуги', vacancies='Вакансии', news='Новости', agreements='Соглашения')
 
     .header__menu 
-        a(href="#").header__link.header__link--active= about
+        a(href="#").header__link= about
         a(href="#").header__link.header__link--drop= service
             span.material-icons.material-icons--color50.material-icons--bold.header__link--drop-icon expand_more
             ul.header__link-menu

@@ -1,8 +1,8 @@
 function slider() {
     if (document.querySelector(".slider")) {
         let value = 1;
-        let left = document.querySelector(".slider__arrow--left");
-        let right = document.querySelector(".slider__arrow--right");
+        let left = document.querySelectorAll(".slider__arrow--left");
+        let right = document.querySelectorAll(".slider__arrow--right");
         let image = document.querySelectorAll(".slider__image");
         let buttons = document.querySelectorAll(".slider__buttons-dots");
 
@@ -31,8 +31,6 @@ function slider() {
             image[value - 1].style.display = "block";
             buttons[value - 1].style.background = "white";
         }
-
-        setInterval(() => showImage(++value), 5000);
     }
 }
 slider();

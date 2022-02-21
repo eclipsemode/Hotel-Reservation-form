@@ -8,11 +8,12 @@
 .header {
     width: 100%;
     background: #fff;
-    box-shadow: rgba($color: #000000, $alpha: 0.5);
+    filter: drop-shadow(0 10px 20px rgba(31,32,65, 5%));
     &__container {
         display: flex;
         justify-content: space-between;
-        padding: 1rem 10%;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
         align-items: center;
     }
 

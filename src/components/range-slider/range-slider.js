@@ -2,10 +2,6 @@
 /* eslint-disable no-inner-declarations */
 function slider() {
     if (document.querySelector(".range")) {
-        window.onload = function () {
-            slideOne();
-            slideTwo();
-        };
 
         let sliderFirst = document.querySelector(".range__slider-first");
         let sliderSecond = document.querySelector(".range__slider-second");

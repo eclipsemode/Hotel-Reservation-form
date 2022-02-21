@@ -1,36 +1,30 @@
-@import '../../style/layout/mixins/arrow-after.scss';
 @import '../../style/layout/mixins/checkbox.scss';
 
 .expandable-checkbox-container {
-    max-width: 266px;
+    min-width: 266px;
+    max-width: fit-content;
     width: 100%;
     display: flex;
     align-items: center;
-    @include arrow-after;
-    &::after {
-        cursor: pointer;
-        pointer-events: all;
-        transform: rotate(225deg);
-    }
+    justify-content: space-between;
     &__title {
         cursor: pointer;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $Dark-shade-100;
     }
-    &--disabled {
-        max-width: 266px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        @include arrow-after;
-        &::after {
-            top: calc(100% - 70%);
-            cursor: pointer;
-            pointer-events: all;
+    &__icon {
+        margin-right: 0.3em;
+        cursor: pointer;
+        &--disabled {
+            transform: rotate(180deg);
         }
     }
 }
 .expandable-checkbox {
     @include checkbox;
+    display: none;
     &--disabled {
-        display: none;
+        display: block;
     }
 }

@@ -1,0 +1,12 @@
+mixin checkbox-list
+    form.checkbox-list(class=attributes.class)
+        label.checkbox-list__label
+            input(type='checkbox' checked).checkbox-list__label-input
+            | Можно курить
+        label.checkbox-list__label
+            input(type='checkbox').checkbox-list__label-input
+            | Можно с питомцами
+        label.checkbox-list__label
+            input(type='checkbox').checkbox-list__label-input
+            .checkbox-list__label-text Можно пригласить гостей
+                span.checkbox-list__label-additional (до 10 человек)

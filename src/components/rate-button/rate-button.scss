@@ -1,46 +1,10 @@
-.rate {
+.products__rate {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: rotateY(180deg);
-    &__label {
-        display: block;
-        width: 24px;
-        height: 24px;
-        position: relative;
-        &::before {
-            content: "\2606";
-            color: $Purple;
-            cursor: pointer;
-            font-size: 27px;
-            font-weight: 400;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        &::after {
-            content: "\2605";
-            color: $Purple;
-            cursor: pointer;
-            font-size: 27px;
-            font-weight: 400;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: 0.5s;
-        }
-        &:hover::after {
-            opacity: 1;
-        }
-    }
-    &__inp {
-        display: none;
-    }
-    &__label:hover::after,
-    &__label:hover ~ &__label::after,
-    &__inp:checked ~ &__label::after {
-        opacity: 1;
+    &-button {
+        cursor: default;
+
     }
 }

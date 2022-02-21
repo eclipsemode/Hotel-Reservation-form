@@ -1,11 +1,5 @@
 @import '../../style/layout/mixins/checkbox.scss';
 
-.rich-checkbox-container {
-    max-width: 266px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
 .rich-checkbox {
     @include checkbox;
     &__label {
@@ -14,10 +8,10 @@
         font-size: 14px;
         line-height: 18px;
         &:not(:last-of-type) {
-            margin-bottom: 43px;
+            margin-bottom: 2.5em;
         }
         &:last-of-type {
-            margin-bottom: 30px;
+            margin-bottom: 3.1em;
         }
     }
     &__text {

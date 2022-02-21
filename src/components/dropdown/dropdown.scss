@@ -20,7 +20,7 @@
 
 .dropdown {
     position: relative;
-    max-width: 320px;
+    width: 266px;
 }
 
 .dropdown-room.active {
@@ -42,12 +42,13 @@
 
 .dropdown-room{
     position: relative;
-    max-width: 320px;
+    width: 266px;
 }
 
 // Main
 .dropdown-type {
     @include text-field;
+    width: inherit;
     display: block;
     cursor: pointer;
     position: relative;

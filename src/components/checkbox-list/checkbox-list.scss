@@ -1,0 +1,14 @@
+@import '../../style/layout/mixins/checkbox.scss';
+
+.checkbox-list {
+    @include checkbox;
+
+    &__label-text {
+        position: relative;
+    }
+    &__label-additional {
+        position: absolute;
+        top: 1.4em;
+        left: 0;
+    }
+}

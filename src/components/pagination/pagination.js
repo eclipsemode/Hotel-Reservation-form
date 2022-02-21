@@ -1,4 +1,3 @@
-
 function pagination(totalPages, page) {
     if (document.querySelector(".pagination")) {
         const ulTag = document.querySelector(".pagination__list");

@@ -1,14 +1,19 @@
-// @import "~normalize.css";
 @import './layout/variables.scss';
 @import './layout/fonts.scss';
 
 // ui kit
-@import '/pages/UI-kit/__cards/cards.scss';
-@import '/pages/UI-kit/__form-elements/form-elements.scss';
+// @import '/pages/UI-kit/__cards/cards.scss';
+// @import '/pages/UI-kit/__form-elements/form-elements.scss';
 @import '/components/__headers&footers/__header/header.scss';
 @import '../components/__headers&footers/__footer/footer.scss';
-@import '/pages/website/__landing/__main/landing.scss';
 
+@import '/pages/website/__search-room/search-room.scss';
+
+@import '/pages/website/__landing/landing.scss';
+
+.air-datepicker--buttons {
+    color: red;
+}
 
 *,
 *::after,
@@ -18,7 +23,7 @@
 html,
 body {
     font-family: "Montserrat", sans-serif;
-    background: #F4F4F6;
+    background: #fff;
     font-size: 14px;
     line-height: 24px;
     color: $Dark-shade-75;
@@ -35,6 +40,15 @@ body {
 }
 .main {
     flex: 1 1 auto;
-    align-self: center;
     position: relative;
+}
+.inner-container {
+    padding: 0 10%;
+}
+
+@media (max-width: 1190px) {
+    .inner-container {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
