@@ -1,7 +1,0 @@
-@import '../../style/layout/mixins/text-field.scss';
-
-.masked-text-field__input {
-    @include text-field;
-    color: $Dark-shade-75;
-    text-transform: uppercase;
-}
