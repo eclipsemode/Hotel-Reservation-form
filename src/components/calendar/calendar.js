@@ -29,8 +29,6 @@ const dp = new AirDatepicker(".datepicker", {
                 element.value = "";
             }
         });
-        localStorage.setItem("date_1", fd.date[0]);
-        localStorage.setItem("date_2", fd.date[1]);
     },
 });
 
@@ -53,11 +51,20 @@ const dpOne = new AirDatepicker(".datepicker-one", {
     
 });
 
+if (document.querySelector(".card__btn")) {
+    document.querySelector(".card__btn").addEventListener("click", () => {
+        let date = new Date();
+        if (dp.rangeDateFrom == "") {
+            localStorage.setItem("date_1", new Date());
+        } else {
+            localStorage.setItem("date_1", dp.rangeDateFrom);
+        }
 
-const dpNoRange = new AirDatepicker(".datepicker-no-range", {
-    buttons: ["clear", selectItem],
-    multipleDatesSeparator: " - ",
-    navTitles: {
-        days: "MMMM <i>yyyy</i>",
-    },
-});
+        if (dp.rangeDateTo == "") {
+            localStorage.setItem("date_2", new Date(Date.now() + 1*24*60*60*1000));
+        } else {
+            localStorage.setItem("date_2", dp.rangeDateTo);
+        }
+
+    });
+}
