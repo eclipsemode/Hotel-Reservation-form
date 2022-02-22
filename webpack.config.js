@@ -1,9 +1,8 @@
+/* eslint-disable no-undef */
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
-const webpack = require("webpack");
 
 
 
@@ -21,6 +20,7 @@ module.exports = {
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
+        clean: true,
     },
     plugins: [
     new HtmlWebpackPlugin({
@@ -33,12 +33,6 @@ module.exports = {
         inject: "body",
         template: "./search.pug",
     }),
-    new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery",
-    }),
-    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: "[name].bundle.css"
     }),
