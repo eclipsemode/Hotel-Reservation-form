@@ -1,6 +1,6 @@
+/* eslint-disable no-inner-declarations */
 function dropdown() {
-    // eslint-disable-next-line no-undef
-    if (dropdown || dropdownRoom) {
+    if (document.querySelector(".dropdown") || document.querySelector(".dropdown-room")) {
         const dropdown = document.querySelector(".dropdown");
         const dropdownRoom = document.querySelector(".dropdown-room");
         const dropdownButton = document.querySelector(".dropdown-type");
@@ -8,9 +8,9 @@ function dropdown() {
         const childrenSelector = document.querySelector("[name=\"children\"]");
         const adultsSelector = document.querySelector("[name=\"adults\"]");
         const clearButton = document.querySelector("[name=\"clear\"]");
+
         
         // CLICK ON BUTTON DROPDOWN. OPEN /  CLOSE DROPDOWN
-        // eslint-disable-next-line no-inner-declarations
         function dropdownOpen() {
             if (dropdown || dropdownRoom) {
                 document.addEventListener("click", (event) => {
@@ -42,7 +42,6 @@ function dropdown() {
         
         
         // ITEM COUNTER
-        // eslint-disable-next-line no-inner-declarations
         function itemCounter() {
             if (document.querySelectorAll(".counter__btn")) {
                 const buttons = document.querySelectorAll(".counter__btn");
@@ -74,6 +73,7 @@ function dropdown() {
                         if (dropdownRoom) {
                             let bedroomsDeclination;
                             let bedsDeclination;
+
             
                             if (document.querySelector("[name=\"bedrooms\"]").value == 1) {
                                 bedroomsDeclination = "спальня";
@@ -82,6 +82,7 @@ function dropdown() {
                             } else {
                                 bedroomsDeclination = "спален";
                             }
+
                             if (document.querySelector("[name=\"beds\"]").value == 1) {
                                 bedsDeclination = "кровать";
                             } else if (document.querySelector("[name=\"beds\"]").value > 1 && document.querySelector("[name=\"beds\"]").value < 5) {
@@ -89,10 +90,16 @@ function dropdown() {
                             } else {
                                 bedsDeclination = "кроватей";
                             }
+
+
                     
                             // Value of dropdown element ROOM
-                            if (dropdownRoom) {
+                            if (document.querySelector("[name=\"bedrooms\"]").value > 0 || document.querySelector("[name=\"beds\"]").value > 0) {
                                 dropdownRoom.querySelector(".dropdown-type").textContent = document.querySelector("[name=\"bedrooms\"]").value + " " + bedroomsDeclination + ", " + document.querySelector("[name=\"beds\"]").value + " " + bedsDeclination + "...";
+                            } 
+
+                            if (document.querySelector("[name=\"bedrooms\"]").value == 0 && document.querySelector("[name=\"beds\"]").value == 0) {
+                                dropdownRoom.querySelector(".dropdown-type").textContent = "Удобства номера";
                             }
                         }
         
@@ -136,7 +143,6 @@ function dropdown() {
         
         
         // DROPDOWN BUTTONS CLEAR AND SUBMIT
-        // eslint-disable-next-line no-inner-declarations
         function submit() {
             if (document.querySelectorAll(".dropdown-guest__list-button")) {
                 document.querySelectorAll(".dropdown-guest__list-button").forEach(element => {
@@ -152,8 +158,9 @@ function dropdown() {
                                     element.previousElementSibling.style = "opacity: 0.5;";
                                     element.nextElementSibling.style = "opacity: 1;";
                                 });
-                            } else if (event.target.parentElement.parentElement.parentElement.parentElement.classList.contains("dropdown-room")) {
-                                element.parentElement.parentElement.previousElementSibling.textContent = "Удобства номера";
+                            } 
+                            if (event.target.parentElement.parentElement.parentElement.parentElement.classList.contains("dropdown-room")) {
+                                element.parentElement.parentElement.previousElementSibling.previousElementSibling.textContent = "Удобства номера";
                                 dropdownRoom.querySelectorAll(".counter__value").forEach(element => {
                                     element.value = 0;
                                     element.previousElementSibling.style = "opacity: 0.5;";
