@@ -16,38 +16,77 @@
         .products__nav--gradient-right {
             opacity: 1;
         }
+        .products__circle {
+            opacity: 1;
+        }
     }
     &__list {
         list-style-type: none;
         padding-left: 0;
         margin: 0;
     }
-    &__img {
+
+    &__img-container {
         max-height: 151.38px;
+        border-radius: 4px 4px 0 0;
+        max-width: 270px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    &__img {
+        height: 151.38px;
         border-radius: 4px 4px 0 0;
         max-width: 270px;
         width: 100%;
         position: relative;
     }
 
+    &__circle {
+        position: absolute;
+        top: 126px;
+        left: 80%;
+        display: flex;
+        width: 42px;
+        justify-content: space-between;
+        opacity: 0;
+        transition: opacity .3s;
+        &-dots {
+            height: 7.5px;
+            width: 7.5px;
+            border: 1px solid white;
+            border-radius: 50%;
+            z-index: 11;
+            &:first-of-type {
+                background: white;
+            }
+        }
+    }
+
     &__nav {
         &--right {
             position: absolute;
-            top: 25%;
+            top: 42%;
             right: 4%;
             cursor: pointer;
             opacity: 0;
             transition: opacity .3s;
             z-index: 10;
+            &::selection {
+                list-style-type: none;
+            }
         }
         &--left {
             position: absolute;
-            top: 25%;
+            top: 42%;
             left: 4%;
             cursor: pointer;
             opacity: 0;
             transition: opacity .3s;
             z-index: 10;
+            &::selection {
+                list-style-type: none;
+            }
         }
         &--gradient-right {
             position:absolute;

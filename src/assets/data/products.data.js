@@ -2,6 +2,9 @@ export const productsData = [
     {
         id: 1,
         src: "./assets/images/rooms/room888.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "888",
         luxe: "люкс",
         price: "9 990₽",
@@ -11,6 +14,9 @@ export const productsData = [
     {
         id: 2,
         src: "./assets/images/rooms/room840.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "840",
         luxe: "",
         price: "9 900₽",
@@ -20,6 +26,9 @@ export const productsData = [
     {
         id: 3,
         src: "./assets/images/rooms/room980.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "980",
         luxe: "люкс",
         price: "8 500₽",
@@ -29,6 +38,9 @@ export const productsData = [
     {
         id: 4,
         src: "./assets/images/rooms/room856.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "856",
         luxe: "",
         price: "7 300₽",
@@ -38,6 +50,9 @@ export const productsData = [
     {
         id: 5,
         src: "./assets/images/rooms/room740.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "740",
         luxe: "",
         price: "6 000₽",
@@ -47,6 +62,9 @@ export const productsData = [
     {
         id: 6,
         src: "./assets/images/rooms/room982.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "982",
         luxe: "",
         price: "5 800₽",
@@ -56,6 +74,9 @@ export const productsData = [
     {
         id: 7,
         src: "./assets/images/rooms/room678.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "678",
         luxe: "",
         price: "5 500₽",
@@ -65,6 +86,9 @@ export const productsData = [
     {
         id: 8,
         src: "./assets/images/rooms/room450.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "450",
         luxe: "",
         price: "5 300₽",
@@ -74,6 +98,9 @@ export const productsData = [
     {
         id: 9,
         src: "./assets/images/rooms/room350.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "350",
         luxe: "",
         price: "5 000₽",
@@ -83,6 +110,9 @@ export const productsData = [
     {
         id: 10,
         src: "./assets/images/rooms/room666.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "666",
         luxe: "",
         price: "5 000₽",
@@ -92,6 +122,9 @@ export const productsData = [
     {
         id: 11,
         src: "./assets/images/rooms/room444.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "444",
         luxe: "",
         price: "5 000₽",
@@ -101,6 +134,9 @@ export const productsData = [
     {
         id: 12,
         src: "./assets/images/rooms/room352.jpg",
+        src2: "./assets/images/rooms/room840.jpg",
+        src3: "./assets/images/rooms/room980.jpg",
+        src4: "./assets/images/rooms/room740.jpg",
         room: "352",
         luxe: "",
         price: "5 000₽",
