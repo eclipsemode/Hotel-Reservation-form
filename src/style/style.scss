@@ -28,7 +28,7 @@ body {
     color: $Dark-shade-75;
     margin: 0;
     padding: 0;
-    min-width: 350px;
+    // min-width: 390px;
     height: 100%;
 }
 .wrapper {
@@ -49,5 +49,10 @@ body {
     .inner-container {
         padding-left: 1em;
         padding-right: 1em;
+    }
+}
+@media (max-width: 610px) {
+    .inner-container {
+        padding: 0;
     }
 }

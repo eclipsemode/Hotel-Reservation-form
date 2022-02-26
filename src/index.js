@@ -23,6 +23,7 @@ window.onload = function () {
         require("./components/radio-buttons/radio-buttons");
         require("./components/range-slider/range-slider");
         require("./components/rate-button/rate-button");
+        require("./pages/website/__search-room/search-room");
     }
 
     if (document.querySelector(".landing")) {

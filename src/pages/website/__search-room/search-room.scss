@@ -12,6 +12,7 @@
     column-gap: 60px;
     margin-top: 1.1em;
     justify-content: center;
+    position: relative;
 
     &__main {
         display: flex;
@@ -21,6 +22,20 @@
             font-size: 24px;
             color: $Dark-shade-100;
             margin-bottom: 0.9em;
+        }
+    }
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 3em;
+        height: 100%;
+        background-color: $Dark-shade-10;
+        display: none;
+        &-icon {
+            padding: 0.64rem;
+            position: relative;
+            top: 11rem;
         }
     }
     &__information {
@@ -80,4 +95,44 @@
         height: 1px;
     }
 
+}
+
+@media (max-width: 1190px) {
+    .search__apartments {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+@media (max-width: 920px) {
+    .search__apartments {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        width: max-content;
+    }
+}
+
+@media (max-width: 610px) {
+    .search__information {
+        position: absolute;
+        top: 0;
+        right: 50em;
+        background: white;
+        z-index: 100;
+    }
+    .search {
+        display: block;
+        margin-top: 0;
+    }
+    .search__apartments {
+        align-self: center;
+    }
+    .search__main {
+        margin-left: 3em;
+    }
+    .search__main-title {
+        text-align: center;
+    }
+    .search__nav {
+        display: block;
+    }
 }
