@@ -1,5 +1,5 @@
 // Border and arrow color focus 
-function dateDropdownBorder() {
+export const dateDropdownBorder = function () {
         if (document.querySelector(".date-form")) {
                 let normalBorder = document.querySelector(".date-form__inp--end").style.borderColor;
                 let focusBorder = "rgba(31, 32, 65, 0.50)";
@@ -19,6 +19,4 @@ function dateDropdownBorder() {
                         dateContainer.forEach(element => element.classList.remove("date-form__container--focus"));
                 });
         }
-}
-
-dateDropdownBorder();
+};

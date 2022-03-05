@@ -1,4 +1,4 @@
-function checkboxPress() {
+export function checkboxPress() {
     const checkbox = document.querySelector(".expandable-checkbox-container");
     const checkboxForm = document.querySelector(".expandable-checkbox");
     const checkboxArrow = document.querySelector(".expandable-checkbox-container__icon");
@@ -9,7 +9,5 @@ function checkboxPress() {
         });
     }
 }
-
-checkboxPress();
 
 

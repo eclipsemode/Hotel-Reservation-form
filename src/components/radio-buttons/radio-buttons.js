@@ -1,4 +1,4 @@
-function radioButton() {
+export function radioButton() {
     let radio = document.querySelector(".radio");
 
     if (radio) {
@@ -15,5 +15,3 @@ function radioButton() {
         });
     }
 }
-
-radioButton();

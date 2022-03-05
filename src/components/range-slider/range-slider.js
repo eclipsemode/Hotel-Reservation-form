@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-inner-declarations */
-function slider() {
+export function slider() {
     if (document.querySelector(".range")) {
 
         let sliderFirst = document.querySelector(".range__slider-first");
@@ -30,11 +30,9 @@ function slider() {
         sliderFirst.addEventListener("input", () => slideOne());
         sliderSecond.addEventListener("input", () => slideTwo());
         function fillColor() {
-            percentOne = (sliderFirst.value / sliderMaxValue) * 100;
-            percentTwo = (sliderSecond.value / sliderMaxValue) * 100;
+            let percentOne = (sliderFirst.value / sliderMaxValue) * 100;
+            let percentTwo = (sliderSecond.value / sliderMaxValue) * 100;
             sliderTrackLine.style.background = `linear-gradient(to right, rgba(255, 255, 255, 0) ${percentOne}%, #6fcf97 ${percentOne}%, #66d2ea ${percentTwo}%, rgba(255, 255, 255, 0) ${percentTwo}%)`;
         }
     }
 }
-
-slider();

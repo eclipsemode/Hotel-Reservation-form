@@ -1,12 +1,14 @@
-window.addEventListener("scroll", event => {
+/* eslint-disable no-unused-vars */
+import { dpOne } from "../../../components/calendar/calendar";
+import { dropdown } from "../../../components/dropdown/dropdown";
+import * as products from "../../../components/__cards/__products/products";
+import { pagination } from "../../../components/pagination/pagination";
+import { checkboxPress } from "../../../components/expandable-checkbox-list/expandable-checkbox-list";
+import { radioButton } from "../../../components/radio-buttons/radio-buttons";
+import { slider } from "../../../components/range-slider/range-slider";
 
-    basicPosition = document.querySelector(".search__nav-icon").style.position;
-    basicTop = document.querySelector(".search__nav-icon").style.top;
-
-    if (window.scrollY < 159 && window.innerWidth <= "610px") {
-    document.querySelector(".search__nav").style.top = "11rem";
-    } 
-    
-    console.log(window.scrollY);
-});
-
+dropdown();
+pagination(15, 1);
+checkboxPress();
+radioButton();
+slider();

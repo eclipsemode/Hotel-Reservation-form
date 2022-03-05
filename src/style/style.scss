@@ -10,10 +10,6 @@
 @import '/pages/website/__search-room/search-room.scss';
 @import '/pages/website/__landing/landing.scss';
 
-.air-datepicker--buttons {
-    color: red;
-}
-
 *,
 *::after,
 *::before {
@@ -28,7 +24,6 @@ body {
     color: $Dark-shade-75;
     margin: 0;
     padding: 0;
-    // min-width: 390px;
     height: 100%;
 }
 .wrapper {

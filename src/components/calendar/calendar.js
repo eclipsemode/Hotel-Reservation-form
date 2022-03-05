@@ -11,7 +11,7 @@ let selectItem = {
     }
 };
 
-const dp = new AirDatepicker(".datepicker", {
+export const dp = new AirDatepicker(".datepicker", {
     buttons: ["clear", selectItem],
     multipleDatesSeparator: " - ",
     minDate: new Date(),
@@ -30,10 +30,33 @@ const dp = new AirDatepicker(".datepicker", {
             }
         });
     },
+    onRenderCell({date, cellType, datepicker}) {
+        if (document.querySelector(".card__btn")) {
+            document.querySelector(".card__btn").addEventListener("click", () => {
+                if (dp.rangeDateFrom == "") {
+                    localStorage.setItem("date_1", new Date());
+                } else {
+                    localStorage.setItem("date_1", dp.rangeDateFrom);
+                }
+        
+                if (dp.rangeDateTo == "") {
+                    localStorage.setItem("date_2", new Date(Date.now() + 1*24*60*60*1000));
+                } else {
+                    localStorage.setItem("date_2", dp.rangeDateTo);
+                }
+        
+            });
+        }
+
+        if (window.innerWidth <= 480) {
+            datepicker.opts.position = "bottom center";
+        } else {
+            datepicker.opts.position = "bottom left";
+        }
+    }
 });
 
-
-const dpOne = new AirDatepicker(".datepicker-one", {
+export const dpOne = new AirDatepicker(".datepicker-one", {
     multipleDates: 2,
     selectedDates: [localStorage.getItem("date_1"), localStorage.getItem("date_2")],
     buttons: ["clear", selectItem],
@@ -47,24 +70,13 @@ const dpOne = new AirDatepicker(".datepicker-one", {
     onSelect: function (fd) {
         localStorage.setItem("date_1", fd.date[0]);
         localStorage.setItem("date_2", fd.date[1]);
+    },
+    onRenderCell({date, cellType, datepicker}) {
+        if (window.innerWidth <= 610) {
+            datepicker.opts.position = "bottom center";
+        } else {
+            datepicker.opts.position = "bottom left";
+        }
     }
-    
 });
 
-if (document.querySelector(".card__btn")) {
-    document.querySelector(".card__btn").addEventListener("click", () => {
-        let date = new Date();
-        if (dp.rangeDateFrom == "") {
-            localStorage.setItem("date_1", new Date());
-        } else {
-            localStorage.setItem("date_1", dp.rangeDateFrom);
-        }
-
-        if (dp.rangeDateTo == "") {
-            localStorage.setItem("date_2", new Date(Date.now() + 1*24*60*60*1000));
-        } else {
-            localStorage.setItem("date_2", dp.rangeDateTo);
-        }
-
-    });
-}

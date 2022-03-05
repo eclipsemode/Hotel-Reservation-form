@@ -1,5 +1,5 @@
 /* eslint-disable no-inner-declarations */
-function dropdown() {
+export function dropdown() {
     if (document.querySelector(".dropdown") || document.querySelector(".dropdown-room")) {
         const dropdown = document.querySelector(".dropdown");
         const dropdownRoom = document.querySelector(".dropdown-room");
@@ -176,5 +176,3 @@ function dropdown() {
         submit();
     }
 }
-
-dropdown();

@@ -1,4 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-inner-declarations */
+import { dp } from "../../../components/calendar/calendar";
+import { dropdown } from "../../../components/dropdown/dropdown";
+import { dateDropdownBorder } from "../../../components/date-dropdown/date-dropdown";
+
 function landingSlider() {
     if (document.querySelector(".landing")) {
         let value = 1;
@@ -23,8 +28,10 @@ function landingSlider() {
         }
 
         setInterval(() => showImage(++value), 5000);
-        
     }
+
 }
 
 landingSlider();
+dropdown();
+dateDropdownBorder();

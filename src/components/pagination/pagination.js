@@ -1,4 +1,4 @@
-function pagination(totalPages, page) {
+export function pagination(totalPages, page) {
     if (document.querySelector(".pagination")) {
         const ulTag = document.querySelector(".pagination__list");
         let liTag = "";
@@ -95,5 +95,3 @@ function pagination(totalPages, page) {
         }
     }
 }
-
-pagination(15, 1);

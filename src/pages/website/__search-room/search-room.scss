@@ -24,20 +24,6 @@
             margin-bottom: 0.9em;
         }
     }
-    &__nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 3em;
-        height: 100%;
-        background-color: $Dark-shade-10;
-        display: none;
-        &-icon {
-            padding: 0.64rem;
-            position: relative;
-            top: 11rem;
-        }
-    }
     &__information {
         display: flex;
         flex-direction: column;
@@ -113,21 +99,15 @@
 
 @media (max-width: 610px) {
     .search__information {
-        position: absolute;
-        top: 0;
-        right: 50em;
-        background: white;
-        z-index: 100;
+        align-items: center;
     }
+
     .search {
         display: block;
         margin-top: 0;
     }
     .search__apartments {
         align-self: center;
-    }
-    .search__main {
-        margin-left: 3em;
     }
     .search__main-title {
         text-align: center;
