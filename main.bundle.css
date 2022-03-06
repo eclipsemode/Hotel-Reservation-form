@@ -1965,6 +1965,9 @@
   font-size: 12px;
   text-transform: uppercase;
 }
+.products__link {
+  text-decoration: none;
+}
 .products__price {
   display: flex;
 }
