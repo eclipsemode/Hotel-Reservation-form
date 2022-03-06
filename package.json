@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Webpack ready for project",
   "main": "index.js",
-  "homepage": "https://eclipsemode.github.io/Hotel-Reservation-form/",
+  "homepage": "https://eclipsemode.github.io/Hotel-Reservation-form",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
