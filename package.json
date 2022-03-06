@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Webpack ready for project",
   "main": "index.js",
-  "homepage": "https://eclipsemode.github.io/Hotel-Reservation-form",
+  "homepage": "https://github.com/eclipsemode/Hotel-Reservation-form.git",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
@@ -27,7 +27,6 @@
   "bugs": {
     "url": "https://github.com/eclipsemode/Hotel-Reservation-form/issues"
   },
-  "homepage": "https://github.com/eclipsemode/Hotel-Reservation-form#readme",
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
