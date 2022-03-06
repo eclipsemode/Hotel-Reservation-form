@@ -12,6 +12,10 @@ window.onload = function () {
     if (document.querySelector(".landing")) {
         require("./pages/website/__landing/landing");
     }
+
+    if (document.querySelector(".room")) {
+        require("./pages/website/__room-details/room-details");
+    }
 };
 
 import "./style/style.scss";

@@ -1,0 +1,23 @@
+.room {
+    &__collage {
+        display: flex;
+    }
+    &__block {
+        width: 100%;
+    }
+    &__block2 {
+        display: flex;
+        flex-direction: column;
+    }
+    &__img--first {
+        max-height: 485px;
+        height: 100%;
+        width: 100%;
+    }
+    &__img--secondary {
+        max-height: 242.5px;
+        height: 100%;
+        // display: block;
+        object-fit: cover;
+    }
+}

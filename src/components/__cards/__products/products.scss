@@ -142,6 +142,9 @@
             text-transform: uppercase;
         }
     }
+    &__link {
+        text-decoration: none;
+    }
     &__price {
         display: flex;
         &-value {

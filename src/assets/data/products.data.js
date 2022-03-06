@@ -9,7 +9,8 @@ export const productsData = [
         luxe: "люкс",
         price: "9 990₽",
         reviews: "145",
-        star: 5
+        star: 5,
+        link: "./room.html"
     },
     {
         id: 2,
@@ -21,7 +22,8 @@ export const productsData = [
         luxe: "",
         price: "9 900₽",
         reviews: "65",
-        star: 4
+        star: 4,
+        link: "./room.html"
     },
     {
         id: 3,
@@ -33,7 +35,8 @@ export const productsData = [
         luxe: "люкс",
         price: "8 500₽",
         reviews: "35",
-        star: 3
+        star: 3,
+        link: "./room.html"
     },
     {
         id: 4,
@@ -45,7 +48,8 @@ export const productsData = [
         luxe: "",
         price: "7 300₽",
         reviews: "19",
-        star: 5
+        star: 5,
+        link: "./room.html"
     },
     {
         id: 5,
@@ -57,7 +61,8 @@ export const productsData = [
         luxe: "",
         price: "6 000₽",
         reviews: "44",
-        star: 4
+        star: 4,
+        link: "./room.html"
     },
     {
         id: 6,
@@ -69,7 +74,8 @@ export const productsData = [
         luxe: "",
         price: "5 800₽",
         reviews: "56",
-        star: 3
+        star: 3,
+        link: "./room.html"
     },
     {
         id: 7,
@@ -81,7 +87,8 @@ export const productsData = [
         luxe: "",
         price: "5 500₽",
         reviews: "45",
-        star: 5
+        star: 5,
+        link: "./room.html"
     },
     {
         id: 8,
@@ -93,7 +100,8 @@ export const productsData = [
         luxe: "",
         price: "5 300₽",
         reviews: "39",
-        star: 4
+        star: 4,
+        link: "./room.html"
     },
     {
         id: 9,
@@ -105,7 +113,8 @@ export const productsData = [
         luxe: "",
         price: "5 000₽",
         reviews: "77",
-        star: 3
+        star: 3,
+        link: "./room.html"
     },
     {
         id: 10,
@@ -117,7 +126,8 @@ export const productsData = [
         luxe: "",
         price: "5 000₽",
         reviews: "25",
-        star: 5
+        star: 5,
+        link: "./room.html"
     },
     {
         id: 11,
@@ -129,7 +139,8 @@ export const productsData = [
         luxe: "",
         price: "5 000₽",
         reviews: "15",
-        star: 4
+        star: 4,
+        link: "./room.html"
     },
     {
         id: 12,
@@ -141,6 +152,7 @@ export const productsData = [
         luxe: "",
         price: "5 000₽",
         reviews: "55",
-        star: 3
+        star: 3,
+        link: "./room.html"
     },
 ];

@@ -44,10 +44,12 @@ class Products {
                             </div>
                         <div class='products__content'>
                             <div class='products__about'>
-                                <div class='products__room'>№
-                                    <span class=${this.classRoom}>${product.room}</span>
-                                    <span class='products__room--luxe'>${product.luxe}</span>
-                                </div> 
+                                <a href=${product.link} class='products__link'>
+                                    <div class='products__room'>№
+                                        <span class=${this.classRoom}>${product.room}</span>
+                                        <span class='products__room--luxe'>${product.luxe}</span>
+                                    </div>
+                                </a>
                                 <div class='products__price'>
                                     <div class=${this.classPrice}>${product.price}</div>
                                     <div class='products__price-text'>в сутки</div>
