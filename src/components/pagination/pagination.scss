@@ -1,10 +1,10 @@
 .pagination {
     &__text {
-        margin: 10px 6px;
+        margin: 0 6px;
         font-weight: 400;
         color: $Dark-shade-75;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 12px;
     }
     &__list {
         display: flex;

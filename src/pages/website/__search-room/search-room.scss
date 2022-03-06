@@ -9,14 +9,15 @@
 
 .search {
     display: flex;
-    column-gap: 60px;
+    column-gap: 2rem;
     margin-top: 1.1em;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
 
     &__main {
         display: flex;
         flex-direction: column;
+        width: min-content;
 
         &-title {
             font-size: 24px;
@@ -64,15 +65,16 @@
     }
     &__pagination {
         align-self: center;
-        margin-top: 40px;
-        margin-bottom: 70px;
+        margin-top: 2rem;
+        margin-bottom: 77px;
+        margin-right: 0.7rem;
     }
     &__apartments {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         grid-column-gap: 0.85em;
-        grid-row-gap: 1.43em;
+        grid-row-gap: 1.5rem;
     }
 
     &__line {
@@ -83,10 +85,13 @@
 
 }
 
-@media (max-width: 1190px) {
+@media (max-width: 1250px) {
     .search__apartments {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
+    }
+    .search {
+        justify-content: center;
     }
 }
 @media (max-width: 920px) {
@@ -114,5 +119,9 @@
     }
     .search__nav {
         display: block;
+    }
+    .search__main {
+        width: fit-content;
+        margin: 0 auto;
     }
 }
