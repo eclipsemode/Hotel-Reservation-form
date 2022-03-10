@@ -1,23 +1,59 @@
 .room {
     &__collage {
         display: flex;
+        justify-content: center;
+        max-height: 485px;
     }
     &__block {
-        width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
     &__block2 {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
     }
     &__img--first {
         max-height: 485px;
         height: 100%;
-        width: 100%;
+        max-width: 100%;
+        min-width: fit-content;
     }
     &__img--secondary {
         max-height: 242.5px;
         height: 100%;
-        // display: block;
-        object-fit: cover;
+    }
+}
+
+@media (max-width: 920px) {
+    .room__collage {
+        flex-direction: column;
+        max-height: initial;
+    }
+    .room__block2 {
+        flex-direction: row;
+        justify-content: center;
+
+    }
+}
+
+@media (max-width: 800px) {
+    .room__img--first {
+        min-width: auto;
+        max-width: none;
+
+        width: 100%;
+        height: 100%;
+    }
+
+}
+@media (max-width: 480px) {
+    .room__block2 {
+        flex-direction: column;
+    }
+    .room__collage {
+        justify-content: flex-start;
+        height: fit-content;
+        max-height: initial;
     }
 }
