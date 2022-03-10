@@ -3,12 +3,12 @@
     width: min-content;
     background: white;
     border-radius: 4px;
-    filter: drop-shadow(0 10px 20px rgba(31,32,65, 5%));
+    filter: drop-shadow(0 0px 25px rgba(31,32,65, 20%));
     &__date-range {
         margin-top: 41.44px;
     }
     &__content {
-        margin: 40px 30px 30px 30px;
+        padding: 40px 30px 30px 30px;
         display: flex;
         flex-direction: column;
         & .text:not(:last-of-type) {
@@ -110,6 +110,7 @@
         &-img {
             margin-left: 5px;
             cursor: pointer;
+            opacity: 0.25;
         }
     }
 }

@@ -1,4 +1,11 @@
+@import '../../../components/__cards/__room-number/room-number.scss';
+@import '../../../components/benefits/benefits.scss';
+
 .room {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 0;
+
     &__collage {
         display: flex;
         justify-content: center;
@@ -23,6 +30,53 @@
         max-height: 242.5px;
         height: 100%;
     }
+
+    &__about {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 5rem;
+    }
+
+    &__chart {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 2.1rem;
+    }
+    &__chart-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    &__chart-item {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        &:nth-of-type(1) {
+            .room__chart-dot {
+                background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+            }
+        }
+        &:nth-of-type(2) {
+            .room__chart-dot {
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            }
+        }
+        &:nth-of-type(3) {
+            .room__chart-dot {
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            }
+        }
+        &:nth-of-type(4) {
+            .room__chart-dot {
+                background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+            }
+        }
+    }
+    &__chart-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
 }
 
 @media (max-width: 920px) {
@@ -33,7 +87,6 @@
     .room__block2 {
         flex-direction: row;
         justify-content: center;
-
     }
 }
 

@@ -738,6 +738,7 @@
 /*!*************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./style/style.scss ***!
   \*************************************************************************************************************/
+@charset "UTF-8";
 @font-face {
   font-family: "Montserrat";
   src: url(assets/fonts/079ca05d3ded9bc107ab.ttf) format("truetype");
@@ -935,7 +936,7 @@
   color: #bc9cff;
 }
 .material-icons--color-white {
-  color: white;
+  color: #fff;
 }
 
 .header__authorization {
@@ -2655,13 +2656,13 @@
   width: min-content;
   background: white;
   border-radius: 4px;
-  filter: drop-shadow(0 10px 20px rgba(31, 32, 65, 0.05));
+  filter: drop-shadow(0 0px 25px rgba(31, 32, 65, 0.2));
 }
 .card__date-range {
   margin-top: 41.44px;
 }
 .card__content {
-  margin: 40px 30px 30px 30px;
+  padding: 40px 30px 30px 30px;
   display: flex;
   flex-direction: column;
 }
@@ -2760,6 +2761,7 @@
 .card__additional-img {
   margin-left: 5px;
   cursor: pointer;
+  opacity: 0.25;
 }
 
 .card__dropdown {
@@ -2831,6 +2833,63 @@
     display: none;
   }
 }
+.room-number__title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.room-number__num {
+  position: relative;
+  color: #1f2041;
+  font-weight: 700;
+  line-height: 29.26px;
+  margin-bottom: 0;
+}
+.room-number__num::before {
+  content: "№";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 29.26px;
+  color: #1f2041;
+}
+.room-number__app {
+  margin-top: 5px;
+  margin-left: 8px;
+  line-height: 14.63px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bc9cff;
+}
+.room-number__value {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  white-space: nowrap;
+}
+.room-number__value--normal {
+  font-weight: 400;
+}
+
+.benefits {
+  display: flex;
+  column-gap: 1em;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  width: 280px;
+}
+.benefits__text-name {
+  margin-bottom: 0;
+}
+.benefits__text-description {
+  margin-top: 0;
+}
+
+.room {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 0;
+}
 .room__collage {
   display: flex;
   justify-content: center;
@@ -2854,6 +2913,42 @@
 .room__img--secondary {
   max-height: 242.5px;
   height: 100%;
+}
+.room__about {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5rem;
+}
+.room__chart {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2.1rem;
+}
+.room__chart-list {
+  list-style-type: none;
+  padding: 0;
+}
+.room__chart-item {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+.room__chart-item:nth-of-type(1) .room__chart-dot {
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+.room__chart-item:nth-of-type(2) .room__chart-dot {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.room__chart-item:nth-of-type(3) .room__chart-dot {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+.room__chart-item:nth-of-type(4) .room__chart-dot {
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
+.room__chart-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
 @media (max-width: 920px) {

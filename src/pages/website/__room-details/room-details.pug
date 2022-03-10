@@ -1,3 +1,7 @@
+include ..\..\..\components\__cards\__order\order.pug
+include ..\..\..\components\__cards\__room-search\room-search.pug
+include ..\..\..\components\benefits\benefits.pug
+
 .room__collage
         .room__block
                 img(src=require("/assets/images/room--info-1.jpg"), alt="alt").room__img--first
@@ -8,13 +12,28 @@
 
 .inner-container
         .room 
-                p sddsds
-                p dsds
-                        p sddsds
-                p dsds
-                        p sddsds
-                p dsds
-                        p sddsds
-                p dsds
-                        p sddsds
-                p dsds 
+                .room__about 
+                        .room__information
+                                h3.room__title Сведения о номере
+                                +benefits
+                        .room__impression
+                                h3.room__title Впечатления от номера
+                                .room__chart 
+                                        .room__chart-circle
+                                                p ddd
+                                        ul.room__chart-list
+                                                li.room__chart-item
+                                                        span.room__chart-dot
+                                                        span.room__chart-text Великолепно
+                                                li.room__chart-item
+                                                        span.room__chart-dot
+                                                        span.room__chart-text Хорошо
+                                                li.room__chart-item
+                                                        span.room__chart-dot
+                                                        span.room__chart-text Удовлетворительно
+                                                li.room__chart-item
+                                                        span.room__chart-dot
+                                                        span.room__chart-text Разачарован
+
+                .room__card
+                        +card-order
