@@ -94,7 +94,8 @@
     .footer__main {
         flex-wrap: wrap;
         margin: 1em 0;
-        row-gap: 2em;
+        row-gap: normal;
+        justify-content: space-between;
     }
     .footer__info {
         text-align: center;
@@ -139,5 +140,8 @@
     }
     .footer {
         padding: 8.143em 1em;
+    }
+    .footer__main {
+        justify-content: center;
     }
 }

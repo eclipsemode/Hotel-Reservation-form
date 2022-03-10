@@ -71,7 +71,6 @@
         background: white;
         z-index: 9;
         transition: all ease .3s;
-        transition: scroll 0s;
         opacity: 0;
         &--active {
             opacity: 1;
