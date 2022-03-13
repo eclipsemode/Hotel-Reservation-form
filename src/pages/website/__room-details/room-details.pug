@@ -1,6 +1,7 @@
-include ..\..\..\components\__cards\__order\order.pug
-include ..\..\..\components\__cards\__room-search\room-search.pug
-include ..\..\..\components\benefits\benefits.pug
+include ../../../components/__cards/__order/order.pug
+include ../../../components/__cards/__room-search/room-search.pug
+include ../../../components/benefits/benefits.pug
+include ../../../components/comment/comment.pug
 
 .room__collage
         .room__block
@@ -20,20 +21,33 @@ include ..\..\..\components\benefits\benefits.pug
                                 h3.room__title Впечатления от номера
                                 .room__chart 
                                         .room__chart-circle
-                                                p ddd
-                                        ul.room__chart-list
-                                                li.room__chart-item
-                                                        span.room__chart-dot
-                                                        span.room__chart-text Великолепно
-                                                li.room__chart-item
-                                                        span.room__chart-dot
-                                                        span.room__chart-text Хорошо
-                                                li.room__chart-item
-                                                        span.room__chart-dot
-                                                        span.room__chart-text Удовлетворительно
-                                                li.room__chart-item
-                                                        span.room__chart-dot
-                                                        span.room__chart-text Разачарован
+                                                canvas#myChart(style='padding-left: 0;' width='311' height='126')
+                                                .room__chart-inner
+                                                        .room__chart-value 260
+                                                        .room__chart-text голосов
+                        .room__comment
+                                .room__reviews 
+                                        h3.room__title Отзывы посетителей номера
+                                        span.room__title-add 2 отзыва
+                                +comment(class='room__comment-item')
+                                +comment('Патрисия Стёклышкова', 'Неделю назад', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')(class='room__comment-item')
+                        
+                        .room__additional
+                                .room__rules
+                                        h3.room__title Правила
+                                        ul.room__list
+                                                li.room__item
+                                                        span.room__item-dot.room__item-dot--grey
+                                                        span.room__item-text Нельзя с питомцами
+                                                li.room__item
+                                                        span.room__item-dot.room__item-dot--grey
+                                                        span.room__item-text Без вечеринок и мероприятий
+                                                li.room__item
+                                                        span.room__item-dot.room__item-dot--grey
+                                                        span.room__item-text Время прибытия — после 13:00, а выезд до 12:00
+                                .room__cancel
+                                        h3.room__title Отмена
+                                        p.room__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
                 .room__card
                         +card-order

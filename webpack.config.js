@@ -26,7 +26,7 @@ module.exports = {
     new HtmlWebpackPlugin({
         filename: "index.html",
         inject: "body",
-        template: "./index.pug",
+        template: "index.pug",
     }),
     new HtmlWebpackPlugin({
         filename: "search.html",

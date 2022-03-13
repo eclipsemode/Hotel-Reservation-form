@@ -12,4 +12,7 @@
     &__text-description {
         margin-top: 0;
     }
+    &:last-child {
+        border-bottom: none;
+    }
 }
