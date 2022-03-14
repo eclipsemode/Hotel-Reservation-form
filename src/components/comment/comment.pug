@@ -1,10 +1,10 @@
 include ../../components/like-button/like-button.pug
 
-mixin comment(name='Мурад Сарафанов', date='5 дней назад', text='Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+mixin comment(src=require('./assets/images/user.png'), name='Мурад Сарафанов', date='5 дней назад', text='Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', value='12')
     .comment(class=attributes.class) 
         .comment__user
-            img.user__image(src=require('./assets/images/user.png') alt="murad-sarafanov")
-            +like(class='comment__like')  
+            img.comment__image(src=src alt="murad-sarafanov")
+            +like(value)(class='comment__like')  
         .comment__info
             span.comment__name= name
             span.comment__date= date   

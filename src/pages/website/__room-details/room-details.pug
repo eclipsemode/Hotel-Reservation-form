@@ -21,17 +21,14 @@ include ../../../components/comment/comment.pug
                                 h3.room__title Впечатления от номера
                                 .room__chart 
                                         .room__chart-circle
-                                                canvas#myChart(style='padding-left: 0;' width='311' height='126')
-                                                .room__chart-inner
-                                                        .room__chart-value 260
-                                                        .room__chart-text голосов
+                                                canvas#myChart(style='margin-left: -1.8rem;' width='350' height='126')
                         .room__comment
                                 .room__reviews 
                                         h3.room__title Отзывы посетителей номера
                                         span.room__title-add 2 отзыва
                                 +comment(class='room__comment-item')
-                                +comment('Патрисия Стёклышкова', 'Неделю назад', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')(class='room__comment-item')
-                        
+                                +comment(require('./assets/images/user2.png'), 'Патрисия Стёклышкова', 'Неделю назад', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', '2')(class='room__comment-item')
+
                         .room__additional
                                 .room__rules
                                         h3.room__title Правила

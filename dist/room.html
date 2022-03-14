@@ -75,24 +75,53 @@
                 <h3 class="room__title">Впечатления от номера</h3>
                 <div class="room__chart"> 
                   <div class="room__chart-circle">
-                    <p>ddd</p>
+                    <canvas id="myChart" style="margin-left: -1.8rem;" width="350" height="126"></canvas>
                   </div>
-                  <ul class="room__chart-list">
-                    <li class="room__chart-item"><span class="room__chart-dot"></span><span class="room__chart-text">Великолепно</span></li>
-                    <li class="room__chart-item"><span class="room__chart-dot"></span><span class="room__chart-text">Хорошо</span></li>
-                    <li class="room__chart-item"><span class="room__chart-dot"></span><span class="room__chart-text">Удовлетворительно</span></li>
-                    <li class="room__chart-item"><span class="room__chart-dot"></span><span class="room__chart-text">Разачарован</span></li>
-                  </ul>
                 </div>
               </div>
-                      <div class="comment"> 
-                        <div class="comment__user user"> <img class="user__image" src="assets/images/b6a156edf0b9a9e20b3c.png" alt="murad-sarafanov"><span class="user__name">Мурад Сарафанов<span class="user__date">5 дней назад</span></span></div>
-                        <div class="comment__info">
-                          <div class="comment__like">
+              <div class="room__comment">
+                <div class="room__reviews"> 
+                  <h3 class="room__title">Отзывы посетителей номера</h3><span class="room__title-add">2 отзыва</span>
+                </div>
+                        <div class="comment room__comment-item"> 
+                          <div class="comment__user"><img class="comment__image" src="assets/images/accd26d47c58826bb371.png" alt="murad-sarafanov">
+                                    <div class="like-btn comment__like">
+                                      <div class="like-btn__content">
+                                        <div class="like-btn__value">12</div>
+                                      </div>
+                                    </div>
                           </div>
-                          <p class="comment__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+                          <div class="comment__info"><span class="comment__name">Мурад Сарафанов</span><span class="comment__date">5 дней назад</span>
+                            <p class="comment__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+                          </div>
                         </div>
-                      </div>
+                        <div class="comment room__comment-item"> 
+                          <div class="comment__user"><img class="comment__image" src="assets/images/4a3b0c80ef277e5696a5.png" alt="murad-sarafanov">
+                                    <div class="like-btn comment__like">
+                                      <div class="like-btn__content">
+                                        <div class="like-btn__value">2</div>
+                                      </div>
+                                    </div>
+                          </div>
+                          <div class="comment__info"><span class="comment__name">Патрисия Стёклышкова</span><span class="comment__date">Неделю назад</span>
+                            <p class="comment__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</p>
+                          </div>
+                        </div>
+              </div>
+              <div class="room__additional">
+                <div class="room__rules">
+                  <h3 class="room__title">Правила</h3>
+                  <ul class="room__list">
+                    <li class="room__item"><span class="room__item-dot room__item-dot--grey"></span><span class="room__item-text">Нельзя с питомцами</span></li>
+                    <li class="room__item"><span class="room__item-dot room__item-dot--grey"></span><span class="room__item-text">Без вечеринок и мероприятий</span></li>
+                    <li class="room__item"><span class="room__item-dot room__item-dot--grey"></span><span class="room__item-text">Время прибытия — после 13:00, а выезд до 12:00</span></li>
+                  </ul>
+                </div>
+                <div class="room__cancel">
+                  <h3 class="room__title">Отмена</h3>
+                  <p class="room__text">Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</p>
+                </div>
+              </div>
             </div>
             <div class="room__card">
                       <div class="card">

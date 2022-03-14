@@ -13,21 +13,25 @@
         justify-content: center;
         max-height: 485px;
     }
+
     &__block {
         display: flex;
         justify-content: flex-end;
     }
+
     &__block2 {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
+
     &__img--first {
         max-height: 485px;
         height: 100%;
         max-width: 100%;
         min-width: fit-content;
     }
+
     &__img--secondary {
         max-height: 242.5px;
         height: 100%;
@@ -38,7 +42,8 @@
         justify-content: flex-start;
         column-gap: 5rem;
         flex-wrap: wrap;
-        & > :first-child {
+
+        &> :first-child {
             margin-left: 0.7rem;
         }
     }
@@ -48,60 +53,49 @@
         justify-content: space-between;
         column-gap: 2.1rem;
     }
+
     &__chart-circle {
         position: relative;
     }
-    &__chart-inner {
-        position: absolute;
-        top: 3rem;
-        left: 2.7rem;
-        pointer-events: none;
-    }
-    &__chart-value {
-        text-align: center;
-        font-size: 24px;
-        font-weight: 700;
-        color: $Purple;
-    }
-    &__chart-text {
-        text-align: center;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 12px;
-        color: $Purple;
-    }
+
     &__list {
         list-style-type: none;
         padding: 0;
     }
+
     &__item {
         display: flex;
         align-items: flex-start;
         column-gap: 5px;
 
     }
+
     &__chart-item {
         &:nth-of-type(1) {
             .room__chart-dot {
                 background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
             }
         }
+
         &:nth-of-type(2) {
             .room__chart-dot {
                 background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
             }
         }
+
         &:nth-of-type(3) {
             .room__chart-dot {
                 background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
             }
         }
+
         &:nth-of-type(4) {
             .room__chart-dot {
                 background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
             }
         }
     }
+
     &__item-dot {
         width: 10px;
         height: 10px;
@@ -109,6 +103,7 @@
         min-width: 10px;
         min-height: 10px;
         margin-top: 6px;
+
         &--grey {
             background-color: $Dark-shade-25;
         }
@@ -123,6 +118,7 @@
         align-items: center;
         justify-content: space-between;
     }
+
     &__reviews-add {
         color: $Dark-shade-50;
     }
@@ -130,6 +126,7 @@
     &__comment {
         margin-top: 2.1rem;
     }
+
     &__comment-item:not(:first-of-type) {
         margin-top: 22px;
     }
@@ -145,6 +142,7 @@
         max-width: 250px;
         min-width: 250px;
     }
+
     &__cancel {
         max-width: 341px;
     }
@@ -156,6 +154,7 @@
         flex-direction: column;
         max-height: initial;
     }
+
     .room__block2 {
         flex-direction: row;
         justify-content: center;
@@ -167,6 +166,7 @@
         flex-wrap: wrap-reverse;
         justify-content: center;
     }
+
     .room__img--first {
         min-width: auto;
         max-width: none;
@@ -176,10 +176,12 @@
     }
 
 }
+
 @media (max-width: 480px) {
     .room__block2 {
         flex-direction: column;
     }
+
     .room__collage {
         justify-content: flex-start;
         height: fit-content;

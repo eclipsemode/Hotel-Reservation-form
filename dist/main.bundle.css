@@ -2860,52 +2860,106 @@
 .benefits__text-description {
   margin-top: 0;
 }
+.benefits:last-child {
+  border-bottom: none;
+}
+
+.like-btn {
+  width: fit-content;
+}
+.like-btn:hover .like-btn__content::after {
+  color: #bc9cff;
+}
+.like-btn:hover .like-btn__content::before {
+  background: url(assets/images/cde7f22f6945bf8bd65d.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px;
+}
+.like-btn:hover .like-btn__content {
+  border-color: #bc9cff;
+}
+.like-btn__content {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  height: 20px;
+  width: 40px;
+  padding: 0px 3px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.like-btn__content::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(assets/images/69d1f53200b2364767d2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.2s;
+}
+.like-btn__value {
+  content: "12";
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: 400;
+  position: absolute;
+  right: 3px;
+  bottom: 0;
+  pointer-events: none;
+  color: rgba(31, 32, 65, 0.25);
+  transition: 0.2s;
+}
+
+.like-btn--active .like-btn__content {
+  border-color: #bc9cff;
+}
+.like-btn--active .like-btn__content::before {
+  background: url(assets/images/cde7f22f6945bf8bd65d.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px;
+}
+.like-btn--active .like-btn__value {
+  color: #bc9cff;
+}
 
 .comment {
-  width: 711px;
   display: flex;
-  flex-direction: column;
+  column-gap: 0.7rem;
+  max-width: 50.8rem;
 }
 .comment__user {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
-}
-.comment__user .user__image {
-  width: 48px;
-  height: 48px;
-  justify-content: center;
-}
-.comment__user .user__name {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-  display: block;
-  margin-left: 14.31px;
-}
-.comment__user .user__date {
-  font-weight: 400;
-  display: block;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.8rem;
 }
 .comment__info {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+}
+.comment__name {
+  font-weight: 700;
 }
 .comment__text {
-  margin-top: 0;
-  margin-left: 14.31px;
+  margin-top: 0.7rem;
 }
-.comment__like {
-  display: flex;
-  justify-content: center;
-  width: 110px;
+.comment__image {
+  filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
 }
 
 .room {
   display: flex;
   justify-content: space-between;
   margin: 5rem 0;
+  column-gap: 1rem;
 }
 .room__collage {
   display: flex;
@@ -2933,22 +2987,28 @@
 }
 .room__about {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   column-gap: 5rem;
   flex-wrap: wrap;
+}
+.room__about > :first-child {
+  margin-left: 0.7rem;
 }
 .room__chart {
   display: flex;
   justify-content: space-between;
   column-gap: 2.1rem;
 }
-.room__chart-list {
+.room__chart-circle {
+  position: relative;
+}
+.room__list {
   list-style-type: none;
   padding: 0;
 }
-.room__chart-item {
+.room__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 5px;
 }
 .room__chart-item:nth-of-type(1) .room__chart-dot {
@@ -2963,10 +3023,45 @@
 .room__chart-item:nth-of-type(4) .room__chart-dot {
   background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
 }
-.room__chart-dot {
+.room__item-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  min-width: 10px;
+  min-height: 10px;
+  margin-top: 6px;
+}
+.room__item-dot--grey {
+  background-color: rgba(31, 32, 65, 0.25);
+}
+.room__title-add {
+  white-space: nowrap;
+}
+.room__reviews {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.room__reviews-add {
+  color: rgba(31, 32, 65, 0.5);
+}
+.room__comment {
+  margin-top: 2.1rem;
+}
+.room__comment-item:not(:first-of-type) {
+  margin-top: 22px;
+}
+.room__additional {
+  display: flex;
+  column-gap: 7rem;
+  flex-wrap: wrap;
+}
+.room__rules {
+  max-width: 250px;
+  min-width: 250px;
+}
+.room__cancel {
+  max-width: 341px;
 }
 
 @media (max-width: 920px) {
@@ -2981,6 +3076,11 @@
   }
 }
 @media (max-width: 800px) {
+  .room {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
   .room__img--first {
     min-width: auto;
     max-width: none;
@@ -3041,6 +3141,6 @@ body {
 }
 @media (max-width: 610px) {
   .inner-container {
-    padding: 0;
+    padding: 0 1rem;
   }
 }

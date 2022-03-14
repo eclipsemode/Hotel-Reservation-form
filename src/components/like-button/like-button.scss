@@ -1,17 +1,21 @@
 .like-btn {
     width: fit-content;
+
     &:hover &__content::after {
         color: $Purple;
     }
+
     &:hover &__content::before {
         background: url(../assets/images/like-active.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 11px;
     }
+
     &:hover &__content {
         border-color: $Purple;
     }
+
     &__content {
         border: 1px solid $Dark-shade-25;
         border-radius: 10px;
@@ -21,6 +25,7 @@
         position: relative;
         cursor: pointer;
         transition: 0.2s;
+
         &::before {
             content: "";
             width: 20px;
@@ -34,35 +39,37 @@
             bottom: 0;
             transition: 0.2s;
         }
-        &::after {
-            content: "12";
-            width: 20px;
-            height: 20px;
-            font-size: 10px;
-            text-align: center;
-            font-weight: 400;
-            position: absolute;
-            right: 3px;
-            bottom: 0;
-            pointer-events: none;
-            color: $Dark-shade-25;
-            transition: 0.2s;
-        }
+    }
+
+    &__value {
+        content: "12";
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        text-align: center;
+        font-weight: 400;
+        position: absolute;
+        right: 3px;
+        bottom: 0;
+        pointer-events: none;
+        color: $Dark-shade-25;
+        transition: 0.2s;
     }
 }
 
 .like-btn--active {
     .like-btn__content {
         border-color: $Purple;
+
         &::before {
             background: url(../assets/images/like-active.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 11px;
         }
-        &::after {
-            content: "13";
-            color: $Purple;
-        }
+    }
+
+    .like-btn__value {
+        color: $Purple;
     }
 }
