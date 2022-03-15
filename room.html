@@ -31,12 +31,12 @@
                     <div class="material-icons header__burger burger">menu</div>
                     <div class="burger__menu"><a class="burger__link">О нас</a><a class="burger__link">Услуги</a><a class="burger__link">Вакансии</a><a class="burger__link">Новости</a><a class="burger__link">Соглашения</a></div>
                     <div class="header__authorization"><i class="material-icons header__acc--mobile">account_circle</i>
-                            <div class="button header__login">
-                              <button class="button__submit button__submit--transparent" type="submit">войти</button>
-                            </div>
-                            <div class="button header__registration">
-                              <button class="button__submit button__submit--small" type="submit">зарегистрироваться</button>
-                            </div>
+                            <div class="button-transparent header__login">
+                              <button class="button-transparent__inp" type="submit">войти</button>
+                            </div><a href="./registration.html">
+                              <div class="button header__registration">
+                                <button class="button__submit button__submit--small" type="submit">зарегистрироваться</button>
+                              </div></a>
                     </div>
             </div>
           </div>
@@ -74,9 +74,7 @@
               <div class="room__impression">
                 <h3 class="room__title">Впечатления от номера</h3>
                 <div class="room__chart"> 
-                  <div class="room__chart-circle">
-                    <canvas id="myChart" style="margin-left: -1.8rem;" width="350" height="126"></canvas>
-                  </div>
+                  <canvas id="myChart" style="margin-left: -1.8rem;" width="350" height="126"></canvas>
                 </div>
               </div>
               <div class="room__comment">
@@ -87,6 +85,7 @@
                           <div class="comment__user"><img class="comment__image" src="assets/images/accd26d47c58826bb371.png" alt="murad-sarafanov">
                                     <div class="like-btn comment__like">
                                       <div class="like-btn__content">
+                                        <div class="like-btn__heart"></div>
                                         <div class="like-btn__value">12</div>
                                       </div>
                                     </div>
@@ -99,6 +98,7 @@
                           <div class="comment__user"><img class="comment__image" src="assets/images/4a3b0c80ef277e5696a5.png" alt="murad-sarafanov">
                                     <div class="like-btn comment__like">
                                       <div class="like-btn__content">
+                                        <div class="like-btn__heart"></div>
                                         <div class="like-btn__value">2</div>
                                       </div>
                                     </div>
@@ -124,24 +124,24 @@
               </div>
             </div>
             <div class="room__card">
-                      <div class="card">
-                        <div class="card__content">
+                      <div class="card-order">
+                        <div class="card-order__content">
                                   <div class="room-number__title">
-                                    <h2 class="card__title room-number__num">888<span class="room-number__app">люкс</span></h2><span class="room-number__value">9 999₽<span class="room-number__value--normal">
+                                    <h2 class="card-order__title room-number__num">888<span class="room-number__app">люкс</span></h2><span class="room-number__value">9 999₽<span class="room-number__value--normal">
                                          в сутки</span></span>
                                   </div>
-                                  <form class="date-form card__date-range">
+                                  <form class="date-form card-order__date-range">
                                     <div class="date-form__container">
-                                      <h3 class="card__suptitle">прибытие</h3>
+                                      <h3 class="date-form__suptitle">прибытие</h3>
                                       <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг"><i class="material-icons material-icons--color50 material-icons--bold date-form__icon">expand_more</i>
                                     </div>
                                     <div class="date-form__container">
-                                      <h3 class="card__suptitle">выезд</h3>
+                                      <h3 class="date-form__suptitle">выезд</h3>
                                       <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг"><i class="material-icons material-icons--color50 material-icons--bold date-form__icon">expand_more</i>
                                     </div>
                                   </form>
-                          <h3 class="card__suptitle">гости</h3>
-                                  <div class="dropdown card__dropdown">
+                          <h3 class="card-order__suptitle">гости</h3>
+                                  <div class="dropdown card-order__dropdown">
                                     <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button><i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i>
                                     <div class="dropdown-guest" hidden>
                                       <ul class="dropdown-guest__list">
@@ -173,15 +173,17 @@
                                       </ul>
                                     </div>
                                   </div>
-                          <div class="card__additional"><span class="card__additional-info">9 990₽ х 4 суток</span><span class="card__additional-value">39 960₽</span></div>
-                          <div class="card__additional"><span class="card__additional-info">Сбор за услуги: скидка 2 179₽<img class="card__additional-img" src="assets/images/58a9de7230b0b1c1c5e4.svg" alt="alt"></span><span class="card__additional-value">0₽</span></div>
-                          <div class="card__additional"><span class="card__additional-info">Сбор за дополнительные услуги<img class="card__additional-img" src="assets/images/58a9de7230b0b1c1c5e4.svg" alt="alt"></span><span class="card__additional-value">300₽</span></div>
-                          <div class="card__price"> 
-                            <h2 class="card__price-sum">Итого</h2>
-                            <div class="card__price-line"></div>
-                            <h2 class="card__price-sum">38 081₽</h2>
+                          <div class="card-order__add">
+                            <div class="card-order__additional"><span class="card-order__additional-info">9 990₽ х 4 суток</span><span class="card-order__additional-value">39 960₽</span></div>
+                            <div class="card-order__additional"><span class="card-order__additional-info">Сбор за услуги: скидка 2 179₽</span><img class="card-order__additional-img" src="assets/images/dd96d2c9d81a1d2b5bd1.svg" alt="alt"><span class="card-order__additional-value">0₽</span></div>
+                            <div class="card-order__additional"><span class="card-order__additional-info">Сбор за дополнительные услуги</span><img class="card-order__additional-img" src="assets/images/dd96d2c9d81a1d2b5bd1.svg" alt="alt"><span class="card-order__additional-value">300₽</span></div>
                           </div>
-                                  <div class="button card__btn"><a class="button__link" href="./search.html">
+                          <div class="card-order__price"> 
+                            <h2 class="card-order__price-sum">Итого</h2>
+                            <div class="card-order__price-line"></div>
+                            <h2 class="card-order__price-sum">38 081₽</h2>
+                          </div>
+                                  <div class="button card-order__btn"><a class="button__link" href="./search.html">
                                       <button class="button__submit button__submit--big" type="submit">забронировать</button><i class="material-icons material-icons--color-white button__icon">arrow_forward</i></a></div>
                         </div>
                       </div>
