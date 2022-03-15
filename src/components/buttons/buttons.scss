@@ -1,10 +1,11 @@
 .button__submit {
-	background: none;
-	border: none;
-	border-radius: 22px;
-	outline: none;
+    background: none;
+    border: none;
+    border-radius: 22px;
+    outline: none;
     font-family: inherit;
     font-size: 12px;
+
     &--small {
         cursor: pointer;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -15,13 +16,16 @@
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
+
         &:hover {
             opacity: 0.5;
         }
+
         &:active {
             transform: translate(0.5px, 0.5px);
         }
     }
+
     &--transparent {
         cursor: pointer;
         text-transform: uppercase;
@@ -33,6 +37,7 @@
         position: relative;
         color: #BC9CFF;
         z-index: 2;
+
         &::before {
             content: '';
             position: absolute;
@@ -44,6 +49,7 @@
             z-index: -2;
             border-radius: 22px;
         }
+
         &::after {
             content: '';
             position: absolute;
@@ -55,13 +61,16 @@
             border-radius: 22px;
             z-index: -1;
         }
+
         &:hover {
             opacity: 0.5;
         }
+
         &:active {
             transform: translate(0.5px, 0.5px);
         }
     }
+
     &--no-border {
         text-transform: uppercase;
         color: #BC9CFF;
@@ -70,16 +79,20 @@
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
+
         & span {
             cursor: pointer;
         }
+
         & span:hover {
             color: rgba(31, 32, 65, 0.5);
         }
+
         & span:active {
             opacity: 0.5;
         }
     }
+
     &--big {
         cursor: pointer;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -91,20 +104,25 @@
         font-size: 12px;
         line-height: 15px;
         position: relative;
+
         &:hover {
             opacity: 0.5;
         }
+
         &:active {
             transform: translate(0.5px, 0.5px);
-            & ~ .button__icon {
+
+            &~.button__icon {
                 transform: translate(0.5px, 0.5px);
             }
         }
     }
 }
+
 .button {
     position: relative;
     width: fit-content;
+
     &__icon {
         position: absolute;
         top: 0.4em;

@@ -2,8 +2,6 @@
 @import './layout/fonts.scss';
 
 // ui kit
-// @import '/pages/UI-kit/__cards/cards.scss';
-// @import '/pages/UI-kit/__form-elements/form-elements.scss';
 @import '/components/__headers&footers/__header/header.scss';
 @import '../components/__headers&footers/__footer/footer.scss';
 
@@ -16,6 +14,7 @@
 *::before {
     box-sizing: border-box;
 }
+
 html,
 body {
     font-family: "Montserrat", sans-serif;
@@ -27,16 +26,19 @@ body {
     padding: 0;
     height: 100%;
 }
+
 .wrapper {
     min-height: 100%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
+
 .main {
     flex: 1 1 auto;
     position: relative;
 }
+
 .inner-container {
     padding: 0 10rem;
 }
@@ -47,6 +49,7 @@ body {
         padding-right: 1em;
     }
 }
+
 @media (max-width: 610px) {
     .inner-container {
         padding: 0 1rem;

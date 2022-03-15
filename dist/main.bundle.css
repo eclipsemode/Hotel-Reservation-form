@@ -2610,7 +2610,8 @@
   background: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
 }
 
-.-in-range-.air-datepicker-cell.-day-.-other-month-, .-in-range-.air-datepicker-cell.-year-.-other-decade- {
+.-in-range-.air-datepicker-cell.-day-.-other-month-,
+.-in-range-.air-datepicker-cell.-year-.-other-decade- {
   background: linear-gradient(rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
   color: rgba(31, 32, 65, 0.25);
 }

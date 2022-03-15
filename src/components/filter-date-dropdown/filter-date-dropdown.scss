@@ -6,16 +6,19 @@
 .filter-date {
     position: relative;
     width: fit-content;
+
     &__dropdown {
         @include text-field;
         max-width: 266px;
         caret-color: #fff;
         cursor: pointer;
         text-transform: lowercase;
-        &:focus ~ .filter-date__icon {
+
+        &:focus~.filter-date__icon {
             color: $Dark-shade-75;
         }
     }
+
     &__icon {
         position: absolute;
         top: 0.4em;

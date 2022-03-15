@@ -3,19 +3,7 @@
 .subscription {
     position: relative;
     width: fit-content;
-    // &::after {
-        // content: "";
-        // position: absolute;
-        // top: 2%;
-        // right: 1%;
-        // width: calc(100% - 239px);
-        // height: calc(100% - 2px);
-        // background-position: center;
-        // background-image: url(../assets/images/arrow_forward.svg);
-        // background-repeat: no-repeat;
-        // z-index: 100;
-        // pointer-events: none;
-    // }
+
     &__email {
         @include text-field;
         max-width: 266px;

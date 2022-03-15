@@ -8,7 +8,8 @@
 .header {
     width: 100%;
     background: #fff;
-    filter: drop-shadow(0 10px 20px rgba(31,32,65, 5%));
+    filter: drop-shadow(0 10px 20px rgba(31, 32, 65, 5%));
+
     &__container {
         display: flex;
         justify-content: space-between;
@@ -24,12 +25,14 @@
         height: fit-content;
         width: 108px;
         cursor: pointer;
+
         &-svg {
             width: 100%;
             height: 40px;
             background: url(../assets/images/logo.svg);
             background-repeat: no-repeat;
         }
+
         &-text {
             width: 100%;
             height: 14px;
@@ -54,6 +57,7 @@
         }
     }
 }
+
 @media (max-width: 920px) {
     .header {
         &__container {
@@ -69,9 +73,11 @@
             flex-direction: column;
             row-gap: 1em;
         }
+
         &__acc {
             display: inline-block;
         }
+
         &__name {
             border-left: none;
             padding-left: 0;
@@ -86,24 +92,30 @@
         &__menu {
             display: none;
         }
+
         &__login {
             display: none;
         }
+
         &__registration {
             display: none;
         }
+
         &__container {
             flex-direction: row;
         }
+
         &__acc--mobile {
             display: inline-block;
         }
+
         &__content {
             display: flex;
             flex-direction: row-reverse;
             column-gap: 1em;
         }
     }
+
     .burger {
         display: block;
     }

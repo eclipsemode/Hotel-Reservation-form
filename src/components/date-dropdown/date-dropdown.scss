@@ -6,27 +6,33 @@
     justify-content: space-between;
     width: 100%;
     max-width: 320px;
+
     & h3 {
         position: absolute;
         bottom: 43px;
     }
+
     &__container {
         position: relative;
     }
+
     &__container--focus {
         &::after {
             border-color: $Dark-shade-75;
         }
+
         .date-form__icon {
             color: $Dark-shade-75;
         }
     }
+
     &__icon {
         position: absolute;
         top: 0.4em;
         right: 0.3em;
         pointer-events: none;
     }
+
     &__inp {
         max-width: 150px;
         max-height: 44px;
@@ -34,12 +40,15 @@
         text-transform: uppercase;
         caret-color: transparent;
         @include text-field;
+
         &::-webkit-datetime-edit {
             overflow: visible;
         }
+
         &:focus::-webkit-calendar-picker-indicator {
             border-color: $Dark-shade-75;
         }
+
         &::placeholder {
             color: $Dark-shade-75;
         }

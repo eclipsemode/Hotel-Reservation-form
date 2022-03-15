@@ -1,9 +1,11 @@
 .toggle {
     position: relative;
     display: block;
+
     &__inp {
         appearance: none;
     }
+
     &__slider {
         position: absolute;
         top: 2px;
@@ -15,6 +17,7 @@
         background-color: #fff;
         transition: 0.4s;
         border-radius: 10px;
+
         &::before {
             content: "";
             position: absolute;
@@ -27,12 +30,15 @@
             transition: 0.4s;
         }
     }
+
     &__text {
         margin-left: 50px;
     }
-    &__inp:checked + &__slider {
+
+    &__inp:checked+&__slider {
         border-color: $Purple;
         transition: 0.4s;
+
         &::before {
             left: 23px;
             background: $Primary-gradient;

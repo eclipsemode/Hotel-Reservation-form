@@ -25,6 +25,7 @@
             margin-bottom: 0.9em;
         }
     }
+
     &__information {
         display: flex;
         flex-direction: column;
@@ -63,12 +64,14 @@
             margin-top: 1em;
         }
     }
+
     &__pagination {
         align-self: center;
         margin-top: 2rem;
         margin-bottom: 77px;
         margin-right: 0.7rem;
     }
+
     &__apartments {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -83,10 +86,12 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 1fr);
     }
+
     .search {
         justify-content: center;
     }
 }
+
 @media (max-width: 920px) {
     .search__apartments {
         grid-template-columns: repeat(1, 1fr);
@@ -104,15 +109,19 @@
         display: block;
         margin-top: 0;
     }
+
     .search__apartments {
         align-self: center;
     }
+
     .search__main-title {
         text-align: center;
     }
+
     .search__nav {
         display: block;
     }
+
     .search__main {
         width: fit-content;
         margin: 0 auto;

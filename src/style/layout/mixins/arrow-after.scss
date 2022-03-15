@@ -2,6 +2,7 @@
 
 @mixin arrow-after {
     position: relative;
+
     &::after {
         content: "";
         position: absolute;
@@ -15,6 +16,7 @@
         pointer-events: none;
         z-index: 10;
     }
+
     &:focus {
         &::after {
             border-color: $Dark-shade-75;

@@ -1,10 +1,12 @@
 .bullet-list {
     display: flex;
     flex-direction: column;
+
     &__item {
         display: flex;
         align-items: center;
     }
+
     &__dot {
         width: 10px;
         height: 10px;
@@ -13,6 +15,7 @@
         align-self: flex-start;
         margin-top: 6px;
     }
+
     &__text {
         margin-left: 10.43px;
         color: $Dark-shade-75;

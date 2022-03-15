@@ -13,15 +13,18 @@
     z-index: 10;
     font-family: inherit;
     font-size: inherit;
+
     &::placeholder {
         color: $Dark-shade-25;
     }
+
     &:focus,
     :active,
     &:hover {
         outline: none;
         border: 1px solid $Dark-shade-50;
     }
+
     &::-webkit-calendar-picker-indicator {
         display: none;
     }

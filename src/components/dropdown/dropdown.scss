@@ -6,13 +6,16 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         border-color: $Dark-shade-75;
+
         &::after {
             border-color: $Dark-shade-75;
         }
+
         &:active {
             border-color: $Dark-shade-75;
         }
     }
+
     .dropdown-guest {
         display: block;
     }
@@ -28,19 +31,22 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         border-color: $Dark-shade-75;
+
         &::after {
             border-color: $Dark-shade-75;
         }
+
         &:active {
             border-color: $Dark-shade-75;
         }
     }
+
     .dropdown-guest {
         display: block;
     }
 }
 
-.dropdown-room{
+.dropdown-room {
     position: relative;
     width: 266px;
 }
@@ -56,13 +62,15 @@
     color: $Dark-shade-75;
     font-family: inherit;
     font-size: inherit;
+
     &:focus,
     &--active {
-        & ~ .dropdown__icon {
+        &~.dropdown__icon {
             color: $Dark-shade-75;
         }
     }
 }
+
 .dropdown__icon {
     position: absolute;
     top: 0.4em;
@@ -81,6 +89,7 @@
     background: #fff;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+
     &__list {
         margin: 0;
         padding: 0 0 0 15px;
@@ -89,6 +98,7 @@
         border: 1px solid $Dark-shade-50;
         border-top: none;
         border-radius: inherit;
+
         &-item {
             height: 37px;
             font-weight: 700;
@@ -96,18 +106,21 @@
             line-height: 14.63px;
             position: relative;
             padding: 9px 0;
+
             .counter {
                 position: absolute;
                 top: 0;
                 right: 0;
             }
         }
+
         &-button {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-right: 7px;
             margin: 13px 0;
+
             &-item {
                 text-transform: uppercase;
                 cursor: pointer;
@@ -117,6 +130,7 @@
                 font-weight: 700;
                 font-size: 12px;
                 font-family: inherit;
+
                 &:hover {
                     opacity: 0.5;
                 }
@@ -139,10 +153,12 @@
     cursor: pointer;
     height: 30px;
     width: 30px;
+
     &:first-of-type {
         opacity: 0.5;
     }
 }
+
 .counter__value {
     border: none;
     text-align: center;
@@ -152,6 +168,7 @@
     font-weight: 700;
     font-family: inherit;
     font-size: inherit;
+
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
         -webkit-appearance: none;

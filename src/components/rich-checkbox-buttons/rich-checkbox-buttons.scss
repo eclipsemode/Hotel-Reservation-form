@@ -2,21 +2,26 @@
 
 .rich-checkbox {
     @include checkbox;
+
     &__label {
         color: $Dark-shade-75;
         font-weight: 700;
         font-size: 14px;
         line-height: 18px;
+
         &:not(:last-of-type) {
             margin-bottom: 2.5em;
         }
+
         &:last-of-type {
             margin-bottom: 3.1em;
         }
     }
+
     &__text {
         position: relative;
     }
+
     &__additional {
         position: absolute;
         left: 0;

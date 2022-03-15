@@ -2,9 +2,11 @@
 
 .landing {
     width: 100vw;
+
     &__slider {
         display: flex;
     }
+
     &__image {
         min-height: 570px;
         max-height: 63em;
@@ -12,12 +14,14 @@
         text-align: center;
         pointer-events: none;
     }
+
     &__room-search {
         position: absolute;
         top: 5em;
         left: 10em;
         z-index: 10;
     }
+
     &__text {
         position: absolute;
         right: 10em;
@@ -44,19 +48,24 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     .date-form__inp {
         max-width: 17.715rem;
     }
+
     .date-form {
         flex-direction: column;
         row-gap: 2.6rem;
     }
+
     .landing__room-search {
         width: 22rem;
     }
+
     .button__submit--big {
         width: 17.715rem;
     }
+
     .landing__text {
         display: none;
     }

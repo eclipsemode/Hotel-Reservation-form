@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
-// import likeButton from "./components/like-button/like-button";
-import { burger } from './components/__headers&footers/__header/header';
+import {
+    burger
+} from './components/__headers&footers/__header/header';
 
 
 window.onload = function () {

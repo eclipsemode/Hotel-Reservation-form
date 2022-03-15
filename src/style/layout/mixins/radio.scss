@@ -8,9 +8,11 @@
         &__label {
             display: inline-flex;
             align-items: center;
+
             &:not(:first-of-type) {
                 margin-left: 20px;
             }
+
             &-input {
                 appearance: none;
                 -webkit-appearance: none;
@@ -21,6 +23,7 @@
                 margin-right: 9.74px;
                 cursor: pointer;
                 position: relative;
+
                 &:checked::before {
                     content: "";
                     top: calc(50% - 6px);
@@ -35,6 +38,7 @@
             }
         }
     }
+
     .radio-container__label--checked {
         color: $Dark-shade-75;
     }
