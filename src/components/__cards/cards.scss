@@ -65,29 +65,30 @@
         line-height: 29.26px;
         color: $Dark-shade-100;
         margin: 0;
+        margin-bottom: 20px;
         width: 100%;
     }
 
     &__radio {
-        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     &__btn {
-        margin-top: 2.2em;
-    }
-
-    &__toggle {
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     &__suptitle {
-        margin-top: 20px;
+        margin: 0;
         font-size: 12px;
         text-transform: uppercase;
         line-height: 14.63px;
         color: $Dark-shade-100;
         margin-bottom: 5px;
         text-align: left;
+    }
+
+    &__input.masked-text-field {
+        margin-bottom: 20px;
     }
 
     &__price {

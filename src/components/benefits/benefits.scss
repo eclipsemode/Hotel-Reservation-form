@@ -5,13 +5,27 @@
     column-gap: 1em;
     border-bottom: 1px solid $Dark-shade-10;
     width: 280px;
+    align-items: center;
+    padding-bottom: 17px;
+
+    &:not(:last-of-type) {
+        margin-bottom: 22px;
+        margin-top: 21px;
+    }
 
     &__text-name {
-        margin-bottom: 0;
+        margin: 0;
+        font-size: 14px;
     }
 
     &__text-description {
-        margin-top: 0;
+        margin: 0;
+    }
+
+    &__svg {
+        width: 48px;
+        height: 48px;
+        object-fit: none;
     }
 
     &:last-child {

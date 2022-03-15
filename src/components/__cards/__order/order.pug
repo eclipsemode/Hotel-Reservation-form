@@ -4,33 +4,33 @@ include ../../buttons/button-big.pug
 include ../__room-number/room-number.pug
 
 mixin card-order
-    .card
-        .card__content
+    .card-order
+        .card-order__content
 
-            +roomNumber(class='card__title')
+            +roomNumber(class='card-order__title')
 
-            +dateDouble('прибытие', 'выезд')(class='card__date-range')
+            +dateDouble('прибытие', 'выезд')(class='card-order__date-range')
 
-            h3.card__suptitle гости
-            +dropdown('гости')(class='card__dropdown')
+            h3.card-order__suptitle гости
+            +dropdown('гости')(class='card-order__dropdown')
+            .card-order__add
+                .card-order__additional
+                    span.card-order__additional-info 9 990₽ х 4 суток
+                    span.card-order__additional-value 39 960₽
 
-            .card__additional
-                span.card__additional-info 9 990₽ х 4 суток
-                span.card__additional-value 39 960₽
-            
-            .card__additional
-                span.card__additional-info Сбор за услуги: скидка 2 179₽
-                    img(src=require('/assets/images/info.svg'), alt="alt").card__additional-img
-                span.card__additional-value 0₽
+                .card-order__additional
+                    span.card-order__additional-info Сбор за услуги: скидка 2 179₽
+                    img(src=require('/assets/images/info.svg'), alt="alt").card-order__additional-img
+                    span.card-order__additional-value 0₽
 
-            .card__additional
-                span.card__additional-info Сбор за дополнительные услуги
-                    img(src=require('/assets/images/info.svg'), alt="alt").card__additional-img
-                span.card__additional-value 300₽
+                .card-order__additional
+                    span.card-order__additional-info Сбор за дополнительные услуги
+                    img(src=require('/assets/images/info.svg'), alt="alt").card-order__additional-img
+                    span.card-order__additional-value 300₽
 
-            .card__price 
-                h2.card__price-sum Итого
-                .card__price-line
-                h2.card__price-sum 38 081₽
+            .card-order__price 
+                h2.card-order__price-sum Итого
+                .card-order__price-line
+                h2.card-order__price-sum 38 081₽
 
-            +buttonBig('забронировать')(class='card__btn')
+            +buttonBig('забронировать')(class='card-order__btn')

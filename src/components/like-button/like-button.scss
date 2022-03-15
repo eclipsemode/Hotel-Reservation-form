@@ -25,48 +25,49 @@
         position: relative;
         cursor: pointer;
         transition: 0.2s;
+    }
 
-        &::before {
-            content: "";
-            width: 20px;
-            height: 20px;
-            background: url(../assets/images/like-notactive.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 11px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            transition: 0.2s;
-        }
+    &__heart {
+        width: 20px;
+        height: 20px;
+        background: url(../assets/images/like-notactive.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 11px;
+        position: absolute;
+        left: 2px;
+        top: 0;
+        transition: 0.2s;
     }
 
     &__value {
-        content: "12";
         width: 20px;
         height: 20px;
         font-size: 10px;
         text-align: center;
         font-weight: 400;
         position: absolute;
-        right: 3px;
-        bottom: 0;
+        right: 2px;
+        top: 0;
         pointer-events: none;
         color: $Dark-shade-25;
         transition: 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 .like-btn--active {
     .like-btn__content {
         border-color: $Purple;
+    }
 
-        &::before {
-            background: url(../assets/images/like-active.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 11px;
-        }
+    .like-btn__heart {
+        background: url(../assets/images/like-active.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 11px;
     }
 
     .like-btn__value {

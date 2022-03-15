@@ -29,12 +29,13 @@
     }
     &__value {
         font-weight: 700;
-        font-size: 12px;
+        font-size: 15px;
         line-height: 18px;
         color: $Dark-shade-50;
         white-space: nowrap;
         &--normal {
             font-weight: 400;
+            font-size: 12px;
         }
     }
 }

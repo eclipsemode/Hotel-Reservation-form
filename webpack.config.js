@@ -38,6 +38,11 @@ module.exports = {
             inject: 'body',
             template: './room.pug',
         }),
+        new HtmlWebpackPlugin({
+            filename: 'registration.html',
+            inject: 'body',
+            template: './registration.pug',
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].bundle.css'
         }),

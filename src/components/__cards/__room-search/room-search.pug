@@ -3,14 +3,14 @@ include ../../dropdown/dropdown.pug
 include ../../buttons/button-big.pug
 
 mixin card-search(title='Найдём номера под ваши пожелания', href='./search.html')
-    .card(class=attributes.class)
-        .card__content
-            h2.card__title= title
+    .card-search(class=attributes.class)
+        .card-search__content
+            h2.card-search__title= title
 
-            +dateDouble('прибытие', 'выезд')(class='card__date-range')
+            +dateDouble('прибытие', 'выезд')(class='card-search__date-range')
 
-            h3.card__suptitle гости
-            +dropdown('гости')(class='card__dropdown')
+            h3.card-search__suptitle гости
+            +dropdown('гости')(class='card-search__dropdown')
             
-            +buttonBig('подобрать номер', href)(class='card__btn')
+            +buttonBig('подобрать номер', href)(class='card-search__btn')
 

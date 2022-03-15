@@ -1,6 +1,82 @@
 @import "../__room-number/room-number.scss";
 @import '../../date-dropdown/date-dropdown.scss';
-@import '../../dropdown/dropdown.scss';
 @import '../../buttons/buttons.scss';
 @import '../../calendar/calendar.scss';
-@import '../cards.scss';
+@import '../../../style/layout/mixins/card.scss';
+
+.card-order {
+    @include card;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 2.6rem;
+        font-size: 24px;
+    }
+
+    &__date-range {
+        margin-bottom: 1.2rem;
+    }
+
+    &__suptitle {
+        margin: 0;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    &__dropdown {
+        width: 100%;
+        margin-bottom: 1.2rem;
+    }
+
+    &__add {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+
+        &> :not(:first-child) {
+            margin-top: 0.8rem;
+        }
+    }
+
+    &__additional {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__additional-info {
+        max-width: 230px;
+        line-height: 20px;
+    }
+
+    &__additional-img {
+        margin-left: -54px;
+    }
+
+    &__price {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+    }
+
+    &__price-sum {
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    &__price-line {
+        width: -webkit-fill-available;
+        align-self: flex-end;
+        border-bottom: 1px dashed $Dark-shade-25;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-order__additional-info {
+        max-width: 185px;
+    }
+    .card-order__additional-img {
+        margin-left: -25px;
+    }
+}

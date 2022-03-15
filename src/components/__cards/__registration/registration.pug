@@ -5,27 +5,29 @@ include ../../masked-text-field/masked-text-field
 include ../../radio-buttons/radio-buttons
 include ../../toggle/toggle
 
-.card
-    .card__content
-        h2.card__title Регистрация аккаунта
+mixin registration()
+    .card-registration(class=attributes.class)
+        .card-registration__content
+            h2.card-registration__title Регистрация аккаунта
+            .card-registration__name
+                +textInput('Имя')(class='card-registration__input')
+                +textInput('Фамилия')(class='card-registration__input')
 
-        +textInput('Имя')(class='card__input')
-        +textInput('Фамилия')(class='card__input')
+            +radio('Мужчина', 'Женщина')(class='card-registration__radio')
 
-        +radio('Мужчина', 'Женщина')(class='card__radio')
+            h3.card-registration__suptitle дата рождения
+            +maskedTextField(class='card-registration__date')
 
-        h3.card__suptitle дата рождения
-        +maskedTextField(class='card__input')
+            h3.card-registration__suptitle данные для входа в сервис
+            .card-registration__data
+                +textInput('Email')(class='card-registration__data-item')
+                +textInput('Пароль')(class='card-registration__data-item')
 
-        h3.card__suptitle данные для входа в сервис
-        +textInput('Email')(class='card__input')
-        +textInput('Пароль')(class='card__input')
+            +toggle('Получать спецпредложения')(class='card-registration__toggle')
 
-        +toggle('Получать спецпредложения')(class='card__toggle')
+            +buttonBig('зарегестрироваться')(class='card-registration__btn')
 
-        +buttonBig('перейти к оплате')(class='card__btn')
+            .card-registration__login
+                .card-registration__login-info Уже есть аккаунт на Toxin
 
-        .card__login
-            .card__login-info Уже есть аккаунт на Toxin
-
-            +buttonTransparent('войти')
+                +buttonTransparent('войти')(class='card-registration__btn-tr')

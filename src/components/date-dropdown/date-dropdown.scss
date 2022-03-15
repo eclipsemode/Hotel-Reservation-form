@@ -7,13 +7,19 @@
     width: 100%;
     max-width: 320px;
 
-    & h3 {
+    &__suptitle {
         position: absolute;
-        bottom: 43px;
+        bottom: 44px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0;
+        color: $Dark-shade-100;
     }
 
     &__container {
         position: relative;
+        width: fit-content;
     }
 
     &__container--focus {
@@ -52,5 +58,16 @@
         &::placeholder {
             color: $Dark-shade-75;
         }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .date-form {
+        flex-direction: column;
+        row-gap: 2.6rem;
+    }
+    .date-form__inp {
+        max-width: 248px;
     }
 }

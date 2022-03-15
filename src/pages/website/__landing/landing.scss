@@ -24,8 +24,8 @@
 
     &__text {
         position: absolute;
-        right: 10em;
-        bottom: 0;
+        right: 9.6em;
+        bottom: 0.5rem;
         color: $Dark-shade-75;
         font-size: 14px;
         max-width: 297px;
@@ -49,21 +49,8 @@
         transform: translate(-50%, -50%);
     }
 
-    .date-form__inp {
-        max-width: 17.715rem;
-    }
-
-    .date-form {
-        flex-direction: column;
-        row-gap: 2.6rem;
-    }
-
     .landing__room-search {
         width: 22rem;
-    }
-
-    .button__submit--big {
-        width: 17.715rem;
     }
 
     .landing__text {

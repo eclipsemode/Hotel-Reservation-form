@@ -17,6 +17,10 @@ window.onload = function () {
     if (document.querySelector('.room')) {
         require('./pages/website/__room-details/room-details');
     }
+
+    if (document.querySelector('.registration')) {
+        require('./pages/website/__registration/registration');
+    }
 };
 
 import './style/style.scss';

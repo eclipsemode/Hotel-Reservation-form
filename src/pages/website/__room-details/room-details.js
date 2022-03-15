@@ -115,6 +115,7 @@ const config = {
     plugins: {
       legend: {
         position: 'right',
+        align: 'end',
         labels: {
           usePointStyle: true,
           boxWidth: 10,
@@ -128,7 +129,7 @@ const config = {
 
     layout: {
       padding: {
-        left: 0
+        right: 0,
       }
     },
     responsive: true,
@@ -178,7 +179,8 @@ const config = {
 
       ctx.save();
     }
-  }]
+  }
+]
 };
 
 const myChart = new Chart(ctx, config);

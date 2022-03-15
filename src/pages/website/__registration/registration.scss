@@ -1,0 +1,16 @@
+@import '../../../components/__cards/__registration/registration.scss';
+
+.registration {
+    &__background {
+        background: url(/assets/images/reg__image.jpg);
+        height: 684px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__card {
+        position: absolute;
+        top: calc(50% - 642px / 2);
+        left: calc(50vw - 380px / 2);
+    }
+}
