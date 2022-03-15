@@ -31,12 +31,12 @@
                     <div class="material-icons header__burger burger">menu</div>
                     <div class="burger__menu"><a class="burger__link">О нас</a><a class="burger__link">Услуги</a><a class="burger__link">Вакансии</a><a class="burger__link">Новости</a><a class="burger__link">Соглашения</a></div>
                     <div class="header__authorization"><i class="material-icons header__acc--mobile">account_circle</i>
-                            <div class="button header__login">
-                              <button class="button__submit button__submit--transparent" type="submit">войти</button>
-                            </div>
-                            <div class="button header__registration">
-                              <button class="button__submit button__submit--small" type="submit">зарегистрироваться</button>
-                            </div>
+                            <div class="button-transparent header__login">
+                              <button class="button-transparent__inp" type="submit">войти</button>
+                            </div><a href="./registration.html">
+                              <div class="button header__registration">
+                                <button class="button__submit button__submit--small" type="submit">зарегистрироваться</button>
+                              </div></a>
                     </div>
             </div>
           </div>
@@ -46,16 +46,18 @@
         <div class="registration__background"></div>
         <div class="inner-container">
           <div class="registration"> 
-                    <div class="card registration__card">
-                      <div class="card__content">
-                        <h2 class="card__title">Регистрация аккаунта</h2>
-                                <div class="text-input card__input">
-                                  <input class="text-input__input" type="text" name="text-field" placeholder="Имя">
-                                </div>
-                                <div class="text-input card__input">
-                                  <input class="text-input__input" type="text" name="text-field" placeholder="Фамилия">
-                                </div>
-                                <form class="radio card__radio">
+                    <div class="card-registration registration__card">
+                      <div class="card-registration__content">
+                        <h2 class="card-registration__title">Регистрация аккаунта</h2>
+                        <div class="card-registration__name">
+                                  <div class="text-input card-registration__input">
+                                    <input class="text-input__input" type="text" name="text-field" placeholder="Имя">
+                                  </div>
+                                  <div class="text-input card-registration__input">
+                                    <input class="text-input__input" type="text" name="text-field" placeholder="Фамилия">
+                                  </div>
+                        </div>
+                                <form class="radio card-registration__radio">
                                   <div class="radio-container">
                                     <label class="radio-container__label">
                                       <input class="radio-container__label-input" type="radio" name="sex" value="male">Мужчина
@@ -65,28 +67,30 @@
                                     </label>
                                   </div>
                                 </form>
-                        <h3 class="card__suptitle">дата рождения</h3>
-                                <div class="masked-text-field card__input">
+                        <h3 class="card-registration__suptitle">дата рождения</h3>
+                                <div class="masked-text-field card-registration__date">
                                   <input class="masked-text-field__input datepicker-no-range" type="text" name="date" placeholder="дд.мм.гггг" autocomplete="off" max="1979-12-31">
                                 </div>
-                        <h3 class="card__suptitle">данные для входа в сервис</h3>
-                                <div class="text-input card__input">
-                                  <input class="text-input__input" type="text" name="text-field" placeholder="Email">
-                                </div>
-                                <div class="text-input card__input">
-                                  <input class="text-input__input" type="text" name="text-field" placeholder="Пароль">
-                                </div>
-                                <div class="toggle card__toggle">
+                        <h3 class="card-registration__suptitle">данные для входа в сервис</h3>
+                        <div class="card-registration__data">
+                                  <div class="text-input card-registration__data-item">
+                                    <input class="text-input__input" type="text" name="text-field" placeholder="Email">
+                                  </div>
+                                  <div class="text-input card-registration__data-item">
+                                    <input class="text-input__input" type="text" name="text-field" placeholder="Пароль">
+                                  </div>
+                        </div>
+                                <div class="toggle card-registration__toggle">
                                   <label class="toggle__label">
                                     <input class="toggle__inp" type="checkbox"><span class="toggle__slider"></span><span class="toggle__text">Получать спецпредложения</span>
                                   </label>
                                 </div>
-                                <div class="button card__btn"><a class="button__link" href="./search.html">
-                                    <button class="button__submit button__submit--big" type="submit">перейти к оплате</button><i class="material-icons material-icons--color-white button__icon">arrow_forward</i></a></div>
-                        <div class="card__login">
-                          <div class="card__login-info">Уже есть аккаунт на Toxin</div>
-                                  <div class="button">
-                                    <button class="button__submit button__submit--transparent" type="submit">войти</button>
+                                <div class="button card-registration__btn"><a class="button__link" href="./search.html">
+                                    <button class="button__submit button__submit--big" type="submit">зарегестрироваться</button><i class="material-icons material-icons--color-white button__icon">arrow_forward</i></a></div>
+                        <div class="card-registration__login">
+                          <div class="card-registration__login-info">Уже есть аккаунт на Toxin</div>
+                                  <div class="button-transparent card-registration__btn-tr">
+                                    <button class="button-transparent__inp" type="submit">войти</button>
                                   </div>
                         </div>
                       </div>
