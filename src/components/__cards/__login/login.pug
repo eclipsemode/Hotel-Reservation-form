@@ -2,15 +2,16 @@ include ../../text-field/text-field
 include ../../buttons/button-big
 include ../../buttons/button-transparent
 
-.card
-    .card__content
-        h2.card__title Войти
-        
-        +textInput('Email')(class='card__input')
-        +textInput('Пароль')(class='card__input')
+mixin login
+    .card-login(class=attributes.class)
+        .card-login__content
+            h2.card-login__title Войти
+            
+            +textInput('Email')(class='card-login__input')
+            +textInput('Пароль')(class='card-login__input')
 
-        +buttonBig('войти')(class='card__btn')
+            +buttonBig('войти')(class='card-login__btn')
 
-        .card__login
-            .card__login-info Нет аккаунта на Toxin?
-            +buttonTransparent('создать')
+            .card-login__login
+                .card-login__login-info Нет аккаунта на Toxin?
+                +buttonTransparent('создать')(class='card-login__btn-tr')

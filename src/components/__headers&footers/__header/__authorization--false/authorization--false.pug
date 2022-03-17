@@ -1,6 +1,7 @@
 mixin auto--false            
     .header__authorization
         i.material-icons.header__acc--mobile account_circle
-        +buttonTransparent('войти')(class='header__login')
+        a(href="./login.html") 
+            +buttonTransparent('войти')(class='header__login')
         a(href="./registration.html")
             +buttonSmall('зарегистрироваться')(class='header__registration')

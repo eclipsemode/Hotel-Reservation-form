@@ -1,0 +1,15 @@
+@import '../../../components/__cards/__login/login.scss';
+
+.login {
+    &__card {
+        position: absolute;
+        top: calc(50% - 338px / 2);
+        left: calc(50vw - 380px / 2);
+    }
+}
+
+@media (max-width: 480px) {
+    .login__card {
+        left: calc(50vw - 308px / 2);
+    }
+}

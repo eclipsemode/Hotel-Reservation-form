@@ -3308,6 +3308,7 @@
 @media (max-width: 480px) {
   .room__block2 {
     flex-direction: column;
+    display: none;
   }
 
   .room__collage {
@@ -3322,6 +3323,14 @@
 
   .room__rules {
     margin-bottom: 2rem;
+  }
+
+  .room__impression {
+    width: 305px;
+  }
+
+  .room {
+    margin-top: 1.1rem;
   }
 }
 .button__submit {
@@ -3863,6 +3872,188 @@
   left: calc(50vw - 190px);
 }
 
+@media (max-width: 480px) {
+  .registration__card {
+    width: 22rem;
+    left: calc(50vw - 154px);
+  }
+  .registration__card .masked-text-field__input {
+    width: -webkit-fill-available;
+  }
+  .registration__card .text-input__input {
+    width: -webkit-fill-available;
+  }
+  .registration__card .card-registration__title {
+    font-size: 20px;
+  }
+  .registration__card .toggle__text {
+    font-size: 10px;
+    margin-left: 3rem;
+  }
+  .registration__card .card-registration__login-info {
+    font-size: 10px;
+  }
+}
+.text {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  line-height: 24px;
+  width: 320px;
+  height: 44px;
+  padding: 0 15px;
+  color: rgba(31, 32, 65, 0.75);
+  background: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  z-index: 10;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+}
+.text::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.text:focus,
+.text :active, .text:hover {
+  outline: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.text::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.text-input__input {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  line-height: 24px;
+  width: 320px;
+  height: 44px;
+  padding: 0 15px;
+  color: rgba(31, 32, 65, 0.75);
+  background: #fff;
+  box-sizing: border-box;
+  text-align: left;
+  z-index: 10;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+}
+.text-input__input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+.text-input__input:focus,
+.text-input__input :active, .text-input__input:hover {
+  outline: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.text-input__input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.card-login {
+  position: relative;
+  width: min-content;
+  background: white;
+  border-radius: 4px;
+  filter: drop-shadow(0 0px 25px rgba(31, 32, 65, 0.2));
+}
+.card-login__content {
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.card-login__btn-tr .button-transparent {
+  border-radius: 22px;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+}
+.card-login__btn-tr .button-transparent__inp {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  min-width: 7em;
+  padding: 0.834em 1.668em;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+  color: #BC9CFF;
+  z-index: 2;
+  width: 99px;
+  height: 44px;
+}
+.card-login__btn-tr .button-transparent__inp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  border-radius: 22px;
+}
+.card-login__btn-tr .button-transparent__inp::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: #FFF;
+  border-radius: 22px;
+  z-index: -1;
+}
+.card-login__btn-tr .button-transparent__inp:hover {
+  opacity: 0.5;
+}
+.card-login__btn-tr .button-transparent__inp:active {
+  transform: translate(0.5px, 0.5px);
+}
+.card-login__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2041;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.card-login__input:first-of-type {
+  margin-bottom: 10px;
+}
+.card-login__btn {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.card-login__login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .card-login {
+    width: 22rem;
+  }
+  .card-login .text-input__input {
+    width: -webkit-fill-available;
+  }
+  .card-login__login-info {
+    font-size: 10px;
+  }
+}
+.login__card {
+  position: absolute;
+  top: calc(50% - 169px);
+  left: calc(50vw - 190px);
+}
+
+@media (max-width: 480px) {
+  .login__card {
+    left: calc(50vw - 154px);
+  }
+}
 *,
 *::after,
 *::before {

@@ -14,3 +14,31 @@
         left: calc(50vw - 380px / 2);
     }
 }
+
+@media (max-width: 480px) {
+    .registration__card {
+        width: 22rem;
+        left: calc(50vw - 308px / 2);
+
+        & .masked-text-field__input {
+            width: -webkit-fill-available;
+        }
+
+        & .text-input__input {
+            width: -webkit-fill-available;
+        }
+
+        & .card-registration__title {
+            font-size: 20px;
+        }
+
+        & .toggle__text {
+            font-size: 10px;
+            margin-left: 3rem;
+        }
+
+        & .card-registration__login-info {
+            font-size: 10px;
+        }
+    }
+}

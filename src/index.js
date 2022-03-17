@@ -21,6 +21,10 @@ window.onload = function () {
     if (document.querySelector('.registration')) {
         require('./pages/website/__registration/registration');
     }
+
+    if (document.querySelector('.login')) {
+        require('./pages/website/__login/login');
+    }
 };
 
 import './style/style.scss';

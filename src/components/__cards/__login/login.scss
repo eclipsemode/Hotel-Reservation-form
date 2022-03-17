@@ -1,3 +1,46 @@
 @import '../../text-field/text-field.scss';
-@import '../../buttons/buttons.scss';
-@import '../cards.scss';
+@import '../../buttons/button-transparent.scss';
+@import '../../../style/layout/mixins/card.scss';
+
+.card-login {
+    @include card;
+    &__btn-tr {
+        @include btn-transparent(99px, 44px);
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: $Dark-shade-100;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    &__input:first-of-type {
+        margin-bottom: 10px;
+    }
+
+    &__btn {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__login {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-login {
+        width: 22rem;
+
+        & .text-input__input {
+            width: -webkit-fill-available;
+        }
+
+        &__login-info {
+            font-size: 10px;
+        }
+    }
+}

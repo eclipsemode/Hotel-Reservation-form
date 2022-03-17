@@ -202,7 +202,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_headers_footers_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/__headers&footers/__header/header */ \"./components/__headers&footers/__header/header.js\");\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/style.scss */ \"./style/style.scss\");\n/* eslint-disable no-undef */\n\n\nwindow.onload = function () {\n  if (document.getElementById('products__list')) {\n    __webpack_require__(/*! ./pages/website/__search-room/search-room */ \"./pages/website/__search-room/search-room.js\");\n  }\n\n  if (document.querySelector('.landing')) {\n    __webpack_require__(/*! ./pages/website/__landing/landing */ \"./pages/website/__landing/landing.js\");\n  }\n\n  if (document.querySelector('.room')) {\n    __webpack_require__(/*! ./pages/website/__room-details/room-details */ \"./pages/website/__room-details/room-details.js\");\n  }\n\n  if (document.querySelector('.registration')) {\n    __webpack_require__(/*! ./pages/website/__registration/registration */ \"./pages/website/__registration/registration.js\");\n  }\n};\n\n\n(0,_components_headers_footers_header_header__WEBPACK_IMPORTED_MODULE_0__.burger)();\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_headers_footers_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/__headers&footers/__header/header */ \"./components/__headers&footers/__header/header.js\");\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/style.scss */ \"./style/style.scss\");\n/* eslint-disable no-undef */\n\n\nwindow.onload = function () {\n  if (document.getElementById('products__list')) {\n    __webpack_require__(/*! ./pages/website/__search-room/search-room */ \"./pages/website/__search-room/search-room.js\");\n  }\n\n  if (document.querySelector('.landing')) {\n    __webpack_require__(/*! ./pages/website/__landing/landing */ \"./pages/website/__landing/landing.js\");\n  }\n\n  if (document.querySelector('.room')) {\n    __webpack_require__(/*! ./pages/website/__room-details/room-details */ \"./pages/website/__room-details/room-details.js\");\n  }\n\n  if (document.querySelector('.registration')) {\n    __webpack_require__(/*! ./pages/website/__registration/registration */ \"./pages/website/__registration/registration.js\");\n  }\n\n  if (document.querySelector('.login')) {\n    __webpack_require__(/*! ./pages/website/__login/login */ \"./pages/website/__login/login.js\");\n  }\n};\n\n\n(0,_components_headers_footers_header_header__WEBPACK_IMPORTED_MODULE_0__.burger)();\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -214,6 +214,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_calendar_calendar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../components/calendar/calendar */ \"./components/calendar/calendar.js\");\n/* harmony import */ var _components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/dropdown/dropdown */ \"./components/dropdown/dropdown.js\");\n/* harmony import */ var _components_date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../components/date-dropdown/date-dropdown */ \"./components/date-dropdown/date-dropdown.js\");\n/* eslint-disable no-inner-declarations */\n\n/* eslint-disable no-unused-vars */\n\n\n\n\nfunction landingSlider() {\n  if (document.querySelector('.landing')) {\n    var showImage = function showImage(e) {\n      var i;\n\n      if (e > image.length) {\n        value = 1;\n      }\n\n      if (e < 1) {\n        value = image.length;\n      }\n\n      for (i = 0; i < image.length; i++) {\n        image[i].style.display = 'none';\n      }\n\n      image[value - 1].style.display = 'block';\n    };\n\n    var value = 1;\n    var image = document.querySelectorAll('.landing__image');\n    setInterval(function () {\n      return showImage(++value);\n    }, 5000);\n  }\n}\n\nlandingSlider();\n(0,_components_dropdown_dropdown__WEBPACK_IMPORTED_MODULE_1__.dropdown)();\n(0,_components_date_dropdown_date_dropdown__WEBPACK_IMPORTED_MODULE_2__.dateDropdownBorder)();\n\n//# sourceURL=webpack:///./pages/website/__landing/landing.js?");
+
+/***/ }),
+
+/***/ "./pages/website/__login/login.js":
+/*!****************************************!*\
+  !*** ./pages/website/__login/login.js ***!
+  \****************************************/
+/***/ (() => {
+
+eval("\n\n//# sourceURL=webpack:///./pages/website/__login/login.js?");
 
 /***/ }),
 

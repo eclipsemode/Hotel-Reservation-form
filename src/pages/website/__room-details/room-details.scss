@@ -207,6 +207,7 @@
 @media (max-width: 480px) {
     .room__block2 {
         flex-direction: column;
+        display: none;
     }
 
     .room__collage {
@@ -221,5 +222,13 @@
 
     .room__rules {
         margin-bottom: 2rem;
+    }
+
+    .room__impression {
+        width: 305px;
+    }
+
+    .room {
+        margin-top: 1.1rem;
     }
 }
