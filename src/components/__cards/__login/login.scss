@@ -1,6 +1,7 @@
 @import '../../text-field/text-field.scss';
 @import '../../buttons/button-transparent.scss';
 @import '../../../style/layout/mixins/card.scss';
+@import '../../../style/layout/variables';
 
 .card-login {
     @include card;
@@ -34,10 +35,6 @@
 @media (max-width: 480px) {
     .card-login {
         width: 22rem;
-
-        & .text-input__input {
-            width: -webkit-fill-available;
-        }
 
         &__login-info {
             font-size: 10px;

@@ -1,3 +1,5 @@
+@import '../../style/layout/variables';
+
 .air-datepicker {
     border: 1px solid $Dark-shade-25;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -36,18 +38,14 @@
 
 .air-datepicker-nav {
     &--action {
-        background: url(../assets/images/arrow_forward.svg);
-        background-repeat: no-repeat;
-        background-position: center;
+      background: url(../assets/images/arrow_forward.svg) no-repeat center;
 
-        &:first-of-type {
+      &:first-of-type {
             transform: rotate(180deg);
         }
 
         &:hover {
-            background: url(../assets/images/arrow_forward.svg);
-            background-repeat: no-repeat;
-            background-position: center;
+          background: url(../assets/images/arrow_forward.svg) no-repeat center;
         }
 
         & svg path {

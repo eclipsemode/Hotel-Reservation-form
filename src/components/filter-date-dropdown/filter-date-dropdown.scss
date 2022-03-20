@@ -5,7 +5,7 @@
 
 .filter-date {
     position: relative;
-    width: fit-content;
+    width: auto;
 
     &__dropdown {
         @include text-field;

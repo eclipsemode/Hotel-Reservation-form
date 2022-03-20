@@ -1,18 +1,18 @@
-include src\components\rate-button\rate-button.pug
+include src/components/rate-button/rate-button.pug
 
 mixin products(src='./dist/assets/images/rooms/room840.jpg')
     .products
         ul.products__list
-            li.products__item 
+            li.products__item
                 img(src=src, alt="room").products__img
-                .products__content 
-                    .products__about 
+                .products__content
+                    .products__about
                         .products__room № 
                             span.products__room-number 888
                         .products__price
                             .products__price-value 9 999₽
                             .products__price-text в сутки
-                    .products__line 
+                    .products__line
                     .products__review
                         +rate(class='material-icons material-icons--color-primary products__rate-button')
                         .products__rate

@@ -1,35 +1,36 @@
 @import '../../date-dropdown/date-dropdown.scss';
-@import '../../buttons/buttons.scss';
 @import '../../calendar/calendar.scss';
 @import '../../../style/layout/mixins/card.scss';
+@import '../../../components/buttons/button-big';
+@import '../../../style/layout/variables';
 
 
 .card-search {
-    @include card;
+  @include card;
 
-    &__title {
-        margin: 0px;
-        margin-bottom: 3rem;
-        font-size: 24px;
-        line-height: normal;
-    }
+  &__title {
+    margin: 0 0 3rem 0;
+    font-size: 24px;
+    line-height: normal;
+    color: $Dark-shade-100;
+  }
 
-    &__dropdown {
-        width: 100%;
-    }
+  &__dropdown {
+    width: 100%;
+  }
 
-    &__date-range {
-        margin-bottom: 1.3rem;
-    }
+  &__date-range {
+    margin-bottom: 1.3rem;
+  }
 
-    &__suptitle {
-        margin: 0;
-        font-size: 12px;
-        text-transform: uppercase;
-        color: $Dark-shade-100;
-    }
+  &__suptitle {
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $Dark-shade-100;
+  }
 
-    &__dropdown {
-        margin-bottom: 2.2rem;
-    }
+  &__dropdown {
+    margin-bottom: 2.2rem;
+  }
 }

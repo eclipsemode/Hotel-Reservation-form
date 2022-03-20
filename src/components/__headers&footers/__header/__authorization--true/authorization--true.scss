@@ -1,18 +1,20 @@
+@import '../../../../style/layout/variables';
+
 .header {
-    &__authorization {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 20px;
-        align-items: center;
-    }
+  &__authorization {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    align-items: center;
+  }
 
-    &__acc {
-        display: none;
-    }
+  &__acc {
+    display: none;
+  }
 
-    &__name {
-        color: $Dark-shade-50;
-        border-left: 1px solid $Dark-shade-10;
-        padding-left: 20px;
-    }
+  &__name {
+    color: $Dark-shade-50;
+    border-left: 1px solid $Dark-shade-10;
+    padding-left: 20px;
+  }
 }

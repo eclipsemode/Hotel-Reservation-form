@@ -1,73 +1,70 @@
 @import '../../style/layout/mixins/arrow-after.scss';
 @import '../../style/layout/mixins/text-field.scss';
+@import '../../style/layout/variables';
 
 .date-form {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 320px;
 
-    &__suptitle {
-        position: absolute;
-        bottom: 44px;
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: 700;
-        margin: 0;
-        color: $Dark-shade-100;
+  &__suptitle {
+    position: absolute;
+    bottom: 44px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    color: $Dark-shade-100;
+  }
+
+  &__container {
+    position: relative;
+    width: auto;
+  }
+
+  &__container--focus {
+    &::after {
+      border-color: $Dark-shade-75;
     }
 
-    &__container {
-        position: relative;
-        width: fit-content;
+    .date-form__icon {
+      color: $Dark-shade-75;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0.4em;
+    right: 0.3em;
+    pointer-events: none;
+  }
+
+  &__inp {
+    max-width: 150px;
+    max-height: 44px;
+    height: 100%;
+    text-transform: uppercase;
+    caret-color: transparent;
+    @include text-field;
+
+    &:focus::-webkit-calendar-picker-indicator {
+      border-color: $Dark-shade-75;
     }
 
-    &__container--focus {
-        &::after {
-            border-color: $Dark-shade-75;
-        }
-
-        .date-form__icon {
-            color: $Dark-shade-75;
-        }
+    &::placeholder {
+      color: $Dark-shade-75;
     }
-
-    &__icon {
-        position: absolute;
-        top: 0.4em;
-        right: 0.3em;
-        pointer-events: none;
-    }
-
-    &__inp {
-        max-width: 150px;
-        max-height: 44px;
-        height: 100%;
-        text-transform: uppercase;
-        caret-color: transparent;
-        @include text-field;
-
-        &::-webkit-datetime-edit {
-            overflow: visible;
-        }
-
-        &:focus::-webkit-calendar-picker-indicator {
-            border-color: $Dark-shade-75;
-        }
-
-        &::placeholder {
-            color: $Dark-shade-75;
-        }
-    }
+  }
 }
 
 
 @media (max-width: 480px) {
-    .date-form {
-        flex-direction: column;
-        row-gap: 2.6rem;
-    }
-    .date-form__inp {
-        max-width: 248px;
-    }
+  .date-form {
+    flex-direction: column;
+    row-gap: 2.6rem;
+  }
+  .date-form__inp {
+    max-width: 248px;
+  }
 }

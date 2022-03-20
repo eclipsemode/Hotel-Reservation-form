@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+
 import {
     burger
 } from './components/__headers&footers/__header/header';

@@ -1,41 +1,48 @@
+@import '../../../style/layout/variables';
+
 .room-number {
-    &__title {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
+  &__title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__num {
+    position: relative;
+    color: $Dark-shade-100;
+    font-weight: 700;
+    line-height: 29.26px;
+    margin-bottom: 0;
+
+    &::before {
+      content: '№';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 29.26px;
+      color: $Dark-shade-100;
     }
-    &__num {
-        position: relative;
-        color: $Dark-shade-100;
-        font-weight: 700;
-        line-height: 29.26px;
-        margin-bottom: 0;
-        &::before {
-            content: '№';
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 29.26px;
-            color: $Dark-shade-100;
-        }
+  }
+
+  &__app {
+    margin-top: 5px;
+    margin-left: 8px;
+    line-height: 14.63px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $Purple;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: $Dark-shade-50;
+    white-space: nowrap;
+
+    &--normal {
+      font-weight: 400;
+      font-size: 12px;
     }
-    &__app {
-        margin-top: 5px;
-        margin-left: 8px;
-        line-height: 14.63px;
-        font-size: 12px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: $Purple;
-    }
-    &__value {
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 18px;
-        color: $Dark-shade-50;
-        white-space: nowrap;
-        &--normal {
-            font-weight: 400;
-            font-size: 12px;
-        }
-    }
+  }
 }

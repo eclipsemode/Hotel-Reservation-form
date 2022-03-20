@@ -1,11 +1,7 @@
 /* eslint-disable no-unused-vars */
 import {
-    dpOne
-} from '../../../components/calendar/calendar';
-import {
     dropdown
 } from '../../../components/dropdown/dropdown';
-import * as products from '../../../components/__cards/__products/products';
 import {
     pagination
 } from '../../../components/pagination/pagination';
@@ -18,6 +14,8 @@ import {
 import {
     slider
 } from '../../../components/range-slider/range-slider';
+import * as filterDate from '../../../components/filter-date-dropdown/filter-date-dropdown';
+import * as products from '../../../components/__cards/__products/products';
 
 dropdown();
 pagination(15, 1);

@@ -1,4 +1,3 @@
-@import '../../buttons/buttons.scss';
 @import '../../buttons/button-transparent.scss';
 @import '../../text-field/text-field.scss';
 @import '../../masked-text-field/masked-text-field.scss';
@@ -6,63 +5,64 @@
 @import '../../toggle/toggle.scss';
 @import '../../calendar/calendar.scss';
 @import '../../../style/layout/mixins/card.scss';
+@import '../../buttons/button-big';
+@import '../../../style/layout/variables';
 
 .card-registration {
-    @include card;
+  @include card;
 
-    &__title {
-        margin: 0;
-        margin-bottom: 1.8rem;
-        font-size: 24px;
-        color: $Dark-shade-100;
-    }
+  &__title {
+    margin: 0 0 1.8rem 0;
+    font-size: 24px;
+    color: $Dark-shade-100;
+  }
 
-    &__input:not(:last-of-type) {
-        margin-bottom: 0.8rem;
-    }
+  &__input:not(:last-of-type) {
+    margin-bottom: 0.8rem;
+  }
 
-    &__name {
-        margin-bottom: 0.5rem;
-    }
+  &__name {
+    margin-bottom: 0.5rem;
+  }
 
-    &__radio {
-        margin-bottom: 0.8rem;
-    }
+  &__radio {
+    margin-bottom: 0.8rem;
+  }
 
-    &__suptitle {
-        margin: 0;
-        font-size: 12px;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
+  &__suptitle {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
-    &__date {
-        margin-bottom: 1.2rem;
-    }
+  &__date {
+    margin-bottom: 1.2rem;
+  }
 
-    &__data {
-        margin-bottom: 0.5rem;
-    }
+  &__data {
+    margin-bottom: 0.5rem;
+  }
 
-    &__data-item:not(:last-of-type) {
-        margin-bottom: 0.8rem;
-    }
+  &__data-item:not(:last-of-type) {
+    margin-bottom: 0.8rem;
+  }
 
-    &__toggle {
-        margin-bottom: 1.7rem;
-    }
+  &__toggle {
+    margin-bottom: 1.7rem;
+  }
 
-    &__btn {
-        margin-bottom: 2.1rem;
-    }
+  &__btn {
+    margin-bottom: 2.1rem;
+  }
 
-    &__login {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  &__login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &__btn-tr {
-        @include btn-transparent(99px, 44px);
-    }
+  &__btn-tr {
+    @include btn-transparent(99px, 44px);
+  }
 }

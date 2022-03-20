@@ -1,15 +1,12 @@
 /* eslint-disable no-inner-declarations */
 /* eslint-disable no-unused-vars */
-
-import {
-    dp
-} from '../../../components/calendar/calendar';
 import {
     dropdown
 } from '../../../components/dropdown/dropdown';
 import {
     dateDropdownBorder
 } from '../../../components/date-dropdown/date-dropdown';
+import * as datepicker from '../../../components/__cards/__room-search/room-search';
 
 function landingSlider() {
     if (document.querySelector('.landing')) {

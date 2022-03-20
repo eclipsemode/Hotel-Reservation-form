@@ -1,6 +1,6 @@
-import { productsData } from "../../../assets/data/products.data";
-import { rateRating } from "../../rate-button/rate-button";
-import { productsSlider } from "./products-slider";
+import {productsData} from '../../../assets/data/products.data';
+import {rateRating} from '../../rate-button/rate-button';
+import {productsSlider} from './products-slider';
 
 const products = [...productsData];
 
@@ -16,7 +16,6 @@ class Products {
         this.classStar = options.classStar;
         this.classStarParent = options.classStarParent;
     }
-
 
     render() {
         let elem = document.querySelector(this.classParentElement);
@@ -80,14 +79,14 @@ class Products {
 
 const productsRender = new Products({
     data: products,
-    classParentElement: "#products__list",
-    classElement: "products",
-    classRoom: "products__room-number",
-    classImg: "products__img",
-    classPrice: "products__price-value",
-    classReviews: "products__rate-value",
-    classStar: "material-icons material-icons--color-primary products__rate-button",
-    classStarParent: "products__rate",
+    classParentElement: '#products__list',
+    classElement: 'products',
+    classRoom: 'products__room-number',
+    classImg: 'products__img',
+    classPrice: 'products__price-value',
+    classReviews: 'products__rate-value',
+    classStar: 'material-icons material-icons--color-primary products__rate-button',
+    classStarParent: 'products__rate',
 });
 
 productsRender.render();

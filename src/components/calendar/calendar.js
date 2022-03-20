@@ -25,25 +25,25 @@ export const dp = new AirDatepicker('.datepicker', {
         document.querySelector('.date-form__inp--end').value = fd.formattedDate[1];
 
         document.querySelectorAll('.date-form__inp').forEach(element => {
-            if (element.value == 'undefined') {
+            if (element.value === 'undefined') {
                 element.value = '';
             }
         });
     },
     onRenderCell({
-        date,
-        cellType,
-        datepicker
-    }) {
-        if (document.querySelector('.card__btn')) {
-            document.querySelector('.card__btn').addEventListener('click', () => {
-                if (dp.rangeDateFrom == '') {
+                     date,
+                     cellType,
+                     datepicker
+                 }) {
+        if (document.querySelector('.card-search__btn')) {
+            document.querySelector('.card-search__btn').addEventListener('click', () => {
+                if (dp.rangeDateFrom === '') {
                     localStorage.setItem('date_1', new Date());
                 } else {
                     localStorage.setItem('date_1', dp.rangeDateFrom);
                 }
 
-                if (dp.rangeDateTo == '') {
+                if (dp.rangeDateTo === '') {
                     localStorage.setItem('date_2', new Date(Date.now() + 1 * 24 * 60 * 60 * 1000));
                 } else {
                     localStorage.setItem('date_2', dp.rangeDateTo);
@@ -76,14 +76,34 @@ export const dpOne = new AirDatepicker('.datepicker-one', {
         localStorage.setItem('date_2', fd.date[1]);
     },
     onRenderCell({
-        date,
-        cellType,
-        datepicker
-    }) {
+                     date,
+                     cellType,
+                     datepicker
+                 }) {
         if (window.innerWidth <= 610) {
             datepicker.opts.position = 'bottom center';
         } else {
             datepicker.opts.position = 'bottom left';
         }
-    }
+    },
+});
+
+export const dpOneDate = new AirDatepicker('.datepicker-one-el', {
+    buttons: ['clear', selectItem],
+    minDate: new Date(),
+    navTitles: {
+        days: 'MMMM <i>yyyy</i>',
+    },
+    dateFormat: 'dd.MM.yy',
+    onRenderCell({
+                     date,
+                     cellType,
+                     datepicker
+                 }) {
+        if (window.innerWidth <= 610) {
+            datepicker.opts.position = 'bottom center';
+        } else {
+            datepicker.opts.position = 'bottom left';
+        }
+    },
 });

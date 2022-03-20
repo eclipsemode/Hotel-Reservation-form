@@ -4,20 +4,20 @@ include ./__authorization--true/authorization--true.pug
 include ./__authorization--false/authorization--false.pug
 include ./__header-menu/header-menu.pug
 
-.header 
-    .inner-container    
+.header
+    .inner-container
         .header__container
             a(href="./index.html")
-                .header__logo 
-                    .header__logo-svg 
-                    .header__logo-text 
+                .header__logo
+                    .header__logo-svg
+                    .header__logo-text
             .header__content
 
                 +header-menu('О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения')
 
                 - var authorised = false
 
-                if (authorised === true) 
+                if (authorised === true)
                     +auto--true
                 else
                     +auto--false

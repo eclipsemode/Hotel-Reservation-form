@@ -1,0 +1,28 @@
+.button-small {
+  position: relative;
+  width: fit-content;
+
+  &__submit {
+    border: none;
+    border-radius: 22px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    text-transform: uppercase;
+    color: #FFF;
+    min-width: 99px;
+    padding: 0.834em 1.668em;
+    font-weight: 700;
+    line-height: 15px;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      transform: translate(0.5px, 0.5px);
+    }
+  }
+}

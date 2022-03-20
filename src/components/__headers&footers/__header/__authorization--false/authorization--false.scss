@@ -1,22 +1,19 @@
 @import '../../../buttons/button-transparent.scss';
+@import '../../../buttons/button-small';
 
 .header {
-    &__authorization {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 24px;
-        align-items: center;
-    }
+  &__authorization {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 24px;
+    align-items: center;
+  }
 
-    &__registration {
-        margin-left: 20px;
-    }
+  &__registration {
+    margin-left: 20px;
+  }
 
-    &__acc--mobile {
-        display: none;
-    }
-
-    &__login {
-        @include btn-transparent;
-    }
+  &__login {
+    @include btn-transparent;
+  }
 }

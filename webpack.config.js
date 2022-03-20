@@ -5,7 +5,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 
-
 module.exports = {
     mode: 'development',
     context: path.resolve(__dirname, 'src'),
@@ -53,9 +52,9 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [{
-                    from: path.resolve(__dirname, 'src/assets/favicon.ico'),
-                    to: path.resolve(__dirname, 'dist')
-                },
+                from: path.resolve(__dirname, 'src/assets/favicon.ico'),
+                to: path.resolve(__dirname, 'dist')
+            },
                 {
                     from: path.resolve(__dirname, 'src/assets/images/rooms'),
                     to: path.resolve(__dirname, 'dist/assets/images/rooms')
@@ -65,12 +64,12 @@ module.exports = {
     ],
     module: {
         rules: [{
-                test: /\.(js|jsx)$/,
-                exclude: /nodeModules/,
-                use: {
-                    loader: 'babel-loader'
-                }
-            },
+            test: /\.(js|jsx)$/,
+            exclude: /nodeModules/,
+            use: {
+                loader: 'babel-loader'
+            }
+        },
             {
                 test: /\.s[ac]ss|css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
@@ -82,7 +81,7 @@ module.exports = {
                     options: {
                         pretty: true
                     }
-                }, ]
+                },]
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,

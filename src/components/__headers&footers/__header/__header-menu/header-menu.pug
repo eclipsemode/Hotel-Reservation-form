@@ -1,5 +1,4 @@
 mixin header-menu(about='О нас', service='Услуги', vacancies='Вакансии', news='Новости', agreements='Соглашения')
-
     .header__menu 
         a(href="#").header__link= about
         a(href="#").header__link.header__link--drop= service
@@ -24,4 +23,12 @@ mixin header-menu(about='О нас', service='Услуги', vacancies='Вака
         a.burger__link= vacancies
         a.burger__link= news
         a.burger__link= agreements
+        br
+        a(href='./login.html').burger__reg
+            i.material-icons.material-icons--bold.header__link--drop-icon.burger__reg-svg login
+            .burger__reg-link Войти
+        a(href='./registration.html').burger__reg
+            i.material-icons.material-icons--bold.header__link--drop-icon.burger__reg-svg how_to_reg
+            .burger__reg-link Регистрация
+
 
