@@ -1,5 +1,4 @@
 @mixin btn-transparent($width: 86.44px, $height: 35px) {
-
     .button-transparent {
         border-radius: 22px;
         outline: none;
@@ -56,3 +55,5 @@
         }
     }
 }
+
+@include btn-transparent;

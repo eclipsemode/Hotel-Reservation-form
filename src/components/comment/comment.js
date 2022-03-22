@@ -1,3 +1,3 @@
-import {
-    like
-} from '../like-button/like-button';
+import { like } from "../like-button/like-button";
+
+like();

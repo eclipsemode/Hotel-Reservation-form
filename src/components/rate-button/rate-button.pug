@@ -1,7 +1,40 @@
-mixin rate
-    .rate(class=attributes.class)
-        span.material-icons.material-icons--color-primary.rate__button.rate__button--1 star_outline
-        span.material-icons.material-icons--color-primary.rate__button.rate__button--2 star_outline
-        span.material-icons.material-icons--color-primary.rate__button.rate__button--3 star_outline
-        span.material-icons.material-icons--color-primary.rate__button.rate__button--4 star_outline
-        span.material-icons.material-icons--color-primary.rate__button.rate__button--5 star_outline
+mixin rate(star="1")
+    if (star == "1")
+        .rate(class=attributes.class)
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--1 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--2 star_outline
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--3 star_outline
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--4 star_outline
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--5 star_outline
+
+    if (star == "2")
+        .rate(class=attributes.class)
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--1 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--2 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--3 star_outline
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--4 star_outline
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--5 star_outline
+
+    if (star == "3")
+        .rate(class=attributes.class)
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--1 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--2 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--3 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--4 star_outline
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--5 star_outline
+
+    if (star == "4")
+        .rate(class=attributes.class)
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--1 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--2 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--3 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--4 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--5 star_outline
+
+    if (star == "5")
+        .rate(class=attributes.class)
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--1 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--2 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--3 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--4 star
+            span.material-icons.material-icons--color-primary.rate__button.rate__button--5 star

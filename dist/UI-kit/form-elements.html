@@ -1,19 +1,6 @@
 
-<!--include ../../../components/dropdown/dropdown-room.pug-->
-<!--include ../../../components/expandable-checkbox-list/expandable-checkbox-list.pug-->
-<!--include ../../../components/benefits/benefits.pug-->
-<!--include ../../../components/radio-buttons/radio-buttons.pug-->
-<!--include ../../../components/toggle/toggle.pug-->
-<!--include ../../../components/like-button/like-button.pug-->
-<!--include ../../../components/rate-button/rate-button.pug-->
-<!--include ../../../components/pagination/pagination.pug-->
-<!--include ../../../components/range-slider/range-slider.pug-->
-<!--include ../../../components/buttons/button-big.pug-->
 <!--include ../../../components/buttons/button-no-border.pug-->
-<!--include ../../../components/buttons/button-small.pug-->
-<!--include ../../../components/buttons/button-transparent.pug-->
-<!--include ../../../components/bullet-list/bullet-list.pug-->
-<!--include ../../../components/comment/comment.pug--><!DOCTYPE html>
+<!--include ../../../components/buttons/button-transparent.pug--><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -114,6 +101,219 @@
                   <div class="checkbox-list__label-text">Можно пригласить гостей<span class="checkbox-list__label-additional">(до 10 человек)</span></div>
                 </label>
               </form>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">radio buttons</h3>
+              <form class="radio elements-one__radio">
+                <div class="radio-container">
+                  <label class="radio-container__label">
+                    <input class="radio-container__label-input" type="radio" name="sex" value="male">Мужчина
+                  </label>
+                  <label class="radio-container__label">
+                    <input class="radio-container__label-input" type="radio" name="sex" value="female">Женщина
+                  </label>
+                </div>
+              </form>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">toggle</h3>
+              <div class="toggle elements-one__toggle">
+                <label class="toggle__label">
+                  <input class="toggle__inp" type="checkbox"><span class="toggle__slider"></span><span class="toggle__text">Получать спецпредложения</span>
+                </label>
+              </div>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">like button</h3>
+              <div class="like-btn elements-one__like">
+                <div class="like-btn__content">
+                  <div class="like-btn__heart"></div>
+                  <div class="like-btn__value">12</div>
+                </div>
+              </div>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">rate button</h3>
+              <div class="elements-one__rate">
+                <div class="rate"><span class="material-icons material-icons--color-primary rate__button rate__button--1">star</span><span class="material-icons material-icons--color-primary rate__button rate__button--2">star</span><span class="material-icons material-icons--color-primary rate__button rate__button--3">star</span><span class="material-icons material-icons--color-primary rate__button rate__button--4">star</span><span class="material-icons material-icons--color-primary rate__button rate__button--5">star_outline</span></div>
+                <div class="rate"><span class="material-icons material-icons--color-primary rate__button rate__button--1">star</span><span class="material-icons material-icons--color-primary rate__button rate__button--2">star</span><span class="material-icons material-icons--color-primary rate__button rate__button--3">star</span><span class="material-icons material-icons--color-primary rate__button rate__button--4">star</span><span class="material-icons material-icons--color-primary rate__button rate__button--5">star</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="elements-one__flex">
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">range slider</h3>
+              <div class="range elements-one__range">
+                <div class="range__value"><span class="range__value-first">3000</span><span>&dash;</span><span class="range__value-second">7000</span></div>
+                <form class="range__form">
+                  <div class="range__track">
+                    <div class="track-line"></div>
+                  </div>
+                  <input class="range__slider range__slider-first" type="range" min="0" max="10000" value="3000" step="500">
+                  <input class="range__slider range__slider-second" type="range" min="0" max="10000" value="7000" step="500">
+                </form>
+              </div>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">buttons</h3>
+              <div class="button-small">
+                <button class="button-small__submit elements-one__btn-small" type="submit">click me</button>
+              </div>
+              <div class="button-transparent elements-one__btn-tr">
+                <button class="button-transparent__inp" type="submit">click me</button>
+              </div>
+              <div class="button-no-border elements-one__btn-no-border">
+                <button class="button-no-border__inp" type="submit"><span>click me</span></button>
+              </div>
+              <div class="button-big elements-one__btn-big"><a class="button-big__link" href="./search.html">
+                  <button class="button-big__submit" type="submit">перейти к оплате</button><i class="material-icons material-icons--color-white button-big__icon">arrow_forward</i></a></div>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">pagination</h3>
+              <div class="pagination">
+                <ul class="pagination__list"></ul>
+                <p class="pagination__text">1 – 12 из 100+ вариантов аренды</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="elements-one">
+          <div class="elements-one__flex">
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">dropdown</h3>
+              <div class="dropdown-room">
+                <button class="dropdown-type" type="submit" name="dropdown-field-room">Удобства номера</button><i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i>
+                <div class="dropdown-guest" hidden>
+                  <ul class="dropdown-guest__list">
+                    <li class="dropdown-guest__list-item" data-value="adults">Спальни
+                      <div class="counter">
+                        <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                        <input class="counter__value" type="number" value="0" max="9" name="bedrooms">
+                        <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                      </div>
+                    </li>
+                    <li class="dropdown-guest__list-item" data-value="children">Кровати
+                      <div class="counter">
+                        <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                        <input class="counter__value" type="number" value="0" max="9" name="beds">
+                        <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                      </div>
+                    </li>
+                    <li class="dropdown-guest__list-item" data-value="babies">Ванные комнаты
+                      <div class="counter">
+                        <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                        <input class="counter__value" type="number" value="0" max="9" name="bathrooms">
+                        <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                      </div>
+                    </li>
+                    <div class="dropdown-guest__list-button">
+                      <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
+                      <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="elements-one">
+          <div class="elements-one__flex">
+            <div class="elements-one__block">
+              <div class="expandable-checkbox-container elements-one__expandable">
+                <h3 class="expandable-checkbox-container__title">Expandable checkbox list</h3><i class="material-icons material-icons--color50 material-icons--bold expandable-checkbox-container__icon">expand_more</i>
+              </div>
+              <form class="expandable-checkbox">
+                <label class="expandable-checkbox__label">
+                  <input class="expandable-checkbox__label-input" type="checkbox" checked>Завтрак
+                </label>
+                <label class="expandable-checkbox__label">
+                  <input class="expandable-checkbox__label-input" type="checkbox">Письменный стол
+                </label>
+                <label class="expandable-checkbox__label">
+                  <input class="expandable-checkbox__label-input" type="checkbox">Стул для кормления
+                </label>
+                <label class="expandable-checkbox__label">
+                  <input class="expandable-checkbox__label-input" type="checkbox">Кроватка
+                </label>
+                <label class="expandable-checkbox__label">
+                  <input class="expandable-checkbox__label-input" type="checkbox">Телевизор
+                </label>
+                <label class="expandable-checkbox__label">
+                  <input class="expandable-checkbox__label-input" type="checkbox">Шампунь 
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="elements-one__flex">
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">rich checkbox buttons</h3>
+              <form class="rich-checkbox">
+                <label class="rich-checkbox__label">
+                  <input class="rich-checkbox__label-input" type="checkbox" checked>
+                  <div class="rich-checkbox__text">Широкий коридор<span class="rich-checkbox__additional">Ширина коридоров в номере не менее 91 см.</span></div>
+                </label>
+                <label class="rich-checkbox__label">
+                  <input class="rich-checkbox__label-input" type="checkbox">
+                  <div class="rich-checkbox__text">Помощник для инвалидов<span class="rich-checkbox__additional">На 1 этаже вас встретит специалист и проводит до номера.</span></div>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="elements-one__flex">
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">bullet list</h3>
+              <div class="bullet-list">
+                <div class="bullet-list__item">
+                  <div class="bullet-list__dot"> </div><span class="bullet-list__text">Нельзя с питомцами</span>
+                </div>
+                <div class="bullet-list__item">
+                  <div class="bullet-list__dot"> </div><span class="bullet-list__text">Без вечеринок и мероприятий</span>
+                </div>
+                <div class="bullet-list__item">
+                  <div class="bullet-list__dot"> </div><span class="bullet-list__text">Время прибытия — после 13:00, а выезд до 12:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="elements-one">
+          <div class="elements-one__flex">
+            <div class="elements-one__block">
+              <div class="benefits"><img class="benefits__svg" src="../assets/images/bff4d8d74f2fa6026d27.svg" alt="alt">
+                <div class="benefits-comfort__text">
+                  <h3 class="benefits__text-name">Комфорт</h3>
+                  <p class="benefits__text-description">Шумопоглощающие стены</p>
+                </div>
+              </div>
+              <div class="benefits"><img class="benefits__svg" src="../assets/images/ba4bbd6a0da5a6dedd41.svg" alt="alt">
+                <div class="benefits-location__text">
+                  <h3 class="benefits__text-name">Удобство</h3>
+                  <p class="benefits__text-description">Окно в каждой из спален</p>
+                </div>
+              </div>
+              <div class="benefits"><img class="benefits__svg" src="../assets/images/fcc9eaf8c182f27c6a88.svg" alt="alt">
+                <div class="benefits-location__text">
+                  <h3 class="benefits__text-name">Уют</h3>
+                  <p class="benefits__text-description">Номер оснещён камином</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="elements-one__flex">
+            <div class="elements-one__block">
+              <div class="comment elements-one__comment"> 
+                <div class="comment__user"><img class="comment__image" src="../assets/images/accd26d47c58826bb371.png" alt="murad-sarafanov">
+                  <div class="like-btn comment__like">
+                    <div class="like-btn__content">
+                      <div class="like-btn__heart"></div>
+                      <div class="like-btn__value">12</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment__info"><span class="comment__name">Мурад Сарафанов</span><span class="comment__date">5 дней назад</span>
+                  <p class="comment__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

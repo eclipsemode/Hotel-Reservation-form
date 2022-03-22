@@ -1,32 +1,47 @@
-@import '../../../style/layout/variables';
-@import '../../../components/text-field/text-field.scss';
-@import '../../../components/dropdown/dropdown.scss';
-@import '../../../components/masked-text-field/masked-text-field.scss';
-@import '../../../components/date-dropdown/date-dropdown.scss';
-@import '../../../components/filter-date-dropdown/filter-date-dropdown.scss';
-@import '../../../components/subscription-text-field/subscription-text-field.scss';
-@import '../../../components/checkbox-list/checkbox-list';
-
-//@import '../../../components/expandable-checkbox-list/expandable-checkbox-list.scss';
-//@import '../../../components/benefits/benefits.scss';
-//@import '../../../components/toggle/toggle.scss';
-//@import '../../../components/like-button/like-button.scss';
-//@import '../../../components/rate-button/rate-button.scss';
-//@import '../../../components/pagination/pagination.scss';
-//@import '../../../components/range-slider/range-slider.scss';
+@import "../../../style/layout/variables";
+@import "../../../components/text-field/text-field.scss";
+@import "../../../components/dropdown/dropdown.scss";
+@import "../../../components/masked-text-field/masked-text-field.scss";
+@import "../../../components/date-dropdown/date-dropdown.scss";
+@import "../../../components/filter-date-dropdown/filter-date-dropdown.scss";
+@import "../../../components/subscription-text-field/subscription-text-field.scss";
+@import "../../../components/checkbox-list/checkbox-list";
+@import "../../../components/rich-checkbox-buttons/rich-checkbox-buttons.scss";
+@import "../../../components/radio-buttons/radio-buttons";
+@import "../../../components/buttons/button-big";
+@import "../../../components/buttons/button-small";
+@import "../../../components/buttons/button-transparent";
+@import "../../../components/buttons/button-no-border";
+@import '../../../components/expandable-checkbox-list/expandable-checkbox-list.scss';
+@import "../../../components/rich-checkbox-buttons/rich-checkbox-buttons";
+@import '../../../components/toggle/toggle.scss';
+@import '../../../components/like-button/like-button.scss';
+@import '../../../components/rate-button/rate-button.scss';
+@import '../../../components/pagination/pagination.scss';
+@import '../../../components/range-slider/range-slider.scss';
+@import "../../../components/benefits/benefits";
 //@import '../../../components/buttons/buttons.scss';
-@import '../../../components/rich-checkbox-buttons/rich-checkbox-buttons.scss';
-//@import '../../../components/bullet-list/bullet-list.scss';
-//@import '../../../components/comment/comment.scss';
+
+
+@import '../../../components/bullet-list/bullet-list.scss';
+@import '../../../components/comment/comment.scss';
 
 .elements-one {
   max-width: 320px;
   display: flex;
   column-gap: 126px;
 
+  &:not(:first-of-type) {
+    margin-top: 100px;
+  }
+
   &__flex {
     display: flex;
     flex-direction: column;
+  }
+
+  &__block {
+    width: 320px;
   }
 
   &__block:not(:last-of-type) {
@@ -36,8 +51,8 @@
   &__upper {
     display: flex;
     justify-content: space-between;
-
   }
+
   &__upper-text1 {
     margin: 0 0 4px 0;
   }
@@ -56,5 +71,40 @@
 
   &__subscribe {
     width: 266px !important;
+  }
+
+  &__rate {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__range {
+    margin-bottom: 40px;
+  }
+
+  &__btn-small {
+    padding: 0.834em 1.5em;
+    height: 44px;
+    width: 99px;
+  }
+  &__btn-big {
+    margin-top: 20px;
+  }
+
+  &__btn-tr {
+    margin-top: 20px;
+    .button-transparent__inp {
+      padding: 0.834em 1.5em;
+      height: 44px;
+      width: 99px;
+    }
+  }
+
+  &__btn-no-border {
+    margin-top: 20px;
+  }
+
+  &__comment {
+    width: max-content;
   }
 }

@@ -5,23 +5,30 @@ include ../../../components/date-dropdown/date-dropdown.pug
 include ../../../components/filter-date-dropdown/filter-date-dropdown.pug
 include ../../../components/subscription-text-field/subscription-text-field.pug
 include ../../../components/checkbox-list/checkbox-list
-
-//include ../../../components/dropdown/dropdown-room.pug
-//include ../../../components/expandable-checkbox-list/expandable-checkbox-list.pug
-//include ../../../components/benefits/benefits.pug
-//include ../../../components/radio-buttons/radio-buttons.pug
-//include ../../../components/toggle/toggle.pug
-//include ../../../components/like-button/like-button.pug
-//include ../../../components/rate-button/rate-button.pug
-//include ../../../components/pagination/pagination.pug
-//include ../../../components/range-slider/range-slider.pug
-//include ../../../components/buttons/button-big.pug
-//include ../../../components/buttons/button-no-border.pug
-//include ../../../components/buttons/button-small.pug
-//include ../../../components/buttons/button-transparent.pug
+include ../../../components/radio-buttons/radio-buttons.pug
 include ../../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug
-//include ../../../components/bullet-list/bullet-list.pug
-//include ../../../components/comment/comment.pug
+include ../../../components/toggle/toggle.pug
+include ../../../components/like-button/like-button.pug
+include ../../../components/rate-button/rate-button.pug
+include ../../../components/range-slider/range-slider.pug
+include ../../../components/buttons/button-transparent
+include ../../../components/buttons/button-no-border
+include ../../../components/dropdown/dropdown-room.pug
+include ../../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../../components/rich-checkbox-buttons/rich-checkbox-buttons
+include ../../../components/benefits/benefits.pug
+
+
+
+include ../../../components/pagination/pagination.pug
+
+include ../../../components/buttons/button-big.pug
+//include ../../../components/buttons/button-no-border.pug
+include ../../../components/buttons/button-small.pug
+//include ../../../components/buttons/button-transparent.pug
+
+include ../../../components/bullet-list/bullet-list.pug
+include ../../../components/comment/comment.pug
 
 doctype html
 html(lang="ru")
@@ -57,9 +64,59 @@ html(lang="ru")
                         .elements-one__block
                             h3.elements-one__upper-text1 checkbox button
                             +checkbox-list(class='elements-one__subscribe')
+                        .elements-one__block
+                            h3.elements-one__upper-text1 radio buttons
+                            +radio(class='elements-one__radio')
+                        .elements-one__block
+                            h3.elements-one__upper-text1 toggle
+                            +toggle(class='elements-one__toggle')
+                        .elements-one__block
+                            h3.elements-one__upper-text1 like button
+                            +like(class='elements-one__like')
+                        .elements-one__block
+                            h3.elements-one__upper-text1 rate button
+                            .elements-one__rate
+                                +rate("4")
+                                +rate("5")
+                    .elements-one__flex
+                        .elements-one__block
+                            h3.elements-one__upper-text1 range slider
+                            +range(class='elements-one__range')
+                        .elements-one__block
+                            h3.elements-one__upper-text1 buttons
+                            +buttonSmall(class="elements-one__btn-small")
+                            +buttonTransparent(class="elements-one__btn-tr")
+                            +buttonNoBorder(class="elements-one__btn-no-border")
+                            +buttonBig("перейти к оплате")(class="elements-one__btn-big")
+                        .elements-one__block
+                            h3.elements-one__upper-text1 pagination
+                            +pagination(class="elements-one__pagination")
 
+                .elements-one
+                    .elements-one__flex
+                        .elements-one__block
+                            h3.elements-one__upper-text1 dropdown
+                            +dropdown-room(class='elements-one__dropdown-room')
 
+                .elements-one
+                    .elements-one__flex
+                        .elements-one__block
+                            +expandable(class='elements-one__expandable')
+                    .elements-one__flex
+                        .elements-one__block
+                            h3.elements-one__upper-text1 rich checkbox buttons
+                            +rich-checkbox(class='elements-one__rich-textbox')
+                    .elements-one__flex
+                        .elements-one__block
+                            h3.elements-one__upper-text1 bullet list
+                            +bullet(class='elements-one__bullet')
 
-
+                .elements-one
+                    .elements-one__flex
+                        .elements-one__block
+                            +benefits
+                    .elements-one__flex
+                        .elements-one__block
+                            +comment(class="elements-one__comment")
 
 
