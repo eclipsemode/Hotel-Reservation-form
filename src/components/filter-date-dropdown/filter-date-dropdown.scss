@@ -17,6 +17,10 @@
         &:focus~.filter-date__icon {
             color: $Dark-shade-75;
         }
+
+        &::placeholder {
+            text-transform: uppercase;
+        }
     }
 
     &__icon {

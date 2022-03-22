@@ -3,13 +3,18 @@
 export function slider() {
     if (document.querySelector('.range')) {
 
+        window.onload = () => {
+            slideOne();
+            slideTwo();
+        };
+
         let sliderFirst = document.querySelector('.range__slider-first');
         let sliderSecond = document.querySelector('.range__slider-second');
         let rangeValueFirst = document.querySelector('.range__value-first');
         let rangeValueSecond = document.querySelector('.range__value-second');
         let sliderTrackLine = document.querySelector('.track-line');
         let sliderMaxValue = sliderFirst.max;
-        let minGap = 400;
+        let minGap = 500;
 
         function slideOne() {
             if (parseInt(sliderSecond.value) - parseInt(sliderFirst.value) <= minGap) {

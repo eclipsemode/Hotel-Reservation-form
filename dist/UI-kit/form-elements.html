@@ -1,0 +1,123 @@
+
+<!--include ../../../components/dropdown/dropdown-room.pug-->
+<!--include ../../../components/expandable-checkbox-list/expandable-checkbox-list.pug-->
+<!--include ../../../components/benefits/benefits.pug-->
+<!--include ../../../components/radio-buttons/radio-buttons.pug-->
+<!--include ../../../components/toggle/toggle.pug-->
+<!--include ../../../components/like-button/like-button.pug-->
+<!--include ../../../components/rate-button/rate-button.pug-->
+<!--include ../../../components/pagination/pagination.pug-->
+<!--include ../../../components/range-slider/range-slider.pug-->
+<!--include ../../../components/buttons/button-big.pug-->
+<!--include ../../../components/buttons/button-no-border.pug-->
+<!--include ../../../components/buttons/button-small.pug-->
+<!--include ../../../components/buttons/button-transparent.pug-->
+<!--include ../../../components/bullet-list/bullet-list.pug-->
+<!--include ../../../components/comment/comment.pug--><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation Project</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link href="../main.bundle.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper">
+      <div class="ui-container">
+        <div class="elements-one">
+          <div class="elements-one__flex">
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">text field</h3>
+              <div class="text-input elements-one__text-field">
+                <input class="text-input__input" type="text" name="text-field" placeholder="Email">
+              </div>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">dropdown</h3>
+              <div class="dropdown elements-one__dropdown">
+                <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button><i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i>
+                <div class="dropdown-guest" hidden>
+                  <ul class="dropdown-guest__list">
+                    <li class="dropdown-guest__list-item" data-value="adults">Взрослые
+                      <div class="counter">
+                        <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                        <input class="counter__value" type="number" value="0" max="9" name="adults">
+                        <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                      </div>
+                    </li>
+                    <li class="dropdown-guest__list-item" data-value="children">Дети
+                      <div class="counter">
+                        <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                        <input class="counter__value" type="number" value="0" max="9" name="children">
+                        <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                      </div>
+                    </li>
+                    <li class="dropdown-guest__list-item" data-value="babies">Младенцы
+                      <div class="counter">
+                        <button class="counter__btn" type="submit" data-direction="minus">-</button>
+                        <input class="counter__value" type="number" value="0" max="9" name="babies">
+                        <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                      </div>
+                    </li>
+                    <div class="dropdown-guest__list-button">
+                      <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
+                      <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">masked text field</h3>
+              <div class="masked-text-field elements-one__text-field-masked">
+                <input class="masked-text-field__input datepicker-one-el" type="text" name="date" placeholder="дд.мм.гггг" autocomplete="off" max="1979-12-31">
+              </div>
+            </div>
+            <div class="elements-one__block">
+              <form class="date-form elements-one__date-dropdown">
+                <div class="date-form__container">
+                  <h3 class="date-form__suptitle">date dropdown</h3>
+                  <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг"><i class="material-icons material-icons--color50 material-icons--bold date-form__icon">expand_more</i>
+                </div>
+                <div class="date-form__container">
+                  <h3 class="date-form__suptitle">date dropdown</h3>
+                  <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг"><i class="material-icons material-icons--color50 material-icons--bold date-form__icon">expand_more</i>
+                </div>
+              </form>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">filter date dropdown</h3>
+              <form class="filter-date elements-one__filter-date">
+                <input class="filter-date__dropdown datepicker-one" type="text" placeholder="ДД.ММ.ГГГГ" spellcheck="false"><i class="material-icons material-icons--color50 material-icons--bold filter-date__icon">expand_more</i>
+              </form>
+            </div>
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">subscription text field</h3>
+              <form class="subscription elements-one__subscribe">
+                <input class="subscription__email" type="email" name="text-field" placeholder="Email"><span class="material-icons material-icons--color-primary subscription__arrow">arrow_forward</span>
+              </form>
+            </div>
+          </div>
+          <div class="elements-one__flex">
+            <div class="elements-one__block">
+              <h3 class="elements-one__upper-text1">checkbox button</h3>
+              <form class="checkbox-list elements-one__subscribe">
+                <label class="checkbox-list__label">
+                  <input class="checkbox-list__label-input" type="checkbox" checked>Можно курить
+                </label>
+                <label class="checkbox-list__label">
+                  <input class="checkbox-list__label-input" type="checkbox">Можно с питомцами
+                </label>
+                <label class="checkbox-list__label">
+                  <input class="checkbox-list__label-input" type="checkbox">
+                  <div class="checkbox-list__label-text">Можно пригласить гостей<span class="checkbox-list__label-additional">(до 10 человек)</span></div>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script defer src="../main.bundle.js"></script></body>
+</html>

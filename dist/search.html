@@ -29,8 +29,10 @@
                           <li class="header__link-item">Соглашение три</li>
                         </ul></a></div>
                     <div class="material-icons header__burger burger">menu</div>
-                    <div class="burger__menu"><a class="burger__link">О нас</a><a class="burger__link">Услуги</a><a class="burger__link">Вакансии</a><a class="burger__link">Новости</a><a class="burger__link">Соглашения</a></div>
-                    <div class="header__authorization"><i class="material-icons header__acc--mobile">account_circle</i><a href="./login.html">
+                    <div class="burger__menu"><a class="burger__link">О нас</a><a class="burger__link">Услуги</a><a class="burger__link">Вакансии</a><a class="burger__link">Новости</a><a class="burger__link">Соглашения</a><br><a class="burger__reg" href="./login.html"><i class="material-icons material-icons--bold header__link--drop-icon burger__reg-svg">login</i>
+                        <div class="burger__reg-link">Войти</div></a><a class="burger__reg" href="./registration.html"><i class="material-icons material-icons--bold header__link--drop-icon burger__reg-svg">how_to_reg</i>
+                        <div class="burger__reg-link">Регистрация</div></a></div>
+                    <div class="header__authorization"><a href="./login.html">
                               <div class="button-transparent header__login">
                                 <button class="button-transparent__inp" type="submit">войти</button>
                               </div></a><a href="./registration.html">
@@ -47,7 +49,7 @@
             <div class="search__information"> 
               <h3 class="search__information-title">даты пребывания в отеле</h3>
                       <form class="filter-date search__information-filter">
-                        <input class="filter-date__dropdown datepicker-one" type="text" spellcheck="false"><i class="material-icons material-icons--color50 material-icons--bold filter-date__icon">expand_more</i>
+                        <input class="filter-date__dropdown datepicker-one" type="text" placeholder="ДД.ММ.ГГГГ" spellcheck="false"><i class="material-icons material-icons--color50 material-icons--bold filter-date__icon">expand_more</i>
                       </form>
               <h3 class="search__information-title">гости</h3>
                       <div class="dropdown search__information-dropdown">
@@ -89,8 +91,8 @@
                           <div class="range__track">
                             <div class="track-line"></div>
                           </div>
-                          <input class="range__slider range__slider-first" type="range" min="0" max="10000" value="3000">
-                          <input class="range__slider range__slider-second" type="range" min="0" max="10000" value="7000">
+                          <input class="range__slider range__slider-first" type="range" min="0" max="10000" value="3000" step="500">
+                          <input class="range__slider range__slider-second" type="range" min="0" max="10000" value="7000" step="500">
                         </form>
                       </div>
               <p class="search__information-text">Стоимость за сутки пребывания в номере</p>

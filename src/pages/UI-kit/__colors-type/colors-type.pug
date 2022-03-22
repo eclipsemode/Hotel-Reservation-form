@@ -1,0 +1,40 @@
+mixin color(name= "Dark Shade 100%", code= '#1F2041')
+    .color
+        .color__square(class=attributes.class)
+        .color__text
+            .color__name= name
+            .color__code= code
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Hotel Reservation Project
+        link(rel="shortcut icon", href="../favicon.ico", type="image/x-icon")
+    body
+        .wrapper
+            .ui-container
+                .colors-and-fonts
+                    .colors
+                        +color('Dark Shade 100%', '#1F2041')(class='color__square--dark100')
+                        +color('Dark Shade 75%', '#1F2041')(class='color__square--dark75')
+                        +color('Dark Shade 50%', '#1F2041')(class='color__square--dark50')
+                        +color('Dark Shade 25%', '#1F2041')(class='color__square--dark25')
+                        +color('Dark Shade 5%', '#1F2041')(class='color__square--dark5')
+                        +color('Purple', '#BC9CFF')(class='color__square--purple')
+                        +color('Green', '#6FCF97')(class='color__square--green')
+                    .fonts
+                        .font.font--h1
+                            h1.font__name H1
+                            h1.font__text This one is the sub-section or widget title
+                        .font.font--h2
+                            h2.font__name H2
+                            h2.font__text Next one is the item title inside widgets
+                        .font.font--h3
+                            h3.font__name H3
+                            h3.font__text This is a label or CTA text
+                        .font.font--body
+                            .font__name Body
+                            .font__text This is the body text which is used for most of the design, like paragraphs, lists, etc.

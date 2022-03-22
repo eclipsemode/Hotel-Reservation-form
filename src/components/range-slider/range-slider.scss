@@ -36,7 +36,7 @@
         width: 100%;
         outline: none;
         position: absolute;
-        top: -2px;
+        top: -4px;
         bottom: 0;
         background-color: transparent;
         pointer-events: none;
@@ -48,9 +48,36 @@
 
         &::-webkit-slider-thumb {
             appearance: none;
+            width: 16px;
+            height: 16px;
+            background: $Secondary-gradient;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            pointer-events: auto;
+
+            &:active {
+                background: $Primary-gradient;
+                border: 2px solid #fff;
+            }
+        }
+
+        @-moz-document url-prefix() {
+            &-first {
+                top: -8px;
+            }
+
+            &-second {
+                top: -8px;
+            }
+        }
+
+
+
+        &::-moz-range-thumb {
+            background: $Secondary-gradient;
             width: 12px;
             height: 12px;
-            background: $Secondary-gradient;
             border: 2px solid #fff;
             border-radius: 50%;
             cursor: pointer;

@@ -47,6 +47,16 @@ module.exports = {
             inject: 'body',
             template: './login.pug',
         }),
+        new HtmlWebpackPlugin({
+            filename: 'UI-kit/colors-type.html',
+            inject: 'body',
+            template: './pages/UI-kit/__colors-type/colors-type.pug',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'UI-kit/form-elements.html',
+            inject: 'body',
+            template: './pages/UI-kit/__form-elements/form-elements.pug',
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].bundle.css'
         }),

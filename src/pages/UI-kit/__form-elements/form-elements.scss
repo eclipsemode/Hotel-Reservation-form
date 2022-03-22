@@ -1,18 +1,60 @@
-@import '/pages/UI-kit/__cards/cards.scss';
-@import '/components/text-field/text-field.scss';
-@import '/components/masked-text-field/masked-text-field.scss';
-@import '/components/date-dropdown/date-dropdown.scss';
-@import '/components/filter-date-dropdown/filter-date-dropdown.scss';
-@import '/components/subscription-text-field/subscription-text-field.scss';
-@import '/components/dropdown/dropdown.scss';
-@import '/components/expandable-checkbox-list/expandable-checkbox-list.scss';
-@import '/components/benefits/benefits.scss';
-@import '/components/toggle/toggle.scss';
-@import '/components/like-button/like-button.scss';
-@import '/components/rate-button/rate-button.scss';
-@import '/components/pagination/pagination.scss';
-@import '/components/range-slider/range-slider.scss';
-@import '/components/buttons/buttons.scss';
-@import '/components/rich-checkbox-buttons/rich-checkbox-buttons.scss';
-@import '/components/bullet-list/bullet-list.scss';
-@import '/components/comment/comment.scss';
+@import '../../../style/layout/variables';
+@import '../../../components/text-field/text-field.scss';
+@import '../../../components/dropdown/dropdown.scss';
+@import '../../../components/masked-text-field/masked-text-field.scss';
+@import '../../../components/date-dropdown/date-dropdown.scss';
+@import '../../../components/filter-date-dropdown/filter-date-dropdown.scss';
+@import '../../../components/subscription-text-field/subscription-text-field.scss';
+@import '../../../components/checkbox-list/checkbox-list';
+
+//@import '../../../components/expandable-checkbox-list/expandable-checkbox-list.scss';
+//@import '../../../components/benefits/benefits.scss';
+//@import '../../../components/toggle/toggle.scss';
+//@import '../../../components/like-button/like-button.scss';
+//@import '../../../components/rate-button/rate-button.scss';
+//@import '../../../components/pagination/pagination.scss';
+//@import '../../../components/range-slider/range-slider.scss';
+//@import '../../../components/buttons/buttons.scss';
+@import '../../../components/rich-checkbox-buttons/rich-checkbox-buttons.scss';
+//@import '../../../components/bullet-list/bullet-list.scss';
+//@import '../../../components/comment/comment.scss';
+
+.elements-one {
+  max-width: 320px;
+  display: flex;
+  column-gap: 126px;
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__block:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  &__upper {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &__upper-text1 {
+    margin: 0 0 4px 0;
+  }
+
+  &__dropdown {
+    width: 100% !important;
+  }
+
+  &__date-dropdown {
+    margin-top: 40px;
+  }
+
+  &__filter-date {
+    width: 266px !important;
+  }
+
+  &__subscribe {
+    width: 266px !important;
+  }
+}

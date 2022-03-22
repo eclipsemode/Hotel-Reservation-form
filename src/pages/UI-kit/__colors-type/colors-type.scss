@@ -1,0 +1,119 @@
+@import '../../../style/layout/variables';
+
+.colors-and-fonts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+  &__square {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    &--dark100 {
+      background: $Dark-shade-100;
+    }
+
+    &--dark75 {
+      background: $Dark-shade-75;
+    }
+
+    &--dark50 {
+      background: $Dark-shade-50;
+    }
+
+    &--dark25 {
+      background: $Dark-shade-25;
+    }
+
+    &--dark5 {
+      background: $Dark-shade-5;
+    }
+
+    &--purple {
+      background: $Purple;
+    }
+
+    &--green {
+    background: $Green;
+    }
+  }
+
+  &__text {
+    color: #1F2041;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 19px;
+  }
+
+  &__code {
+    font-size: 19px;
+  }
+}
+
+.font {
+  display: flex;
+  column-gap: 30px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+
+  &__name {
+    text-align: right;
+    flex: 1;
+    max-width: 40px;
+  }
+
+  &__text {
+    flex: 2;
+  }
+
+  &--h1 {
+    .font__name {
+      font-weight: 400;
+      color: $Dark-shade-25;
+    }
+    .font__text {
+      max-width: 369px;
+    }
+  }
+
+  &--h2 {
+    .font__name {
+      font-weight: 400;
+      color: $Dark-shade-25;
+    }
+    .font__text {
+      max-width: 312px;
+    }
+  }
+
+  &--h3 {
+    .font__name {
+      font-weight: 400;
+      color: $Dark-shade-25;
+    }
+    .font__text {
+      max-width: 186px;
+    }
+  }
+
+  &--body {
+    .font__name {
+      font-weight: 400;
+      color: $Dark-shade-25;
+    }
+    .font__text {
+      max-width: 301px;
+    }
+  }
+}
