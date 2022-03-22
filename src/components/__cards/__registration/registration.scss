@@ -1,12 +1,12 @@
-@import '../../buttons/button-transparent.scss';
-@import '../../text-field/text-field.scss';
-@import '../../masked-text-field/masked-text-field.scss';
-@import '../../radio-buttons/radio-buttons.scss';
-@import '../../toggle/toggle.scss';
-@import '../../calendar/calendar.scss';
-@import '../../../style/layout/mixins/card.scss';
-@import '../../buttons/button-big';
-@import '../../../style/layout/variables';
+@import "../../buttons/button-transparent.scss";
+@import "../../text-field/text-field.scss";
+@import "../../masked-text-field/masked-text-field.scss";
+@import "../../radio-buttons/radio-buttons.scss";
+@import "../../toggle/toggle.scss";
+@import "../../calendar/calendar.scss";
+@import "../../../style/layout/mixins/card.scss";
+@import "../../buttons/button-big";
+@import "../../../style/layout/variables";
 
 .card-registration {
   @include card;
@@ -30,11 +30,10 @@
   }
 
   &__suptitle {
-    margin: 0;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
   }
 
   &__date {

@@ -5220,11 +5220,10 @@
   margin-bottom: 1.2rem;
 }
 .card-registration__suptitle {
-  margin: 0;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin: 0 0 5px 0;
 }
 .card-registration__date {
   margin-bottom: 1.5rem;
