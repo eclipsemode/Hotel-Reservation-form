@@ -1,0 +1,136 @@
+@import "../../style/layout/variables";
+@import "../../style/layout/mixins/text-field";
+
+.dropdown-room {
+  position: relative;
+
+  &--active &__guest {
+    display: block;
+  }
+  &--active &__type {
+    border-radius: 4px 4px 0 0;
+    border-color: $Dark-shade-50;
+  }
+
+  &--active &__icon {
+    color: $Dark-shade-75;
+  }
+
+  &__type {
+    @include text-field;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding: 0 35px 0 15px;
+    color: $Dark-shade-75;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  &__type:focus &__icon {
+    color: $Dark-shade-75;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0.4em;
+    right: 0.3em;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  &__guest {
+    overflow: hidden;
+    z-index: 100;
+    position: absolute;
+    top: inherit;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 4px 0 0 15px;
+    list-style: none;
+    border: 1px solid $Dark-shade-50;
+    border-top: none;
+    border-radius: inherit;
+  }
+
+  &__item {
+    height: 37px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14.63px;
+    position: relative;
+    padding: 9px 0;
+  }
+
+  &__counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 92px;
+  }
+
+  &__btn {
+    border: 1px solid $Dark-shade-25;
+    border-radius: 50%;
+    background: none;
+    color: $Dark-shade-50;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+
+    &:first-of-type {
+      opacity: 0.5;
+    }
+  }
+
+  &__value {
+    border: none;
+    text-align: center;
+    width: 20px;
+    color: $Dark-shade-100;
+    background: none;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: inherit;
+    pointer-events: none;
+    -moz-appearance:textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 7px;
+    margin: 13px 0;
+  }
+
+  &__submit-item {
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: $Purple;
+    font-weight: 700;
+    font-size: 12px;
+    font-family: inherit;
+
+      &:hover {
+        opacity: 0.5;
+      }
+  }
+}
