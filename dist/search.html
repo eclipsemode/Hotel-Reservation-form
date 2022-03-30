@@ -49,37 +49,37 @@
             <div class="search__information"> 
               <h3 class="search__information-title">даты пребывания в отеле</h3>
                       <form class="filter-date search__information-filter">
-                        <input class="filter-date__dropdown datepicker-one" type="text" placeholder="ДД.ММ.ГГГГ" spellcheck="false"><i class="material-icons material-icons--color50 material-icons--bold filter-date__icon">expand_more</i>
+                        <input class="filter-date__dropdown datepicker-one" type="text" placeholder="ДД.ММ.ГГГГ" spellcheck="false" readonly><i class="material-icons material-icons--color50 material-icons--bold filter-date__icon">expand_more</i>
                       </form>
               <h3 class="search__information-title">гости</h3>
                       <div class="dropdown search__information-dropdown">
-                        <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button><i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i>
-                        <div class="dropdown-guest" hidden>
-                          <ul class="dropdown-guest__list">
-                            <li class="dropdown-guest__list-item" data-value="adults">Взрослые
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="adults">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                        <button class="dropdown__type" type="submit" name="dropdown">Сколько гостей<i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i></button>
+                        <div class="dropdown__guest">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__item" data-value="adults">Взрослые
+                              <div class="dropdown__counter">
+                                <button class="dropdown__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown__value" type="number" value="0" max="9" name="adults">
+                                <button class="dropdown__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <li class="dropdown-guest__list-item" data-value="children">Дети
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="children">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                            <li class="dropdown__item" data-value="children">Дети
+                              <div class="dropdown__counter">
+                                <button class="dropdown__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown__value" type="number" value="0" max="9" name="children">
+                                <button class="dropdown__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <li class="dropdown-guest__list-item" data-value="babies">Младенцы
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="babies">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                            <li class="dropdown__item" data-value="babies">Младенцы
+                              <div class="dropdown__counter">
+                                <button class="dropdown__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown__value" type="number" value="0" max="9" name="babies">
+                                <button class="dropdown__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <div class="dropdown-guest__list-button">
-                              <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
-                              <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+                            <div class="dropdown__submit">
+                              <button class="dropdown__submit-item" type="submit" name="clear">Очистить</button>
+                              <button class="dropdown__submit-item" type="submit" name="submit">Применить</button>
                             </div>
                           </ul>
                         </div>
@@ -121,34 +121,34 @@
                         </label>
                       </form>
               <h3 class="search__information-title">Удобства номера</h3>
-                      <div class="dropdown-room">
-                        <button class="dropdown-type" type="submit" name="dropdown-field-room">Удобства номера</button><i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i>
-                        <div class="dropdown-guest" hidden>
-                          <ul class="dropdown-guest__list">
-                            <li class="dropdown-guest__list-item" data-value="adults">Спальни
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="bedrooms">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                      <div class="dropdown-room search__information-dropdown">
+                        <button class="dropdown-room__type" type="submit" name="dropdownRoom">Удобства номера<i class="material-icons material-icons--color50 material-icons--bold dropdown-room__icon">expand_more</i></button>
+                        <div class="dropdown-room__guest">
+                          <ul class="dropdown-room__list">
+                            <li class="dropdown-room__item" data-value="adults">Спальни
+                              <div class="dropdown-room__counter">
+                                <button class="dropdown-room__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown-room__value" type="number" value="0" max="9" name="bedrooms">
+                                <button class="dropdown-room__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <li class="dropdown-guest__list-item" data-value="children">Кровати
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="beds">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                            <li class="dropdown-room__item" data-value="children">Кровати
+                              <div class="dropdown-room__counter">
+                                <button class="dropdown-room__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown-room__value" type="number" value="0" max="9" name="beds">
+                                <button class="dropdown-room__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <li class="dropdown-guest__list-item" data-value="babies">Ванные комнаты
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="bathrooms">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                            <li class="dropdown-room__item" data-value="babies">Ванные комнаты
+                              <div class="dropdown-room__counter">
+                                <button class="dropdown-room__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown-room__value" type="number" value="0" max="9" name="bathrooms">
+                                <button class="dropdown-room__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <div class="dropdown-guest__list-button">
-                              <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
-                              <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+                            <div class="dropdown-room__submit">
+                              <button class="dropdown-room__submit-item" type="submit" name="clear">Очистить</button>
+                              <button class="dropdown-room__submit-item" type="submit" name="submit">Применить</button>
                             </div>
                           </ul>
                         </div>

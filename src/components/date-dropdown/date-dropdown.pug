@@ -2,9 +2,9 @@ mixin dateDouble(start= 'dropdown', end= 'dropdown')
     form.date-form(class=attributes.class)
         .date-form__container
             h3.date-form__suptitle= start
-            input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--start.datepicker
+            input(type="text" max="1979-12-31" placeholder='дд.мм.гггг' readonly).date-form__inp.date-form__inp--start.datepicker
             i.material-icons.material-icons--color50.material-icons--bold.date-form__icon expand_more
         .date-form__container
             h3.date-form__suptitle= end
-            input(type="text" max="1979-12-31" placeholder='дд.мм.гггг').date-form__inp.date-form__inp--end.datepicker
+            input(type="text" max="1979-12-31" placeholder='дд.мм.гггг' readonly).date-form__inp.date-form__inp--end.datepicker
             i.material-icons.material-icons--color50.material-icons--bold.date-form__icon expand_more

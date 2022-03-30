@@ -5,7 +5,6 @@ include ../../../components/range-slider/range-slider.pug
 include ../../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../../components/checkbox-list/checkbox-list.pug
 include ../../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug
-//include ../../../components/dropdown/dropdown-room.pug
 include ../../../components/dropdown-room/dropdown-room
 include ../../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 
@@ -15,7 +14,7 @@ include ../../../components/expandable-checkbox-list/expandable-checkbox-list.pu
             h3.search__information-title даты пребывания в отеле
             +filterDate(class='search__information-filter')
             h3.search__information-title гости
-            //+dropdown(class='search__information-dropdown')
+            +dropdown(class='search__information-dropdown')
             h3.search__information-title Диапазон цены
             +range(class='search__information-range')
             p.search__information-text Стоимость за сутки пребывания в номере
@@ -24,7 +23,7 @@ include ../../../components/expandable-checkbox-list/expandable-checkbox-list.pu
             h3.search__information-title Доступность
             +rich-checkbox
             h3.search__information-title Удобства номера
-            +dropdown-room
+            +dropdown-room(class='search__information-dropdown')
             +expandable('Дополнительные удобства')(class='search__information-expandable')
         .search__main
             h2.search__main-title Номера, которые мы для вас подобрали

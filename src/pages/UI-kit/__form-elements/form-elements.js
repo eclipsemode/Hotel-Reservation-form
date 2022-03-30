@@ -1,11 +1,13 @@
-import { dropdown } from "../../../components/dropdown/dropdown";
+import { dropdownRenderFunc } from "../../../components/dropdown/dropdown";
+import { dropdownRoomRenderFunc } from "../../../components/dropdown-room/dropdown-room";
 import { radioButton } from "../../../components/radio-buttons/radio-buttons";
 import { like } from "../../../components/like-button/like-button";
 import { slider } from "../../../components/range-slider/range-slider";
 import { pagination } from "../../../components/pagination/pagination";
 import { checkboxPress } from "../../../components/expandable-checkbox-list/expandable-checkbox-list";
 
-dropdown();
+dropdownRenderFunc();
+dropdownRoomRenderFunc();
 radioButton();
 like();
 slider();

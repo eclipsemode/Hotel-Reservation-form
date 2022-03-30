@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
-import { dropdown } from "../../../components/dropdown/dropdown";
+// import { dropdown } from "../../../components/dropdown/dropdown";
 import { dropdownRoomRenderFunc } from "../../../components/dropdown-room/dropdown-room";
+import { dropdownRenderFunc } from "../../../components/dropdown/dropdown";
 import { pagination } from "../../../components/pagination/pagination";
 import { checkboxPress } from "../../../components/expandable-checkbox-list/expandable-checkbox-list";
 import { radioButton } from "../../../components/radio-buttons/radio-buttons";
@@ -9,6 +10,7 @@ import * as filterDate from "../../../components/filter-date-dropdown/filter-dat
 import * as products from "../../../components/__cards/__products/products";
 
 // dropdown();
+dropdownRenderFunc();
 dropdownRoomRenderFunc();
 pagination(15, 1);
 checkboxPress();

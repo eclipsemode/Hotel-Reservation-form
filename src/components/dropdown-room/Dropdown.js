@@ -50,38 +50,74 @@ class Dropdown {
   };
 
   out() {
-    let bedroomsDeclination;
-    let bedsDeclination;
+    document.querySelectorAll(this.mainClass).forEach((element) => {
+      if (element === document.querySelector(".dropdown-room")) {
+        let bedroomsDeclination;
+        let bedsDeclination;
 
-    if (this.bedroom.value === "1") bedroomsDeclination = "спальня";
-    else if (this.bedroom.value > "1" && this.bedroom.value < "5")
-      bedroomsDeclination = "спальни";
-    else bedroomsDeclination = "спален";
+        if (this.bedroom.value === "1") bedroomsDeclination = "спальня";
+        else if (this.bedroom.value > "1" && this.bedroom.value < "5")
+          bedroomsDeclination = "спальни";
+        else bedroomsDeclination = "спален";
 
-    if (this.bed.value === "1") bedsDeclination = "кровать";
-    else if (this.bed.value > "1" && this.bed.value < "5")
-      bedsDeclination = "кровати";
-    else bedsDeclination = "кроватей";
-    if (
-      this.bedroom.value === "0" &&
-      this.bed.value === "0" &&
-      this.bathroom.value === "0"
-    )
-      this.mainType.firstChild.textContent = this.textNormal;
-    else if (
-      this.bedroom.value > "0" ||
-      this.bed.value > "0" ||
-      this.bathroom.value > "0"
-    )
-      this.mainType.firstChild.textContent =
-        this.bedroom.value +
-        " " +
-        bedroomsDeclination +
-        ", " +
-        this.bed.value +
-        " " +
-        bedsDeclination +
-        "...";
+        if (this.bed.value === "1") bedsDeclination = "кровать";
+        else if (this.bed.value > "1" && this.bed.value < "5")
+          bedsDeclination = "кровати";
+        else bedsDeclination = "кроватей";
+
+        if (
+          this.bedroom.value === "0" &&
+          this.bed.value === "0" &&
+          this.bathroom.value === "0"
+        )
+          this.mainType.firstChild.textContent = this.textNormal;
+        else if (
+          this.bedroom.value > "0" ||
+          this.bed.value > "0" ||
+          this.bathroom.value > "0"
+        )
+          this.mainType.firstChild.textContent =
+            this.bedroom.value +
+            " " +
+            bedroomsDeclination +
+            ", " +
+            this.bed.value +
+            " " +
+            bedsDeclination +
+            "...";
+      }
+      if (element === document.querySelector(".dropdown")) {
+        let val =
+          Number(this.bedroom.value) +
+          Number(this.bed.value) +
+          Number(this.bathroom.value);
+        let declination;
+
+        if (val.toString().split("").pop() === "1" && val.toString() !== "11")
+          declination = "гость";
+        else if (
+          val.toString().split("").pop() === "2" ||
+          val.toString().split("").pop() === "3" ||
+          val.toString().split("").pop() === "4"
+        )
+          declination = "гостя";
+        else declination = "гостей";
+        if (
+          val.toString() === "12" ||
+          val.toString() === "13" ||
+          val.toString() === "14"
+        )
+          declination = "гостей";
+
+        if (
+          this.bedroom.value === "0" &&
+          this.bed.value === "0" &&
+          this.bathroom.value === "0"
+        )
+          this.mainType.firstChild.textContent = this.textNormal;
+        else this.mainType.firstChild.textContent = val + " " + declination;
+      }
+    });
   }
 
   inp() {

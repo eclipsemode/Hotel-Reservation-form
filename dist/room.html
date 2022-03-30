@@ -134,42 +134,42 @@
                                   <form class="date-form card-order__date-range">
                                     <div class="date-form__container">
                                       <h3 class="date-form__suptitle">прибытие</h3>
-                                      <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг"><i class="material-icons material-icons--color50 material-icons--bold date-form__icon">expand_more</i>
+                                      <input class="date-form__inp date-form__inp--start datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг" readonly><i class="material-icons material-icons--color50 material-icons--bold date-form__icon">expand_more</i>
                                     </div>
                                     <div class="date-form__container">
                                       <h3 class="date-form__suptitle">выезд</h3>
-                                      <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг"><i class="material-icons material-icons--color50 material-icons--bold date-form__icon">expand_more</i>
+                                      <input class="date-form__inp date-form__inp--end datepicker" type="text" max="1979-12-31" placeholder="дд.мм.гггг" readonly><i class="material-icons material-icons--color50 material-icons--bold date-form__icon">expand_more</i>
                                     </div>
                                   </form>
                           <h3 class="card-order__suptitle">гости</h3>
                                   <div class="dropdown card-order__dropdown">
-                                    <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button><i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i>
-                                    <div class="dropdown-guest" hidden>
-                                      <ul class="dropdown-guest__list">
-                                        <li class="dropdown-guest__list-item" data-value="adults">Взрослые
-                                          <div class="counter">
-                                            <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                            <input class="counter__value" type="number" value="0" max="9" name="adults">
-                                            <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                                    <button class="dropdown__type" type="submit" name="dropdown">Сколько гостей<i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i></button>
+                                    <div class="dropdown__guest">
+                                      <ul class="dropdown__list">
+                                        <li class="dropdown__item" data-value="adults">Взрослые
+                                          <div class="dropdown__counter">
+                                            <button class="dropdown__btn" type="submit" data-direction="minus">-</button>
+                                            <input class="dropdown__value" type="number" value="0" max="9" name="adults">
+                                            <button class="dropdown__btn" type="submit" data-direction="plus">+</button>
                                           </div>
                                         </li>
-                                        <li class="dropdown-guest__list-item" data-value="children">Дети
-                                          <div class="counter">
-                                            <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                            <input class="counter__value" type="number" value="0" max="9" name="children">
-                                            <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                                        <li class="dropdown__item" data-value="children">Дети
+                                          <div class="dropdown__counter">
+                                            <button class="dropdown__btn" type="submit" data-direction="minus">-</button>
+                                            <input class="dropdown__value" type="number" value="0" max="9" name="children">
+                                            <button class="dropdown__btn" type="submit" data-direction="plus">+</button>
                                           </div>
                                         </li>
-                                        <li class="dropdown-guest__list-item" data-value="babies">Младенцы
-                                          <div class="counter">
-                                            <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                            <input class="counter__value" type="number" value="0" max="9" name="babies">
-                                            <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                                        <li class="dropdown__item" data-value="babies">Младенцы
+                                          <div class="dropdown__counter">
+                                            <button class="dropdown__btn" type="submit" data-direction="minus">-</button>
+                                            <input class="dropdown__value" type="number" value="0" max="9" name="babies">
+                                            <button class="dropdown__btn" type="submit" data-direction="plus">+</button>
                                           </div>
                                         </li>
-                                        <div class="dropdown-guest__list-button">
-                                          <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
-                                          <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+                                        <div class="dropdown__submit">
+                                          <button class="dropdown__submit-item" type="submit" name="clear">Очистить</button>
+                                          <button class="dropdown__submit-item" type="submit" name="submit">Применить</button>
                                         </div>
                                       </ul>
                                     </div>

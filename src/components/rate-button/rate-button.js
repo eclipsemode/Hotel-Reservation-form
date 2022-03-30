@@ -1,4 +1,4 @@
-export function rateRating() {
+function rateRating() {
   if (document.querySelector(".products__rate")) {
     const rate = document.querySelectorAll(".products__rate");
     for (let i = 0; i < rate.length; i++) {
@@ -9,3 +9,5 @@ export function rateRating() {
     }
   }
 }
+
+export { rateRating };

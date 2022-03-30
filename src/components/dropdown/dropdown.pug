@@ -1,25 +1,24 @@
 mixin dropdown
     .dropdown(class=attributes.class)
-        button(type="submit" name="dropdown-field").dropdown-type Сколько гостей
-        i.material-icons.material-icons--color50.material-icons--bold.dropdown__icon expand_more
-        .dropdown-guest(hidden)
-            ul.dropdown-guest__list
-                li(data-value='adults').dropdown-guest__list-item Взрослые
-                    .counter
-                        button.counter__btn(type='submit' data-direction="minus") -
-                        input.counter__value(type="number" value="0" max="9" name='adults')
-                        button.counter__btn(type='submit' data-direction="plus") +
-                li(data-value='children').dropdown-guest__list-item Дети
-                    .counter
-                        button.counter__btn(type='submit' data-direction="minus") -
-                        input.counter__value(type="number" value="0" max="9" name='children')
-                        button.counter__btn(type='submit' data-direction="plus") +
-                li(data-value='babies').dropdown-guest__list-item Младенцы
-                    .counter
-                        button.counter__btn(type='submit' data-direction="minus") -
-                        input.counter__value(type="number" value="0" max="9" name='babies')
-                        button.counter__btn(type='submit' data-direction="plus") +
-                .dropdown-guest__list-button
-                    button(type="submit" name="clear").dropdown-guest__list-button-item Очистить
-                    button(type="submit" name="submit").dropdown-guest__list-button-item Применить
-                    
+        button(type="submit" name="dropdown").dropdown__type Сколько гостей
+            i.material-icons.material-icons--color50.material-icons--bold.dropdown__icon expand_more
+        .dropdown__guest
+            ul.dropdown__list
+                li(data-value='adults').dropdown__item Взрослые
+                    .dropdown__counter
+                        button.dropdown__btn(type='submit' data-direction="minus") -
+                        input.dropdown__value(type="number" value="0" max="9" name='adults')
+                        button.dropdown__btn(type='submit' data-direction="plus") +
+                li(data-value='children').dropdown__item Дети
+                    .dropdown__counter
+                        button.dropdown__btn(type='submit' data-direction="minus") -
+                        input.dropdown__value(type="number" value="0" max="9" name='children')
+                        button.dropdown__btn(type='submit' data-direction="plus") +
+                li(data-value='babies').dropdown__item Младенцы
+                    .dropdown__counter
+                        button.dropdown__btn(type='submit' data-direction="minus") -
+                        input.dropdown__value(type="number" value="0" max="9" name='babies')
+                        button.dropdown__btn(type='submit' data-direction="plus") +
+                .dropdown__submit
+                    button(type="submit" name="clear").dropdown__submit-item Очистить
+                    button(type="submit" name="submit").dropdown__submit-item Применить

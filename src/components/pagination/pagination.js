@@ -1,5 +1,5 @@
 /* eslint-disable */
-export function pagination(totalPages, page) {
+function pagination(totalPages, page) {
   if (document.querySelector(".pagination")) {
     const ulTag = document.querySelector(".pagination__list");
     let liTag = "";
@@ -18,22 +18,22 @@ export function pagination(totalPages, page) {
       }
     }
 
-    for (let pageLenght = beforePages; pageLenght <= afterPages; pageLenght++) {
-      if (pageLenght > totalPages) {
+    for (let pageLength = beforePages; pageLength <= afterPages; pageLength++) {
+      if (pageLength > totalPages) {
         continue;
       }
 
-      if (pageLenght == 0) {
-        pageLenght = pageLenght + 1;
+      if (pageLength == 0) {
+        pageLength = pageLength + 1;
       }
 
-      if (page == pageLenght) {
+      if (page == pageLength) {
         activeLi = "pagination__item--active";
       } else {
         activeLi = "";
       }
 
-      liTag += `<li class="pagination__item pagination__number ${activeLi}">${pageLenght}</li>`;
+      liTag += `<li class="pagination__item pagination__number ${activeLi}">${pageLength}</li>`;
     }
 
     if (page < totalPages - 1) {
@@ -116,3 +116,5 @@ export function pagination(totalPages, page) {
     }
   }
 }
+
+export { pagination };

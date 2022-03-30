@@ -21,6 +21,7 @@ const dropdownRoomRenderFunc = () => {
   dropdownRoomRender.itemCounter();
   dropdownRoomRender.dropdownOpen();
   dropdownRoomRender.out();
+  dropdownRoomRender.inp();
   dropdownRoomRender.submit();
 };
 

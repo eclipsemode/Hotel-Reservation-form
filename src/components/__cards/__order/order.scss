@@ -3,6 +3,7 @@
 @import '../../buttons/button-big';
 @import '../../calendar/calendar.scss';
 @import '../../../style/layout/mixins/card.scss';
+@import "../../dropdown/dropdown";
 
 .card-order {
     @include card;

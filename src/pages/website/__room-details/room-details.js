@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { dp } from "../../../components/calendar/calendar";
+import {
+  dp,
+  dropdownRenderFunc,
+} from "../../../components/__cards/__order/order";
 import { dateDropdownBorder } from "../../../components/date-dropdown/date-dropdown";
-import { dropdown } from "../../../components/dropdown/dropdown";
 import * as comment from "../../../components/comment/comment";
 
 import {
@@ -175,5 +177,5 @@ const config = {
 
 const myChart = new Chart(ctx, config);
 
-dropdown();
+dropdownRenderFunc();
 dateDropdownBorder();
