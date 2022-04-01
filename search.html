@@ -9,35 +9,36 @@
   <link href="main.bundle.css" rel="stylesheet"></head>
   <body>
     <div class="wrapper">
-      <div class="header"> 
-        <div class="inner-container">   
+      <div class="header">
+        <div class="inner-container">
           <div class="header__container"><a href="./index.html">
-              <div class="header__logo"> 
-                <div class="header__logo-svg"> </div>
-                <div class="header__logo-text"> </div>
+              <div class="header__logo">
+                <div class="header__logo-svg"></div>
+                <div class="header__logo-text"></div>
               </div></a>
             <div class="header__content">
-                    <div class="header__menu"> <a class="header__link" href="#">О нас</a><a class="header__link header__link--drop" href="#">Услуги<span class="material-icons material-icons--color50 material-icons--bold header__link--drop-icon">expand_more</span>
-                        <ul class="header__link-menu">
-                          <li class="header__link-item">Услуга один</li>
-                          <li class="header__link-item">Услуга два</li>
-                          <li class="header__link-item">Услуга три</li>
-                        </ul></a><a class="header__link" href="#">Вакансии</a><a class="header__link" href="#">Новости</a><a class="header__link header__link--drop" href="#">Соглашения<span class="material-icons material-icons--color50 material-icons--bold header__link--drop-icon">expand_more</span>
-                        <ul class="header__link-menu">
-                          <li class="header__link-item">Соглашение один</li>
-                          <li class="header__link-item">Соглашение два</li>
-                          <li class="header__link-item">Соглашение три</li>
-                        </ul></a></div>
-                    <div class="material-icons header__burger burger">menu</div>
-                    <div class="burger__menu"><a class="burger__link">О нас</a><a class="burger__link">Услуги</a><a class="burger__link">Вакансии</a><a class="burger__link">Новости</a><a class="burger__link">Соглашения</a></div>
-                    <div class="header__authorization"><i class="material-icons header__acc--mobile">account_circle</i>
-                            <div class="button-transparent header__login">
-                              <button class="button-transparent__inp" type="submit">войти</button>
-                            </div><a href="./registration.html">
-                              <div class="button header__registration">
-                                <button class="button__submit button__submit--small" type="submit">зарегистрироваться</button>
-                              </div></a>
-                    </div>
+              <div class="header__menu"> <a class="header__link" href="#">О нас</a><a class="header__link header__link--drop" href="#">Услуги<span class="material-icons material-icons--color50 material-icons--bold header__link--drop-icon">expand_more</span>
+                  <ul class="header__link-menu">
+                    <li class="header__link-item">Услуга один</li>
+                    <li class="header__link-item">Услуга два</li>
+                    <li class="header__link-item">Услуга три</li>
+                  </ul></a><a class="header__link" href="#">Вакансии</a><a class="header__link" href="#">Новости</a><a class="header__link header__link--drop" href="#">Соглашения<span class="material-icons material-icons--color50 material-icons--bold header__link--drop-icon">expand_more</span>
+                  <ul class="header__link-menu">
+                    <li class="header__link-item">Соглашение один</li>
+                    <li class="header__link-item">Соглашение два</li>
+                    <li class="header__link-item">Соглашение три</li>
+                  </ul></a></div>
+              <div class="material-icons header__burger burger">menu</div>
+              <div class="burger__menu"><a class="burger__link">О нас</a><a class="burger__link">Услуги</a><a class="burger__link">Вакансии</a><a class="burger__link">Новости</a><a class="burger__link">Соглашения</a><br><a class="burger__reg" href="./login.html"><i class="material-icons material-icons--bold header__link--drop-icon burger__reg-svg">login</i>
+                  <div class="burger__reg-link">Войти</div></a><a class="burger__reg" href="./registration.html"><i class="material-icons material-icons--bold header__link--drop-icon burger__reg-svg">how_to_reg</i>
+                  <div class="burger__reg-link">Регистрация</div></a></div>
+              <div class="header__authorization"><a href="./login.html">
+                  <div class="button-transparent header__login">
+                    <button class="button-transparent__inp" type="submit">войти</button>
+                  </div></a><a href="./registration.html">
+                  <div class="button-small header__registration">
+                    <button class="button-small__submit" type="submit">зарегистрироваться</button>
+                  </div></a></div>
             </div>
           </div>
         </div>
@@ -48,37 +49,37 @@
             <div class="search__information"> 
               <h3 class="search__information-title">даты пребывания в отеле</h3>
                       <form class="filter-date search__information-filter">
-                        <input class="filter-date__dropdown datepicker-one" type="text" spellcheck="false"><i class="material-icons material-icons--color50 material-icons--bold filter-date__icon">expand_more</i>
+                        <input class="filter-date__dropdown datepicker-one" type="text" placeholder="ДД.ММ.ГГГГ" spellcheck="false" readonly><i class="material-icons material-icons--color50 material-icons--bold filter-date__icon">expand_more</i>
                       </form>
               <h3 class="search__information-title">гости</h3>
                       <div class="dropdown search__information-dropdown">
-                        <button class="dropdown-type" type="submit" name="dropdown-field">Сколько гостей</button><i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i>
-                        <div class="dropdown-guest" hidden>
-                          <ul class="dropdown-guest__list">
-                            <li class="dropdown-guest__list-item" data-value="adults">Взрослые
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="adults">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                        <button class="dropdown__type" type="submit" name="dropdown">Сколько гостей<i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i></button>
+                        <div class="dropdown__guest">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__item" data-value="adults">Взрослые
+                              <div class="dropdown__counter">
+                                <button class="dropdown__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown__value" type="number" value="0" max="9" name="adults">
+                                <button class="dropdown__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <li class="dropdown-guest__list-item" data-value="children">Дети
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="children">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                            <li class="dropdown__item" data-value="children">Дети
+                              <div class="dropdown__counter">
+                                <button class="dropdown__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown__value" type="number" value="0" max="9" name="children">
+                                <button class="dropdown__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <li class="dropdown-guest__list-item" data-value="babies">Младенцы
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="babies">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                            <li class="dropdown__item" data-value="babies">Младенцы
+                              <div class="dropdown__counter">
+                                <button class="dropdown__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown__value" type="number" value="0" max="9" name="babies">
+                                <button class="dropdown__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <div class="dropdown-guest__list-button">
-                              <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
-                              <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+                            <div class="dropdown__submit">
+                              <button class="dropdown__submit-item" type="submit" name="clear">Очистить</button>
+                              <button class="dropdown__submit-item" type="submit" name="submit">Применить</button>
                             </div>
                           </ul>
                         </div>
@@ -90,8 +91,8 @@
                           <div class="range__track">
                             <div class="track-line"></div>
                           </div>
-                          <input class="range__slider range__slider-first" type="range" min="0" max="10000" value="3000">
-                          <input class="range__slider range__slider-second" type="range" min="0" max="10000" value="7000">
+                          <input class="range__slider range__slider-first" type="range" min="0" max="10000" value="3000" step="500">
+                          <input class="range__slider range__slider-second" type="range" min="0" max="10000" value="7000" step="500">
                         </form>
                       </div>
               <p class="search__information-text">Стоимость за сутки пребывания в номере</p>
@@ -109,7 +110,7 @@
                         </label>
                       </form>
               <h3 class="search__information-title">Доступность</h3>
-                      <form class="rich-checkbox">
+                      <form class="rich-checkbox search__information-checkbox-rich">
                         <label class="rich-checkbox__label">
                           <input class="rich-checkbox__label-input" type="checkbox" checked>
                           <div class="rich-checkbox__text">Широкий коридор<span class="rich-checkbox__additional">Ширина коридоров в номере не менее 91 см.</span></div>
@@ -120,34 +121,34 @@
                         </label>
                       </form>
               <h3 class="search__information-title">Удобства номера</h3>
-                      <div class="dropdown-room">
-                        <button class="dropdown-type" type="submit" name="dropdown-field-room">Удобства номера</button><i class="material-icons material-icons--color50 material-icons--bold dropdown__icon">expand_more</i>
-                        <div class="dropdown-guest" hidden>
-                          <ul class="dropdown-guest__list">
-                            <li class="dropdown-guest__list-item" data-value="adults">Спальни
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="bedrooms">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                      <div class="dropdown-room search__information-dropdown-room">
+                        <button class="dropdown-room__type" type="submit" name="dropdownRoom">Удобства номера<i class="material-icons material-icons--color50 material-icons--bold dropdown-room__icon">expand_more</i></button>
+                        <div class="dropdown-room__guest">
+                          <ul class="dropdown-room__list">
+                            <li class="dropdown-room__item" data-value="adults">Спальни
+                              <div class="dropdown-room__counter">
+                                <button class="dropdown-room__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown-room__value" type="number" value="0" max="9" name="bedrooms">
+                                <button class="dropdown-room__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <li class="dropdown-guest__list-item" data-value="children">Кровати
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="beds">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                            <li class="dropdown-room__item" data-value="children">Кровати
+                              <div class="dropdown-room__counter">
+                                <button class="dropdown-room__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown-room__value" type="number" value="0" max="9" name="beds">
+                                <button class="dropdown-room__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <li class="dropdown-guest__list-item" data-value="babies">Ванные комнаты
-                              <div class="counter">
-                                <button class="counter__btn" type="submit" data-direction="minus">-</button>
-                                <input class="counter__value" type="number" value="0" max="9" name="bathrooms">
-                                <button class="counter__btn" type="submit" data-direction="plus">+</button>
+                            <li class="dropdown-room__item" data-value="babies">Ванные комнаты
+                              <div class="dropdown-room__counter">
+                                <button class="dropdown-room__btn" type="submit" data-direction="minus">-</button>
+                                <input class="dropdown-room__value" type="number" value="0" max="9" name="bathrooms">
+                                <button class="dropdown-room__btn" type="submit" data-direction="plus">+</button>
                               </div>
                             </li>
-                            <div class="dropdown-guest__list-button">
-                              <button class="dropdown-guest__list-button-item" type="submit" name="clear">Очистить</button>
-                              <button class="dropdown-guest__list-button-item" type="submit" name="submit">Применить</button>
+                            <div class="dropdown-room__submit">
+                              <button class="dropdown-room__submit-item" type="submit" name="clear">Очистить</button>
+                              <button class="dropdown-room__submit-item" type="submit" name="submit">Применить</button>
                             </div>
                           </ul>
                         </div>
@@ -192,9 +193,9 @@
       <footer class="footer">
         <div class="inner-container">
           <div class="footer__container">
-            <div class="footer__main"> 
-              <div class="footer__info"><a href="./index.html"><img class="footer__logo" src="assets/images/13a17d6b0d1594e874c6.svg" alt="alt"></a>
-                <p class="footer__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды» </p>
+            <div class="footer__main">
+              <div class="footer__info"><a href="./index.html"><img class="footer__logo" alt="logo"></a>
+                <p class="footer__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
               </div>
               <ul class="footer__nav">
                 <li class="footer__item--title">Навигация</li>
@@ -219,9 +220,9 @@
               <ul class="footer__nav">
                 <li class="footer__item--title">Подписка</li>
                 <p class="footer__text">Получайте специальные предложения и новости сервиса</p>
-                      <form class="subscription">
-                        <input class="subscription__email" type="email" name="text-field" placeholder="Email"><span class="material-icons material-icons--color-primary subscription__arrow">arrow_forward</span>
-                      </form>
+                <form class="subscription">
+                  <input class="subscription__email" type="email" name="text-field" placeholder="Email"><span class="material-icons material-icons--color-primary subscription__arrow">arrow_forward</span>
+                </form>
               </ul>
             </div>
           </div>
@@ -230,7 +231,7 @@
         <div class="inner-container">
           <div class="footer__additional">
             <div class="footer__copyright">Copyright © 2018 Toxin отель. Все права защищены.</div>
-            <div class="footer__social"><img class="footer__social-network" src="assets/images/9bcafb2d6155f305c58b.svg" alt="alt"><img class="footer__social-network" src="assets/images/43716815b160273236b5.svg" alt="alt"><img class="footer__social-network" src="assets/images/989e049e39da6627ba56.svg" alt="alt"></div>
+            <div class="footer__social"><img class="footer__social-network footer__social-network--twitter" alt="twitter"><img class="footer__social-network footer__social-network--facebook" alt="facebook"><img class="footer__social-network footer__social-network--instagram" alt="instagram"></div>
           </div>
         </div>
       </footer>
