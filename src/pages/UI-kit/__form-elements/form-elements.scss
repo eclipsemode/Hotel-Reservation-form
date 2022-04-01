@@ -80,9 +80,11 @@
   }
 
   &__btn-small {
-    padding: 0.834em 1.5em;
-    height: 44px;
-    width: 99px;
+    .button-small__submit {
+      padding: 0.834em 1.5em;
+      height: 44px;
+      width: 99px;
+    }
   }
   &__btn-big {
     margin-top: 20px;
