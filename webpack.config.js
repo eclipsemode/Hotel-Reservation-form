@@ -61,6 +61,11 @@ module.exports = {
       inject: "body",
       template: "./pages/UI-kit/__cards/cards.pug",
     }),
+    new HtmlWebpackPlugin({
+      filename: "UI-kit/headers&footers.html",
+      inject: "body",
+      template: "./pages/UI-kit/__headers&footers/headers&footers.pug",
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].bundle.css",
     }),

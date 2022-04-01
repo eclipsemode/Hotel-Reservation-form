@@ -1,0 +1,24 @@
+include ../../../components/__headers&footers/__header/header
+include ../../../components/__headers&footers/__footer/footer
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Hotel Reservation Project
+        link(rel="shortcut icon", href="../favicon.ico", type="image/x-icon")
+    body
+        .headers-footers
+            .headers-footers__inner-container
+                +header(false)
+                +header(true)
+                +footer(class="headers-footers__footer")
+                .headers-footers__footer-mini.footer-mini
+                    img.footer-mini__logo
+                    .footer-mini__text Copyright © 2018 Toxin отель. Все права защищены.
+                    .footer-mini__social
+                        img.footer-mini__social--twitter
+                        img.footer-mini__social--facebook
+                        img.footer-mini__social--instagram

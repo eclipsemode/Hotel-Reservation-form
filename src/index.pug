@@ -1,12 +1,13 @@
 extends pages/layout/layout
+include components/__headers&footers/__header/header.pug
+include components/__headers&footers/__footer/footer.pug
 
-block header 
-    include components/__headers&footers/__header/header.pug
+block header
+    +header
 
 block content
     .main 
         include pages/website/__landing/landing.pug
 
-
 block footer
-    include components/__headers&footers/__footer/footer.pug
+    +footer
