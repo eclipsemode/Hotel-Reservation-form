@@ -10,7 +10,7 @@
   @include card;
 
   &__title {
-    margin: 0 0 3rem 0;
+    margin: 0 0 3.1rem 0;
     font-size: 24px;
     line-height: normal;
     color: $Dark-shade-100;
@@ -21,7 +21,7 @@
   }
 
   &__date-range {
-    margin-bottom: 1.3rem;
+    margin-bottom: 1.5rem;
   }
 
   &__suptitle {
@@ -33,5 +33,6 @@
 
   &__dropdown {
     margin-bottom: 2.2rem;
+    margin-top: 0.4rem;
   }
 }
