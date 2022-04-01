@@ -66,7 +66,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -97,7 +97,7 @@
       <workItem from="1648541990955" duration="4721000" />
       <workItem from="1648629677659" duration="17820000" />
       <workItem from="1648805929602" duration="3064000" />
-      <workItem from="1648810025182" duration="23673000" />
+      <workItem from="1648810025182" duration="24506000" />
     </task>
     <task id="LOCAL-00001" summary="Some refactoring">
       <created>1647978894631</created>
