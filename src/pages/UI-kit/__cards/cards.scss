@@ -1,5 +1,25 @@
-@import '/components/__cards/__room-search/room-search.scss';
-@import "/components/__cards/__registration/registration.scss";
-@import '/components/__cards/__order/order.scss';
-@import '/components/__cards/__login/login.scss';
-@import "/components/__cards/__room-details/room-details.scss";
+@import "src/components/__cards/__room-search/room-search";
+@import "src/components/__cards/__registration/registration";
+@import "src/components/__cards/__order/order";
+@import "src/components/__cards/__login/login";
+@import "src/components/calendar/calendar";
+@import "src/components/__cards/__products/products";
+
+.cards {
+  background: #F4F4F6;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+
+  &__inner-container {
+    padding: 150px 140px 140px 140px;
+    display: flex;
+    column-gap: 40px;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}

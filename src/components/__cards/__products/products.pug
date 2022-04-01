@@ -1,20 +1,35 @@
-include src/components/rate-button/rate-button.pug
+include ../../../components/rate-button/rate-button.pug
 
-mixin products(src='./dist/assets/images/rooms/room840.jpg')
+mixin products(src="/assets/images/rooms/room840.jpg", star="3")
     .products
         ul.products__list
             li.products__item
-                img(src=src, alt="room").products__img
+                .products__img-container
+                    img(src=src, alt="room").products__img
+                    img(src=src, alt="room").products__img
+                    img(src=src, alt="room").products__img
+                    img(src=src, alt="room").products__img
+                    i.material-icons.material-icons--color-white.products__nav--left chevron_left
+                    i.material-icons.material-icons--color-white.products__nav--right navigate_next
+                    .products__nav--gradient-left
+                    .products__nav--gradient-right
+                    .products__circle
+                        span.products__circle-dots
+                        span.products__circle-dots
+                        span.products__circle-dots
+                        span.products__circle-dots
                 .products__content
                     .products__about
-                        .products__room № 
-                            span.products__room-number 888
+                        a(href="#").products__link
+                            .products__room №
+                                span.products__room-number 888
+                                span.products__room--luxe
                         .products__price
                             .products__price-value 9 999₽
                             .products__price-text в сутки
                     .products__line
                     .products__review
-                        +rate(class='material-icons material-icons--color-primary products__rate-button')
+                        +rate(star)(class='material-icons material-icons--color-primary products__rate-button')
                         .products__rate
                             .products__rate-value 145
                             .products__rate-text Отзывов

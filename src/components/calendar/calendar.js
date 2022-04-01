@@ -103,4 +103,14 @@ const dpOneDate = new AirDatepicker(".datepicker-one-el", {
   },
 });
 
-export { dp, dpOne, dpOneDate };
+const dpForm = new AirDatepicker(".datepicker-form", {
+  buttons: ["clear", selectItem],
+  navTitles: {
+    days: "MMMM <i>yyyy</i>",
+  },
+  inline: true,
+  multipleDates: 2,
+  range: true,
+});
+
+export { dp, dpOne, dpOneDate, dpForm };

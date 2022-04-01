@@ -1,10 +1,27 @@
-h2 ROOM SERACH 
-include ../../../components/__cards/__room-search/room-search.pug
-h2 REGISTRATION 
-include ../../../components/__cards/__registration/registration.pug
-h2 LOGIN 
-include ../../../components/__cards/__login/login.pug
-h2 ORDER 
-include ../../../components/__cards/__order/order.pug
-h2 ROOM DETAILS 
-include ../../../components/__cards/__room-details/room-details.pug
+include ../../../components/__cards/__room-search/room-search
+include ../../../components/__cards/__registration/registration
+include ../../../components/__cards/__order/order
+include ../../../components/__cards/__login/login
+include ../../../components/__cards/__products/products
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Hotel Reservation Project
+        link(rel="shortcut icon", href="../favicon.ico", type="image/x-icon")
+    body
+        .cards
+            .cards__inner-container
+                .cards__flex
+                    +card-search
+                    +registration
+                .cards__flex
+                    +card-order
+                    +login
+                .cards__flex
+                    .datepicker-form
+                    +products("/assets/images/rooms/room888.jpg", "5")
+                    +products("/assets/images/rooms/room840.jpg", "4")

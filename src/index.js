@@ -24,6 +24,9 @@ if (document.querySelector(".login")) {
 if (document.querySelector(".elements-one")) {
   require("./pages/UI-kit/__form-elements/form-elements");
 }
+if (document.querySelector(".cards")) {
+  require("./pages/UI-kit/__cards/cards");
+}
 
 import "./style/style.scss";
 
