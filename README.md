@@ -13,7 +13,7 @@ MetaLamp second project
 
 <h3>UI kit:</h3>
 
-<p>Colors & Type: <a href="https://eclipsemode.github.io/Hotel-Reservation-form/UI-kit/colors-type.html" target="_blank">https://eclipsemode.github.io/Hotel-Reservation-form/UI-kit/colors-type.html</a></p>
-<p>Form Elements: <a href="https://eclipsemode.github.io/Hotel-Reservation-form/UI-kit/form-elements.html" target="_blank">https://eclipsemode.github.io/Hotel-Reservation-form/UI-kit/form-elements.html</a></p>
-<p>Cards: <a href="https://eclipsemode.github.io/Hotel-Reservation-form/UI-kit/cards.html" target="_blank">https://eclipsemode.github.io/Hotel-Reservation-form/UI-kit/cards.html</a></p>
-<p>Headers & Footers: <a href="https://eclipsemode.github.io/Hotel-Reservation-form/UI-kit/headers&footers.html" target="_blank">https://eclipsemode.github.io/Hotel-Reservation-form/UI-kit/headers&footers.html</a></p>
+<p>Colors & Type: <a href="https://eclipsemode.github.io/Hotel-Reservation-form/colors-type.html" target="_blank">https://eclipsemode.github.io/Hotel-Reservation-form/colors-type.html</a></p>
+<p>Form Elements: <a href="https://eclipsemode.github.io/Hotel-Reservation-form/form-elements.html" target="_blank">https://eclipsemode.github.io/Hotel-Reservation-form/form-elements.html</a></p>
+<p>Cards: <a href="https://eclipsemode.github.io/Hotel-Reservation-form/cards.html" target="_blank">https://eclipsemode.github.io/Hotel-Reservation-form/cards.html</a></p>
+<p>Headers & Footers: <a href="https://eclipsemode.github.io/Hotel-Reservation-form/headers&footers.html" target="_blank">https://eclipsemode.github.io/Hotel-Reservation-form/headers&footers.html</a></p>
