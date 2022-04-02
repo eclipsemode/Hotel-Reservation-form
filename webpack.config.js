@@ -47,22 +47,22 @@ module.exports = {
       template: "./login.pug",
     }),
     new HtmlWebpackPlugin({
-      filename: "UI-kit/colors-type.html",
+      filename: "colors-type.html",
       inject: "body",
       template: "./pages/UI-kit/__colors-type/colors-type.pug",
     }),
     new HtmlWebpackPlugin({
-      filename: "UI-kit/form-elements.html",
+      filename: "form-elements.html",
       inject: "body",
       template: "./pages/UI-kit/__form-elements/form-elements.pug",
     }),
     new HtmlWebpackPlugin({
-      filename: "UI-kit/cards.html",
+      filename: "cards.html",
       inject: "body",
       template: "./pages/UI-kit/__cards/cards.pug",
     }),
     new HtmlWebpackPlugin({
-      filename: "UI-kit/headers&footers.html",
+      filename: "headers&footers.html",
       inject: "body",
       template: "./pages/UI-kit/__headers&footers/headers&footers.pug",
     }),
